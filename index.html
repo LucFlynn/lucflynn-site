@@ -66,7 +66,31 @@
       color: #aaa;
     }
   </style>
+<style>
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+                radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 3px 3px, 6px 6px;
+    animation: drift 120s linear infinite;
+    z-index: 0;
+  }
 
+  @keyframes drift {
+    0% { background-position: 0 0, 0 0; }
+    100% { background-position: 1000px 1000px, 500px 500px; }
+  }
+
+  body > * {
+    position: relative;
+    z-index: 1;
+  }
+</style>
+
+  
 </head>
 <body>
   <div class="container">
