@@ -66,18 +66,7 @@
       color: #aaa;
     }
   </style>
-<style>
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
-                radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 3px 3px, 6px 6px;
-    animation: drift 120s linear infinite;
-    z-index: 0;
-  }
+
 
   @keyframes drift {
     0% { background-position: 0 0, 0 0; }
@@ -169,5 +158,59 @@
   <footer>
     &copy; 2025 Luc Flynn. All rights reserved.
   </footer>
+    <style>
+  .signal-line {
+    position: fixed;
+    background: linear-gradient(90deg, rgba(0,255,255,0.6), rgba(255,0,255,0.6));
+    height: 2px;
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+    animation: shoot 1s ease-out forwards;
+  }
+
+  @keyframes shoot {
+    0% {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    10% {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scaleX(1.2);
+    }
+  }
+</style>
+
+<script>
+  function createSignalLine() {
+    const line = document.createElement('div');
+    line.className = 'signal-line';
+
+    const angle = Math.random() * 360;
+    const length = Math.random() * 50 + 150;
+    const top = Math.random() * window.innerHeight;
+    const left = Math.random() * window.innerWidth;
+
+    line.style.top = `${top}px`;
+    line.style.left = `${left}px`;
+    line.style.width = `${length}px`;
+    line.style.transformOrigin = 'left center';
+    line.style.transform = `rotate(${angle}deg) scaleX(0)`;
+    
+    document.body.appendChild(line);
+
+    setTimeout(() => {
+      line.remove();
+    }, 1000);
+  }
+
+  setInterval(() => {
+    createSignalLine();
+  }, 600);
+</script>
 </body>
 </html>
