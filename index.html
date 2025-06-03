@@ -73,58 +73,57 @@
         margin-bottom: 2rem;
         color: #E0E0E0;
     }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem; 
-      justify-content: center;
-      margin-top: 1.5rem; 
+    
+    /* Case Studies Section Styles */
+    .case-studies-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center; /* Center items if only two */
     }
-    .card {
-      background: #1E2251;
-      padding: 1.5rem; 
-      border-radius: 8px;
-      flex: 1 1 280px; 
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    .case-study-item {
+        background: #1E2251;
+        padding: 1.5rem 2rem; /* Slightly more horizontal padding */
+        border-radius: 8px;
+        flex: 1 1 400px; /* Allow them to be a bit wider if only two */
+        max-width: 460px; /* Max width for each case study */
+        border-top: 4px solid #6366F1; /* Changed accent to top */
     }
-    .card h3 {
-        font-size: 1.25rem;
+    .case-study-item h3 {
+        font-size: 1.35rem; /* Slightly larger heading for case studies */
         margin-top: 0;
-        margin-bottom: 0.75rem;
+        margin-bottom: 1rem;
         color: #A6ADFF; 
     }
-    .card p {
+    .case-study-item strong { /* For Problem, Solution, Result labels */
+        color: #C0C5FF;
+        font-weight: 600;
+    }
+    .case-study-item p {
         font-size: 0.95rem;
         color: #B0B8E0; 
-        margin-bottom: 1rem;
-        flex-grow: 1;
+        margin-bottom: 0.75rem;
     }
-    .card button, .tally-book-button { 
-        background-color: #6366F1; 
-        color: white;
-        border: none;
-        padding: 0.75rem 1.5rem;
-        border-radius: 6px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background-color 0.2s ease-in-out;
-        text-decoration: none; 
-        display: inline-block; 
-        font-family: 'Inter', sans-serif;
+    .case-study-item .moral, .case-study-item .cta-text {
+        font-style: italic;
+        color: #ccc;
+        margin-top: 1rem;
         font-size: 0.9rem;
     }
-    .card button:hover, .tally-book-button:hover {
-        background-color: #4F46E5; 
+    .case-study-item .cta-text a {
+        color: #A6ADFF;
+        text-decoration: underline;
+    }
+    .case-study-item .cta-text a:hover {
+        color: #8990EF;
     }
 
-    /* Testimonials Section Styles - UPDATED */
+
+    /* Testimonials Section Styles */
     .testimonials-grid {
-        display: flex; /* CHANGED from grid */
-        flex-wrap: wrap; /* ADDED */
-        justify-content: center; /* ADDED to center items, especially the last row */
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center; 
         gap: 1.5rem;
         margin-top: 2rem;
     }
@@ -135,10 +134,8 @@
         border-left: 4px solid #6366F1; 
         display: flex; 
         flex-direction: column;
-        flex: 1 1 300px; /* CHANGED: flex-grow, flex-shrink, flex-basis */
-        max-width: 380px; /* ADDED: Optional, to prevent items getting too wide. Adjust as needed. (was 450px, trying a bit less) */
-                                  /* Max-width can be tricky with flex-grow:1. Test this. Or remove it to let them fill. */
-                                  /* If you want exactly 3 columns on wider screens, and then 2 centered, consider setting flex-basis closer to 30-32% and removing max-width here */
+        flex: 1 1 300px; 
+        max-width: 380px; 
     }
     .testimonial-item .stars {
         color: #FFD700; 
@@ -166,6 +163,23 @@
         font-size: 0.85rem;
     }
 
+    .tally-book-button { /* Copied from .card button for consistency */
+        background-color: #6366F1; 
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        text-decoration: none; 
+        display: inline-block; 
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+    }
+    .tally-book-button:hover {
+        background-color: #4F46E5;
+    }
     .tally-book-button-container { 
         text-align: center;
         margin-top: 3rem;
@@ -232,25 +246,24 @@
       </div>
     </div>
 
-    <div class="section">
-      <h2>My Expertise</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Paid Traffic Systems</h3>
-          <p>How to Get Paid Traffic to Actually Convert.</p>
-          <button>Watch The Videos</button> 
+    <div class="section" id="case-studies">
+        <h2>Success Stories</h2>
+        <div class="case-studies-grid">
+            <div class="case-study-item">
+                <h3>Facebook Ads Tracking Turnaround</h3>
+                <p><strong>The Problem:</strong> A client's Facebook ads, driving to a Typeform funnel, were a mess. Their pixel counted every form submission as a conversion—even unqualified leads. Despite hiring multiple technical people and using fancy server-side tracking, Facebook was optimizing for the wrong data.</p>
+                <p><strong>My Fix:</strong> In a 45-minute call, I diagnosed the core logic flaw. I reconfigured the pixel to fire only when a lead is genuinely qualified, all while preserving their existing advanced tracking setup.</p>
+                <p><strong>The Result:</strong> Their ads are now optimizing for the right people, not junk leads, making their ad spend significantly more effective.</p>
+                <p class="moral">Moral: Advanced tracking is useless if core logic is flawed. Solid tracking saves money.</p>
+                <p class="cta-text">Want me to take a look at your tracking? <a href="#tally-contact">Shoot me a message.</a></p> </div>
+            <div class="case-study-item">
+                <h3>Hotel's Google Ads Revenue Tracking Restored</h3>
+                <p><strong>The Problem:</strong> A successful 25-year-old hotel, working with a top-tier agency, couldn't track their Google Ads revenue. GA4 was a disaster, attributing sales to "direct" or "referral," and Google Ads showed almost zero conversions. Previous GTM "experts" couldn't solve it.</p>
+                <p><strong>My Fix:</strong> I rebuilt their GTM and GA4 from scratch, implemented robust cross-domain tracking between their main site and booking engine, stitched user sessions, and fixed referrer issues. I also worked directly with their booking engine provider to capture the true purchase event.</p>
+                <p><strong>The Result:</strong> We are now on track to attribute 100% of their Google Ads revenue accurately, providing clear ROI.</p>
+                <p class="moral">This is what I do: I solve the tracking problems no one else can, focusing on real-world troubleshooting.</p>
+                <p class="cta-text">If your tracking is broken, or your GA4 is a mess, <a href="#tally-contact">let’s talk.</a></p> </div>
         </div>
-        <div class="card">
-          <h3>Lead Gen Systems</h3>
-          <p><em>[Placeholder: Describe strategies for converting paid traffic into qualified sales leads, or add a mini case study. This text can be updated later.]</em></p>
-          <button>Learn More</button> 
-        </div>
-        <div class="card">
-          <h3>Real-World Insights</h3>
-          <p><em>[Placeholder: Share insights on day-to-day marketing operations, analytics, or platform nuances. This text can be updated later.]</em></p>
-          <button>Explore Insights</button> 
-        </div>
-      </div>
     </div>
 
     <div class="section" id="testimonials">
@@ -275,103 +288,3 @@
                 <div class="stars">★★★★☆</div> 
                 <p class="quote">"I hired Luc to help me understand and use Google Ads. He not only helped me understand how to use Google Ads but also provided sound marketing advice."</p>
                 <p class="attribution">Client on Upwork <span class="project-title">Project: Help Me Use Google Ads to Find the Right Clients</span></p>
-            </div>
-            <div class="testimonial-item">
-                <div class="stars">★★★★★</div>
-                <p class="quote">"He helped us get our ads up when we needed it"</p>
-                <p class="attribution">Client on Upwork <span class="project-title">Project: Google ads setup for tiling company</span></p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="tally-book-button-container">
-        <button 
-            class="tally-book-button" 
-            data-tally-open="https://tally.so/r/3qpNp5" 
-            data-tally-layout="modal" 
-            data-tally-emoji-text="👋" 
-            data-tally-emoji-animation="wave"
-        >
-        Book a Call
-        </button>
-    </div>
-
-  </div> 
-
-  <div class="form-section"> 
-    <div style="max-width: 700px; margin: 3rem auto 0 auto; padding: 0 1rem;"> 
-      <iframe 
-        data-tally-src="https://tally.so/embed/w7ePZP?alignLeft=1&hideTitle=1&dynamicHeight=1" 
-        loading="lazy" 
-        width="100%" 
-        height="320" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0" 
-        title="Lead generation form"
-        style="border: none; background: white; border-radius: 8px;">
-      </iframe>
-    </div>
-  </div>
-
-  <footer>
-    &copy; <span id="currentYear"></span> Luc Flynn. All rights reserved.
-  </footer>
-
-  <script>
-    var d=document,w="https://tally.so/widgets/embed.js",v=function(){
-      "undefined"!=typeof Tally?Tally.loadEmbeds():
-      d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){
-        e.src=e.dataset.tallySrc
-      }))
-    };
-    if("undefined"!=typeof Tally)v();
-    else if(d.querySelector('script[src="'+w+'"]')==null){
-      var s=d.createElement("script");
-      s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);
-    }
-  </script>
-  
-  <script>
-    function createSignalLine() {
-      const line = document.createElement('div');
-      line.className = 'signal-line';
-
-      const angle = Math.random() * 360;
-      const length = Math.random() * (window.innerWidth * 0.15) + (window.innerWidth * 0.1); 
-      const top = Math.random() * window.innerHeight;
-      const left = Math.random() * window.innerWidth;
-
-      line.style.top = `${top}px`;
-      line.style.left = `${left}px`;
-      line.style.width = `${length}px`;
-      line.style.transformOrigin = 'left center';
-      line.style.transform = `rotate(${angle}deg) scaleX(0)`;
-      
-      document.body.appendChild(line);
-
-      setTimeout(() => {
-        line.remove();
-      }, 1000); 
-    }
-
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (!prefersReducedMotion || prefersReducedMotion.matches === false) {
-        setInterval(() => {
-            if (document.visibilityState === 'visible') { 
-                 createSignalLine();
-            }
-        }, 1500); 
-    }
-  </script>
-  
-  <script>
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-  </script>
-  <script>
-    if (typeof Tally !== 'undefined' && typeof Tally.loadEmbeds === 'function') {
-        Tally.loadEmbeds();
-    }
-  </script>
-</body>
-</html>
