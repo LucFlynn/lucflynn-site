@@ -288,3 +288,102 @@
                 <div class="stars">★★★★☆</div> 
                 <p class="quote">"I hired Luc to help me understand and use Google Ads. He not only helped me understand how to use Google Ads but also provided sound marketing advice."</p>
                 <p class="attribution">Client on Upwork <span class="project-title">Project: Help Me Use Google Ads to Find the Right Clients</span></p>
+            </div>
+            <div class="testimonial-item">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"He helped us get our ads up when we needed it"</p>
+                <p class="attribution">Client on Upwork <span class="project-title">Project: Google ads setup for tiling company</span></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="tally-book-button-container" id="tally-contact"> <button 
+            class="tally-book-button" 
+            data-tally-open="https://tally.so/r/3qpNp5" 
+            data-tally-layout="modal" 
+            data-tally-emoji-text="👋" 
+            data-tally-emoji-animation="wave"
+        >
+        Book a Call
+        </button>
+    </div>
+
+  </div> 
+
+  <div class="form-section"> 
+    <div style="max-width: 700px; margin: 3rem auto 0 auto; padding: 0 1rem;"> 
+      <iframe 
+        data-tally-src="https://tally.so/embed/w7ePZP?alignLeft=1&hideTitle=1&dynamicHeight=1" 
+        loading="lazy" 
+        width="100%" 
+        height="320" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0" 
+        title="Lead generation form"
+        style="border: none; background: white; border-radius: 8px;">
+      </iframe>
+    </div>
+  </div>
+
+  <footer>
+    &copy; <span id="currentYear"></span> Luc Flynn. All rights reserved.
+  </footer>
+
+  <script>
+    var d=document,w="https://tally.so/widgets/embed.js",v=function(){
+      "undefined"!=typeof Tally?Tally.loadEmbeds():
+      d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){
+        e.src=e.dataset.tallySrc
+      }))
+    };
+    if("undefined"!=typeof Tally)v();
+    else if(d.querySelector('script[src="'+w+'"]')==null){
+      var s=d.createElement("script");
+      s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);
+    }
+  </script>
+  
+  <script>
+    function createSignalLine() {
+      const line = document.createElement('div');
+      line.className = 'signal-line';
+
+      const angle = Math.random() * 360;
+      const length = Math.random() * (window.innerWidth * 0.15) + (window.innerWidth * 0.1); 
+      const top = Math.random() * window.innerHeight;
+      const left = Math.random() * window.innerWidth;
+
+      line.style.top = `${top}px`;
+      line.style.left = `${left}px`;
+      line.style.width = `${length}px`;
+      line.style.transformOrigin = 'left center';
+      line.style.transform = `rotate(${angle}deg) scaleX(0)`;
+      
+      document.body.appendChild(line);
+
+      setTimeout(() => {
+        line.remove();
+      }, 1000); 
+    }
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (!prefersReducedMotion || prefersReducedMotion.matches === false) {
+        setInterval(() => {
+            if (document.visibilityState === 'visible') { 
+                 createSignalLine();
+            }
+        }, 1500); 
+    }
+  </script>
+  
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    if (typeof Tally !== 'undefined' && typeof Tally.loadEmbeds === 'function') {
+        Tally.loadEmbeds();
+    }
+  </script>
+</body>
+</html>
