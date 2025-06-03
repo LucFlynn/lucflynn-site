@@ -13,6 +13,7 @@
       font-family: 'Inter', sans-serif;
       background: #0B0F2F;
       color: white;
+      line-height: 1.6;
     }
     .container {
       max-width: 960px;
@@ -22,7 +23,16 @@
     .header {
       text-align: center;
     }
-    .hero {
+    .header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .header p {
+        font-size: 1.1rem;
+        color: #ccc;
+    }
+
+    .hero-content { /* Renamed from .hero for clarity */
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -30,49 +40,167 @@
       gap: 2rem;
       margin-top: 3rem;
     }
-    .hero img {
-      border-radius: 8px;
-      max-width: 200px;
+    .hero-stats {
+        flex: 1 1 300px;
+        max-width: 500px;
+    }
+    .hero-stats ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1.1rem;
+    }
+    .hero-stats li {
+        margin-bottom: 1rem;
+        background-color: #1E2251; /* Added background for visual grouping */
+        padding: 0.75rem 1rem;
+        border-radius: 6px;
+    }
+    .hero-image { /* Renamed for clarity */
+        flex: 0 0 auto;
+    }
+    .hero-image img {
+      border-radius: 12px; /* Was 8px, then 12px in inline style, harmonizing */
+      max-width: 250px; /* Adjusted from 200px in class, 300px inline */
+      width: 100%;
     }
     .section {
       margin-top: 3rem;
     }
+    .section h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #E0E0E0;
+    }
     .cards {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1rem; /* Reduced gap slightly for tighter card layout */
       justify-content: center;
-      margin-top: 2rem;
+      margin-top: 1.5rem; /* Adjusted from 2rem */
     }
     .card {
       background: #1E2251;
-      padding: 1rem;
+      padding: 1.5rem; /* Increased padding */
       border-radius: 8px;
-      flex: 1 1 250px;
+      flex: 1 1 280px; /* Adjusted flex basis */
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    .wins {
-      background: #101332;
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin-top: 3rem;
-      text-align: center;
+    .card h3 {
+        font-size: 1.25rem;
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        color: #A6ADFF; /* Accent color for card titles */
+    }
+    .card p {
+        font-size: 0.95rem;
+        color: #B0B8E0; /* Lighter text for card paragraph */
+        margin-bottom: 1rem;
+        flex-grow: 1;
+    }
+    .card button, .tally-book-button { /* Styling the Tally modal button too */
+        background-color: #6366F1; /* Primary button color */
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        text-decoration: none; /* For <a> tags styled as buttons */
+        display: inline-block; /* For <a> tags */
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+    }
+    .card button:hover, .tally-book-button:hover {
+        background-color: #4F46E5; /* Darker shade on hover */
+    }
+
+    /* Testimonials Section Styles */
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    .testimonial-item {
+        background: #1E2251;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid #6366F1; /* Accent border */
+    }
+    .testimonial-item .stars {
+        color: #FFD700; /* Gold color for stars */
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .testimonial-item p.quote {
+        font-style: italic;
+        color: #E0E0E0;
+        margin-bottom: 1rem;
+    }
+    .testimonial-item p.attribution {
+        font-size: 0.9rem;
+        color: #A6ADFF;
+        font-weight: 600;
+        text-align: right;
+    }
+    .testimonial-item p.attribution .project-title {
+        display: block;
+        font-weight: normal;
+        font-style: italic;
+        color: #8A93C4;
+        font-size: 0.85rem;
+    }
+
+    .tally-book-button-container { /* Container for the Book a Call button */
+        text-align: center;
+        margin-top: 3rem;
     }
     
+    .form-section { /* Ensuring some top margin if elements stack */
+        margin-top: 3rem;
+    }
+
     footer {
       text-align: center;
       font-size: 0.875rem;
       padding: 2rem 0;
       color: #aaa;
+      margin-top: 3rem;
+    }
+
+    /* Signal Line Animation (kept from original) */
+    .signal-line {
+      position: fixed;
+      background: linear-gradient(90deg, rgba(0,255,255,0.6), rgba(255,0,255,0.6));
+      height: 2px;
+      z-index: 0; /* Kept as 0, might need adjustment if it overlaps interactive elements */
+      opacity: 0;
+      pointer-events: none;
+      animation: shoot 1s ease-out forwards;
+    }
+
+    @keyframes shoot {
+      0% {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      10% {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scaleX(1.2); /* Adjusted slightly */
+      }
     }
   </style>
-
-
-</style>
-
-<script src="https://tally.so/widgets/embed.js"></script>
-
-  
+  <script src="https://tally.so/widgets/embed.js"></script>
 </head>
 <body>
   <div class="container">
@@ -82,135 +210,150 @@
       <p>Let’s figure out what’s working, what’s not, and how we can get you more customers.</p>
     </div>
 
-   <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem; margin-top: 3rem;">
-  <div style="flex: 1 1 300px; max-width: 500px;">
-    <ul style="list-style: none; padding: 0; margin: 0; font-size: 1.1rem;">
-      <li style="margin-bottom: 1rem;">📊 Over $10M in Ad Spend Managed</li>
-      <li style="margin-bottom: 1rem;">📥 Generated Tens of Thousands of High-Quality Leads</li>
-      <li>💰 Helped Contribute to $19M in Revenue for Clients</li>
-    </ul>
-  </div>
-  <div style="flex: 0 0 auto;">
-<img src="headshot.jpg" alt="Luc Flynn Headshot" style="max-width: 300px; width: 100%; border-radius: 12px;" />  </div>
-</div>
-
-    <div class="section">
-      <div class="cards">
-        <div class="card">
-          <h3>Paid Traffic Systems</h3>
-          <p>How to Get Paid Traffic to Actually Convert</p>
-          <button>Watch The Videos</button>
-        </div>
-        <div class="card">
-          <h3>Lead Gen Systems</h3>
-          <p>How to Convert Paid Traffic into Sales</p>
-          <button>Cool Stuff Coming Soon</button>
-        </div>
-        <div class="card">
-          <h3>Real-World Insights</h3>
-          <p>What This All Looks Like Day-to-Day</p>
-          <button>Cool Stuff Coming Soon</button>
-        </div>
+    <div class="hero-content">
+      <div class="hero-stats">
+        <ul>
+          <li>📊 Over $10M in Ad Spend Managed</li>
+          <li>📥 Generated Tens of Thousands of High-Quality Leads</li>
+          <li>💰 Helped Contribute to $19M in Revenue for Clients</li>
+        </ul>
+      </div>
+      <div class="hero-image">
+        <img src="headshot.jpg" alt="Luc Flynn Headshot" />
       </div>
     </div>
 
-  <button 
-  class="bg-white text-black font-semibold py-3 px-6 rounded-lg hover:bg-gray-200 transition duration-200"
-  data-tally-open="https://tally.so/r/3qpNp5" 
-  data-tally-layout="modal" 
-  data-tally-emoji-text="👋"
-  data-tally-emoji-animation="wave"
->
-  Book a Call
-</button>
+    <div class="section">
+      <h2>My Expertise</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Paid Traffic Systems</h3>
+          <p>How to Get Paid Traffic to Actually Convert.</p>
+          <button>Watch The Videos</button> </div>
+        <div class="card">
+          <h3>Lead Gen Systems</h3>
+          <p><em>[Placeholder: Describe strategies for converting paid traffic into qualified sales leads, or add a mini case study. This text can be updated later.]</em></p>
+          <button>Learn More</button> </div>
+        <div class="card">
+          <h3>Real-World Insights</h3>
+          <p><em>[Placeholder: Share insights on day-to-day marketing operations, analytics, or platform nuances. This text can be updated later.]</em></p>
+          <button>Explore Insights</button> </div>
+      </div>
+    </div>
+
+    <div class="section" id="testimonials">
+        <h2>What Clients Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-item">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"Luc is a top tier Google Ads manager with advanced understanding and expertise with the platform. We hired him to upgrade some existing campaigns and after giving it the proper amount of time to reset, the campaigns suddenly kicked into high gear. We have broken records for daily conversions and call bookings... Luc is the best we've worked with. He's also just got the right entrepreneurial mindset and he's a problem solver."</p>
+                <p class="attribution">Client on Upwork <span class="project-title">Project: Google Ads Manager</span></p>
+            </div>
+            <div class="testimonial-item">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"Luc delivered good work on this Social Media Marketing project and I enjoyed working with him. His communication was top-notch, he met all deadlines, and his skills were exceptional."</p>
+                <p class="attribution">Client on Upwork <span class="project-title">Project: Facebook & Social Media Marketing Ads For Outbound Sales Lead Generation</span></p>
+            </div>
+            <div class="testimonial-item">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"Luc is highly knowledgeable, trustworthy, and delivered the project right on schedule!"</p>
+                <p class="attribution">Client on Upwork <span class="project-title">Project: Profile Optimization for Business Consulting and Data Science on Upwork</span></p>
+            </div>
+             <div class="testimonial-item">
+                <div class="stars">★★★★☆</div> <p class="quote">"I hired Luc to help me understand and use Google Ads. He not only helped me understand how to use Google Ads but also provided sound marketing advice."</p>
+                <p class="attribution">Client on Upwork <span class="project-title">Project: Help Me Use Google Ads to Find the Right Clients</span></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="tally-book-button-container">
+        <button 
+            class="tally-book-button" 
+            data-tally-open="https://tally.so/r/3qpNp5" 
+            data-tally-layout="modal" 
+            data-tally-emoji-text="👋" 
+            data-tally-emoji-animation="wave"
+        >
+        Book a Call
+        </button>
+    </div>
+
+  </div> <div class="form-section"> 
+    <div style="max-width: 700px; margin: 3rem auto 0 auto; padding: 0 1rem;"> <iframe 
+        data-tally-src="https://tally.so/embed/w7ePZP?alignLeft=1&hideTitle=1&dynamicHeight=1" 
+        loading="lazy" 
+        width="100%" 
+        height="320" 
+        frameborder="0" 
+        marginheight="0" 
+        marginwidth="0" 
+        title="Lead generation form"
+        style="border: none; background: white; border-radius: 8px;">
+      </iframe>
+    </div>
   </div>
 
-  <div class="form-section">
- <div style="max-width: 700px; margin: 0 auto; padding: 2rem 1rem;">
-  <iframe 
-    data-tally-src="https://tally.so/embed/w7ePZP?alignLeft=1&hideTitle=1&dynamicHeight=1" 
-    loading="lazy" 
-    width="100%" 
-    height="320" 
-    frameborder="0" 
-    marginheight="0" 
-    marginwidth="0" 
-    title="Lead generation form"
-    style="border: none; background: white; border-radius: 8px;">
-  </iframe>
-</div>
-
-<script>
-  var d=document,w="https://tally.so/widgets/embed.js",v=function(){
-    "undefined"!=typeof Tally?Tally.loadEmbeds():
-    d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){
-      e.src=e.dataset.tallySrc
-    }))
-  };
-  if("undefined"!=typeof Tally)v();
-  else if(d.querySelector('script[src="'+w+'"]')==null){
-    var s=d.createElement("script");
-    s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);
-  }
-</script>
   <footer>
-    &copy; 2025 Luc Flynn. All rights reserved.
+    &copy; <span id="currentYear"></span> Luc Flynn. All rights reserved.
   </footer>
-    <style>
-  .signal-line {
-    position: fixed;
-    background: linear-gradient(90deg, rgba(0,255,255,0.6), rgba(255,0,255,0.6));
-    height: 2px;
-    z-index: 0;
-    opacity: 0;
-    pointer-events: none;
-    animation: shoot 1s ease-out forwards;
-  }
 
-  @keyframes shoot {
-    0% {
-      opacity: 0;
-      transform: scaleX(0);
+  <script>
+    var d=document,w="https://tally.so/widgets/embed.js",v=function(){
+      "undefined"!=typeof Tally?Tally.loadEmbeds():
+      d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){
+        e.src=e.dataset.tallySrc
+      }))
+    };
+    if("undefined"!=typeof Tally)v();
+    else if(d.querySelector('script[src="'+w+'"]')==null){
+      var s=d.createElement("script");
+      s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);
     }
-    10% {
-      opacity: 1;
-      transform: scaleX(1);
+  </script>
+  
+  <script>
+    function createSignalLine() {
+      const line = document.createElement('div');
+      line.className = 'signal-line';
+
+      const angle = Math.random() * 360;
+      // Ensure length calculation is reasonable for different screen sizes
+      const length = Math.random() * (window.innerWidth * 0.15) + (window.innerWidth * 0.1); // length relative to screen width
+      const top = Math.random() * window.innerHeight;
+      const left = Math.random() * window.innerWidth;
+
+      line.style.top = `${top}px`;
+      line.style.left = `${left}px`;
+      line.style.width = `${length}px`;
+      line.style.transformOrigin = 'left center';
+      line.style.transform = `rotate(${angle}deg) scaleX(0)`;
+      
+      document.body.appendChild(line);
+
+      setTimeout(() => {
+        line.remove();
+      }, 1000); // Animation duration
     }
-    100% {
-      opacity: 0;
-      transform: scaleX(1.2);
+
+    // Only run animation if not on a touch device or if user prefers animations
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (!prefersReducedMotion || prefersReducedMotion.matches === false) {
+        // Adjust interval for less frequent animations
+        setInterval(() => {
+            if (document.visibilityState === 'visible') { // Only run if tab is active
+                 createSignalLine();
+            }
+        }, 1500); // Increased interval
     }
-  }
-</style>
-
-<script>
-  function createSignalLine() {
-    const line = document.createElement('div');
-    line.className = 'signal-line';
-
-    const angle = Math.random() * 360;
-    const length = Math.random() * 50 + 150;
-    const top = Math.random() * window.innerHeight;
-    const left = Math.random() * window.innerWidth;
-
-    line.style.top = `${top}px`;
-    line.style.left = `${left}px`;
-    line.style.width = `${length}px`;
-    line.style.transformOrigin = 'left center';
-    line.style.transform = `rotate(${angle}deg) scaleX(0)`;
-    
-    document.body.appendChild(line);
-
-    setTimeout(() => {
-      line.remove();
-    }, 1000);
-  }
-
-  setInterval(() => {
-    createSignalLine();
-  }, 600);
-</script>
-<script>
-  Tally.loadEmbeds();
-</script></body>
+  </script>
+  
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    if (typeof Tally !== 'undefined' && typeof Tally.loadEmbeds === 'function') {
+        Tally.loadEmbeds();
+    }
+  </script>
+</body>
 </html>
