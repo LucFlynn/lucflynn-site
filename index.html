@@ -120,10 +120,11 @@
         background-color: #4F46E5; 
     }
 
-    /* Testimonials Section Styles */
+    /* Testimonials Section Styles - UPDATED */
     .testimonials-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        display: flex; /* CHANGED from grid */
+        flex-wrap: wrap; /* ADDED */
+        justify-content: center; /* ADDED to center items, especially the last row */
         gap: 1.5rem;
         margin-top: 2rem;
     }
@@ -132,8 +133,12 @@
         padding: 1.5rem;
         border-radius: 8px;
         border-left: 4px solid #6366F1; 
-        display: flex; /* Added for better internal alignment if needed */
-        flex-direction: column; /* Added for better internal alignment */
+        display: flex; 
+        flex-direction: column;
+        flex: 1 1 300px; /* CHANGED: flex-grow, flex-shrink, flex-basis */
+        max-width: 380px; /* ADDED: Optional, to prevent items getting too wide. Adjust as needed. (was 450px, trying a bit less) */
+                                  /* Max-width can be tricky with flex-grow:1. Test this. Or remove it to let them fill. */
+                                  /* If you want exactly 3 columns on wider screens, and then 2 centered, consider setting flex-basis closer to 30-32% and removing max-width here */
     }
     .testimonial-item .stars {
         color: #FFD700; 
@@ -144,14 +149,14 @@
         font-style: italic;
         color: #E0E0E0;
         margin-bottom: 1rem;
-        flex-grow: 1; /* Allows quote to take up space */
+        flex-grow: 1; 
     }
     .testimonial-item p.attribution {
         font-size: 0.9rem;
         color: #A6ADFF;
         font-weight: 600;
         text-align: right;
-        margin-top: auto; /* Pushes attribution to bottom if item heights vary */
+        margin-top: auto; 
     }
     .testimonial-item p.attribution .project-title {
         display: block;
