@@ -32,7 +32,7 @@
         color: #ccc;
     }
 
-    .hero-content { /* Renamed from .hero for clarity */
+    .hero-content { 
       display: flex;
       flex-wrap: wrap;
       align-items: center;
@@ -52,16 +52,16 @@
     }
     .hero-stats li {
         margin-bottom: 1rem;
-        background-color: #1E2251; /* Added background for visual grouping */
+        background-color: #1E2251; 
         padding: 0.75rem 1rem;
         border-radius: 6px;
     }
-    .hero-image { /* Renamed for clarity */
+    .hero-image { 
         flex: 0 0 auto;
     }
     .hero-image img {
-      border-radius: 12px; /* Was 8px, then 12px in inline style, harmonizing */
-      max-width: 250px; /* Adjusted from 200px in class, 300px inline */
+      border-radius: 12px; 
+      max-width: 250px; 
       width: 100%;
     }
     .section {
@@ -76,15 +76,15 @@
     .cards {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem; /* Reduced gap slightly for tighter card layout */
+      gap: 1rem; 
       justify-content: center;
-      margin-top: 1.5rem; /* Adjusted from 2rem */
+      margin-top: 1.5rem; 
     }
     .card {
       background: #1E2251;
-      padding: 1.5rem; /* Increased padding */
+      padding: 1.5rem; 
       border-radius: 8px;
-      flex: 1 1 280px; /* Adjusted flex basis */
+      flex: 1 1 280px; 
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -94,16 +94,16 @@
         font-size: 1.25rem;
         margin-top: 0;
         margin-bottom: 0.75rem;
-        color: #A6ADFF; /* Accent color for card titles */
+        color: #A6ADFF; 
     }
     .card p {
         font-size: 0.95rem;
-        color: #B0B8E0; /* Lighter text for card paragraph */
+        color: #B0B8E0; 
         margin-bottom: 1rem;
         flex-grow: 1;
     }
-    .card button, .tally-book-button { /* Styling the Tally modal button too */
-        background-color: #6366F1; /* Primary button color */
+    .card button, .tally-book-button { 
+        background-color: #6366F1; 
         color: white;
         border: none;
         padding: 0.75rem 1.5rem;
@@ -111,13 +111,13 @@
         font-weight: 600;
         cursor: pointer;
         transition: background-color 0.2s ease-in-out;
-        text-decoration: none; /* For <a> tags styled as buttons */
-        display: inline-block; /* For <a> tags */
+        text-decoration: none; 
+        display: inline-block; 
         font-family: 'Inter', sans-serif;
         font-size: 0.9rem;
     }
     .card button:hover, .tally-book-button:hover {
-        background-color: #4F46E5; /* Darker shade on hover */
+        background-color: #4F46E5; 
     }
 
     /* Testimonials Section Styles */
@@ -131,10 +131,12 @@
         background: #1E2251;
         padding: 1.5rem;
         border-radius: 8px;
-        border-left: 4px solid #6366F1; /* Accent border */
+        border-left: 4px solid #6366F1; 
+        display: flex; /* Added for better internal alignment if needed */
+        flex-direction: column; /* Added for better internal alignment */
     }
     .testimonial-item .stars {
-        color: #FFD700; /* Gold color for stars */
+        color: #FFD700; 
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
     }
@@ -142,12 +144,14 @@
         font-style: italic;
         color: #E0E0E0;
         margin-bottom: 1rem;
+        flex-grow: 1; /* Allows quote to take up space */
     }
     .testimonial-item p.attribution {
         font-size: 0.9rem;
         color: #A6ADFF;
         font-weight: 600;
         text-align: right;
+        margin-top: auto; /* Pushes attribution to bottom if item heights vary */
     }
     .testimonial-item p.attribution .project-title {
         display: block;
@@ -157,12 +161,12 @@
         font-size: 0.85rem;
     }
 
-    .tally-book-button-container { /* Container for the Book a Call button */
+    .tally-book-button-container { 
         text-align: center;
         margin-top: 3rem;
     }
     
-    .form-section { /* Ensuring some top margin if elements stack */
+    .form-section { 
         margin-top: 3rem;
     }
 
@@ -179,7 +183,7 @@
       position: fixed;
       background: linear-gradient(90deg, rgba(0,255,255,0.6), rgba(255,0,255,0.6));
       height: 2px;
-      z-index: 0; /* Kept as 0, might need adjustment if it overlaps interactive elements */
+      z-index: 0; 
       opacity: 0;
       pointer-events: none;
       animation: shoot 1s ease-out forwards;
@@ -196,7 +200,7 @@
       }
       100% {
         opacity: 0;
-        transform: scaleX(1.2); /* Adjusted slightly */
+        transform: scaleX(1.2); 
       }
     }
   </style>
@@ -229,15 +233,18 @@
         <div class="card">
           <h3>Paid Traffic Systems</h3>
           <p>How to Get Paid Traffic to Actually Convert.</p>
-          <button>Watch The Videos</button> </div>
+          <button>Watch The Videos</button> 
+        </div>
         <div class="card">
           <h3>Lead Gen Systems</h3>
           <p><em>[Placeholder: Describe strategies for converting paid traffic into qualified sales leads, or add a mini case study. This text can be updated later.]</em></p>
-          <button>Learn More</button> </div>
+          <button>Learn More</button> 
+        </div>
         <div class="card">
           <h3>Real-World Insights</h3>
           <p><em>[Placeholder: Share insights on day-to-day marketing operations, analytics, or platform nuances. This text can be updated later.]</em></p>
-          <button>Explore Insights</button> </div>
+          <button>Explore Insights</button> 
+        </div>
       </div>
     </div>
 
@@ -260,8 +267,14 @@
                 <p class="attribution">Client on Upwork <span class="project-title">Project: Profile Optimization for Business Consulting and Data Science on Upwork</span></p>
             </div>
              <div class="testimonial-item">
-                <div class="stars">★★★★☆</div> <p class="quote">"I hired Luc to help me understand and use Google Ads. He not only helped me understand how to use Google Ads but also provided sound marketing advice."</p>
+                <div class="stars">★★★★☆</div> 
+                <p class="quote">"I hired Luc to help me understand and use Google Ads. He not only helped me understand how to use Google Ads but also provided sound marketing advice."</p>
                 <p class="attribution">Client on Upwork <span class="project-title">Project: Help Me Use Google Ads to Find the Right Clients</span></p>
+            </div>
+            <div class="testimonial-item">
+                <div class="stars">★★★★★</div>
+                <p class="quote">"He helped us get our ads up when we needed it"</p>
+                <p class="attribution">Client on Upwork <span class="project-title">Project: Google ads setup for tiling company</span></p>
             </div>
         </div>
     </div>
@@ -278,8 +291,11 @@
         </button>
     </div>
 
-  </div> <div class="form-section"> 
-    <div style="max-width: 700px; margin: 3rem auto 0 auto; padding: 0 1rem;"> <iframe 
+  </div> 
+
+  <div class="form-section"> 
+    <div style="max-width: 700px; margin: 3rem auto 0 auto; padding: 0 1rem;"> 
+      <iframe 
         data-tally-src="https://tally.so/embed/w7ePZP?alignLeft=1&hideTitle=1&dynamicHeight=1" 
         loading="lazy" 
         width="100%" 
@@ -317,8 +333,7 @@
       line.className = 'signal-line';
 
       const angle = Math.random() * 360;
-      // Ensure length calculation is reasonable for different screen sizes
-      const length = Math.random() * (window.innerWidth * 0.15) + (window.innerWidth * 0.1); // length relative to screen width
+      const length = Math.random() * (window.innerWidth * 0.15) + (window.innerWidth * 0.1); 
       const top = Math.random() * window.innerHeight;
       const left = Math.random() * window.innerWidth;
 
@@ -332,18 +347,16 @@
 
       setTimeout(() => {
         line.remove();
-      }, 1000); // Animation duration
+      }, 1000); 
     }
 
-    // Only run animation if not on a touch device or if user prefers animations
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (!prefersReducedMotion || prefersReducedMotion.matches === false) {
-        // Adjust interval for less frequent animations
         setInterval(() => {
-            if (document.visibilityState === 'visible') { // Only run if tab is active
+            if (document.visibilityState === 'visible') { 
                  createSignalLine();
             }
-        }, 1500); // Increased interval
+        }, 1500); 
     }
   </script>
   
