@@ -201,19 +201,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     &copy; <span id="currentYear"></span> Luc Flynn. All rights reserved.
   </footer>
 
-  <script>
-    var d=document,w="https://tally.so/widgets/embed.js",v=function(){
-      "undefined"!=typeof Tally?Tally.loadEmbeds():
-      d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){
-        e.src=e.dataset.tallySrc
-      }))
-    };
-    if("undefined"!=typeof Tally)v();
-    else if(d.querySelector('script[src="'+w+'"]')==null){
-      var s=d.createElement("script");
-      s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);
-    }
-  </script>
+
   
   <script>
     function createSignalLine() {
