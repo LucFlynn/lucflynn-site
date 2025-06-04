@@ -307,50 +307,98 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 
   </div> 
-<!-- modify this form HTML and place wherever you want your form -->
 <form id="my-form" action="https://formspree.io/f/mblokqzw" method="POST">
-  <label>Email:</label>
-  <input type="email" name="email" />
-  <label>Name:</label>
-  <input type="name" name="name" />
-  <label>Message:</label>
-  <input type="text" name="message" />
+  <div>
+    <label for="first-name">First Name:</label>
+    <input type="text" name="first-name" id="first-name" required />
+  </div>
+  <div>
+    <label for="last-name">Last Name:</label>
+    <input type="text" name="last-name" id="last-name" required />
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required />
+  </div>
+  <div>
+    <label for="phone">Phone:</label>
+    <input type="tel" name="phone" id="phone" />
+  </div>
+  <div>
+    <label for="what-they-want">How can we help you?</label>
+    <textarea name="what-they-want" id="what-they-want" rows="5" required></textarea>
+  </div>
+
+  <input type="hidden" name="gclid" id="gclid_field" value="" />
+  <input type="hidden" name="fbclid" id="fbclid_field" value="" />
+
   <button id="my-form-button">Submit</button>
   <p id="my-form-status"></p>
 </form>
 
-<!-- Place this script at the end of the body tag -->
 <script>
   var form = document.getElementById("my-form");
-  
+
+  // Function to get URL parameters
+  function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  };
+
+  // Populate hidden fields with URL parameters if they exist
+  document.addEventListener("DOMContentLoaded", function() {
+    const gclidValue = getUrlParameter('gclid');
+    if (gclidValue) {
+      document.getElementById('gclid_field').value = gclidValue;
+    }
+
+    const fbclidValue = getUrlParameter('fbclid');
+    if (fbclidValue) {
+      document.getElementById('fbclid_field').value = fbclidValue;
+    }
+  });
+
   async function handleSubmit(event) {
     event.preventDefault();
     var status = document.getElementById("my-form-status");
     var data = new FormData(event.target);
+
+    // Optional: You could also repopulate hidden fields here just before submission
+    // if there's a chance they are set after initial page load but before submission
+    // though DOMContentLoaded should generally cover it.
+    // data.set('gclid', getUrlParameter('gclid'));
+    // data.set('fbclid', getUrlParameter('fbclid'));
+
+
     fetch(event.target.action, {
       method: form.method,
       body: data,
       headers: {
-          'Accept': 'application/json'
+        'Accept': 'application/json'
       }
     }).then(response => {
       if (response.ok) {
         status.innerHTML = "Thanks for your submission!";
-        form.reset()
+        form.reset();
+        // Clear hidden fields after successful submission if you want
+        // document.getElementById('gclid_field').value = '';
+        // document.getElementById('fbclid_field').value = '';
       } else {
         response.json().then(data => {
           if (Object.hasOwn(data, 'errors')) {
-            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
           } else {
-            status.innerHTML = "Oops! There was a problem submitting your form"
+            status.innerHTML = "Oops! There was a problem submitting your form";
           }
-        })
+        });
       }
     }).catch(error => {
-      status.innerHTML = "Oops! There was a problem submitting your form"
+      status.innerHTML = "Oops! There was a problem submitting your form";
     });
   }
-  form.addEventListener("submit", handleSubmit)
+  form.addEventListener("submit", handleSubmit);
 </script>
 
 
