@@ -14,223 +14,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-K5T59C5F');</script>
 <!-- End Google Tag Manager -->
+  <link rel="stylesheet" href="style.css">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #0B0F2F;
-      color: white;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    .header {
-      text-align: center;
-    }
-    .header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-    }
-    .header p {
-        font-size: 1.1rem;
-        color: #ccc;
-    }
-
-    .hero-content { 
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .hero-stats {
-        flex: 1 1 300px;
-        max-width: 500px;
-    }
-    .hero-stats ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        font-size: 1.1rem;
-    }
-    .hero-stats li {
-        margin-bottom: 1rem;
-        background-color: #1E2251; 
-        padding: 0.75rem 1rem;
-        border-radius: 6px;
-    }
-    .hero-image { 
-        flex: 0 0 auto;
-    }
-    .hero-image img {
-      border-radius: 12px; 
-      max-width: 250px; 
-      width: 100%;
-    }
-    .section {
-      margin-top: 3rem;
-    }
-    .section h2 {
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        color: #E0E0E0;
-    }
-    
-    /* Case Studies Section Styles */
-    .case-studies-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-        justify-content: center; /* Center items if only two */
-    }
-    .case-study-item {
-        background: #1E2251;
-        padding: 1.5rem 2rem; /* Slightly more horizontal padding */
-        border-radius: 8px;
-        flex: 1 1 400px; /* Allow them to be a bit wider if only two */
-        max-width: 460px; /* Max width for each case study */
-        border-top: 4px solid #6366F1; /* Changed accent to top */
-    }
-    .case-study-item h3 {
-        font-size: 1.35rem; /* Slightly larger heading for case studies */
-        margin-top: 0;
-        margin-bottom: 1rem;
-        color: #A6ADFF; 
-    }
-    .case-study-item strong { /* For Problem, Solution, Result labels */
-        color: #C0C5FF;
-        font-weight: 600;
-    }
-    .case-study-item p {
-        font-size: 0.95rem;
-        color: #B0B8E0; 
-        margin-bottom: 0.75rem;
-    }
-    .case-study-item .moral, .case-study-item .cta-text {
-        font-style: italic;
-        color: #ccc;
-        margin-top: 1rem;
-        font-size: 0.9rem;
-    }
-    .case-study-item .cta-text a {
-        color: #A6ADFF;
-        text-decoration: underline;
-    }
-    .case-study-item .cta-text a:hover {
-        color: #8990EF;
-    }
-
-
-    /* Testimonials Section Styles */
-    .testimonials-grid {
-        display: flex; 
-        flex-wrap: wrap; 
-        justify-content: center; 
-        gap: 1.5rem;
-        margin-top: 2rem;
-    }
-    .testimonial-item {
-        background: #1E2251;
-        padding: 1.5rem;
-        border-radius: 8px;
-        border-left: 4px solid #6366F1; 
-        display: flex; 
-        flex-direction: column;
-        flex: 1 1 300px; 
-        max-width: 380px; 
-    }
-    .testimonial-item .stars {
-        color: #FFD700; 
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-    }
-    .testimonial-item p.quote {
-        font-style: italic;
-        color: #E0E0E0;
-        margin-bottom: 1rem;
-        flex-grow: 1; 
-    }
-    .testimonial-item p.attribution {
-        font-size: 0.9rem;
-        color: #A6ADFF;
-        font-weight: 600;
-        text-align: right;
-        margin-top: auto; 
-    }
-    .testimonial-item p.attribution .project-title {
-        display: block;
-        font-weight: normal;
-        font-style: italic;
-        color: #8A93C4;
-        font-size: 0.85rem;
-    }
-
-    .tally-book-button { /* Copied from .card button for consistency */
-        background-color: #6366F1; 
-        color: white;
-        border: none;
-        padding: 0.75rem 1.5rem;
-        border-radius: 6px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background-color 0.2s ease-in-out;
-        text-decoration: none; 
-        display: inline-block; 
-        font-family: 'Inter', sans-serif;
-        font-size: 0.9rem;
-    }
-    .tally-book-button:hover {
-        background-color: #4F46E5;
-    }
-    .tally-book-button-container { 
-        text-align: center;
-        margin-top: 3rem;
-    }
-    
-    .form-section { 
-        margin-top: 3rem;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.875rem;
-      padding: 2rem 0;
-      color: #aaa;
-      margin-top: 3rem;
-    }
-
-    /* Signal Line Animation (kept from original) */
-    .signal-line {
-      position: fixed;
-      background: linear-gradient(90deg, rgba(0,255,255,0.6), rgba(255,0,255,0.6));
-      height: 2px;
-      z-index: 0; 
-      opacity: 0;
-      pointer-events: none;
-      animation: shoot 1s ease-out forwards;
-    }
-
-    @keyframes shoot {
-      0% {
-        opacity: 0;
-        transform: scaleX(0);
-      }
-      10% {
-        opacity: 1;
-        transform: scaleX(1);
-      }
-      100% {
-        opacity: 0;
-        transform: scaleX(1.2); 
-      }
-    }
-  </style>
+ 
   <script src="https://tally.so/widgets/embed.js"></script>
 </head>
 <body>
@@ -363,16 +149,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     var status = document.getElementById("my-form-status");
     var data = new FormData(event.target);
 
+    // ... (inside async function handleSubmit(event))
     fetch(event.target.action, {
       method: form.method,
       body: data,
       headers: {
-        'Accept': 'application/json'
+          'Accept': 'application/json'
       }
     }).then(response => {
       if (response.ok) {
         status.innerHTML = "Thanks for your submission!";
         form.reset();
+        // Optionally clear hidden fields if needed
+        // document.getElementById('gclid_field').value = '';
+        // document.getElementById('fbclid_field').value = '';
       } else {
         response.json().then(data => {
           if (Object.hasOwn(data, 'errors')) {
@@ -382,7 +172,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }
         });
       }
-    }).
+    }).catch(error => { // Added the .catch() block for network errors
+      status.innerHTML = "Oops! There was a problem submitting your form";
+    });
+  } // End of handleSubmit function
+
+  form.addEventListener("submit", handleSubmit);
+</script>
 
 
   <div class="form-section"> 

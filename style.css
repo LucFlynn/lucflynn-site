@@ -1,0 +1,297 @@
+ <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0B0F2F;
+      color: white;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .header {
+      text-align: center;
+    }
+    .header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .header p {
+        font-size: 1.1rem;
+        color: #ccc;
+    }
+
+    .hero-content { 
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .hero-stats {
+        flex: 1 1 300px;
+        max-width: 500px;
+    }
+    .hero-stats ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1.1rem;
+    }
+    .hero-stats li {
+        margin-bottom: 1rem;
+        background-color: #1E2251; 
+        padding: 0.75rem 1rem;
+        border-radius: 6px;
+    }
+    .hero-image { 
+        flex: 0 0 auto;
+    }
+    .hero-image img {
+      border-radius: 12px; 
+      max-width: 250px; 
+      width: 100%;
+    }
+    .section {
+      margin-top: 3rem;
+    }
+    .section h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #E0E0E0;
+    }
+    
+    /* Case Studies Section Styles */
+    .case-studies-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center; /* Center items if only two */
+    }
+    .case-study-item {
+        background: #1E2251;
+        padding: 1.5rem 2rem; /* Slightly more horizontal padding */
+        border-radius: 8px;
+        flex: 1 1 400px; /* Allow them to be a bit wider if only two */
+        max-width: 460px; /* Max width for each case study */
+        border-top: 4px solid #6366F1; /* Changed accent to top */
+    }
+    .case-study-item h3 {
+        font-size: 1.35rem; /* Slightly larger heading for case studies */
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: #A6ADFF; 
+    }
+    .case-study-item strong { /* For Problem, Solution, Result labels */
+        color: #C0C5FF;
+        font-weight: 600;
+    }
+    .case-study-item p {
+        font-size: 0.95rem;
+        color: #B0B8E0; 
+        margin-bottom: 0.75rem;
+    }
+    .case-study-item .moral, .case-study-item .cta-text {
+        font-style: italic;
+        color: #ccc;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+    .case-study-item .cta-text a {
+        color: #A6ADFF;
+        text-decoration: underline;
+    }
+    .case-study-item .cta-text a:hover {
+        color: #8990EF;
+    }
+
+
+    /* Testimonials Section Styles */
+    .testimonials-grid {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    .testimonial-item {
+        background: #1E2251;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid #6366F1; 
+        display: flex; 
+        flex-direction: column;
+        flex: 1 1 300px; 
+        max-width: 380px; 
+    }
+    .testimonial-item .stars {
+        color: #FFD700; 
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .testimonial-item p.quote {
+        font-style: italic;
+        color: #E0E0E0;
+        margin-bottom: 1rem;
+        flex-grow: 1; 
+    }
+    .testimonial-item p.attribution {
+        font-size: 0.9rem;
+        color: #A6ADFF;
+        font-weight: 600;
+        text-align: right;
+        margin-top: auto; 
+    }
+    .testimonial-item p.attribution .project-title {
+        display: block;
+        font-weight: normal;
+        font-style: italic;
+        color: #8A93C4;
+        font-size: 0.85rem;
+    }
+
+    .tally-book-button { /* Copied from .card button for consistency */
+        background-color: #6366F1; 
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        text-decoration: none; 
+        display: inline-block; 
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+    }
+    .tally-book-button:hover {
+        background-color: #4F46E5;
+    }
+    .tally-book-button-container { 
+        text-align: center;
+        margin-top: 3rem;
+    }
+    
+    .form-section { 
+        margin-top: 3rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.875rem;
+      padding: 2rem 0;
+      color: #aaa;
+      margin-top: 3rem;
+    }
+
+    /* Signal Line Animation (kept from original) */
+    .signal-line {
+      position: fixed;
+      background: linear-gradient(90deg, rgba(0,255,255,0.6), rgba(255,0,255,0.6));
+      height: 2px;
+      z-index: 0; 
+      opacity: 0;
+      pointer-events: none;
+      animation: shoot 1s ease-out forwards;
+    }
+
+    @keyframes shoot {
+      0% {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+      10% {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scaleX(1.2); 
+      }
+    }
+
+    /* Styles for the Formspree form in form-style.css */
+
+#my-form {
+  max-width: 700px; /* Consistent with your Tally form section */
+  margin: 3rem auto; /* Centers the form block with top/bottom margin */
+  padding: 30px;   /* A bit more padding for a spacious feel */
+  background-color: #1E2251; /* Matches your .case-study-item background */
+  border-radius: 8px;
+  /* border-top: 4px solid #6366F1; */ /* Optional: matches case study accent if desired */
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif; /* Ensure consistent font */
+}
+
+#my-form .form-group {
+  margin-bottom: 22px; /* Spacing between form fields */
+}
+
+#my-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #E0E0E0; /* Light color for labels */
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+#my-form .form-input,
+#my-form .form-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #4A5070; /* Border color fitting the dark theme */
+  background-color: #FFFFFF; /* White background for input fields */
+  color: #222222; /* Dark text color inside input fields */
+  border-radius: 6px; /* Matches other rounded elements on your site */
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5; /* Improved readability for input text */
+}
+
+#my-form .form-input:focus,
+#my-form .form-textarea:focus {
+  outline: none;
+  border-color: #6366F1; /* Your site's accent color for focus */
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.35); /* Subtle focus glow */
+}
+
+#my-form .form-textarea {
+  min-height: 130px; /* Slightly taller textarea */
+  resize: vertical;
+}
+
+#my-form .form-button {
+  background-color: #6366F1; /* Your site's accent color */
+  color: white;
+  border: none;
+  padding: 12px 28px; /* Generous padding for a primary button */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  font-family: 'Inter', sans-serif;
+  margin-top: 10px; /* Add some space above the button */
+}
+
+#my-form .form-button:hover {
+  background-color: #4F46E5; /* Consistent hover color from your site */
+}
+
+#my-form .form-status {
+  margin-top: 20px;
+  color: #E0E0E0;
+  text-align: center;
+  min-height: 20px;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+}
+  </style>
