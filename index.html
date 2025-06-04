@@ -307,39 +307,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 
   </div> 
-<form id="my-form" action="https://formspree.io/f/mblokqzw" method="POST">
-  <div>
+<form id="my-form" class="custom-form" action="https://formspree.io/f/mblokqzw" method="POST">
+  <div class="form-group">
     <label for="first-name">First Name:</label>
-    <input type="text" name="first-name" id="first-name" required />
+    <input type="text" name="first-name" id="first-name" class="form-input" required />
   </div>
-  <div>
+  <div class="form-group">
     <label for="last-name">Last Name:</label>
-    <input type="text" name="last-name" id="last-name" required />
+    <input type="text" name="last-name" id="last-name" class="form-input" required />
   </div>
-  <div>
+  <div class="form-group">
     <label for="email">Email:</label>
-    <input type="email" name="email" id="email" required />
+    <input type="email" name="email" id="email" class="form-input" required />
   </div>
-  <div>
+  <div class="form-group">
     <label for="phone">Phone:</label>
-    <input type="tel" name="phone" id="phone" />
+    <input type="tel" name="phone" id="phone" class="form-input" />
   </div>
-  <div>
+  <div class="form-group">
     <label for="what-they-want">How can we help you?</label>
-    <textarea name="what-they-want" id="what-they-want" rows="5" required></textarea>
+    <textarea name="what-they-want" id="what-they-want" class="form-textarea" rows="5" required></textarea>
   </div>
 
   <input type="hidden" name="gclid" id="gclid_field" value="" />
   <input type="hidden" name="fbclid" id="fbclid_field" value="" />
 
-  <button id="my-form-button">Submit</button>
-  <p id="my-form-status"></p>
+  <button type="submit" id="my-form-button" class="form-button">Submit</button>
+  <p id="my-form-status" class="form-status"></p>
 </form>
 
 <script>
   var form = document.getElementById("my-form");
 
-  // Function to get URL parameters
   function getUrlParameter(name) {
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -347,7 +346,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
   };
 
-  // Populate hidden fields with URL parameters if they exist
   document.addEventListener("DOMContentLoaded", function() {
     const gclidValue = getUrlParameter('gclid');
     if (gclidValue) {
@@ -365,13 +363,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     var status = document.getElementById("my-form-status");
     var data = new FormData(event.target);
 
-    // Optional: You could also repopulate hidden fields here just before submission
-    // if there's a chance they are set after initial page load but before submission
-    // though DOMContentLoaded should generally cover it.
-    // data.set('gclid', getUrlParameter('gclid'));
-    // data.set('fbclid', getUrlParameter('fbclid'));
-
-
     fetch(event.target.action, {
       method: form.method,
       body: data,
@@ -382,9 +373,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       if (response.ok) {
         status.innerHTML = "Thanks for your submission!";
         form.reset();
-        // Clear hidden fields after successful submission if you want
-        // document.getElementById('gclid_field').value = '';
-        // document.getElementById('fbclid_field').value = '';
       } else {
         response.json().then(data => {
           if (Object.hasOwn(data, 'errors')) {
@@ -394,12 +382,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }
         });
       }
-    }).catch(error => {
-      status.innerHTML = "Oops! There was a problem submitting your form";
-    });
-  }
-  form.addEventListener("submit", handleSubmit);
-</script>
+    }).
 
 
   <div class="form-section"> 
