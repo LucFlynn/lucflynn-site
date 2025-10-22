@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ad Account Health Check | Get Your 3 Improvements</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K5T59C5F');</script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="stylesheet" href="leadflow.css">
+  <style>
+    /* Health Check Specific Styles */
+    .health-check-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .health-check-card {
+      background: linear-gradient(135deg, #1E2251 0%, #252a5f 100%);
+      padding: 3rem;
+      border-radius: 16px;
+      max-width: 700px;
+      width: 100%;
+      border: 2px solid #6366F1;
+      box-shadow: 0 12px 32px rgba(99, 102, 241, 0.2);
+    }
+
+    .health-check-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .health-check-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .health-check-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+    }
+
+    .health-check-subtitle {
+      font-size: 1.1rem;
+      color: #B0B8E0;
+      line-height: 1.6;
+    }
+
+    .video-help {
+      background: rgba(99, 102, 241, 0.1);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .video-help-text {
+      font-size: 0.95rem;
+      color: #A6ADFF;
+      margin-bottom: 0.75rem;
+    }
+
+    .video-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #6366F1;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .video-link:hover {
+      color: #8B5CF6;
+    }
+
+    .form-section {
+      margin-bottom: 2rem;
+    }
+
+    .input-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .input-label {
+      display: block;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #E0E0E0;
+      margin-bottom: 0.5rem;
+    }
+
+    .input-help {
+      display: block;
+      font-size: 0.85rem;
+      color: #8A93C4;
+      margin-bottom: 0.5rem;
+      font-style: italic;
+    }
+
+    .health-input {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      border: 2px solid #4A5070;
+      background: #FFFFFF;
+      color: #222222;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.3s ease;
+    }
+
+    .health-input:focus {
+      outline: none;
+      border-color: #6366F1;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    }
+
+    .health-input::placeholder {
+      color: #999;
+    }
+
+    .calculate-btn {
+      width: 100%;
+      padding: 1.2rem 2rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      background: #6366F1;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .calculate-btn:hover {
+      background: #4F46E5;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    }
+
+    .calculate-btn:disabled {
+      background: #4A5070;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .error-message {
+      background: rgba(255, 107, 157, 0.1);
+      border-left: 4px solid #FF6B9D;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      display: none;
+    }
+
+    .error-message.show {
+      display: block;
+    }
+
+    .error-text {
+      color: #FFB3CD;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .health-check-card {
+        padding: 2rem 1.5rem;
+      }
+
+      .health-check-title {
+        font-size: 1.6rem;
+      }
+
+      .health-check-subtitle {
+        font-size: 1rem;
+      }
+
+      .health-input {
+        font-size: 1rem;
+      }
+
+      .calculate-btn {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="health-check-container">
+    <div class="health-check-card">
+      <div class="health-check-header">
+        <div class="health-check-icon">📊</div>
+        <h1 class="health-check-title">Ad Account Health Check</h1>
+        <p class="health-check-subtitle">Enter your last 30 days of data to get 3 specific improvements</p>
+      </div>
+
+      <div class="video-help">
+        <p class="video-help-text">Not sure where to find these numbers?</p>
+        <a href="#" class="video-link">
+          <span>▶️</span>
+          <span>Watch 60-second tutorial</span>
+        </a>
+      </div>
+
+      <div class="error-message" id="error-message">
+        <p class="error-text" id="error-text"></p>
+      </div>
+
+      <form id="health-check-form" class="form-section">
+        <div class="input-group">
+          <label for="impressions" class="input-label">Impressions</label>
+          <span class="input-help">Total number of times your ads were shown</span>
+          <input
+            type="number"
+            id="impressions"
+            name="impressions"
+            class="health-input"
+            placeholder="e.g., 50000"
+            min="0"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="clicks" class="input-label">Clicks</label>
+          <span class="input-help">Total clicks on your ads</span>
+          <input
+            type="number"
+            id="clicks"
+            name="clicks"
+            class="health-input"
+            placeholder="e.g., 2000"
+            min="0"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="conversions" class="input-label">Conversions</label>
+          <span class="input-help">Leads, calls, form fills, purchases, etc.</span>
+          <input
+            type="number"
+            id="conversions"
+            name="conversions"
+            class="health-input"
+            placeholder="e.g., 100"
+            min="0"
+            step="0.01"
+            required
+          />
+        </div>
+
+        <div class="input-group">
+          <label for="cost" class="input-label">Total Cost</label>
+          <span class="input-help">Total ad spend in dollars</span>
+          <input
+            type="number"
+            id="cost"
+            name="cost"
+            class="health-input"
+            placeholder="e.g., 5000"
+            min="0"
+            step="0.01"
+            required
+          />
+        </div>
+
+        <button type="submit" class="calculate-btn">Get My 3 Improvements</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // ===========================================
+    // BENCHMARKS - Easy to adjust here
+    // ===========================================
+    const BENCHMARKS = {
+      minCTR: 3,        // Minimum acceptable CTR %
+      minCVR: 3,        // Minimum acceptable CVR %
+      maxCPC: 20,       // Maximum acceptable CPC $
+      maxCPL: 150       // Maximum acceptable CPL $
+    };
+
+    // ===========================================
+    // Form Handling
+    // ===========================================
+    const form = document.getElementById('health-check-form');
+    const errorMessage = document.getElementById('error-message');
+    const errorText = document.getElementById('error-text');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Clear previous errors
+      errorMessage.classList.remove('show');
+
+      // Get form values
+      const impressions = parseFloat(document.getElementById('impressions').value);
+      const clicks = parseFloat(document.getElementById('clicks').value);
+      const conversions = parseFloat(document.getElementById('conversions').value);
+      const cost = parseFloat(document.getElementById('cost').value);
+
+      // Validation
+      if (impressions <= 0 || clicks <= 0 || conversions < 0 || cost <= 0) {
+        showError('Please enter valid positive numbers for all fields.');
+        return;
+      }
+
+      if (clicks > impressions) {
+        showError('Clicks cannot be greater than impressions.');
+        return;
+      }
+
+      if (conversions > clicks) {
+        showError('Conversions cannot be greater than clicks.');
+        return;
+      }
+
+      // Calculate metrics
+      const ctr = (clicks / impressions) * 100;
+      const cvr = clicks > 0 ? (conversions / clicks) * 100 : 0;
+      const cpc = cost / clicks;
+      const cpl = conversions > 0 ? cost / conversions : 0;
+
+      // Store data in localStorage
+      const data = {
+        impressions,
+        clicks,
+        conversions,
+        cost,
+        ctr,
+        cvr,
+        cpc,
+        cpl,
+        timestamp: new Date().toISOString()
+      };
+
+      localStorage.setItem('healthCheckData', JSON.stringify(data));
+
+      // Redirect to results page
+      window.location.href = 'healthcheck-results.html';
+    });
+
+    function showError(message) {
+      errorText.textContent = message;
+      errorMessage.classList.add('show');
+      errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  </script>
+
+</body>
+</html>
