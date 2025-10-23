@@ -1054,6 +1054,40 @@ section {
   font-style: italic;
 }
 
+.testimonial-stars {
+  color: #FFD700;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  color: #E0E0E0;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-size: 1rem;
+  display: block;
+  border: none;
+  padding: 0;
+}
+
+.testimonial-author {
+  color: #A6ADFF;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-author span {
+  display: block;
+  color: #8A93C4;
+  font-size: 0.85rem;
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
 .attribution {
   color: #A6ADFF;
   font-weight: 600;
