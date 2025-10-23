@@ -36,7 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </ul>
     </div>
     <div class="hero-image">
-      <img src="headshot.jpg" alt="Luc Flynn Headshot" />
+      <img src="assets/images/headshot.jpg" alt="Luc Flynn Headshot" />
     </div>
   </div>
 </div>
@@ -160,6 +160,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }).then(response => {
       if (response.ok) {
         status.innerHTML = "Thanks for your submission!";
+
+        // Fire GTM conversion event
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            'event': 'form_submission',
+            'form_name': 'contact_form'
+          });
+        }
+
         form.reset();
         // Optionally clear hidden fields if needed
         // document.getElementById('gclid_field').value = '';
