@@ -354,6 +354,18 @@
 
       localStorage.setItem('healthCheckData', JSON.stringify(data));
 
+      // Fire GTM conversion event for health check quiz completion
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          'event': 'health_check_completed',
+          'quiz_name': 'ad_account_health_check',
+          'ctr': ctr.toFixed(2),
+          'cvr': cvr.toFixed(2),
+          'cpc': cpc.toFixed(2),
+          'cpl': cpl.toFixed(2)
+        });
+      }
+
       // Redirect to results page
       window.location.href = '../campaign-templates/Medspas/healthcheck-results.html';
     });
