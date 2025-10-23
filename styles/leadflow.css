@@ -1009,7 +1009,7 @@ section {
 
 .testimonial-card {
   background: #1E2251;
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 2.5rem;
   border-radius: 12px;
   border-left: 4px solid #6366F1;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
