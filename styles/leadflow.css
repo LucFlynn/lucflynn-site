@@ -1063,7 +1063,7 @@ section {
 .testimonial-text {
   color: #E0E0E0;
   font-style: italic;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   line-height: 1.7;
   font-size: 1rem;
   display: block;
@@ -1072,11 +1072,14 @@ section {
 }
 
 .testimonial-author {
-  color: #A6ADFF;
-  font-weight: 600;
-  font-size: 0.95rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
   display: block;
   margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(99, 102, 241, 0.2);
 }
 
 .testimonial-author span {
@@ -1084,8 +1087,9 @@ section {
   color: #8A93C4;
   font-size: 0.85rem;
   font-weight: 400;
-  font-style: italic;
-  margin-top: 0.25rem;
+  font-style: normal;
+  margin-top: 0.5rem;
+  line-height: 1.4;
 }
 
 .attribution {
