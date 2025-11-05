@@ -513,7 +513,7 @@ section {
 
 /* Case Studies Visual */
 .case-studies-visual {
-  background: #f5f5f5;
+  background: #0f1338;
   padding: 5rem 0;
 }
 
@@ -525,20 +525,28 @@ section {
 }
 
 .case-study {
-  background: white;
+  background: linear-gradient(135deg, #1E2251 0%, #252a5f 100%);
   border-radius: 16px;
   padding: 48px;
   max-width: 640px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.2);
   position: relative;
   overflow: hidden;
+  border: 2px solid rgba(99, 102, 241, 0.3);
+  transition: all 0.3s ease;
+}
+
+.case-study:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.3);
+  border-color: #6366F1;
 }
 
 .industry-tag {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
   color: white;
   padding: 8px 32px;
   font-size: 13px;
@@ -555,27 +563,28 @@ section {
 .headline-main {
   font-size: 36px;
   font-weight: 700;
-  color: #111;
+  color: #FFFFFF;
   line-height: 1.2;
   margin-bottom: 8px;
 }
 
 .headline-sub {
   font-size: 18px;
-  color: #666;
+  color: #A6ADFF;
   font-weight: 400;
 }
 
 .timeframe {
   display: inline-block;
-  background: #f0fdf4;
-  color: #166534;
+  background: rgba(99, 102, 241, 0.15);
+  color: #A6ADFF;
   padding: 6px 16px;
   border-radius: 6px;
   font-size: 14px;
   font-weight: 600;
   margin-top: 16px;
   margin-bottom: 32px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
 .metrics-container {
@@ -589,14 +598,16 @@ section {
   align-items: center;
   gap: 24px;
   padding: 24px;
-  background: #fafafa;
+  background: rgba(11, 15, 47, 0.5);
   border-radius: 12px;
   transition: all 0.3s ease;
+  border: 1px solid rgba(99, 102, 241, 0.2);
 }
 
 .metric-row:hover {
-  background: #f5f5f5;
+  background: rgba(99, 102, 241, 0.1);
   transform: translateY(-2px);
+  border-color: rgba(99, 102, 241, 0.4);
 }
 
 .metric-box {
@@ -607,7 +618,7 @@ section {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #888;
+  color: #8A93C4;
   font-weight: 600;
   margin-bottom: 8px;
 }
@@ -615,15 +626,15 @@ section {
 .metric-value {
   font-size: 32px;
   font-weight: 700;
-  color: #111;
+  color: #FFFFFF;
 }
 
 .before .metric-value {
-  color: #666;
+  color: #B0B8E0;
 }
 
 .after .metric-value {
-  color: #16a34a;
+  color: #10B981;
 }
 
 .change-indicator {
@@ -635,26 +646,26 @@ section {
 
 .arrow {
   font-size: 24px;
-  color: #16a34a;
+  color: #6366F1;
 }
 
 .change-value {
   font-size: 20px;
   font-weight: 700;
-  color: #16a34a;
+  color: #10B981;
   white-space: nowrap;
 }
 
 .cta-section {
   margin-top: 40px;
   padding-top: 32px;
-  border-top: 2px solid #f0f0f0;
+  border-top: 2px solid rgba(99, 102, 241, 0.2);
 }
 
 .cta-button {
   display: block;
   width: 100%;
-  background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
   color: white;
   text-align: center;
   padding: 18px 32px;
@@ -663,26 +674,27 @@ section {
   font-weight: 600;
   font-size: 16px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
 }
 
 .additional-context {
   margin-top: 32px;
   padding: 20px;
-  background: #f9fafb;
+  background: rgba(99, 102, 241, 0.1);
   border-radius: 8px;
-  border-left: 4px solid #7c3aed;
+  border-left: 4px solid #6366F1;
 }
 
 .context-title {
   font-size: 14px;
   font-weight: 700;
-  color: #111;
+  color: #FFFFFF;
   margin-bottom: 8px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -690,7 +702,7 @@ section {
 
 .context-text {
   font-size: 14px;
-  color: #666;
+  color: #B0B8E0;
   line-height: 1.6;
 }
 
@@ -710,13 +722,8 @@ section {
 .case-study.variation-2 .metric-name {
   font-size: 14px;
   font-weight: 600;
-  color: #111;
+  color: #FFFFFF;
   margin-bottom: 12px;
-}
-
-/* Case Studies Section Title Override */
-.case-studies-visual .section-title {
-  color: #111;
 }
 
 /* Responsive for Case Studies */
