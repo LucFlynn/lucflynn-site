@@ -11,11 +11,11 @@ Last Updated: November 4, 2025
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Google Ads SOP — Keyword Optimization | Luc Flynn</title>
   <meta name="description" content="Step-by-step keyword optimization SOP for Google Ads: thresholds, restructuring, match types, negatives, and QA checklists to fix wasted spend." />
-  <link rel="canonical" href="https://lucflynn.com/sop/keyword-optimization" />
+  <link rel="canonical" href="https://lucflynn.com/pages/sop/keyword-optimization" />
   <meta property="og:title" content="Google Ads SOP — Keyword Optimization" />
   <meta property="og:description" content="Actionable, field-tested SOP to diagnose and fix keyword-layer bottlenecks in Google Ads." />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://lucflynn.com/sop/keyword-optimization" />
+  <meta property="og:url" content="https://lucflynn.com/pages/sop/keyword-optimization" />
   <meta property="og:site_name" content="Luc Flynn" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -34,6 +34,13 @@ Last Updated: November 4, 2025
   <style>
     .prose :where(code):not(:where([class~="not-prose"])) {background:#0b1220; color:#d1e9ff; padding:.15rem .35rem; border-radius:.35rem}
     .section-anchor { scroll-margin-top: 120px; }
+    body { background: #0B0F2F; }
+    .prose-dark { color: #E0E0E0; }
+    .prose-dark h1, .prose-dark h2, .prose-dark h3 { color: #FFFFFF; }
+    .prose-dark strong { color: #A6ADFF; }
+    .card-dark { background: linear-gradient(135deg, #1E2251 0%, #252a5f 100%); border-color: rgba(99, 102, 241, 0.3); }
+    .card-dark:hover { border-color: #6366F1; box-shadow: 0 8px 24px rgba(99, 102, 241, 0.2); }
+    .protip-box { background: rgba(99, 102, 241, 0.1); border-left: 4px solid #6366F1; }
   </style>
   <script type="application/ld+json">
     {
@@ -50,14 +57,14 @@ Last Updated: November 4, 2025
     }
   </script>
 </head>
-<body class="bg-slate-50 text-slate-900">
-  <header class="border-b border-slate-200 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-40">
+<body class="prose-dark">
+  <header class="border-b border-slate-700 bg-slate-900/70 backdrop-blur sticky top-0 z-40">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-      <a href="/" class="font-semibold tracking-tight text-slate-800 hover:text-brand-700">Luc Flynn</a>
+      <a href="/" class="font-semibold tracking-tight text-white hover:text-purple-400">Luc Flynn</a>
       <nav class="text-sm hidden sm:flex gap-4">
-        <a class="hover:text-brand-700" href="/sop/keyword-optimization">Keyword SOP</a>
-        <a class="hover:text-brand-700" href="/sop/campaign-optimization">Campaign SOP</a>
-        <a class="hover:text-brand-700" href="/sop/scaling">Scaling SOP</a>
+        <a class="text-purple-400 font-semibold" href="/pages/sop/keyword-optimization">Keyword SOP</a>
+        <a class="text-gray-300 hover:text-purple-400" href="/pages/sop/campaign-optimization">Campaign SOP</a>
+        <a class="text-gray-300 hover:text-purple-400" href="/pages/sop/scaling">Scaling SOP</a>
       </nav>
     </div>
   </header>
@@ -67,19 +74,20 @@ Last Updated: November 4, 2025
       <!-- TOC -->
       <aside class="lg:col-span-3 order-last lg:order-first">
         <div class="lg:sticky lg:top-28 space-y-4">
-          <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-            <h2 class="text-sm font-semibold text-slate-700">On this page</h2>
+          <div class="card-dark border-2 rounded-2xl p-4 shadow-sm">
+            <h2 class="text-sm font-semibold text-white">On this page</h2>
             <ol class="mt-3 text-sm leading-6 space-y-1">
-              <li><a class="text-slate-700 hover:text-brand-700" href="#objective">Objective</a></li>
-              <li><a class="text-slate-700 hover:text-brand-700" href="#steps">Steps</a></li>
-              <li><a class="text-slate-700 hover:text-brand-700" href="#deliverables">Deliverables</a></li>
-              <li><a class="text-slate-700 hover:text-brand-700" href="#cadence">Cadence</a></li>
-              <li><a class="text-slate-700 hover:text-brand-700" href="#faq">FAQ</a></li>
+              <li><a class="text-gray-300 hover:text-purple-400" href="#objective">Objective</a></li>
+              <li><a class="text-gray-300 hover:text-purple-400" href="#steps">Steps</a></li>
+              <li><a class="text-gray-300 hover:text-purple-400" href="#protips">Pro Tips</a></li>
+              <li><a class="text-gray-300 hover:text-purple-400" href="#deliverables">Deliverables</a></li>
+              <li><a class="text-gray-300 hover:text-purple-400" href="#cadence">Cadence</a></li>
+              <li><a class="text-gray-300 hover:text-purple-400" href="#faq">FAQ</a></li>
             </ol>
           </div>
-          <div class="bg-slate-900 text-slate-100 rounded-2xl p-4 shadow-sm">
-            <h3 class="text-sm font-semibold">Weekly Report Flag: Keywords</h3>
-            <p class="mt-2 text-sm/6 text-slate-300">If your weekly report flags <em>Keywords are the bottleneck</em>, run this SOP exactly, then re‑evaluate in 7–14 days.</p>
+          <div class="protip-box rounded-2xl p-4 shadow-sm">
+            <h3 class="text-sm font-semibold text-white">Weekly Report Flag: Keywords</h3>
+            <p class="mt-2 text-sm/6 text-gray-300">If your weekly report flags <em>Keywords are the bottleneck</em>, run this SOP exactly, then re‑evaluate in 7–14 days.</p>
           </div>
         </div>
       </aside>
@@ -182,8 +190,8 @@ Last Updated: November 4, 2025
         <footer class="mt-12 border-t border-slate-200 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p class="text-sm text-slate-500">Part of the ElectroRaven Optimization Series.</p>
           <div class="flex gap-3">
-            <a href="/sop/campaign-optimization" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm hover:border-brand-300">Next: Campaign SOP →</a>
-            <a href="/sop/scaling" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm hover:border-brand-300">Or jump to Scaling</a>
+            <a href="/pages/sop/campaign-optimization" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm hover:border-brand-300">Next: Campaign SOP →</a>
+            <a href="/pages/sop/scaling" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm hover:border-brand-300">Or jump to Scaling</a>
           </div>
         </footer>
       </article>
