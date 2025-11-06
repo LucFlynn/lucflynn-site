@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True Cost Per Customer Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2d5a7b 100%);
+            color: #fff;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #93c5fd;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .warning-box {
+            background: rgba(239, 68, 68, 0.15);
+            border-left: 4px solid #ef4444;
+            padding: 15px 20px;
+            border-radius: 8px;
+            color: #fca5a5;
+            font-size: 0.95rem;
+        }
+
+        .calculator-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #60a5fa;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-label {
+            display: block;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #e0e7ff;
+        }
+
+        .helper-text {
+            font-size: 0.85rem;
+            color: #93c5fd;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .input-wrapper {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 12px 15px;
+            color: #fff;
+            font-size: 1.1rem;
+            width: 180px;
+            transition: all 0.3s ease;
+        }
+
+        input[type="number"]:focus,
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #60a5fa;
+            background: rgba(96, 165, 250, 0.1);
+        }
+
+        .input-prefix {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #93c5fd;
+            font-size: 1.1rem;
+        }
+
+        .input-suffix {
+            color: #93c5fd;
+            font-size: 1rem;
+        }
+
+        .quick-options {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .quick-option {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .quick-option:hover {
+            background: rgba(96, 165, 250, 0.2);
+            border-color: #60a5fa;
+        }
+
+        .results-section {
+            display: none;
+        }
+
+        .results-section.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .comparison-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .comparison-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comparison-card.thinking {
+            border-color: rgba(147, 197, 253, 0.3);
+        }
+
+        .comparison-card.reality {
+            border-color: rgba(239, 68, 68, 0.5);
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .card-title.thinking {
+            color: #93c5fd;
+        }
+
+        .card-title.reality {
+            color: #fca5a5;
+        }
+
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .metric:last-child {
+            border-bottom: none;
+        }
+
+        .metric-label {
+            color: #e0e7ff;
+            font-size: 0.95rem;
+        }
+
+        .metric-value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #60a5fa;
+        }
+
+        .metric-value.bad {
+            color: #ef4444;
+        }
+
+        .metric-value.good {
+            color: #10b981;
+        }
+
+        .funnel-breakdown {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .funnel-step {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .funnel-icon {
+            font-size: 2rem;
+            width: 50px;
+            text-align: center;
+        }
+
+        .funnel-content {
+            flex: 1;
+        }
+
+        .funnel-label {
+            font-size: 0.9rem;
+            color: #93c5fd;
+            margin-bottom: 5px;
+        }
+
+        .funnel-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #e0e7ff;
+        }
+
+        .funnel-arrow {
+            text-align: center;
+            font-size: 2rem;
+            color: #60a5fa;
+            margin: -10px 0;
+        }
+
+        .verdict-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .verdict-icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
+
+        .verdict-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .verdict-title.critical { color: #ef4444; }
+        .verdict-title.warning { color: #f59e0b; }
+        .verdict-title.good { color: #10b981; }
+
+        .verdict-description {
+            font-size: 1.1rem;
+            color: #e0e7ff;
+            line-height: 1.8;
+        }
+
+        .danger-list {
+            text-align: left;
+            background: rgba(239, 68, 68, 0.1);
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .danger-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .danger-list li {
+            padding: 8px 0;
+            color: #fca5a5;
+        }
+
+        .danger-list li:before {
+            content: "❌ ";
+            margin-right: 8px;
+        }
+
+        .recommendations-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .recommendation-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #60a5fa;
+        }
+
+        .rec-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #60a5fa;
+            margin-bottom: 15px;
+        }
+
+        .rec-content {
+            color: #e0e7ff;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .rec-impact {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid #10b981;
+            border-radius: 8px;
+            padding: 15px;
+            color: #6ee7b7;
+            font-weight: 600;
+        }
+
+        .cta-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #e0e7ff;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        .cta-button.secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #60a5fa;
+            box-shadow: none;
+        }
+
+        .cta-note {
+            font-size: 0.9rem;
+            color: #93c5fd;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        .calculate-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            border: none;
+            padding: 18px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .input-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            input[type="number"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-section">
+            <h1>💰 True Cost Per Customer Calculator</h1>
+            <p class="subtitle">You're Tracking the Wrong Metric (And It's Costing You)</p>
+            <div class="warning-box">
+                ⚠️ Most advertisers celebrate a $50 CPL... then realize their true cost per customer is $500, and their deal is only $1,000. Find out what you're ACTUALLY paying.
+            </div>
+        </div>
+
+        <div class="calculator-section">
+            <div class="section-title">📊 Step 1: Your Current Metrics</div>
+            <p style="color: #93c5fd; margin-bottom: 25px; font-size: 0.95rem;">Most of these numbers are in your Ads Manager dashboard. If you don't know exact numbers, estimates work.</p>
+
+            <div class="input-group">
+                <label class="input-label">How much did you spend on ads last month?</label>
+                <div class="input-wrapper">
+                    <input type="number" id="adSpend" placeholder="5000" min="0" step="100">
+                    <span class="input-suffix">dollars</span>
+                </div>
+                <div class="quick-options">
+                    <div class="quick-option" onclick="setValue('adSpend', 1000)">$1,000</div>
+                    <div class="quick-option" onclick="setValue('adSpend', 5000)">$5,000</div>
+                    <div class="quick-option" onclick="setValue('adSpend', 10000)">$10,000</div>
+                    <div class="quick-option" onclick="setValue('adSpend', 20000)">$20,000</div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">How many leads did you get?</label>
+                <div class="input-wrapper">
+                    <input type="number" id="totalLeads" placeholder="100" min="0" step="1">
+                    <span class="input-suffix">leads</span>
+                </div>
+                <div class="helper-text">💡 Check: Ads Manager → Results column</div>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">What % of those leads were ACTUALLY qualified?</label>
+                <p style="color: #93c5fd; font-size: 0.9rem; margin-bottom: 10px;">Not spam, not job seekers, not totally wrong fit</p>
+                <div class="input-wrapper">
+                    <input type="number" id="qualifiedPercent" placeholder="40" min="0" max="100" step="1">
+                    <span class="input-suffix">%</span>
+                </div>
+                <div class="quick-options">
+                    <div class="quick-option" onclick="setValue('qualifiedPercent', 20)">20% (lots of spam)</div>
+                    <div class="quick-option" onclick="setValue('qualifiedPercent', 40)">40% (average)</div>
+                    <div class="quick-option" onclick="setValue('qualifiedPercent', 60)">60% (pretty good)</div>
+                    <div class="quick-option" onclick="setValue('qualifiedPercent', 80)">80% (rare!)</div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">What % of qualified leads become paying customers?</label>
+                <div class="input-wrapper">
+                    <input type="number" id="closeRate" placeholder="15" min="0" max="100" step="1">
+                    <span class="input-suffix">%</span>
+                </div>
+                <div class="quick-options">
+                    <div class="quick-option" onclick="setValue('closeRate', 10)">10%</div>
+                    <div class="quick-option" onclick="setValue('closeRate', 15)">15%</div>
+                    <div class="quick-option" onclick="setValue('closeRate', 20)">20%</div>
+                    <div class="quick-option" onclick="setValue('closeRate', 30)">30%</div>
+                </div>
+                <div class="helper-text">💡 Industry average: B2B services 10-20%, High-ticket B2B 5-10%, Local services 30-40%</div>
+            </div>
+        </div>
+
+        <div class="calculator-section">
+            <div class="section-title">💰 Step 2: Your Deal Economics</div>
+
+            <div class="input-group">
+                <label class="input-label">What's your average deal worth?</label>
+                <div class="input-wrapper">
+                    <input type="number" id="dealValue" placeholder="1000" min="0" step="100">
+                    <span class="input-suffix">dollars</span>
+                </div>
+                <div class="helper-text">Average of what a customer pays you (one-time or annual value)</div>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">What's your profit margin?</label>
+                <div class="input-wrapper">
+                    <input type="number" id="profitMargin" placeholder="40" min="0" max="100" step="1">
+                    <span class="input-suffix">%</span>
+                </div>
+                <div class="quick-options">
+                    <div class="quick-option" onclick="setValue('profitMargin', 80)">80%+ (software/digital)</div>
+                    <div class="quick-option" onclick="setValue('profitMargin', 60)">60% (services)</div>
+                    <div class="quick-option" onclick="setValue('profitMargin', 40)">40% (hybrid)</div>
+                    <div class="quick-option" onclick="setValue('profitMargin', 25)">25% (physical products)</div>
+                </div>
+                <div class="helper-text">After delivering the service/product, before ad costs</div>
+            </div>
+
+            <button class="calculate-btn" onclick="calculateResults()">💡 Calculate My True Costs</button>
+        </div>
+
+        <div id="resultsSection" class="results-section">
+            <!-- Results will be inserted here -->
+        </div>
+    </div>
+
+    <script>
+        function setValue(id, value) {
+            document.getElementById(id).value = value;
+        }
+
+        function calculateResults() {
+            // Get inputs
+            const adSpend = parseFloat(document.getElementById('adSpend').value) || 0;
+            const totalLeads = parseFloat(document.getElementById('totalLeads').value) || 0;
+            const qualifiedPercent = parseFloat(document.getElementById('qualifiedPercent').value) || 0;
+            const closeRate = parseFloat(document.getElementById('closeRate').value) || 0;
+            const dealValue = parseFloat(document.getElementById('dealValue').value) || 0;
+            const profitMargin = parseFloat(document.getElementById('profitMargin').value) || 0;
+
+            // Validate inputs
+            if (!adSpend || !totalLeads || !qualifiedPercent || !closeRate || !dealValue || !profitMargin) {
+                alert('Please fill in all fields to see your results!');
+                return;
+            }
+
+            // Calculate metrics
+            const cpl = adSpend / totalLeads;
+            const qualifiedLeads = totalLeads * (qualifiedPercent / 100);
+            const cpql = adSpend / qualifiedLeads;
+            const customers = qualifiedLeads * (closeRate / 100);
+            const costPerCustomer = adSpend / customers;
+            const grossProfitPerDeal = dealValue * (profitMargin / 100);
+            const netProfitPerCustomer = grossProfitPerDeal - costPerCustomer;
+            const trueProfitMargin = (netProfitPerCustomer / dealValue) * 100;
+            const totalRevenue = customers * dealValue;
+            const totalGrossProfit = customers * grossProfitPerDeal;
+            const totalNetProfit = totalRevenue - adSpend - (customers * (dealValue - grossProfitPerDeal));
+
+            // Determine verdict
+            let verdict, verdictIcon, verdictClass, verdictText;
+            if (trueProfitMargin < 10) {
+                verdict = "BARELY PROFITABLE - RISKY";
+                verdictIcon = "🟡";
+                verdictClass = "warning";
+                verdictText = "You're making money, but barely. Here's why this is dangerous:";
+            } else if (trueProfitMargin < 25) {
+                verdict = "OKAY BUT VULNERABLE";
+                verdictIcon = "⚠️";
+                verdictClass = "warning";
+                verdictText = "You're profitable, but there's not much cushion. You're vulnerable to market changes.";
+            } else if (trueProfitMargin < 40) {
+                verdict = "SOLID PROFITABILITY";
+                verdictIcon = "✅";
+                verdictClass = "good";
+                verdictText = "You're in good shape! Your margins give you room to scale and weather fluctuations.";
+            } else {
+                verdict = "EXCELLENT ECONOMICS";
+                verdictIcon = "🏆";
+                verdictClass = "good";
+                verdictText = "Your unit economics are strong. You can scale aggressively.";
+            }
+
+            // Generate results HTML
+            const resultsHTML = `
+                <div class="comparison-box">
+                    <h2 style="font-size: 2rem; margin-bottom: 10px; color: #e0e7ff;">What You THINK vs. What's ACTUALLY Happening</h2>
+                    <p style="color: #93c5fd; margin-bottom: 30px;">Based on your inputs</p>
+
+                    <div class="comparison-grid">
+                        <div class="comparison-card thinking">
+                            <div class="card-title thinking">💭 What You Think</div>
+                            <div class="metric">
+                                <span class="metric-label">Ad Spend</span>
+                                <span class="metric-value">$${formatNumber(adSpend)}</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Total Leads</span>
+                                <span class="metric-value">${formatNumber(totalLeads)}</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Cost Per Lead</span>
+                                <span class="metric-value">$${formatNumber(cpl)}</span>
+                            </div>
+                            <p style="margin-top: 15px; color: #93c5fd; font-style: italic;">"That seems pretty good!"</p>
+                        </div>
+
+                        <div class="comparison-card reality">
+                            <div class="card-title reality">🎯 The Reality</div>
+                            <div class="metric">
+                                <span class="metric-label">Qualified Leads</span>
+                                <span class="metric-value">${formatNumber(qualifiedLeads)}</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">True CPQL</span>
+                                <span class="metric-value bad">$${formatNumber(cpql)}</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Actual Customers</span>
+                                <span class="metric-value">${formatNumber(customers)}</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Cost Per Customer</span>
+                                <span class="metric-value bad">$${formatNumber(costPerCustomer)}</span>
+                            </div>
+                            <p style="margin-top: 15px; color: #fca5a5; font-weight: 600;">You're paying ${formatNumber(costPerCustomer / cpl)}x more than your CPL</p>
+                        </div>
+                    </div>
+
+                    <div class="funnel-breakdown">
+                        <h3 style="margin-bottom: 20px; color: #60a5fa;">🔻 Your Actual Funnel</h3>
+                        
+                        <div class="funnel-step">
+                            <div class="funnel-icon">📊</div>
+                            <div class="funnel-content">
+                                <div class="funnel-label">Total Leads Generated</div>
+                                <div class="funnel-number">${formatNumber(totalLeads)} leads @ $${formatNumber(cpl)}/each</div>
+                            </div>
+                        </div>
+
+                        <div class="funnel-arrow">⬇️</div>
+
+                        <div class="funnel-step">
+                            <div class="funnel-icon">✅</div>
+                            <div class="funnel-content">
+                                <div class="funnel-label">Qualified Leads (${qualifiedPercent}%)</div>
+                                <div class="funnel-number">${formatNumber(qualifiedLeads)} leads @ $${formatNumber(cpql)}/each</div>
+                            </div>
+                        </div>
+
+                        <div class="funnel-arrow">⬇️</div>
+
+                        <div class="funnel-step">
+                            <div class="funnel-icon">💰</div>
+                            <div class="funnel-content">
+                                <div class="funnel-label">Paying Customers (${closeRate}% close rate)</div>
+                                <div class="funnel-number">${formatNumber(customers)} customers @ $${formatNumber(costPerCustomer)}/each</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.08); border-radius: 15px; padding: 25px; margin-top: 25px;">
+                        <h3 style="margin-bottom: 15px; color: #60a5fa;">💸 Your True Economics</h3>
+                        <div class="metric">
+                            <span class="metric-label">Deal Value</span>
+                            <span class="metric-value">$${formatNumber(dealValue)}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Cost to Acquire Customer</span>
+                            <span class="metric-value bad">$${formatNumber(costPerCustomer)}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Gross Profit (before ads)</span>
+                            <span class="metric-value">$${formatNumber(grossProfitPerDeal)}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">Net Profit Per Customer</span>
+                            <span class="metric-value ${netProfitPerCustomer > 0 ? 'good' : 'bad'}">$${formatNumber(netProfitPerCustomer)}</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-label">True Profit Margin</span>
+                            <span class="metric-value ${trueProfitMargin > 25 ? 'good' : trueProfitMargin > 10 ? '' : 'bad'}">${formatNumber(trueProfitMargin)}%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verdict-box">
+                    <div class="verdict-icon">${verdictIcon}</div>
+                    <div class="verdict-title ${verdictClass}">${verdict}</div>
+                    <div class="verdict-description">${verdictText}</div>
+                    
+                    ${trueProfitMargin < 25 ? `
+                    <div class="danger-list">
+                        <ul>
+                            <li>One bad month drops you to break-even or loss</li>
+                            <li>Can't scale without going negative</li>
+                            <li>Vulnerable to CPL increases</li>
+                            <li>No cushion for sales team underperformance</li>
+                            <li>Rising costs or competition could kill profitability</li>
+                        </ul>
+                    </div>
+                    ` : ''}
+                </div>
+
+                ${generateRecommendations(qualifiedPercent, closeRate, dealValue, costPerCustomer, cpql, customers, profitMargin)}
+                ${generateCTA(trueProfitMargin)}
+            `;
+
+            document.getElementById('resultsSection').innerHTML = resultsHTML;
+            document.getElementById('resultsSection').classList.add('show');
+            document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function generateRecommendations(qualifiedPercent, closeRate, dealValue, costPerCustomer, cpql, customers, profitMargin) {
+            // Calculate improvement scenarios
+            const improvedQualified = 60;
+            const improvedClose = 25;
+            const improvedDeal = dealValue * 1.5;
+
+            const newCPQLIfQualityImproved = cpql * (qualifiedPercent / improvedQualified);
+            const newCostPerCustomerQuality = costPerCustomer * (qualifiedPercent / improvedQualified);
+            const savingsQuality = costPerCustomer - newCostPerCustomerQuality;
+            const profitImpactQuality = ((savingsQuality / costPerCustomer) * 100);
+
+            const newCostPerCustomerClose = costPerCustomer * (closeRate / improvedClose);
+            const savingsClose = costPerCustomer - newCostPerCustomerClose;
+            const profitImpactClose = ((savingsClose / costPerCustomer) * 100);
+
+            const newProfit = (improvedDeal * (profitMargin / 100)) - costPerCustomer;
+            const oldProfit = (dealValue * (profitMargin / 100)) - costPerCustomer;
+            const profitIncrease = newProfit - oldProfit;
+            const profitImpactDeal = ((profitIncrease / oldProfit) * 100);
+
+            return `
+                <div class="recommendations-box">
+                    <h2 style="font-size: 2rem; margin-bottom: 25px; color: #e0e7ff;">🎯 What You Need to Fix</h2>
+
+                    <div class="recommendation-card">
+                        <div class="rec-title">📊 Option 1: Improve Lead Quality (EASIEST)</div>
+                        <div class="rec-content">
+                            If you increased qualified lead % from <strong>${qualifiedPercent}%</strong> to <strong>${improvedQualified}%</strong>:
+                            <ul style="margin: 15px 0; padding-left: 20px;">
+                                <li>True CPQL drops from $${formatNumber(cpql)} → <strong>$${formatNumber(newCPQLIfQualityImproved)}</strong></li>
+                                <li>Cost per customer drops from $${formatNumber(costPerCustomer)} → <strong>$${formatNumber(newCostPerCustomerQuality)}</strong></li>
+                                <li>You save <strong>$${formatNumber(savingsQuality)}</strong> per customer</li>
+                            </ul>
+                        </div>
+                        <div class="rec-impact">
+                            ⚡ Impact: +${formatNumber(profitImpactQuality)}% profit per customer
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="rec-title">🎯 Option 2: Improve Close Rate (HARDER)</div>
+                        <div class="rec-content">
+                            If you increased close rate from <strong>${closeRate}%</strong> to <strong>${improvedClose}%</strong>:
+                            <ul style="margin: 15px 0; padding-left: 20px;">
+                                <li>Cost per customer drops from $${formatNumber(costPerCustomer)} → <strong>$${formatNumber(newCostPerCustomerClose)}</strong></li>
+                                <li>You save <strong>$${formatNumber(savingsClose)}</strong> per customer</li>
+                                <li>You'd get <strong>${formatNumber((customers * improvedClose) / closeRate)}</strong> customers instead of ${formatNumber(customers)}</li>
+                            </ul>
+                        </div>
+                        <div class="rec-impact">
+                            ⚡ Impact: +${formatNumber(profitImpactClose)}% profit per customer
+                        </div>
+                    </div>
+
+                    <div class="recommendation-card">
+                        <div class="rec-title">💰 Option 3: Increase Deal Value (STRATEGIC)</div>
+                        <div class="rec-content">
+                            If you increased average deal from <strong>$${formatNumber(dealValue)}</strong> to <strong>$${formatNumber(improvedDeal)}</strong>:
+                            <ul style="margin: 15px 0; padding-left: 20px;">
+                                <li>Profit per customer increases from $${formatNumber(oldProfit)} → <strong>$${formatNumber(newProfit)}</strong></li>
+                                <li>That's an extra <strong>$${formatNumber(profitIncrease)}</strong> per customer</li>
+                            </ul>
+                        </div>
+                        <div class="rec-impact">
+                            ⚡ Impact: +${formatNumber(profitImpactDeal)}% profit per customer
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function generateCTA(trueProfitMargin) {
+            if (trueProfitMargin < 10) {
+                return `
+                    <div class="cta-section">
+                        <h2 class="cta-title">⚠️ You Need to Fix This Before Scaling</h2>
+                        <p style="margin-bottom: 25px; color: #e0e7ff; font-size: 1.1rem;">
+                            At your current margins, you can't profitably scale. You need to improve lead quality, close rate, or deal value FIRST.
+                        </p>
+                        <a href="#" class="cta-button">📊 Book Free Strategy Session →</a>
+                        <a href="#" class="cta-button secondary">📄 Download: Lead Quality Optimization Guide →</a>
+                        <p class="cta-note">We'll tell you which lever will have the biggest impact for YOUR business. No sales pitch. Just math.</p>
+                    </div>
+                `;
+            } else if (trueProfitMargin < 25) {
+                return `
+                    <div class="cta-section">
+                        <h2 class="cta-title">🎯 Want to Scale Without Risk?</h2>
+                        <p style="margin-bottom: 25px; color: #e0e7ff; font-size: 1.1rem;">
+                            Your margins are okay, but there's not much cushion. Let's improve your metrics before you scale.
+                        </p>
+                        <a href="#" class="cta-button">📞 Talk to an Expert →</a>
+                        <a href="#" class="cta-button secondary">📄 Download: Fix Lead Quality Checklist →</a>
+                        <p class="cta-note">Most businesses find fixing lead quality is the fastest lever to pull.</p>
+                    </div>
+                `;
+            } else {
+                return `
+                    <div class="cta-section">
+                        <h2 class="cta-title">🚀 Ready to Scale?</h2>
+                        <p style="margin-bottom: 25px; color: #e0e7ff; font-size: 1.1rem;">
+                            Your unit economics are solid. Now it's about scaling efficiently without breaking what's working.
+                        </p>
+                        <a href="#" class="cta-button">📈 Book Scaling Strategy Call →</a>
+                        <a href="#" class="cta-button secondary">📄 Download: Weekly Optimization Checklists →</a>
+                        <p class="cta-note">Let's make sure you scale smart, not just fast.</p>
+                    </div>
+                `;
+            }
+        }
+
+        function formatNumber(num) {
+            if (num === 0) return '0';
+            if (num < 1) return num.toFixed(2);
+            if (num < 10) return num.toFixed(1);
+            return Math.round(num).toLocaleString();
+        }
+    </script>
+</body>
+</html>

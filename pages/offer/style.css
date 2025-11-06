@@ -229,6 +229,12 @@ body {
     gap: 2rem;
 }
 
+.resource-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .resource-card {
     background: var(--dark);
     border-radius: 12px;
@@ -236,6 +242,14 @@ body {
     border: 1px solid var(--border);
     position: relative;
     transition: all 0.3s;
+    cursor: pointer;
+    height: 100%;
+}
+
+.resource-card-link:hover .resource-card {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
+    border-color: var(--primary);
 }
 
 .resource-card.featured {
