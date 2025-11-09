@@ -8,6 +8,15 @@
     <meta property="og:title" content="Steal the Exact Ads That Book More Cleaning Jobs">
     <meta property="og:description" content="Get the top 10 keywords and headlines from $98K in cleaning ad spend. Free cheat sheet based on real data.">
     <meta property="og:type" content="website">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K5T59C5F');</script>
+    <!-- End Google Tag Manager -->
+
     <link rel="stylesheet" href="../pages/offer/style.css">
     <style>
         /* Cleaning Page Specific Styles */
@@ -453,12 +462,33 @@
         <div class="container">
             <div class="section-header">
                 <h2>Real Results from Real Businesses</h2>
+                <p style="color: var(--text-secondary); margin-top: 0.5rem;">Trusted by 150+ businesses and agencies</p>
             </div>
-            <div class="testimonial-card-single">
-                <p class="testimonial-quote">
-                    "We hired Luc to upgrade some existing campaigns and after giving it the proper amount of time to reset, the campaigns suddenly kicked into high gear. We have broken records for daily conversions and call bookings. All campaign metrics are above benchmark. In some cases we are getting 2x benchmark results."
-                </p>
-                <div class="testimonial-author">— Owner, Service Business</div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div class="testimonial-card-single" style="margin: 0;">
+                    <div style="color: var(--accent); font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+                    <p class="testimonial-quote">
+                        "We hired Luc to upgrade some existing campaigns and after giving it the proper amount of time to reset, the campaigns suddenly kicked into high gear. We have broken records for daily conversions and call bookings. All campaign metrics are above benchmark. In some cases we are getting 2x benchmark results."
+                    </p>
+                    <div class="testimonial-author">— Owner, Financial Services Firm</div>
+                </div>
+
+                <div class="testimonial-card-single" style="margin: 0;">
+                    <div style="color: var(--accent); font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+                    <p class="testimonial-quote">
+                        "Luc is one of the best digital strategists I have ever had the opportunity to work with... His experience and skill was evident in how quickly he jumped in to optimize campaigns and deliver excellent results for our clients."
+                    </p>
+                    <div class="testimonial-author">— Marcus Sanford, Analytics & SEO Consultant</div>
+                </div>
+
+                <div class="testimonial-card-single" style="margin: 0;">
+                    <div style="color: var(--accent); font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+                    <p class="testimonial-quote">
+                        "Luc did an excellent job in explaining what was wrong and what was correct with my Ad campaign and helped with any correction that needed to be fixed. He is very knowledgeable... Luc will be my guy with all things Pay Per Click."
+                    </p>
+                    <div class="testimonial-author">— Agency Partner, Pay Per Click Campaign</div>
+                </div>
             </div>
         </div>
     </section>
@@ -593,6 +623,18 @@
             } else {
                 redirectInput.value = '/industry/thankyou-simple.html';
             }
+        });
+
+        // Push form submission to dataLayer
+        document.getElementById('leadForm').addEventListener('submit', function() {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'form_submission',
+                'form_name': 'cleaning_lead_form',
+                'form_location': 'cleaning_landing_page',
+                'ad_spend': document.getElementById('adSpend').value,
+                'interest_level': document.querySelector('input[name="interest"]:checked').value
+            });
         });
     </script>
 </body>
