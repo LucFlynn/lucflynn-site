@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You! Download Your Resources | Luc Flynn</title>
+    <meta name="description" content="Thank you for downloading the Cleaning Ads Cheat Sheet. Access your resources below.">
+    <link rel="stylesheet" href="../pages/offer/style.css">
+    <style>
+        .thankyou-section {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 4rem 2rem;
+        }
+
+        .thankyou-container {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            background: var(--dark-lighter);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 4rem 3rem;
+        }
+
+        .success-icon {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            animation: bounce 1s ease;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .thankyou-headline {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .thankyou-subtext {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .download-section {
+            background: var(--dark);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+        }
+
+        .download-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .download-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1.25rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+        }
+
+        .download-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+
+        .download-btn.secondary {
+            background: var(--accent);
+        }
+
+        .download-btn.secondary:hover {
+            background: #059669;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+        }
+
+        .next-steps {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .next-steps h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .next-steps p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .calendly-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 2.5rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+            margin-top: 1rem;
+        }
+
+        .calendly-btn:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+        }
+
+        .email-note {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .thankyou-container {
+                padding: 3rem 2rem;
+            }
+
+            .thankyou-headline {
+                font-size: 2rem;
+            }
+
+            .thankyou-subtext {
+                font-size: 1.1rem;
+            }
+
+            .download-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+    <script>
+        // Auto-download the cheat sheet when page loads
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const downloadLink = document.createElement('a');
+                downloadLink.href = '../assets/docs/The 2025 Cleaning Ads Cheat Sheet.pdf';
+                downloadLink.download = 'The 2025 Cleaning Ads Cheat Sheet.pdf';
+                downloadLink.style.display = 'none';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            }, 500);
+        });
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-wrapper">
+            <div class="nav-logo">
+                <a href="/" style="text-decoration: none; color: inherit;">
+                    <span class="logo-text">Luc Flynn</span>
+                    <span class="logo-tagline">Ad Management That Actually Works</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/industry/cleaning">Cleaning Resources</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thank You Section -->
+    <section class="thankyou-section">
+        <div class="thankyou-container">
+            <div class="success-icon">🎉</div>
+
+            <h1 class="thankyou-headline">You're All Set!</h1>
+
+            <p class="thankyou-subtext">
+                Your free resources are ready to download below.<br>
+                We've also sent them to your email.
+            </p>
+
+            <div class="download-section">
+                <h3>📥 Download Your Resources</h3>
+                <div class="download-links">
+                    <a href="../assets/docs/The 2025 Cleaning Ads Cheat Sheet.pdf" download class="download-btn">
+                        📄 Download Cheat Sheet (Quick Reference)
+                    </a>
+                    <a href="../assets/docs/The 2025 Google Ads Playbook for Cleaning Companies (1).pdf" download class="download-btn secondary">
+                        📚 Download Full Playbook (10 Pages)
+                    </a>
+                </div>
+            </div>
+
+            <div class="next-steps">
+                <h3>💬 Need Help?</h3>
+                <p>
+                    Have questions about implementing these strategies?<br>
+                    Reach out directly and I'll be happy to help.
+                </p>
+                <a href="mailto:luc@lucflynn.com" class="calendly-btn">
+                    📧 Email Me: luc@lucflynn.com
+                </a>
+            </div>
+
+            <div class="email-note">
+                💌 <strong>Check your inbox!</strong> We've sent you an email with these downloads and some bonus tips to get started.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 Luc Flynn. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="mailto:luc@lucflynn.com">Email</a>
+                    <a href="/">Home</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
