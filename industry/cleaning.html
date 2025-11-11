@@ -17,6 +17,9 @@
     })(window,document,'script','dataLayer','GTM-K5T59C5F');</script>
     <!-- End Google Tag Manager -->
 
+    <!-- Vercel Analytics -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
     <link rel="stylesheet" href="../pages/offer/style.css">
     <style>
         /* Cleaning Page Specific Styles */
@@ -507,6 +510,16 @@
                     <input type="hidden" name="_subject" value="New Cleaning Company Lead">
                     <input type="hidden" name="source" value="cleaning-landing-page">
 
+                    <!-- UTM Parameters -->
+                    <input type="hidden" name="utm_source" id="utm_source">
+                    <input type="hidden" name="utm_medium" id="utm_medium">
+                    <input type="hidden" name="utm_campaign" id="utm_campaign">
+                    <input type="hidden" name="utm_term" id="utm_term">
+                    <input type="hidden" name="utm_content" id="utm_content">
+
+                    <!-- Google Click ID -->
+                    <input type="hidden" name="gclid" id="gclid">
+
                     <div class="form-group">
                         <label for="name">Your Name *</label>
                         <input type="text" id="name" name="name" required placeholder="John Smith">
@@ -611,6 +624,26 @@
     </footer>
 
     <script>
+        // Capture UTM parameters and GCLID from URL
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // UTM parameters
+            const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+            utmParams.forEach(param => {
+                const value = urlParams.get(param);
+                if (value) {
+                    document.getElementById(param).value = value;
+                }
+            });
+
+            // GCLID (Google Click ID)
+            const gclid = urlParams.get('gclid');
+            if (gclid) {
+                document.getElementById('gclid').value = gclid;
+            }
+        })();
+
         // Update redirect URL based on ad spend selection
         document.getElementById('adSpend').addEventListener('change', function() {
             const adSpend = this.value;
