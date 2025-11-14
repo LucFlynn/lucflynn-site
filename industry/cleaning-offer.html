@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get 10-15 Qualified Cleaning Leads in 30 Days - Founder's Trial</title>
+    <meta name="description" content="Done-for-you lead generation system for cleaning companies. Landing page, ads, tracking, automation—everything built & managed. First 30 days FREE.">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K5T59C5F');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Vercel Analytics -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <link rel="stylesheet" href="../pages/offer/style.css">
+    <style>
+        @keyframes pulse-scale {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .pulse-animation {
+            animation: pulse-scale 2s ease-in-out infinite;
+        }
+
+        /* Hero Section */
+        .offer-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero-headline {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .hero-subheadline {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            line-height: 1.5;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Result Cards */
+        .results-section {
+            background: var(--dark-lighter);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .results-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .result-card {
+            background: var(--dark);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .result-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .result-card h3 {
+            color: var(--accent);
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .result-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: var(--dark-lighter);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.75rem, 3vw, 2.25rem);
+            font-weight: 800;
+            color: var(--text-primary);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Math Section Boxes */
+        .math-box {
+            background: rgba(37, 99, 235, 0.05);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .math-box p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .math-box.success {
+            background: rgba(16, 185, 129, 0.05);
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .math-box.purple {
+            background: rgba(168, 85, 247, 0.05);
+            border-color: rgba(168, 85, 247, 0.2);
+        }
+
+        .math-highlight {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            display: block;
+            margin-top: 0.5rem;
+        }
+
+        /* Offer Boxes */
+        .offer-box {
+            background: var(--dark);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .offer-box.primary {
+            border-color: var(--accent);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .offer-box.secondary {
+            border-color: var(--primary);
+            background: rgba(37, 99, 235, 0.05);
+        }
+
+        .offer-box h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .offer-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        .offer-box li {
+            display: flex;
+            align-items: start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .offer-highlight {
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .offer-highlight p {
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background: var(--accent);
+            color: var(--dark);
+            font-weight: 700;
+            padding: 1.25rem 3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.125rem;
+            transition: all 0.2s;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #0ea571;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(16, 185, 129, 0.4);
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        /* Credibility Section */
+        .credibility-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .credibility-grid {
+                grid-template-columns: auto 1fr;
+            }
+        }
+
+        .credibility-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin: 0 auto;
+        }
+
+        .credibility-text p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .credibility-text strong {
+            color: var(--text-primary);
+        }
+
+        /* Testimonial */
+        .testimonial-box {
+            background: var(--dark-lighter);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-stars {
+            color: #fbbf24;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.125rem;
+            font-style: italic;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .testimonial-author {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Qualification List */
+        .qualification-list {
+            max-width: 900px;
+            margin: 2rem auto 0;
+        }
+
+        .qualification-item {
+            display: flex;
+            gap: 1rem;
+            align-items: start;
+            margin-bottom: 1.5rem;
+        }
+
+        .qualification-check {
+            width: 32px;
+            height: 32px;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .qualification-check svg {
+            width: 20px;
+            height: 20px;
+            color: var(--accent);
+        }
+
+        .qualification-text {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            line-height: 1.6;
+        }
+
+        .qualification-text strong {
+            color: var(--text-primary);
+        }
+
+        /* CTA Sections */
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent) 0%, #059669 100%);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            text-align: center;
+            color: var(--dark);
+            margin-bottom: 2rem;
+        }
+
+        .cta-section h2 {
+            color: var(--dark);
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section .btn-primary {
+            background: white;
+            color: var(--accent);
+        }
+
+        .cta-section .btn-primary:hover {
+            background: #f1f5f9;
+        }
+
+        .cta-section p {
+            color: rgba(15, 23, 42, 0.8);
+            margin-top: 1rem;
+        }
+
+        .cta-urgent {
+            background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
+        }
+
+        .cta-urgent .btn-primary {
+            background: white;
+            color: #dc2626;
+        }
+
+        /* Urgency Banner */
+        .urgency-banner {
+            background: rgba(220, 38, 38, 0.1);
+            border-bottom: 2px solid rgba(220, 38, 38, 0.3);
+            padding: 0.75rem;
+            text-align: center;
+        }
+
+        .urgency-text {
+            color: #fca5a5;
+            font-weight: 700;
+            font-size: 0.875rem;
+        }
+
+        @media (min-width: 768px) {
+            .urgency-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K5T59C5F"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Urgency Banner -->
+    <div class="urgency-banner pulse-animation">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            <span style="font-size: 1.25rem;">⚠️</span>
+            <span class="urgency-text">FOUNDER'S TRIAL: Only 2 of 3 Spots Left This Month (I personally manage each trial—can't scale past 3 at once)</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="offer-hero">
+        <div class="container">
+            <h1 class="hero-headline">
+                Get 10-15 Qualified Cleaning Leads in 30 Days—Or We Work Free Until You Do
+            </h1>
+            <p class="hero-subheadline">
+                Done-for-you system: Landing page, ads, tracking, automation. Month 1 completely FREE—you only pay ~$1,000 for ad spend. Then $1,000/month for 15-20 ongoing leads if you love the results.
+            </p>
+
+            <!-- Primary CTA -->
+            <div style="margin-bottom: 1.5rem;">
+                <a href="https://calendly.com/luc-flynn/b" class="btn-primary">
+                    Book Your Free 15-Min Strategy Call →
+                </a>
+            </div>
+
+            <!-- Trust badges -->
+            <div class="trust-badges">
+                <span class="trust-badge">
+                    <svg style="width: 1.25rem; height: 1.25rem;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    No contracts
+                </span>
+                <span class="trust-badge">
+                    <svg style="width: 1.25rem; height: 1.25rem;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    No setup fees
+                </span>
+                <span class="trust-badge">
+                    <svg style="width: 1.25rem; height: 1.25rem;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    Personal guarantee
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Social Proof Results -->
+        <div class="results-section">
+            <h2 class="section-title">📊 Real Results From Real Cleaning Companies</h2>
+            <p class="section-subtitle">Based on analysis of $98,530 in ad spend across 12 cleaning companies</p>
+
+            <div class="results-grid">
+                <!-- Result Card 1 -->
+                <div class="result-card">
+                    <h3>Denver Residential Client</h3>
+                    <p>"$29.26 cost per lead with 19.75% conversion rate — top 5% of all cleaning companies"</p>
+                </div>
+
+                <!-- Result Card 2 -->
+                <div class="result-card">
+                    <h3>Austin Maid Service</h3>
+                    <p>"27% conversion rate (highest in dataset) at $30.24 per lead vs. $67 industry average"</p>
+                </div>
+
+                <!-- Result Card 3 -->
+                <div class="result-card">
+                    <h3>Phoenix Commercial Cleaners</h3>
+                    <p>"$35.58 cost per lead — 47% cheaper than $67 industry average with 13.56% conversion"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- The Math Section -->
+        <div class="content-section">
+            <h2 class="section-title">💰 The Math That Makes This a No-Brainer</h2>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 1.5rem;">Let's say we deliver the minimum (10 qualified leads) in Month 1:</p>
+
+                <div class="math-box">
+                    <p>• <strong>10 qualified leads</strong> at typical 30% booking rate = <strong>3 booked jobs</strong></p>
+                    <p>• <strong>3 jobs</strong> × $200 average job value = <strong>$600 revenue</strong> (Month 1)</p>
+                    <p>• Your investment: <strong>$1,000</strong> (ad spend only—no management fees)</p>
+                    <span class="math-highlight" style="color: var(--primary);">Month 1: -$400 (learning your market, building momentum)</span>
+                </div>
+
+                <p style="color: var(--text-primary); font-weight: 600; margin: 1.5rem 0; font-size: 1.125rem;">Month 2+: Continue at $1,000/month for 15-20 leads</p>
+
+                <div class="math-box success">
+                    <p>• <strong>15 leads</strong> × 30% = <strong>5 booked jobs</strong> × $200 = <strong>$1,000 revenue</strong></p>
+                    <p>• Your investment: <strong>$2,000</strong> ($1,000 ad spend + $1,000 management)</p>
+                    <span class="math-highlight" style="color: var(--accent);">Month 2: Break even</span>
+                </div>
+
+                <div class="math-box purple">
+                    <span class="math-highlight" style="color: #a855f7;">Month 3+: Same $2,000/month spend = $1,000+ profit per month</span>
+                    <p style="margin-top: 1rem;">Plus you keep every customer who becomes a recurring client. The real profit is in the lifetime value.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="content-section">
+            <h2 class="section-title">🔥 How the Founder's Trial Works</h2>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <!-- Month 1 -->
+                <div class="offer-box primary">
+                    <h3>Month 1: You Pay Only Ad Spend (~$1,000)</h3>
+
+                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 1rem;">Everything you need to start booking jobs:</p>
+
+                    <ul>
+                        <li>
+                            <span style="color: var(--accent); font-size: 1.25rem; font-weight: bold;">✅</span>
+                            <span>Custom landing page (20-28% conversion rate vs. industry 3-5%)</span>
+                        </li>
+                        <li>
+                            <span style="color: var(--accent); font-size: 1.25rem; font-weight: bold;">✅</span>
+                            <span>Google & Meta ad campaigns</span>
+                        </li>
+                        <li>
+                            <span style="color: var(--accent); font-size: 1.25rem; font-weight: bold;">✅</span>
+                            <span>Full conversion tracking system</span>
+                        </li>
+                        <li>
+                            <span style="color: var(--accent); font-size: 1.25rem; font-weight: bold;">✅</span>
+                            <span>Daily campaign management by me personally</span>
+                        </li>
+                        <li>
+                            <span style="color: var(--accent); font-size: 1.25rem; font-weight: bold;">✅</span>
+                            <span>Weekly performance reports</span>
+                        </li>
+                    </ul>
+
+                    <div class="offer-highlight">
+                        <p>Your only cost: Ad spend (~$1,000 for 30 days)</p>
+                        <p><strong>Goal: 10 qualified leads minimum.</strong> We'll push for 15+ depending on your market conditions and competition.</p>
+                    </div>
+                </div>
+
+                <!-- Month 2+ -->
+                <div class="offer-box secondary">
+                    <h3>Month 2+: You Decide</h3>
+
+                    <div style="margin: 1.5rem 0; color: var(--text-secondary); font-size: 1.125rem; line-height: 1.8;">
+                        <p style="margin-bottom: 1rem;"><strong style="color: var(--text-primary);">Option 1:</strong> Continue at $1,000/month for 15-20 ongoing qualified leads + full management</p>
+                        <p><strong style="color: var(--text-primary);">Option 2:</strong> Walk away—keep the landing page, tracking system, and everything I built. No hard feelings.</p>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 1.5rem;">
+                        <p style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">📍 No contracts. No lock-in. Just results.</p>
+                        <p style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary);">📍 Only 2 spots left this month (I can only personally manage 3 trials at once)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guarantee Section -->
+        <div class="content-section" style="background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%); border-color: var(--primary);">
+            <h2 class="section-title">⚡ My Personal Guarantee</h2>
+            <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.25rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">
+                    If we don't deliver at least <strong style="color: var(--text-primary);">10 qualified leads</strong> in your first 30 days, I'll work a second month <strong style="color: var(--text-primary);">completely free</strong> until we hit 15.
+                </p>
+                <p style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">
+                    You literally can't lose. Worst case: you get 2 months of professional management for just the cost of ad spend.
+                </p>
+            </div>
+        </div>
+
+        <!-- Who This Is For -->
+        <div class="content-section">
+            <h2 class="section-title">Who Qualifies for This Offer?</h2>
+
+            <div class="qualification-list">
+                <div class="qualification-item">
+                    <div class="qualification-check">
+                        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    </div>
+                    <p class="qualification-text">Cleaning businesses (residential or commercial) spending <strong>OR willing to spend at least $1,000/month on ads</strong></p>
+                </div>
+
+                <div class="qualification-item">
+                    <div class="qualification-check">
+                        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    </div>
+                    <p class="qualification-text">Whether you're <strong>brand new to advertising or frustrated with current results</strong>—if you're ready to grow, you likely qualify</p>
+                </div>
+
+                <div class="qualification-item">
+                    <div class="qualification-check">
+                        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    </div>
+                    <p class="qualification-text">You have <strong>capacity to handle 10-15 new leads per month</strong> and can deliver quality service</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Credibility Section -->
+        <div class="content-section">
+            <h2 class="section-title">Who's Building Your System?</h2>
+
+            <div class="credibility-grid">
+                <div>
+                    <img src="../assets/images/headshot.jpg" alt="Luc Flynn" class="credibility-image">
+                </div>
+
+                <div class="credibility-text">
+                    <p>I'm Luc Flynn. I've managed <strong>$10M+ in ad spend</strong> across 150+ service businesses over 8 years—and I've learned that leads don't matter if they don't convert into booked jobs.</p>
+
+                    <p>I specialize in building <strong>fully automated lead-generation systems</strong>—not just running ads.</p>
+
+                    <p>Most cleaning companies need a system that filters, tracks, and nurtures those leads so they actually convert into booked jobs.</p>
+
+                    <p><strong>The result: 20-28% conversion rates and $29-35 cost per lead (vs. the industry average of 3-5% and $67+ CPL).</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimonial -->
+        <div class="testimonial-box">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote class="testimonial-text">
+                "Luc is a top tier Google Ads manager with advanced understanding and expertise with the platform. We hired him to upgrade some existing campaigns and after giving it the proper amount of time to reset, the campaigns suddenly kicked into high gear. We have broken records for daily conversions and call bookings. All campaign metrics are above benchmark. In some cases we are getting 2x benchmark results. We will be working with Luc again after we launch an upgraded version of our website. Do not hesitate to let Luc audit your current campaigns or start from scratch. I have been working with Google Ads for over 10 years. Luc is the best we've worked with. He's also just got the right entrepreneurial mindset and he's a problem solver."
+            </blockquote>
+            <p class="testimonial-author">— Owner, Financial Services Firm</p>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="content-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3 class="faq-question">Q: What if I don't get 10 leads?</h3>
+                    <p class="faq-answer">If we don't deliver at least 10 qualified leads in your first 30 days, I'll work a second month completely free until we hit 15. You literally can't lose.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Q: What's a "qualified lead"?</h3>
+                    <p class="faq-answer">A qualified lead is someone who submitted a form or called asking for a quote for cleaning services in your service area. We track every lead and share weekly reports so you see exactly where your $1,000 is going.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Q: What if my market is really competitive?</h3>
+                    <p class="faq-answer">If we determine during the strategy call that your market will need more than $1,000/month to hit 10 leads, I'll tell you upfront. I only take on trials where I'm confident we can deliver results.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Q: What's the catch?</h3>
+                    <p class="faq-answer">No catch—just case studies. I need 3 businesses to prove this end-to-end system works across different markets. In exchange for your honest feedback and permission to use your results (anonymously), you get everything built free for month 1.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Q: What happens after the free month?</h3>
+                    <p class="faq-answer">You decide. Continue at $1,000/month for 15-20 ongoing leads, or walk away with everything I built. No pressure, no hard feelings.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Primary CTA -->
+        <div class="cta-section">
+            <h2>Ready to Get Your First 10-15 Leads?</h2>
+            <a href="https://calendly.com/luc-flynn/b" class="btn-primary">
+                Book Your Free Strategy Call Now →
+            </a>
+            <p style="margin-top: 1rem; font-size: 1.125rem;">Next: 15-minute qualification call to confirm fit. If qualified, we start building immediately.</p>
+            <p style="font-size: 0.875rem; margin-top: 0.5rem;">Takes 30 seconds to book • Only 2 spots remaining this month</p>
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="cta-section cta-urgent">
+            <h2>Don't Let Another Competitor Take Your Spot</h2>
+            <a href="https://calendly.com/luc-flynn/b" class="btn-primary">
+                Lock In Your Founder's Trial Now →
+            </a>
+            <p style="margin-top: 1rem; font-size: 1.125rem;">Only 2 of 3 spots left. Next group pays full price from day one.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

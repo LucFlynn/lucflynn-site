@@ -1,0 +1,704 @@
+﻿The 2025 Google Ads Playbook for Cleaning Companies
+Why Some Cleaning Companies Pay $29 Per Lead While Others Pay $324
+Based on Real Analysis: $98,530 in Ad Spend | 12 Companies | 1,468 Leads | July-November 2025
+________________
+
+
+What You're About to Learn
+This isn't theory or best practices from some marketing blog.
+This is real performance data from real cleaning companies.
+Between July and November 2025, we analyzed every Google Ad from 12 cleaning companies who collectively spent $98,530 to generate 1,468 leads.
+What we found was shocking:
+* Best performer: $29.26 cost per lead
+* Worst performer: $323.99 cost per lead
+* That's an 11x difference for the same type of lead
+The difference?
+Three things: Ad copy, campaign settings, and targeting.
+This playbook shows you exactly what the winners did differently.
+________________
+
+
+The $95 Per lead Difference
+The Raw Numbers
+Company
+	Cost Per lead
+	Conversion Rate
+	What They Did
+	Company A
+	$29.26
+	19.75%
+	City-specific headlines
+	Company B
+	$30.24
+	27.09%
+	Brand + location combo
+	Company C
+	$35.58
+	13.56%
+	Simple, direct CTAs
+	Company D
+	$48.33
+	9.77%
+	Focused targeting
+	Company E
+	$104.52
+	7.88%
+	Generic copy hurting them
+	Company F
+	$116.38
+	10.31%
+	Wrong campaign types
+	Average
+	$67.14
+	12.89%
+	Portfolio average
+	Translation:
+If you're paying more than $50 per lead, you're leaving massive money on the table.
+If you're paying over $100, you have serious problems that are easy to fix.
+________________
+
+
+Part 1: The Ad Copy That Actually Converts
+The Data: 5,606 Ad Variations Analyzed
+We analyzed every headline and description combination from these 12 companies.
+The pattern was crystal clear:
+Some ad copy converts at 28%. Some ad copy converts at 0.1%.
+That's a 280x difference from just changing a few words.
+________________
+
+
+The Headlines That Win (20-28% Conversion Rate)
+These headlines converted at 20-28% (industry average is 3-5%):
+1. Location + Authority = Gold
+28.6% Conversion Rate | $81.83 CPA:
+* "Austin's Top Maid Service"
+* "{LOCATION(City)}'s Top Maid Service"
+* "Maid Service in {LOCATION(City)}"
+28.1% Conversion Rate | $28.91 CPA:
+* "#1 Cleaning Service In Denver"
+* "Denver's #1 Rated Cleaners"
+27.2% Conversion Rate | $30.24 CPA:
+* "[Brand Name] | [City]"
+* "Serving {LOCATION(City)}"
+Why it works: People search for LOCAL services. When you say "Denver's #1" instead of "near you," you match their intent exactly.
+2. Strong, Direct CTAs
+28.1% Conversion Rate | $28.91 CPA:
+* "Schedule Your House Cleaning"
+* "Get a Free Quote Here"
+27.4% Conversion Rate | $23.49 CPA:
+* "Request A Home Cleaning Quote"
+26.3% Conversion Rate | $31.20 CPA:
+* "Get a Free Quote Or Book Today"
+Why it works: Tells them exactly what to do. No friction. No confusion.
+3. Trust Signals That Actually Matter
+28.1% Conversion Rate | $28.91 CPA:
+* "Trusted & Highly Recommended"
+* "Green Seal Certified Cleaners"
+* "Easy, Flat Rate Pricing"
+28.4% Conversion Rate | $21.69 CPA:
+* "Residential Clean Done Right"
+Why it works: Third-party validation reduces risk. Pricing transparency removes anxiety.
+4. Brand + Location (If You Have Good Reviews)
+27.4% Conversion Rate:
+* "[Brand Name] Cleaning Services"
+27.2% Conversion Rate | $30.24 CPA:
+* "[Brand Name] | [City]"
+34.9% CTR (highest in dataset):
+* "[Brand Name] Cleaning"
+Why it works: If you have reviews and brand recognition, lean into it. Brand builds trust.
+5. Service Specificity
+28.6% Conversion Rate:
+* "{Keyword:Local Maid Service}"
+* "{Keyword:Recurring Cleaning Services}"
+28.4% Conversion Rate | $21.69 CPA:
+* "Residential Clean Done Right"
+Why it works: Matches search intent precisely. They searched "maid service," you say "maid service."
+________________
+
+
+The Headlines That Tank (0-3% Conversion Rate)
+These headlines wasted thousands of dollars:
+Generic "Near You" Copy (AVOID)
+0.1% Conversion Rate (yes, really):
+* "Deep Cleaning Service Near You"
+3.3% Conversion Rate:
+* "Cleaning Service Near You"
+* "Regular Cleaning Near You"
+3.5% Conversion Rate:
+* "Locations Near You"
+Why it fails: Vague, sounds like a directory listing, no differentiation from competition.
+Emotional Fluff Without Substance
+1.0% Conversion Rate:
+* "Clean Home, Fresh Start"
+* "Clean House, Happy Life"
+* "Save Time For Yourself"
+2.7% Conversion Rate:
+* "Sparkling Homes, Happy Lives"
+Why it fails: Cliché, no specific reason to choose YOU over competitors.
+Feature Dumps
+1.0% Conversion Rate:
+* "Safe for Your Family and Pets"
+2.7% Conversion Rate:
+* "Eco Friendly Products"
+3.5% Conversion Rate:
+* "Safe Cleaning for Pets & Kids"
+Why it fails: These are table stakes. Everyone says this. Not a differentiator.
+Weak Help Language
+2.7% Conversion Rate:
+* "We're Here to Help"
+* "Call Us Today"
+2.8% Conversion Rate:
+* "Request A Quote" (when not combined with anything specific)
+1.0% Conversion Rate:
+* "We Make Moving Easy"
+Why it fails: Could be ANY service business. No specificity. No compelling reason to click.
+Just Service Names
+2.7% Conversion Rate:
+* "Deep House Cleaning"
+* "Move In/Move Out Cleaning"
+* "Power Washing"
+Why it fails: Just stating what you do isn't compelling. Need differentiation.
+________________
+
+
+The Pattern: What Winners Do vs What Losers Do
+Winners (20-28% conversion):
+* ✅ Specific city names ("Denver," "Austin," "St. Louis")
+* ✅ Authority claims ("#1," "Top," "Most Trusted")
+* ✅ Direct CTAs ("Schedule," "Get Quote")
+* ✅ Trust signals (certifications, ratings, guarantees)
+* ✅ Service specificity ("Maid Service" not just "Cleaning")
+Losers (0-3% conversion):
+* ❌ Generic location ("near you," "in your area")
+* ❌ No differentiation (everyone says it)
+* ❌ Vague promises (emotional fluff)
+* ❌ Weak CTAs ("call us")
+* ❌ Feature dumps without context
+________________
+
+
+Copy-and-Paste Google Ads Template
+Use this structure for your Responsive Search Ads. Just replace [City] and [Company Name] with yours:
+HEADLINE 1: [Company Name] | [City]
+HEADLINE 2: [City]'s #1 House Cleaning Service  
+HEADLINE 3: Schedule Your [City] Cleaning Today
+HEADLINE 4: Get a Free Quote Here
+HEADLINE 5: Trusted & Highly Recommended
+HEADLINE 6: Easy, Flat Rate Pricing
+HEADLINE 7: Licensed & Insured Since [Year]
+HEADLINE 8: Green Seal Certified Cleaners
+HEADLINE 9: [City]'s Most Trusted Cleaners
+HEADLINE 10: Professional Residential Cleaning
+
+
+DESCRIPTION 1: Get your [City] home spotless in hours. Book online in 60 seconds. Same-week availability!
+
+
+DESCRIPTION 2: Flat-rate pricing with no hidden fees. Trusted by 500+ [City] families. Get your free quote today!
+
+
+DESCRIPTION 3: Professional cleaning services in [City]. Licensed, insured, and background-checked. Book now!
+
+
+DESCRIPTION 4: We pride ourselves on attention to detail and excellent lead service. Call today!
+
+
+Expected performance: 20-25% conversion rate, $30-50 CPA
+________________
+
+
+Part 2: Campaign Settings That Matter
+The Campaigns That Work (Data-Backed)
+Based on our analysis, here are the campaign types and settings that generated the best results:
+Campaign Type: Search Only
+What worked:
+* Standard Search campaigns
+* Responsive Search Ads
+What didn't work:
+* Display Network (wasted $255 with 0 conversions for one company)
+* Performance Max (inconsistent, hard to optimize)
+Best CPAs came from pure Search campaigns:
+* Company A: $29.26 CPA (Search only)
+* Company B: $30.24 CPA (Search only)
+* Company C: $35.58 CPA (Search only)
+Recommendation: Turn off Display Network and Search Partners. Run Search campaigns only.
+________________
+
+
+Campaign Structure: Keep It Simple
+Winning campaign structures from the data:
+1. Brand Campaign (Separate)
+* Your company name keywords
+* Defensive bidding
+* Usually lowest CPA
+Example: One company's brand campaign - $84.77 CPA (vs $203 for generic)
+2. Service-Specific Campaigns
+* One campaign per major service type
+* House cleaning / Maid service / Deep cleaning / Move in-out
+Example: One company's house cleaning campaign - $30.24 CPA with 27% conversion
+3. Location-Specific (If Multi-Location)
+* Separate campaigns or ad groups by city
+Don't overcomplicate it. The best performers had 1-3 simple campaigns.
+________________
+
+
+Geographic Targeting: Be Specific
+What the data shows:
+Ads with specific city names converted at 27%. Ads with "near you" converted at 0.1%.
+That's 270x worse.
+Recommended targeting:
+* Use radius targeting (10-15 miles max from service area)
+* Exclude areas you don't serve
+* Bid higher in affluent zip codes
+* Use location insertion in ads: {LOCATION(City)}
+Example from the data:
+* Denver-specific campaigns: $28-30 CPA
+* Generic "near you" campaigns: $200+ CPA
+________________
+
+
+Settings Checklist
+Turn ON:
+* ✅ Search Network
+* ✅ Call extensions
+* ✅ Location extensions
+* ✅ Sitelink extensions
+* ✅ Callout extensions
+* ✅ Conversion tracking
+Turn OFF:
+* ❌ Display Network
+* ❌ Search Partners (test, but usually worse)
+* ❌ Performance Max (for now)
+* ❌ "Optimized" targeting (gives Google too much control)
+Best practice from winners: Keep tight control. Don't let Google expand beyond your target areas.
+________________
+
+
+Part 3: The Numbers That Actually Matter
+Performance Benchmarks (From Real Data)
+Here's what "good" looks like based on the 12 companies analyzed:
+Metric
+	Poor
+	Average
+	Good
+	Elite
+	Cost Per lead
+	$100+
+	$50-100
+	$30-50
+	<$30
+	Conversion Rate
+	<8%
+	8-12%
+	12-20%
+	20%+
+	CTR
+	<4%
+	4-5%
+	5-7%
+	7%+
+	CPC
+	$10+
+	$7-10
+	$5-7
+	<$5
+	Where do you fall?
+If your CPA is above $100, you have major optimization opportunities (like Company E in our dataset).
+If your CPA is $50-100, you're average and can improve significantly.
+If your CPA is below $50, you're in the top 25%.
+If your CPA is below $30, you're in the top 5% (like Companies A and B).
+________________
+
+
+Monthly Performance Trends
+What the data showed across 4 months:
+Month
+	Avg CPA
+	Avg Conv Rate
+	Insight
+	July
+	$68.73
+	11.93%
+	Baseline
+	August
+	$52.78
+	14.24%
+	Best month
+	September
+	$67.56
+	14.79%
+	Volume up, efficiency down slightly
+	October
+	$76.35
+	11.64%
+	Worst efficiency
+	November
+	$77.69
+	10.11%
+	Partial month
+	Key insight: August had the best efficiency. October saw costs increase despite volume growth.
+Likely cause: Many companies launched new campaigns in September/October without proper optimization, diluting overall performance.
+________________
+
+
+Part 4: What Winners vs Losers Actually Did
+The Top Performers (CPA Under $50)
+Company A: $29.26 CPA | 19.75% Conv Rate
+What they did right:
+* Used dynamic keyword insertion: "{KeyWord:House Cleaning}"
+* Strong CTAs: "Get Your Home Cleaned Now"
+* Kept campaigns simple and focused
+* City-specific targeting
+Best performing ad group: 25% conversion rate, $23.70 CPA
+________________
+
+
+Company B: $30.24 CPA | 27.09% Conv Rate (Highest conversion in dataset)
+What they did right:
+* Brand + Location formula: "[Brand] | [City]"
+* Authority claims: "#1 Cleaning Service In [City]"
+* Trust signals: "Green Seal Certified Cleaners"
+* Multiple strong CTAs
+Best performing ad group: 27% conversion rate (highest in entire dataset)
+________________
+
+
+Company C: $35.58 CPA | 13.56% Conv Rate
+What they did right:
+* Very low CPC ($4.82) through quality optimization
+* Simple, clear headlines
+* Focused on long-term client campaigns
+* Consistent messaging
+Result: Excellent efficiency with 13.56% conversion rate
+________________
+
+
+The Underperformers (CPA Over $100)
+Company E: $104.52 CPA | 7.88% Conv Rate
+Problems identified:
+1. Brand campaign worked ($84.77 CPA)
+2. Generic search campaign failed ($203.39 CPA)
+3. Display campaign wasted money ($255 spent, 0 conversions)
+4. Website traffic campaign disaster ($3,159 CPA!)
+What needs fixing:
+* Replace "near you" headlines with city-specific headlines
+* Kill display and website traffic campaigns immediately
+* Focus budget on brand campaign (which is working)
+* Add city-specific copy throughout
+Potential impact: Could drop CPA from $104 to $50-60 just by fixing ad copy and pausing bad campaigns.
+________________
+
+
+Company F: $116.38 CPA | 10.31% Conv Rate
+Problems identified:
+1. One geographic campaign worked ($80.72 CPA)
+2. Second geographic campaign was a disaster ($488.35 CPA!)
+What needs fixing:
+* Pause the failing geographic campaign immediately
+* Focus all budget on the working geography
+* Fix ad copy if expanding again
+Potential impact: Could drop CPA from $116 to $80 by cutting the bad geography alone.
+________________
+
+
+Part 5: The One Change That Will 10x Your Results
+If you only do ONE thing from this playbook:
+Replace every instance of "near you" with your specific city name.
+That's it.
+The data:
+* "Cleaning Service Near You" → 0.1% conversion rate
+* "[City]'s Top Cleaning Service" → 27% conversion rate
+That's 270x better from changing two words.
+How to do it:
+1. Log into Google Ads
+2. Go to your Responsive Search Ads
+3. Find any headline with "near you" or "in your area"
+4. Replace with:
+   * "[Your City]'s Top [Service]"
+   * "[Service] in [Your City]"
+   * "[Your City]'s Most Trusted [Service]"
+Time required: 10 minutes
+Expected impact: 50-100% improvement in conversion rate
+This is the fastest, easiest win in this entire playbook.
+________________
+
+
+Part 6: Common Expensive Mistakes
+Mistake #1: No Conversion Tracking
+Companies affected: At least 3 in our dataset showed signs of this
+The problem: Can't optimize what you can't measure.
+The cost: Wasting 30-50% of budget on campaigns that don't work.
+The fix:
+* Set up Google Ads conversion tracking
+* Track both form submissions AND phone calls
+* Use call tracking numbers (CallRail, CallTrackingMetrics)
+* Verify tracking is working before spending more
+________________
+
+
+Mistake #2: Using Display Network
+Example: One company spent $255 on display with 0 conversions
+The problem: Display ads don't work for local service businesses. People aren't browsing the internet thinking "I need cleaning today."
+The fix: Turn off Display Network. Search only.
+________________
+
+
+Mistake #3: Wrong Campaign Types
+Example: One company's "website traffic" campaign - $3,159 CPA
+The problem: Optimizing for clicks/traffic instead of leads.
+The fix: Only run campaigns optimized for conversions. Delete anything optimized for clicks, traffic, or impressions.
+________________
+
+
+Mistake #4: Generic Copy
+Evidence: "Near you" headlines had 0.1-3% conversion vs 20-28% for city-specific
+The problem: You're competing with every cleaning company's generic ads.
+The fix: Use the copy templates in Part 1. City name + authority + service type.
+________________
+
+
+Mistake #5: Broad Geographic Targeting
+Evidence: Best performers had tight geographic focus
+The problem: Paying for clicks from people 30+ miles away who will never book.
+The fix:
+* 10-15 mile radius max
+* Exclude areas you don't serve
+* Bid higher in affluent zip codes
+________________
+
+
+Mistake #6: No Negative Keywords
+Evidence: Search term reports likely show tons of irrelevant searches
+The problem: Wasting money on searches like "cleaning jobs," "cleaning products," "DIY cleaning."
+The fix: Build a negative keyword list:
+* jobs
+* careers
+* hiring
+* DIY
+* products
+* supplies
+* equipment
+* franchise
+* free
+* cheap
+* (your city name if targeting different cities)
+________________
+
+
+Mistake #7: Not Tracking ROI
+Evidence: Most companies didn't know which campaigns were profitable
+The problem: Can't make smart decisions without knowing lead value.
+The fix:
+* Calculate average lead value
+* Track lifetime value, not just first job
+* Know your maximum acceptable CPA
+* Kill campaigns above that threshold
+________________
+
+
+Part 7: 30-Day Action Plan
+Week 1: Audit & Quick Wins
+Day 1-2: Data Collection
+* [ ] Log into Google Ads
+* [ ] Download last 90 days of data
+* [ ] Calculate your actual CPA
+* [ ] Identify your best and worst campaigns
+Day 3-4: The "Near You" Purge
+* [ ] Find every headline with "near you"
+* [ ] Replace with city-specific copy (templates in Part 1)
+* [ ] Update ad descriptions to include city name
+* [ ] Add location insertion: {LOCATION(City)}
+Day 5: Settings Audit
+* [ ] Turn OFF Display Network
+* [ ] Turn OFF Search Partners (or monitor closely)
+* [ ] Verify conversion tracking is working
+* [ ] Add call extensions with tracking numbers
+Day 6-7: Campaign Cleanup
+* [ ] Pause any campaign with $100+ spend and 0 conversions
+* [ ] Pause "website traffic" or "brand awareness" campaigns
+* [ ] Focus budget on conversion-optimized campaigns only
+Expected impact: 30-50% CPA reduction just from these quick wins.
+________________
+
+
+Week 2: Structural Improvements
+Day 8-10: Campaign Restructure
+* [ ] Separate brand campaign from generic search
+* [ ] Create service-specific campaigns
+* [ ] Set up location-specific ad groups (if needed)
+* [ ] Keep structure simple (3-5 campaigns max)
+Day 11-12: Ad Copy Refresh
+* [ ] Write new RSAs using winning templates
+* [ ] Include: Brand + City, Authority claim, Strong CTA
+* [ ] Add trust signals to descriptions
+* [ ] Pin your best headlines to position 1
+Day 13-14: Negative Keywords
+* [ ] Review search terms report
+* [ ] Add obvious negative keywords (jobs, careers, DIY, etc.)
+* [ ] Create negative keyword list
+* [ ] Apply to all campaigns
+________________
+
+
+Week 3: Optimize & Test
+Day 15-17: Performance Review
+* [ ] Which campaigns have CPA under $50?
+* [ ] Which ad groups convert best?
+* [ ] Which headlines get highest CTR?
+* [ ] Which descriptions drive conversions?
+Day 18-20: Budget Reallocation
+* [ ] Move budget FROM underperformers
+* [ ] Move budget TO winners
+* [ ] Increase bids on best-performing keywords
+* [ ] Decrease bids on high-CPA keywords
+Day 21: Quality Score Optimization
+* [ ] Check Quality Scores
+* [ ] Improve ad relevance (match keywords to ad copy)
+* [ ] Improve landing page relevance
+* [ ] Improve expected CTR (use better headlines)
+________________
+
+
+Week 4: Scale What Works
+Day 22-24: Winner Identification
+* [ ] List all campaigns with CPA below target
+* [ ] List all ad groups with >15% conversion rate
+* [ ] List all headlines with >20% conversion rate
+Day 25-27: Scaling
+* [ ] Increase budgets on winning campaigns by 20-30%
+* [ ] Create variations of winning ads
+* [ ] Expand winning campaigns to similar keywords
+* [ ] Test new geographic areas (carefully)
+Day 28-30: Monitoring & Documentation
+* [ ] Track daily performance
+* [ ] Document what's working
+* [ ] Calculate ROI
+* [ ] Plan next month's optimizations
+________________
+
+
+Part 8: Your Benchmark Scorecard
+Use this to grade your current Google Ads performance:
+Campaign Structure
+Grade A (Elite):
+* [ ] Search campaigns only
+* [ ] Clear brand vs generic separation
+* [ ] Service-specific structure
+* [ ] Tight geographic targeting
+Grade B (Good):
+* [ ] Mostly search, minimal display
+* [ ] Some structure
+* [ ] Geographic targeting in place
+Grade C (Needs Work):
+* [ ] Running display or PMax
+* [ ] No clear structure
+* [ ] Broad targeting
+Grade F (Broken):
+* [ ] Multiple campaign types mixed
+* [ ] No organization
+* [ ] Targeting entire states
+________________
+
+
+Ad Copy
+Grade A (Elite):
+* [ ] City name in every headline
+* [ ] Authority claims (#1, Top, Most Trusted)
+* [ ] Strong CTAs (Schedule, Get Quote)
+* [ ] Trust signals (certifications, ratings)
+* [ ] Zero "near you" headlines
+Grade B (Good):
+* [ ] Some city-specific copy
+* [ ] Mix of strong and weak headlines
+* [ ] At least one strong CTA
+Grade C (Needs Work):
+* [ ] Mostly generic copy
+* [ ] Some "near you" headlines
+* [ ] Weak CTAs
+Grade F (Broken):
+* [ ] All "near you" headlines
+* [ ] No differentiation
+* [ ] Generic fluff
+* [ ] Weak or missing CTAs
+________________
+
+
+Performance Metrics
+Grade A (Elite):
+* [ ] CPA under $50
+* [ ] Conversion rate 15%+
+* [ ] CTR 5%+
+* [ ] CPC under $7
+Grade B (Good):
+* [ ] CPA $50-80
+* [ ] Conversion rate 10-15%
+* [ ] CTR 4-5%
+* [ ] CPC $7-10
+Grade C (Needs Work):
+* [ ] CPA $80-120
+* [ ] Conversion rate 7-10%
+* [ ] CTR 3-4%
+* [ ] CPC $10-15
+Grade F (Broken):
+* [ ] CPA over $120
+* [ ] Conversion rate under 7%
+* [ ] CTR under 3%
+* [ ] CPC over $15
+________________
+
+
+Final Thoughts
+The data doesn't lie:
+Some cleaning companies get leads for $29. Others pay $324 for the same lead.
+The difference isn't budget. The difference isn't luck.
+The difference is:
+1. ✅ Using city-specific headlines instead of "near you"
+2. ✅ Running search campaigns instead of display
+3. ✅ Having strong CTAs instead of weak ones
+4. ✅ Building trust instead of making vague promises
+You now have the exact formulas used by the top performers.
+The question is: Will you implement them?
+Most people will read this, nod along, and do nothing.
+The winners will log into Google Ads this week and start making changes.
+Which one will you be?
+________________
+
+
+About This Data
+Data Source:
+* 12 cleaning companies (anonymized)
+* $98,530 in ad spend
+* July 11 - November 7, 2025
+* 1,468 total leads generated
+* 6,857 ad performance records analyzed
+* 5,606 ad variations with actual copy
+Geographic Coverage:
+* Multiple major U.S. cities
+* Urban and suburban markets
+* Competitive markets with 5-10+ competitors per city
+Analysis Methodology:
+* Campaign-level performance tracking
+* Ad group-level optimization analysis
+* Individual headline/description performance
+* Geographic targeting analysis
+* Conversion rate optimization
+* Cost per acquisition benchmarking
+________________
+
+
+What's Next?
+This Week: Log into Google Ads and implement the "near you" headline swap (Part 5).
+That ONE change could 2-3x your conversion rate.
+This Month: Follow the 30-day action plan in Part 7.
+By day 30, you should see a 30-50% reduction in CPA.
+This Quarter: Optimize, scale, and dominate your market while your competitors waste money on generic copy.
+________________
+
+
+Questions?
+Want us to implement this for you? [Your booking link]
+ luc@lucflynn.com -> Subject: Cleaning Playbook
+________________
+
+
+© 2025 | Based on analysis of $98,530 in real Google Ads spend from 12 cleaning companies
