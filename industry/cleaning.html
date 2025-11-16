@@ -550,10 +550,10 @@
                         <select id="adSpend" name="adSpend" required>
                             <option value="">Select range...</option>
                             <option value="$0 - Not running ads yet">$0 - Not running ads yet</option>
-                            <option value="$1 - $500/month">$1 - $500/month</option>
-                            <option value="$500 - $2,000/month">$500 - $2,000/month</option>
-                            <option value="$2,000 - $5,000/month">$2,000 - $5,000/month</option>
-                            <option value="$5,000 - $10,000/month">$5,000 - $10,000/month</option>
+                            <option value="$1 - $399/month">$1 - $399/month</option>
+                            <option value="$400 - $1,999/month">$400 - $1,999/month</option>
+                            <option value="$2,000 - $4,999/month">$2,000 - $4,999/month</option>
+                            <option value="$5,000 - $9,999/month">$5,000 - $9,999/month</option>
                             <option value="$10,000+/month">$10,000+/month</option>
                         </select>
                     </div>
@@ -639,7 +639,7 @@
 
             // High spenders ($2,000+) get the founder's offer page
             // Lower spenders get the simple thank you page
-            if (adSpend === '$2,000 - $5,000/month' || adSpend === '$5,000 - $10,000/month' || adSpend === '$10,000+/month') {
+            if (adSpend === '$2,000 - $4,999/month' || adSpend === '$5,000 - $9,999/month' || adSpend === '$10,000+/month') {
                 redirectInput.value = '/industry/thanksyou.html';
             } else {
                 redirectInput.value = '/industry/thankyou-simple.html';
@@ -653,16 +653,16 @@
             var conversionTier = '';
 
             // Map spend ranges to conversion values
-            if (adSpendValue === "$1 - $500/month") {
+            if (adSpendValue === "$1 - $399/month") {
                 conversionValue = 10;
                 conversionTier = 'extra-small';
-            } else if (adSpendValue === "$500 - $2,000/month") {
+            } else if (adSpendValue === "$400 - $1,999/month") {
                 conversionValue = 25;
                 conversionTier = 'small';
-            } else if (adSpendValue === "$2,000 - $5,000/month") {
+            } else if (adSpendValue === "$2,000 - $4,999/month") {
                 conversionValue = 100;
                 conversionTier = 'medium';
-            } else if (adSpendValue === "$5,000 - $10,000/month") {
+            } else if (adSpendValue === "$5,000 - $9,999/month") {
                 conversionValue = 250;
                 conversionTier = 'large';
             } else if (adSpendValue === "$10,000+/month") {
