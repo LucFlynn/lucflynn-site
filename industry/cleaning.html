@@ -653,7 +653,10 @@
             var conversionTier = '';
 
             // Map spend ranges to conversion values
-            if (adSpendValue === "$500 - $2,000/month") {
+            if (adSpendValue === "$1 - $500/month") {
+                conversionValue = 10;
+                conversionTier = 'extra-small';
+            } else if (adSpendValue === "$500 - $2,000/month") {
                 conversionValue = 25;
                 conversionTier = 'small';
             } else if (adSpendValue === "$2,000 - $5,000/month") {
@@ -666,7 +669,7 @@
                 conversionValue = 500;
                 conversionTier = 'enterprise';
             } else {
-                conversionValue = 0; // Not running ads or under $500
+                conversionValue = 0; // Not running ads yet
                 conversionTier = 'none';
             }
 
