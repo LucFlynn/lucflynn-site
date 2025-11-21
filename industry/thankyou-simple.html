@@ -303,17 +303,15 @@
     </nav>
 
     <!-- Confirmation Section -->
-    <div class="offer-hero" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 4rem 2rem; text-align: center; margin-bottom: 3rem;">
+    <div class="offer-hero" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 2rem 2rem 1.5rem; text-align: center; margin-bottom: 3rem;">
         <div class="container" style="max-width: 800px; margin: 0 auto;">
 
-            <div class="success-icon">✅</div>
-
-            <!-- Main Headline -->
-            <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 1rem; color: var(--text-primary);">
-                Your Free Cheat Sheet is On The Way!
+            <!-- Main Headline with inline checkmark -->
+            <h1 style="font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 900; line-height: 1.2; margin-bottom: 0.5rem; color: var(--text-primary); display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                <span style="font-size: 1.5em;">✅</span> Your Free Cheat Sheet is On The Way!
             </h1>
 
-            <p style="font-size: clamp(1.25rem, 2vw, 1.5rem); color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.5;">
+            <p style="font-size: clamp(1rem, 2vw, 1.15rem); color: var(--text-secondary); margin-bottom: 0; line-height: 1.4;">
                 Check your email in 2 minutes.
             </p>
         </div>
@@ -377,51 +375,51 @@
                     <input type="hidden" name="form_type" value="toolkit_upgrade">
                     <input type="hidden" name="email" id="hidden_email">
 
-                    <!-- Company Name -->
+                    <!-- Running Ads -->
                     <div style="margin-bottom: 1.5rem;">
-                        <label for="company_name" style="display: block; color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem;">
-                            Company Name *
+                        <label for="running_ads" style="display: block; color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem;">
+                            Are you currently running paid ads? *
                         </label>
-                        <input type="text" id="company_name" name="company_name" required
-                               style="width: 100%; padding: 0.875rem; background: var(--dark-lighter); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-size: 1rem;">
-                    </div>
-
-                    <!-- Company Size -->
-                    <div style="margin-bottom: 1.5rem;">
-                        <label for="company_size" style="display: block; color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem;">
-                            Company Size *
-                        </label>
-                        <select id="company_size" name="company_size" required
+                        <select id="running_ads" name="running_ads" required
                                 style="width: 100%; padding: 0.875rem; background: var(--dark-lighter); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-size: 1rem;">
                             <option value="">Select...</option>
-                            <option value="Solo">Solo</option>
-                            <option value="2-5">2-5</option>
-                            <option value="6-20">6-20</option>
-                            <option value="21+">21+</option>
+                            <option value="yes_working">Yes, and getting good results</option>
+                            <option value="yes_not_working">Yes, but not getting enough leads</option>
+                            <option value="no_want_to">No, but I want to start</option>
+                            <option value="no_not_interested">No, not interested right now</option>
                         </select>
                     </div>
 
-                    <!-- Urgency -->
+                    <!-- Monthly Revenue -->
                     <div style="margin-bottom: 1.5rem;">
-                        <label for="urgency" style="display: block; color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem;">
-                            How soon do you need more clients? *
+                        <label for="monthly_revenue" style="display: block; color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem;">
+                            What's your monthly revenue? *
                         </label>
-                        <select id="urgency" name="urgency" required
+                        <select id="monthly_revenue" name="monthly_revenue" required
                                 style="width: 100%; padding: 0.875rem; background: var(--dark-lighter); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-size: 1rem;">
                             <option value="">Select...</option>
-                            <option value="ASAP">ASAP</option>
-                            <option value="Next 30 days">Next 30 days</option>
-                            <option value="Just exploring">Just exploring</option>
+                            <option value="under_5k">Under $5K</option>
+                            <option value="5k_15k">$5K-$15K</option>
+                            <option value="15k_50k">$15K-$50K</option>
+                            <option value="50k_100k">$50K-$100K</option>
+                            <option value="100k_plus">$100K+</option>
                         </select>
                     </div>
 
-                    <!-- Challenge (Optional) -->
-                    <div style="margin-bottom: 2rem;">
-                        <label for="challenge" style="display: block; color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem;">
-                            What's your biggest paid ads challenge? (Optional)
+                    <!-- Ad Budget -->
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="ad_budget" style="display: block; color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem;">
+                            If we could guarantee 10+ qualified bookings/month, what would you invest in ads? *
                         </label>
-                        <textarea id="challenge" name="challenge" rows="4"
-                                  style="width: 100%; padding: 0.875rem; background: var(--dark-lighter); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-size: 1rem; resize: vertical;"></textarea>
+                        <select id="ad_budget" name="ad_budget" required
+                                style="width: 100%; padding: 0.875rem; background: var(--dark-lighter); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-size: 1rem;">
+                            <option value="">Select...</option>
+                            <option value="0_500">$0-$500</option>
+                            <option value="500_1k">$500-$1,000</option>
+                            <option value="1k_3k">$1,000-$3,000</option>
+                            <option value="3k_5k">$3,000-$5,000</option>
+                            <option value="5k_plus">$5,000+</option>
+                        </select>
                     </div>
 
                     <!-- Submit Button -->
