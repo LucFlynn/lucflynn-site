@@ -52,6 +52,26 @@
             text-align: center;
         }
 
+        .hero-cta-btn {
+            margin-top: 2.5rem;
+            padding: 1.25rem 2.5rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+
+        .hero-cta-btn:hover {
+            background: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+        }
+
         .stats-badge {
             display: inline-flex;
             align-items: center;
@@ -432,6 +452,10 @@
                     <span class="proof-label">Customers Tracked</span>
                 </div>
             </div>
+
+            <button onclick="document.getElementById('leadForm').scrollIntoView({ behavior: 'smooth', block: 'center' })" class="hero-cta-btn">
+                📥 Get My Free Cheat Sheet Now
+            </button>
         </div>
     </section>
 
