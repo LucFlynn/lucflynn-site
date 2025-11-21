@@ -544,7 +544,7 @@
                 </div>
 
                 <form id="leadForm" action="https://formspree.io/f/mblqrqoq" method="POST">
-                    <input type="hidden" name="_next" value="/industry/thanksyou.html" id="redirectUrl">
+                    <input type="hidden" name="_next" value="/industry/thankyou-simple.html" id="redirectUrl">
                     <input type="hidden" name="_subject" value="New Cleaning Company Lead">
                     <input type="hidden" name="source" value="cleaning-landing-page">
 
@@ -669,11 +669,15 @@
             }
         });
 
-        // Push form submission to dataLayer
+        // Push form submission to dataLayer and store email
         document.getElementById('leadForm').addEventListener('submit', function() {
             var adSpendValue = document.getElementById('adSpend').value;
+            var userEmail = document.getElementById('email').value;
             var conversionValue = 0;
             var conversionTier = '';
+
+            // Store email in localStorage for use on thank you page
+            localStorage.setItem('user_email', userEmail);
 
             // Map spend ranges to conversion values
             if (adSpendValue === "$1 - $399/month") {
@@ -703,7 +707,7 @@
                 'googleAdsSpend': adSpendValue,
                 'conversionValue': conversionValue,
                 'conversionTier': conversionTier,
-                'userEmail': document.getElementById('email').value,
+                'userEmail': userEmail,
                 'userName': document.getElementById('name').value
             });
         });

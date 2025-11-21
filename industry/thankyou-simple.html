@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You! Download Your Resources | Luc Flynn</title>
-    <meta name="description" content="Thank you for downloading the Cleaning Ads Cheat Sheet. Access your resources below.">
+    <title>Thank You! Check Your Email | Luc Flynn</title>
+    <meta name="description" content="Thank you! Your Cleaning Ads Cheat Sheet is on the way. Get the complete toolkit by answering 4 quick questions.">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -208,21 +208,80 @@
         window.dataLayer.push({
             'event': 'conversion',
             'conversion_type': 'lead_download',
-            'page_type': 'thank_you_simple',
-            'lead_value': 'low_spend'
+            'page_type': 'thank_you_toolkit',
+            'lead_value': 'toolkit_offer'
         });
 
-        // Auto-download the cheat sheet when page loads
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                const downloadLink = document.createElement('a');
-                downloadLink.href = '../assets/docs/The 2025 Cleaning Ads Cheat Sheet.pdf';
-                downloadLink.download = 'The 2025 Cleaning Ads Cheat Sheet.pdf';
-                downloadLink.style.display = 'none';
-                document.body.appendChild(downloadLink);
-                downloadLink.click();
-                document.body.removeChild(downloadLink);
-            }, 500);
+        // Auto-download disabled - cheat sheet will be sent via email
+        // window.addEventListener('load', function() {
+        //     setTimeout(function() {
+        //         const downloadLink = document.createElement('a');
+        //         downloadLink.href = '../assets/docs/The 2025 Cleaning Ads Cheat Sheet.pdf';
+        //         downloadLink.download = 'The 2025 Cleaning Ads Cheat Sheet.pdf';
+        //         downloadLink.style.display = 'none';
+        //         document.body.appendChild(downloadLink);
+        //         downloadLink.click();
+        //         document.body.removeChild(downloadLink);
+        //     }, 500);
+        // });
+
+        // Handle form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('toolkit-form');
+            const successMessage = document.getElementById('success-message');
+            const auditUpsell = document.getElementById('audit-upsell');
+            const hiddenEmailField = document.getElementById('hidden_email');
+
+            // Try to capture email from URL parameters or localStorage
+            const urlParams = new URLSearchParams(window.location.search);
+            let userEmail = urlParams.get('email');
+
+            // If not in URL, try to get from localStorage (in case it was stored from previous form)
+            if (!userEmail) {
+                userEmail = localStorage.getItem('user_email');
+            }
+
+            // Populate hidden email field if we have it
+            if (userEmail) {
+                hiddenEmailField.value = userEmail;
+            }
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Submit form via fetch
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(function(response) {
+                    if (response.ok) {
+                        // Hide form and show success message
+                        form.style.display = 'none';
+                        successMessage.style.display = 'block';
+
+                        // Push event to GTM
+                        window.dataLayer = window.dataLayer || [];
+                        window.dataLayer.push({
+                            'event': 'toolkit_upgrade',
+                            'form_type': 'toolkit_qualification'
+                        });
+
+                        // Scroll to success message
+                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                        // Optional: Show audit upsell after 3 seconds
+                        // Uncomment the line below to enable the $27 audit upsell
+                        // setTimeout(function() { auditUpsell.style.display = 'block'; }, 3000);
+                    } else {
+                        alert('There was a problem submitting your form. Please try again or email luc@lucflynn.com');
+                    }
+                }).catch(function(error) {
+                    alert('There was a problem submitting your form. Please try again or email luc@lucflynn.com');
+                });
+            });
         });
     </script>
 </head>
@@ -243,165 +302,168 @@
         </div>
     </nav>
 
-    <!-- Offer Hero Section -->
+    <!-- Confirmation Section -->
     <div class="offer-hero" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 4rem 2rem; text-align: center; margin-bottom: 3rem;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
 
-            <!-- Success Message (Subtle) -->
-            <div style="display: inline-block; background: rgba(16, 185, 129, 0.1); border: 1px solid var(--accent); border-radius: 100px; padding: 0.5rem 1.5rem; margin-bottom: 2rem;">
-                <span style="color: var(--accent); font-size: 0.875rem; font-weight: 600;">✅ Your download is on the way! Check your email in a few minutes.</span>
-            </div>
+            <div class="success-icon">✅</div>
 
             <!-- Main Headline -->
-            <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text-primary);">
-                Stop Wasting Money on Cleaning Ads—Get the Complete Profit System for $97
+            <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.1; margin-bottom: 1rem; color: var(--text-primary);">
+                Your Free Cheat Sheet is On The Way!
             </h1>
 
-            <p style="font-size: clamp(1.125rem, 2vw, 1.5rem); color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.5; max-width: 900px; margin-left: auto; margin-right: auto;">
-                Most cleaning companies waste 40-60% of their ad budget. I'll audit <strong style="color: var(--text-primary);">YOUR account</strong>, build your campaigns, and hand you ready-to-use templates—everything you need to stop the bleeding and start profiting. <strong style="color: var(--text-primary);">($1,788 value for just $97)</strong>
+            <p style="font-size: clamp(1.25rem, 2vw, 1.5rem); color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.5;">
+                Check your email in 2 minutes.
             </p>
-
-            <!-- Trust Badges -->
-            <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
-                <span style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent); font-size: 0.875rem; font-weight: 600;">
-                    <svg style="width: 1.25rem; height: 1.25rem;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    $10M+ Managed
-                </span>
-                <span style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent); font-size: 0.875rem; font-weight: 600;">
-                    <svg style="width: 1.25rem; height: 1.25rem;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    150+ Businesses
-                </span>
-                <span style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent); font-size: 0.875rem; font-weight: 600;">
-                    <svg style="width: 1.25rem; height: 1.25rem;" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-                    8+ Years Experience
-                </span>
-            </div>
-
-            <!-- Urgency -->
-            <div style="text-align: center;">
-                <span style="color: #fbbf24; font-weight: 700; font-size: 1rem;">⚠️ Only 10 Spots Available This Month (7 Remaining)</span>
-            </div>
         </div>
     </div>
 
     <!-- Main Container -->
     <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
 
-        <!-- What's Included Section -->
+        <!-- Toolkit Upgrade Offer -->
         <div class="content-section" style="background: var(--dark-lighter); border: 1px solid var(--border); border-radius: 12px; padding: 3rem 2rem; margin-bottom: 2rem;">
-            <h2 class="section-title" style="font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 800; color: var(--text-primary); text-align: center; margin-bottom: 2rem;">
-                🎯 What You Get in Your $97 Audit & Optimization Package
-            </h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h2 class="section-title" style="font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 800; color: var(--text-primary); text-align: center; margin-bottom: 1rem;">
+                    Want the Complete 10-Page Playbook + Professional Toolkit?
+                </h2>
 
-            <div style="max-width: 900px; margin: 0 auto;">
-                <!-- Service Items -->
-                <div class="offer-box" style="background: var(--dark); border: 2px solid var(--border); border-radius: 12px; padding: 2rem; margin: 1.5rem 0;">
+                <p style="font-size: 1.25rem; color: var(--text-secondary); text-align: center; margin-bottom: 2.5rem; line-height: 1.6;">
+                    You just got the Quick Start guide. Answer 4 quick questions and we'll also send you:
+                </p>
+
+                <!-- What You Get -->
+                <div style="background: var(--dark); border: 2px solid var(--border); border-radius: 12px; padding: 2rem; margin-bottom: 2.5rem;">
                     <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.6;">
+                        <li style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
                             <span style="color: var(--accent); font-size: 1.25rem; font-weight: bold;">✅</span>
-                            <span style="font-size: 1.2rem; color: var(--text-primary);"><strong>30-Minute Strategy Call with Me</strong> (Value: $150+) — I typically charge $150/hour for consulting. This call alone covers your investment—we'll walk through your audit together and I'll answer any questions you have</span>
+                            <span style="font-size: 1.1rem; color: var(--text-primary);">Complete 10-Page Playbook — Extended version with full strategies</span>
                         </li>
-                        <li style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.6;">
+                        <li style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
                             <span style="color: var(--accent); font-size: 1.25rem; font-weight: bold;">✅</span>
-                            <span style="font-size: 1.2rem; color: var(--text-primary);"><strong>Personalized Campaign Audit</strong> (Loom video + PDF report) — I'll review your current ads (or assess your market if you're starting from scratch) and show you exactly where you're leaving money on the table</span>
+                            <span style="font-size: 1.1rem; color: var(--text-primary);">Google Ads 20-Minute Weekly Optimization Checklist</span>
                         </li>
-                        <li style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.6;">
+                        <li style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
                             <span style="color: var(--accent); font-size: 1.25rem; font-weight: bold;">✅</span>
-                            <span style="font-size: 1.2rem; color: var(--text-primary);"><strong>2-3 Conversion-Optimized Landing Page Templates</strong> — Proven templates that convert at 27%+ (vs industry average of 3-5%) customized for your business</span>
+                            <span style="font-size: 1.1rem; color: var(--text-primary);">Ad Account Health Check Tool — Get 3 specific improvements</span>
                         </li>
-                        <li style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1.5rem; color: var(--text-secondary); line-height: 1.6;">
+                        <li style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
                             <span style="color: var(--accent); font-size: 1.25rem; font-weight: bold;">✅</span>
-                            <span style="font-size: 1.2rem; color: var(--text-primary);"><strong>90-Day PPC Growth Roadmap</strong> — Month-by-month action plan to scale from wherever you are to consistent, predictable lead flow</span>
+                            <span style="font-size: 1.1rem; color: var(--text-primary);">Facebook Lead Spam Reduction Checklist</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <span style="color: var(--accent); font-size: 1.25rem; font-weight: bold;">✅</span>
+                            <span style="font-size: 1.1rem; color: var(--text-primary);">Google Ads Scaling SOP</span>
+                        </li>
+                        <li style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <span style="color: var(--accent); font-size: 1.25rem; font-weight: bold;">✅</span>
+                            <span style="font-size: 1.1rem; color: var(--text-primary);">Campaign + Keyword Optimization SOPs</span>
                         </li>
                         <li style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 0; color: var(--text-secondary); line-height: 1.6;">
                             <span style="color: var(--accent); font-size: 1.25rem; font-weight: bold;">✅</span>
-                            <span style="font-size: 1.2rem; color: var(--text-primary);"><strong>Campaign Structure Templates</strong> — Copy-paste campaign structures that get results from day one (keywords, ad copy, targeting)</span>
+                            <span style="font-size: 1.1rem; color: var(--text-primary);">Landing Page SOP</span>
                         </li>
                     </ul>
-
-                    <!-- Social Proof Section -->
-                    <div style="background: rgba(37, 99, 235, 0.1); border: 1px solid rgba(37, 99, 235, 0.3); border-radius: 12px; padding: 2rem; margin-top: 2rem;">
-                        <h3 style="color: var(--text-primary); font-size: 1.3rem; font-weight: 800; margin-bottom: 1rem; text-align: center;">💼 Real Results from Real Cleaning Companies</h3>
-                        <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; text-align: center;">
-                            In the last year alone, I've managed <strong style="color: var(--text-primary);">$750,000+ in ad spend for cleaning companies</strong> and generated <strong style="color: var(--text-primary);">over 9,290 qualified leads</strong>. This isn't theory—it's a proven system that consistently delivers 20-28% conversion rates (vs. industry average of 3-5%).
-                        </p>
-                        <blockquote style="border-left: 3px solid var(--accent); padding-left: 1.5rem; margin: 0; font-style: italic; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
-                            "We hired Luc to upgrade some existing campaigns and after giving it the proper amount of time to reset, the campaigns suddenly kicked into high gear. We have broken records for daily conversions and call bookings."
-                        </blockquote>
-                        <p style="color: var(--text-primary); font-weight: 600; margin-top: 0.75rem; text-align: right;">— Erik E.</p>
-                    </div>
-
-                    <div class="offer-highlight" style="background: rgba(16, 185, 129, 0.1); border-radius: 8px; padding: 1.5rem; margin-top: 2rem;">
-                        <p style="color: var(--text-primary); font-weight: 700; font-size: 1.25rem; margin-bottom: 0.5rem; text-align: center;">📊 Total Value: $1,788</p>
-                        <p style="color: var(--accent); font-weight: 900; font-size: 2rem; margin: 0; text-align: center;">Your Price Today: $97</p>
-                    </div>
                 </div>
 
-                <!-- Scarcity + Bonus -->
-                <div style="margin: 2rem 0; padding: 2rem; border: 3px dashed var(--accent); border-radius: 12px; background: rgba(16, 185, 129, 0.15);">
-                    <p style="color: var(--text-primary); font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; text-align: center;">
-                        ⚡ Reserved for the first 10 buyers this month
-                    </p>
-                    <p style="color: #ef4444; font-weight: 700; font-size: 1.2rem; margin: 0; text-align: center;">
-                        🔥 FIRST 5 BUYERS: Qualify for 90 days FREE campaign management (worth $3,000+) — see eligibility below
-                    </p>
+                <p style="font-size: 1.15rem; color: var(--text-primary); text-align: center; margin-bottom: 2rem; font-weight: 600;">
+                    Just tell us about your company so we can customize your toolkit (takes 30 seconds):
+                </p>
+
+                <!-- Form -->
+                <form action="https://formspree.io/f/mblwbvae" method="POST" id="toolkit-form" style="background: var(--dark); border: 2px solid var(--border); border-radius: 12px; padding: 2.5rem;">
+                    <!-- Hidden fields -->
+                    <input type="hidden" name="form_type" value="toolkit_upgrade">
+                    <input type="hidden" name="email" id="hidden_email">
+
+                    <!-- Company Name -->
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="company_name" style="display: block; color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem;">
+                            Company Name *
+                        </label>
+                        <input type="text" id="company_name" name="company_name" required
+                               style="width: 100%; padding: 0.875rem; background: var(--dark-lighter); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-size: 1rem;">
+                    </div>
+
+                    <!-- Company Size -->
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="company_size" style="display: block; color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem;">
+                            Company Size *
+                        </label>
+                        <select id="company_size" name="company_size" required
+                                style="width: 100%; padding: 0.875rem; background: var(--dark-lighter); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-size: 1rem;">
+                            <option value="">Select...</option>
+                            <option value="Solo">Solo</option>
+                            <option value="2-5">2-5</option>
+                            <option value="6-20">6-20</option>
+                            <option value="21+">21+</option>
+                        </select>
+                    </div>
+
+                    <!-- Urgency -->
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="urgency" style="display: block; color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem;">
+                            How soon do you need more clients? *
+                        </label>
+                        <select id="urgency" name="urgency" required
+                                style="width: 100%; padding: 0.875rem; background: var(--dark-lighter); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-size: 1rem;">
+                            <option value="">Select...</option>
+                            <option value="ASAP">ASAP</option>
+                            <option value="Next 30 days">Next 30 days</option>
+                            <option value="Just exploring">Just exploring</option>
+                        </select>
+                    </div>
+
+                    <!-- Challenge (Optional) -->
+                    <div style="margin-bottom: 2rem;">
+                        <label for="challenge" style="display: block; color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem; font-size: 1rem;">
+                            What's your biggest paid ads challenge? (Optional)
+                        </label>
+                        <textarea id="challenge" name="challenge" rows="4"
+                                  style="width: 100%; padding: 0.875rem; background: var(--dark-lighter); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-size: 1rem; resize: vertical;"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit"
+                            style="width: 100%; padding: 1.5rem; background: var(--accent); color: white; border: none; border-radius: 8px; font-size: 1.25rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                        Send Me The Complete Toolkit + Playbook (Free)
+                    </button>
+                </form>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="success-message" style="display: none; background: rgba(16, 185, 129, 0.1); border: 2px solid var(--accent); border-radius: 12px; padding: 2rem; margin-top: 2rem; text-align: center;">
+                    <p style="color: var(--accent); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">✅ Perfect!</p>
+                    <p style="color: var(--text-primary); font-size: 1.1rem; margin: 0;">Check your email in 2 minutes for everything.</p>
                 </div>
 
-                <!-- Security Badge -->
-                <p style="text-align: center; color: var(--text-secondary); font-size: 0.95rem; margin: 1.5rem 0 1rem;">
-                    🔒 Secure payment via Stripe (card, Apple Pay, Google Pay). We never store your info.
-                </p>
-
-                <!-- CTA Button -->
-                <a href="https://buy.stripe.com/aFaaEYeuDgaE7Hf07L5J600" class="btn-primary" style="display: block; padding: 1.75rem 3rem; background: var(--accent); color: white; text-align: center; font-size: 1.5rem; border-radius: 12px; text-decoration: none; font-weight: 900; margin: 2rem 0 1.5rem; transition: all 0.3s; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);">
-                    Claim My $97 Profit System Now (Only 10 Left) →
-                </a>
-
-                <!-- Guarantee -->
-                <p style="font-size: 1.1rem; color: var(--text-secondary); text-align: center; line-height: 1.7; margin-bottom: 0;">
-                    <strong style="color: var(--text-primary);">🛡️ 100% Results Guarantee:</strong> If you don't get at least 3 actionable improvements you can implement this week to cut wasted spend, email me within 14 days for a full refund—no questions, no hassle.
-                </p>
-            </div>
-        </div>
-
-        <!-- Bonus: Free Management Section -->
-        <div class="content-section" style="background: var(--dark-lighter); border: 1px solid var(--border); border-radius: 12px; padding: 3rem 2rem; margin-bottom: 2rem;">
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div style="background: rgba(239, 68, 68, 0.1); border: 2px solid #ef4444; border-radius: 12px; padding: 2.5rem;">
-                    <h3 style="color: #ef4444; font-size: 1.5rem; font-weight: 800; margin-bottom: 1.5rem; text-align: center;">
-                        🔥 BONUS: How to Claim Your FREE 90-Day Campaign Management (First 5 Only)
+                <!-- Optional: $27 Audit Upsell (Hidden by default, can be shown after form submission) -->
+                <div id="audit-upsell" style="display: none; background: var(--dark); border: 2px solid var(--primary); border-radius: 12px; padding: 2.5rem; margin-top: 2rem;">
+                    <h3 style="color: var(--text-primary); font-size: 1.75rem; font-weight: 800; text-align: center; margin-bottom: 1rem;">
+                        🎯 One More Thing...
                     </h3>
-                    <ol style="color: var(--text-primary); font-size: 1.2rem; line-height: 1.9; padding-left: 1.5rem;">
-                        <li style="margin-bottom: 1rem;">Buy the $97 package (button above)</li>
-                        <li style="margin-bottom: 1rem;">Book your included 30-minute strategy call</li>
-                        <li style="margin-bottom: 1rem;">If you have <strong>$1,000+/month ad budget</strong> and agree to implement our landing page + tracking recommendations, you qualify for <strong>90 days FREE management (worth $3,000)</strong></li>
-                    </ol>
-                    <p style="font-weight: 700; color: var(--accent); margin-top: 1.5rem; font-size: 1.2rem; text-align: center;">
-                        ✨ Don't qualify? No problem — you still keep all deliverables + strategy call for just $97.
+                    <p style="color: var(--text-secondary); font-size: 1.1rem; text-align: center; margin-bottom: 1.5rem; line-height: 1.6;">
+                        Want me to personally review your ad account and show you exactly where you're leaving money on the table?
+                    </p>
+                    <p style="color: var(--text-primary); font-size: 1.25rem; font-weight: 700; text-align: center; margin-bottom: 2rem;">
+                        Get a detailed 15-minute video audit for just $27
+                    </p>
+                    <a href="https://buy.stripe.com/YOUR-STRIPE-LINK" style="display: block; padding: 1.5rem; background: var(--primary); color: white; text-align: center; border-radius: 8px; text-decoration: none; font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">
+                        Get My $27 Audit Now →
+                    </a>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; text-align: center; margin: 0;">
+                        Limited to 5 audits per week
                     </p>
                 </div>
-            </div>
-        </div>
-
-        <!-- Download Resources Section -->
-        <div class="content-section" style="background: var(--dark-lighter); border: 1px solid var(--border); border-radius: 12px; padding: 3rem 2rem; margin-bottom: 2rem;">
-            <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary); text-align: center; margin-bottom: 2rem;">📥 Don't Forget Your Free Resources</h3>
-            <div style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px; margin: 0 auto;">
-                <a href="../assets/docs/The 2025 Cleaning Ads Cheat Sheet.pdf" download class="download-btn" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; padding: 1.25rem 2rem; background: var(--primary); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem; transition: all 0.2s;">
-                    📄 Download Cheat Sheet (Quick Reference)
-                </a>
-                <a href="../assets/docs/The 2025 Google Ads Playbook for Cleaning Companies (1).pdf" download class="download-btn secondary" style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; padding: 1.25rem 2rem; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem; transition: all 0.2s;">
-                    📚 Download Full Playbook (10 Pages)
-                </a>
             </div>
         </div>
 
         <!-- Questions Section -->
         <div style="text-align: center; padding: 2rem 0;">
-            <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">💬 Questions About the Offer?</h3>
+            <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1rem;">💬 Questions?</h3>
             <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 1.5rem;">
-                Want to know if you qualify for the free 90-day management?<br>
-                Reach out directly and I'll walk you through it.
+                Need help with your ads or have questions about the toolkit?<br>
+                Reach out directly and I'll get back to you.
             </p>
             <a href="mailto:luc@lucflynn.com" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1.25rem 2.5rem; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; font-weight: 700; font-size: 1.1rem; transition: all 0.2s;">
                 📧 Email Me: luc@lucflynn.com
