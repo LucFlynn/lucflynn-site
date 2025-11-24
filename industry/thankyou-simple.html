@@ -258,10 +258,6 @@
                     }
                 }).then(function(response) {
                     if (response.ok) {
-                        // Hide form and show success message
-                        form.style.display = 'none';
-                        successMessage.style.display = 'block';
-
                         // Push event to GTM
                         window.dataLayer = window.dataLayer || [];
                         window.dataLayer.push({
@@ -269,12 +265,8 @@
                             'form_type': 'toolkit_qualification'
                         });
 
-                        // Scroll to success message
-                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-                        // Optional: Show audit upsell after 3 seconds
-                        // Uncomment the line below to enable the $27 audit upsell
-                        // setTimeout(function() { auditUpsell.style.display = 'block'; }, 3000);
+                        // Redirect to thankyou-ads.html after successful submission
+                        window.location.href = '/industry/thankyou-ads.html';
                     } else {
                         alert('There was a problem submitting your form. Please try again or email luc@lucflynn.com');
                     }
