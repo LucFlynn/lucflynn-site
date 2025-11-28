@@ -582,6 +582,9 @@
                     <!-- Google Click ID -->
                     <input type="hidden" name="gclid" id="gclid">
 
+                    <!-- IP Address -->
+                    <input type="hidden" name="ip_address" id="ip_address">
+
                     <div class="form-group">
                         <label for="name">First Name *</label>
                         <input type="text" id="name" name="name" required placeholder="John">
@@ -659,6 +662,18 @@
     </footer>
 
     <script>
+        // Capture IP address on page load
+        (function() {
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('ip_address').value = data.ip;
+                })
+                .catch(error => {
+                    console.log('Unable to fetch IP address');
+                });
+        })();
+
         // Capture UTM parameters and GCLID from URL
         (function() {
             const urlParams = new URLSearchParams(window.location.search);
