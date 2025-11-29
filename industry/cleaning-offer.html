@@ -793,6 +793,22 @@
                 <input type="hidden" name="_subject" value="3-Lead Trial Application - Pay-Per-Lead">
                 <input type="hidden" name="source" value="cleaning-offer-page">
 
+                <!-- UTM Parameters -->
+                <input type="hidden" name="utm_source" id="utm_source">
+                <input type="hidden" name="utm_medium" id="utm_medium">
+                <input type="hidden" name="utm_campaign" id="utm_campaign">
+                <input type="hidden" name="utm_term" id="utm_term">
+                <input type="hidden" name="utm_content" id="utm_content">
+
+                <!-- Google Click ID -->
+                <input type="hidden" name="gclid" id="gclid">
+
+                <!-- Facebook Click ID -->
+                <input type="hidden" name="fbclid" id="fbclid">
+
+                <!-- IP Address -->
+                <input type="hidden" name="ip_address" id="ip_address">
+
                 <div style="margin-bottom: 1.5rem;">
                     <label style="display: block; color: var(--text-primary); font-weight: 600; margin-bottom: 0.5rem;">Name *</label>
                     <input type="text" name="name" required placeholder="Your name"
@@ -847,6 +863,44 @@
     </div>
 
     <script>
+        // Capture IP address on page load
+        (function() {
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('ip_address').value = data.ip;
+                })
+                .catch(error => {
+                    console.log('Unable to fetch IP address');
+                });
+        })();
+
+        // Capture UTM parameters and GCLID from URL
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // UTM parameters
+            const utmParams = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+            utmParams.forEach(param => {
+                const value = urlParams.get(param);
+                if (value) {
+                    document.getElementById(param).value = value;
+                }
+            });
+
+            // GCLID (Google Click ID)
+            const gclid = urlParams.get('gclid');
+            if (gclid) {
+                document.getElementById('gclid').value = gclid;
+            }
+
+            // FBCLID (Facebook Click ID)
+            const fbclid = urlParams.get('fbclid');
+            if (fbclid) {
+                document.getElementById('fbclid').value = fbclid;
+            }
+        })();
+
         // Handle conditional redirect based on revenue
         document.getElementById('lead-trial-form').addEventListener('submit', function(e) {
             e.preventDefault();

@@ -582,6 +582,9 @@
                     <!-- Google Click ID -->
                     <input type="hidden" name="gclid" id="gclid">
 
+                    <!-- Facebook Click ID -->
+                    <input type="hidden" name="fbclid" id="fbclid">
+
                     <!-- IP Address -->
                     <input type="hidden" name="ip_address" id="ip_address">
 
@@ -691,6 +694,12 @@
             const gclid = urlParams.get('gclid');
             if (gclid) {
                 document.getElementById('gclid').value = gclid;
+            }
+
+            // FBCLID (Facebook Click ID)
+            const fbclid = urlParams.get('fbclid');
+            if (fbclid) {
+                document.getElementById('fbclid').value = fbclid;
             }
         })();
 
