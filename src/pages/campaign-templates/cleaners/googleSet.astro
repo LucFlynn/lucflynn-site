@@ -1,0 +1,486 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Google Ads Campaign Settings Guide" showNav={false} showFooter={false}>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 40px 20px;
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 16px;
+        padding: 48px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+        font-size: 32px;
+        color: #1a1a1a;
+        margin-bottom: 12px;
+        font-weight: 700;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 40px;
+    }
+
+    .video-section {
+        margin-bottom: 48px;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 2px solid #e9ecef;
+    }
+
+    .video-placeholder {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 80px 40px;
+        text-align: center;
+        color: white;
+    }
+
+    .video-icon {
+        font-size: 64px;
+        margin-bottom: 16px;
+        opacity: 0.9;
+    }
+
+    .video-placeholder p {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    .video-note {
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 0.9;
+    }
+
+    .video-section iframe {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+
+    .settings-grid {
+        display: grid;
+        gap: 32px;
+    }
+
+    .setting-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        border: 2px solid #e9ecef;
+        transition: all 0.3s ease;
+    }
+
+    .setting-row:hover {
+        border-color: #667eea;
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+    }
+
+    .screenshot-box {
+        background: white;
+        border-radius: 8px;
+        padding: 16px;
+        border: 1px solid #dee2e6;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+
+    .screenshot-box:hover {
+        transform: scale(1.02);
+    }
+
+    .screenshot-box img {
+        width: 100%;
+        border-radius: 4px;
+        display: block;
+    }
+
+    .screenshot-placeholder {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        height: 180px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6c757d;
+        font-size: 14px;
+        font-style: italic;
+    }
+
+    .recommendation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .setting-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .setting-name {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+    }
+
+    .status-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .status-badge.recommend {
+        background: #d4edda;
+        color: #155724;
+    }
+
+    .status-badge.avoid {
+        background: #f8d7da;
+        color: #721c24;
+    }
+
+    .status-badge.depends {
+        background: #fff3cd;
+        color: #856404;
+    }
+
+    .icon {
+        font-size: 16px;
+    }
+
+    .recommendation-text {
+        font-size: 15px;
+        color: #495057;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+
+    .why-section {
+        background: white;
+        padding: 12px 16px;
+        border-radius: 6px;
+        border-left: 3px solid #667eea;
+    }
+
+    .why-label {
+        font-size: 12px;
+        font-weight: 600;
+        color: #667eea;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 6px;
+    }
+
+    .why-text {
+        font-size: 14px;
+        color: #6c757d;
+        line-height: 1.5;
+    }
+
+    .footer {
+        margin-top: 40px;
+        padding-top: 24px;
+        border-top: 2px solid #e9ecef;
+        text-align: center;
+        color: #6c757d;
+        font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 32px 24px;
+        }
+
+        .setting-row {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .setting-name {
+            font-size: 18px;
+        }
+    }
+  </style>
+
+  <div class="container">
+      <h1>Google Ads Campaign Settings Guide</h1>
+      <p class="subtitle">Essential settings for Search campaigns to maximize performance and control costs</p>
+
+      <!-- Video Section -->
+      <div class="video-section">
+          <div class="video-placeholder">
+              <div class="video-icon">🎥</div>
+              <p>Video walkthrough coming soon</p>
+              <p class="video-note">I'll walk you through each of these settings step-by-step</p>
+          </div>
+          <!-- When ready, replace placeholder with:
+          <iframe width="100%" height="500" src="YOUR_VIDEO_URL" frameborder="0" allowfullscreen></iframe>
+          -->
+      </div>
+
+      <div class="settings-grid">
+          <!-- Networks -->
+          <div class="setting-row">
+              <div class="screenshot-box">
+                  <img src="/assets/google_settings/networks.png" alt="Networks setting">
+              </div>
+              <div class="recommendation">
+                  <div class="setting-header">
+                      <span class="setting-name">Networks</span>
+                      <span class="status-badge recommend">
+                          <span class="icon">✓</span> Recommended
+                      </span>
+                  </div>
+                  <p class="recommendation-text">
+                      <strong>Select:</strong> Google Search Network only<br>
+                      <strong>Uncheck:</strong> Display Network, Search Partners
+                  </p>
+                  <div class="why-section">
+                      <div class="why-label">Why This Matters</div>
+                      <div class="why-text">
+                          Search Network gives you the most control and highest intent traffic. Display and Search Partners often have lower quality clicks and make optimization harder.
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Locations -->
+          <div class="setting-row">
+              <div class="screenshot-box">
+                  <img src="/assets/google_settings/location.png" alt="Location targeting setting">
+              </div>
+              <div class="recommendation">
+                  <div class="setting-header">
+                      <span class="setting-name">Location Targeting</span>
+                      <span class="status-badge recommend">
+                          <span class="icon">✓</span> Critical
+                      </span>
+                  </div>
+                  <p class="recommendation-text">
+                      <strong>Select:</strong> "Presence: People in or regularly in your targeted locations"<br>
+                      <strong>Avoid:</strong> "Presence or interest" setting
+                  </p>
+                  <div class="why-section">
+                      <div class="why-label">Why This Matters</div>
+                      <div class="why-text">
+                          The "interest" option shows ads to people just searching for your location, even if they're nowhere near it. This wastes budget on unqualified clicks.
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Location Exclusions -->
+          <div class="setting-row">
+              <div class="screenshot-box">
+                  <img src="/assets/google_settings/locexl.png" alt="Location exclusions">
+              </div>
+              <div class="recommendation">
+                  <div class="setting-header">
+                      <span class="setting-name">Location Exclusions</span>
+                      <span class="status-badge recommend">
+                          <span class="icon">✓</span> Recommended
+                      </span>
+                  </div>
+                  <p class="recommendation-text">
+                      <strong>Add:</strong> Areas you don't serve or that underperform<br>
+                      <strong>Review:</strong> Monthly performance by location
+                  </p>
+                  <div class="why-section">
+                      <div class="why-label">Why This Matters</div>
+                      <div class="why-text">
+                          Block specific cities, zip codes, or regions where you can't deliver service or that consistently waste budget. This prevents irrelevant clicks.
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Bidding - Max Clicks -->
+          <div class="setting-row">
+              <div class="screenshot-box">
+                  <img src="/assets/google_settings/maxclicks.png" alt="Maximize Clicks bidding">
+              </div>
+              <div class="recommendation">
+                  <div class="setting-header">
+                      <span class="setting-name">Maximize Clicks</span>
+                      <span class="status-badge depends">
+                          <span class="icon">◐</span> Depends on Business
+                      </span>
+                  </div>
+                  <p class="recommendation-text">
+                      <strong>Local Businesses:</strong> Start with this if you're just launching<br>
+                      <strong>National/Broader:</strong> Avoid - use Manual CPC or Target CPA instead
+                  </p>
+                  <div class="why-section">
+                      <div class="why-label">Why This Matters</div>
+                      <div class="why-text">
+                          For local businesses with tight geo-targeting, Maximize Clicks can work initially to gather data. For national campaigns with broader targeting, it often drives low-quality clicks and wastes budget. Switch to Target CPA once you have conversion data.
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Bidding - Max Conversions -->
+          <div class="setting-row">
+              <div class="screenshot-box">
+                  <img src="/assets/google_settings/maxconv.png" alt="Maximize Conversions bidding">
+              </div>
+              <div class="recommendation">
+                  <div class="setting-header">
+                      <span class="setting-name">Maximize Conversions</span>
+                      <span class="status-badge depends">
+                          <span class="icon">◐</span> Use With Caution
+                      </span>
+                  </div>
+                  <p class="recommendation-text">
+                      <strong>Only Use If:</strong> You have 30+ conversions/month consistently<br>
+                      <strong>Otherwise:</strong> Start with Manual CPC or Target CPA
+                  </p>
+                  <div class="why-section">
+                      <div class="why-label">Why This Matters</div>
+                      <div class="why-text">
+                          Without enough conversion data, this strategy can blow through your budget quickly. Google's algorithm needs sufficient data to optimize properly.
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Keyword Match Types - Phrase -->
+          <div class="setting-row">
+              <div class="screenshot-box">
+                  <img src="/assets/google_settings/kwphrase.png" alt="Phrase match keywords">
+              </div>
+              <div class="recommendation">
+                  <div class="setting-header">
+                      <span class="setting-name">Phrase Match Keywords</span>
+                      <span class="status-badge recommend">
+                          <span class="icon">✓</span> Recommended
+                      </span>
+                  </div>
+                  <p class="recommendation-text">
+                      <strong>Use:</strong> Phrase match "keyword" as your primary match type<br>
+                      <strong>Format:</strong> Wrap keywords in quotes: "plumber near me"
+                  </p>
+                  <div class="why-section">
+                      <div class="why-label">Why This Matters</div>
+                      <div class="why-text">
+                          Phrase match gives you balance between reach and control. It matches searches that include your keyword phrase in the right order, filtering out completely irrelevant queries.
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Broad Match Off -->
+          <div class="setting-row">
+              <div class="screenshot-box">
+                  <img src="/assets/google_settings/broadmatchoff.png" alt="Broad match disabled">
+              </div>
+              <div class="recommendation">
+                  <div class="setting-header">
+                      <span class="setting-name">Broad Match</span>
+                      <span class="status-badge avoid">
+                          <span class="icon">✗</span> Avoid (Initially)
+                      </span>
+                  </div>
+                  <p class="recommendation-text">
+                      <strong>Start Without:</strong> Broad match keywords<br>
+                      <strong>Later:</strong> Test carefully with strong negative keyword lists
+                  </p>
+                  <div class="why-section">
+                      <div class="why-label">Why This Matters</div>
+                      <div class="why-text">
+                          Broad match gives Google too much freedom to interpret your keywords. You'll often show for irrelevant searches. Only use once you have robust conversion tracking and negative keywords.
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Negative Keywords -->
+          <div class="setting-row">
+              <div class="screenshot-box">
+                  <img src="/assets/google_settings/negkw.png" alt="Negative keywords">
+              </div>
+              <div class="recommendation">
+                  <div class="setting-header">
+                      <span class="setting-name">Negative Keywords</span>
+                      <span class="status-badge recommend">
+                          <span class="icon">✓</span> Critical
+                      </span>
+                  </div>
+                  <p class="recommendation-text">
+                      <strong>Add From Day 1:</strong> 50-100 negative keywords minimum<br>
+                      <strong>Review:</strong> Weekly search terms report to add more
+                  </p>
+                  <div class="why-section">
+                      <div class="why-label">Why This Matters</div>
+                      <div class="why-text">
+                          Negative keywords prevent your ads from showing for irrelevant searches (e.g., "free," "DIY," "jobs"). This is your #1 tool to cut wasted spend.
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Tracking Template -->
+          <div class="setting-row">
+              <div class="screenshot-box">
+                  <img src="/assets/google_settings/trackingtemp.png" alt="Tracking template">
+              </div>
+              <div class="recommendation">
+                  <div class="setting-header">
+                      <span class="setting-name">Tracking Template</span>
+                      <span class="status-badge recommend">
+                          <span class="icon">✓</span> Advanced
+                      </span>
+                  </div>
+                  <p class="recommendation-text">
+                      <strong>Add:</strong> UTM parameters to track campaign performance<br>
+                      <strong>Example:</strong> ?utm_source=google&utm_medium=cpc&utm_campaign={'{campaign}'}
+                  </p>
+                  <div class="why-section">
+                      <div class="why-label">Why This Matters</div>
+                      <div class="why-text">
+                          Tracking templates let you pass campaign data to your analytics platform. This helps you see exactly which campaigns, ad groups, and keywords drive conversions.
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="footer">
+          <p><strong>Pro Tip:</strong> Review and adjust these settings monthly based on performance data</p>
+      </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Lead Quality Score Calculator | Luc Flynn</title><meta name="description" content="Free ad management resources, SOPs, templates, and tools by Luc Flynn."><meta property="og:type" content="website"><meta property="og:site_name" content="Luc Flynn"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K5T59C5F');</script> <!-- Vercel Analytics --><script defer src="/_vercel/insights/script.js"></script> <!-- Hotjar Tracking Code --><script>
+(function (c, s, q, u, a, r, e) {
+    c.hj=c.hj||function(){(c.hj.q=c.hj.q||[]).push(arguments)};
+    c._hjSettings = { hjid: a };
+    r = s.getElementsByTagName('head')[0];
+    e = s.createElement('script');
+    e.async = true;
+    e.src = q + c._hjSettings.hjid + u;
+    r.appendChild(e);
+})(window, document, 'https://static.hj.contentsquare.net/c/csq-', '.js', 6579122);
+</script> <!-- PostHog --><script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Or Ar ci Tr Cr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_87ISppR8KUJq1jXfcyR9b0jayvulu5XRQGNFi26Aymy', {
+    api_host: 'https://us.i.posthog.com',
+    defaults: '2025-05-24',
+    person_profiles: 'identified_only',
+})
+</script><link rel="stylesheet" href="/_astro/googleSet.CzPgZt_-.css">
+<link rel="stylesheet" href="/_astro/lead-score.DDIedptT.css">
+<link rel="stylesheet" href="/_astro/googleSet.CnDQ2qkQ.css"></head> <body>    <div class="container" data-astro-cid-yihbbv4h> <h1 data-astro-cid-yihbbv4h>🎯 Lead Quality Score Calculator</h1> <p class="subtitle" data-astro-cid-yihbbv4h>Find out why 60% of your leads are garbage. Answer 8 quick questions about your Facebook/Google lead gen setup. Takes 3 minutes.</p> <form id="calculatorForm" data-astro-cid-yihbbv4h> <!-- Question 1 --> <div class="question-block" data-astro-cid-yihbbv4h> <div class="question-number" data-astro-cid-yihbbv4h>QUESTION 1/8</div> <div class="question-text" data-astro-cid-yihbbv4h>Open your Facebook Lead Ad form. What's the "Form type" setting?</div> <div class="options" data-astro-cid-yihbbv4h> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q1" value="10" required data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>"Higher intent"</span> <span class="points" data-astro-cid-yihbbv4h>+10 pts</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q1" value="0" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>"More volume"</span> <span class="points red" data-astro-cid-yihbbv4h>RED FLAG</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q1" value="0" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>I don't know how to check this</span> <span class="points" data-astro-cid-yihbbv4h>0 pts</span> </label> </div> <div class="helper-text" data-astro-cid-yihbbv4h>💡 Ads Manager → Your Form → Settings → Form Type</div> </div> <!-- Question 2 --> <div class="question-block" data-astro-cid-yihbbv4h> <div class="question-number" data-astro-cid-yihbbv4h>QUESTION 2/8</div> <div class="question-text" data-astro-cid-yihbbv4h>How many questions do people answer in your form?</div> <div class="helper-text" style="margin-bottom: 15px;" data-astro-cid-yihbbv4h>Not counting name/email/phone - just the EXTRA questions you added</div> <div class="options" data-astro-cid-yihbbv4h> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q2" value="15" required data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>3 or more questions</span> <span class="points" data-astro-cid-yihbbv4h>+15 pts</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q2" value="8" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>1-2 questions</span> <span class="points" data-astro-cid-yihbbv4h>+8 pts</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q2" value="0" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>Zero extra questions</span> <span class="points" data-astro-cid-yihbbv4h>0 pts</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q2" value="0" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>I don't know</span> <span class="points" data-astro-cid-yihbbv4h>0 pts</span> </label> </div> </div> <!-- Question 3 --> <div class="question-block" data-astro-cid-yihbbv4h> <div class="question-number" data-astro-cid-yihbbv4h>QUESTION 3/8</div> <div class="question-text" data-astro-cid-yihbbv4h>Check your ad placements. Is "Audience Network" turned ON?</div> <div class="options" data-astro-cid-yihbbv4h> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q3" value="10" required data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>No, I excluded it</span> <span class="points" data-astro-cid-yihbbv4h>+10 pts</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q3" value="0" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>Yes, it's running</span> <span class="points" data-astro-cid-yihbbv4h>Likely waste</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q3" value="0" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>I don't know / Can't find it</span> <span class="points" data-astro-cid-yihbbv4h>0 pts</span> </label> </div> <div class="helper-text" data-astro-cid-yihbbv4h>💡 Go to Ad Set → Placements</div> </div> <!-- Question 4 --> <div class="question-block" data-astro-cid-yihbbv4h> <div class="question-number" data-astro-cid-yihbbv4h>QUESTION 4/8</div> <div class="question-text" data-astro-cid-yihbbv4h>How fast do you call/email leads?</div> <div class="options" data-astro-cid-yihbbv4h> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q4" value="15" required data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>Within 5 minutes (automated)</span> <span class="points" data-astro-cid-yihbbv4h>+15 pts</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q4" value="8" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>Within 1-2 hours</span> <span class="points" data-astro-cid-yihbbv4h>+8 pts</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q4" value="3" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>Same day</span> <span class="points" data-astro-cid-yihbbv4h>+3 pts</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q4" value="0" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>Next day or slower</span> <span class="points" data-astro-cid-yihbbv4h>Most leads are dead</span> </label> </div> </div> <!-- Question 5 --> <div class="question-block" data-astro-cid-yihbbv4h> <div class="question-number" data-astro-cid-yihbbv4h>QUESTION 5/8</div> <div class="question-text" data-astro-cid-yihbbv4h>Out of your last 20 leads, how many were qualified/real?</div> <div class="options" data-astro-cid-yihbbv4h> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q5" value="15" required data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>15+ were qualified/real</span> <span class="points" data-astro-cid-yihbbv4h>+15 pts (crushing it!)</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q5" value="10" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>10-14 were qualified</span> <span class="points" data-astro-cid-yihbbv4h>+10 pts (decent)</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q5" value="5" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>5-9 were qualified</span> <span class="points" data-astro-cid-yihbbv4h>+5 pts (below avg)</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q5" value="0" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>Under 5 were qualified</span> <span class="points" data-astro-cid-yihbbv4h>Major problem</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q5" value="0" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>I haven't tracked this</span> <span class="points" data-astro-cid-yihbbv4h>Flying blind</span> </label> </div> </div> <!-- Question 6 --> <div class="question-block" data-astro-cid-yihbbv4h> <div class="question-number" data-astro-cid-yihbbv4h>QUESTION 6/8</div> <div class="question-text" data-astro-cid-yihbbv4h>Do you have a customer list uploaded to Facebook to exclude them from ads?</div> <div class="options" data-astro-cid-yihbbv4h> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q6" value="10" required data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>Yes</span> <span class="points" data-astro-cid-yihbbv4h>+10 pts</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q6" value="0" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>No</span> <span class="points" data-astro-cid-yihbbv4h>Wasting money on existing customers</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q6" value="0" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>I don't know how to do this</span> <span class="points" data-astro-cid-yihbbv4h>0 pts</span> </label> </div> </div> <!-- Question 7 --> <div class="question-block" data-astro-cid-yihbbv4h> <div class="question-number" data-astro-cid-yihbbv4h>QUESTION 7/8</div> <div class="question-text" data-astro-cid-yihbbv4h>When someone fills out your form, what happens?</div> <div class="options" data-astro-cid-yihbbv4h> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q7" value="15" required data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>Instant notification + goes to CRM automatically</span> <span class="points" data-astro-cid-yihbbv4h>+15 pts</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q7" value="5" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>I get an email notification</span> <span class="points" data-astro-cid-yihbbv4h>+5 pts</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q7" value="0" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>I have to manually download leads from Facebook</span> <span class="points" data-astro-cid-yihbbv4h>0 pts</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q7" value="0" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>I don't actually know</span> <span class="points" data-astro-cid-yihbbv4h>BIG problem</span> </label> </div> </div> <!-- Question 8 --> <div class="question-block" data-astro-cid-yihbbv4h> <div class="question-number" data-astro-cid-yihbbv4h>QUESTION 8/8</div> <div class="question-text" data-astro-cid-yihbbv4h>Look at your ad frequency. What number do you see?</div> <div class="options" data-astro-cid-yihbbv4h> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q8" value="10" required data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>Under 3</span> <span class="points" data-astro-cid-yihbbv4h>+10 pts</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q8" value="5" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>3-5</span> <span class="points" data-astro-cid-yihbbv4h>+5 pts</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q8" value="0" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>Over 5</span> <span class="points" data-astro-cid-yihbbv4h>Creative fatigue</span> </label> <label class="option" data-astro-cid-yihbbv4h> <input type="radio" name="q8" value="0" data-astro-cid-yihbbv4h> <span class="option-label" data-astro-cid-yihbbv4h>I don't know where to find this</span> <span class="points" data-astro-cid-yihbbv4h>0 pts</span> </label> </div> <div class="helper-text" data-astro-cid-yihbbv4h>💡 Ads Manager → Columns → Frequency</div> </div> <button type="submit" class="calculate-btn" data-astro-cid-yihbbv4h>Calculate My Score</button> </form> <div id="results" class="results" data-astro-cid-yihbbv4h> <div class="score-display" data-astro-cid-yihbbv4h> <div class="score-number" id="scoreNumber" data-astro-cid-yihbbv4h>0</div> <div class="score-label" data-astro-cid-yihbbv4h>out of 100 points</div> </div> <div class="verdict" id="verdict" data-astro-cid-yihbbv4h></div> <div id="resultsContent" data-astro-cid-yihbbv4h></div> <div class="cta-section" data-astro-cid-yihbbv4h> <h3 style="margin-bottom: 15px;" data-astro-cid-yihbbv4h>What's Next?</h3> <div id="ctaContent" data-astro-cid-yihbbv4h></div> </div> </div> </div> <script>
+        // Handle option selection visual feedback
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', function() {
+                const radio = this.querySelector('input[type="radio"]');
+                const questionName = radio.name;
+
+                // Remove selected class from all options in this question
+                document.querySelectorAll(`input[name="${questionName}"]`).forEach(r => {
+                    r.closest('.option').classList.remove('selected');
+                });
+
+                // Add selected class to clicked option
+                this.classList.add('selected');
+                radio.checked = true;
+            });
+        });
+
+        // Handle form submission
+        document.getElementById('calculatorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Calculate score
+            let totalScore = 0;
+            const formData = new FormData(this);
+
+            for (let [key, value] of formData.entries()) {
+                totalScore += parseInt(value);
+            }
+
+            // Display results
+            displayResults(totalScore, formData);
+
+            // Scroll to results
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        function displayResults(score, formData) {
+            const resultsDiv = document.getElementById('results');
+            const scoreNumber = document.getElementById('scoreNumber');
+            const verdict = document.getElementById('verdict');
+            const resultsContent = document.getElementById('resultsContent');
+            const ctaContent = document.getElementById('ctaContent');
+
+            scoreNumber.textContent = score;
+
+            // Determine verdict and content based on score
+            if (score >= 86) {
+                verdict.textContent = '🏆 Elite Status';
+                verdict.className = 'verdict excellent';
+                resultsContent.innerHTML = `
+                    <p style="text-align: center; font-size: 1.1rem; line-height: 1.8;">
+                        <strong>You're in the top 5% of advertisers we audit.</strong><br><br>
+                        You clearly know what you're doing. Your lead quality setup is dialed in.
+                        Keep monitoring and stay ahead of the curve.
+                    </p>
+                `;
+                ctaContent.innerHTML = `
+                    <p style="margin-bottom: 15px;">The only reason to talk to us is if you want to scale faster without breaking what's working.</p>
+                    <a href="#" class="cta-button">Schedule Expert Strategy Session →</a>
+                `;
+            } else if (score >= 61) {
+                verdict.textContent = '✅ Solid Setup, Room for Improvement';
+                verdict.className = 'verdict good';
+
+                const issues = findIssues(formData);
+                resultsContent.innerHTML = `
+                    <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                        You're in the top 30% of accounts we audit. Nice work.
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        But you still have <strong>${issues.length} opportunities</strong> to improve:
+                    </p>
+                    <div class="issue-list">
+                        ${issues.map(issue => `
+                            <div class="issue-item">
+                                <div class="issue-title">❌ ${issue.title}</div>
+                                <div class="issue-description">${issue.description}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <p style="margin-top: 20px;">
+                        <strong>Estimated monthly waste from these issues: $1,200-2,500</strong>
+                    </p>
+                `;
+                ctaContent.innerHTML = `
+                    <p style="margin-bottom: 15px;">Want to get to 90+?</p>
+                    <a href="#" class="cta-button">Download Advanced Optimization Checklist →</a>
+                    <a href="#" class="cta-button secondary">Book Free Review →</a>
+                `;
+            } else if (score >= 31) {
+                verdict.textContent = '⚠️ Major Issues Costing You Money';
+                verdict.className = 'verdict warning';
+
+                const issues = findIssues(formData);
+                resultsContent.innerHTML = `
+                    <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                        You're doing better than most, but you have <strong>${issues.length} major gaps</strong> costing you money every single day.
+                    </p>
+                    <div class="issue-list">
+                        ${issues.map(issue => `
+                            <div class="issue-item">
+                                <div class="issue-title">❌ ${issue.title}</div>
+                                <div class="issue-description">${issue.description}<br><br>
+                                <strong>Estimated cost:</strong> ~$${issue.cost}/month in wasted spend</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <p style="margin-top: 20px; font-size: 1.2rem; font-weight: 600;">
+                        Total estimated waste: <span style="color: #ef4444;">$${calculateTotalWaste(issues)}/month</span>
+                    </p>
+                `;
+                ctaContent.innerHTML = `
+                    <p style="margin-bottom: 15px;"><strong>You have 2 options:</strong></p>
+                    <p style="margin-bottom: 15px;"><strong>Option 1: Fix It Yourself</strong><br>
+                    Estimated time: 20-40 hours to learn + implement all fixes</p>
+                    <a href="#" class="cta-button secondary">Download 47-Step Lead Quality SOP →</a>
+                    <p style="margin: 20px 0 15px;"><strong>Option 2: Let Us Fix It</strong><br>
+                    We've done this 150+ times. Takes us 2-3 weeks.</p>
+                    <a href="#" class="cta-button">Book Free Account Review →</a>
+                `;
+            } else {
+                verdict.textContent = '🚨 Lead Quality Crisis';
+                verdict.className = 'verdict critical';
+
+                const issues = findIssues(formData);
+                const dontKnowCount = countDontKnows(formData);
+
+                resultsContent.innerHTML = `
+                    <p style="font-size: 1.2rem; margin-bottom: 20px; line-height: 1.8;">
+                        <strong>Here's the hard truth: Your account has serious problems.</strong>
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        You answered <strong>"I don't know"</strong> or scored <strong>0 points</strong> on ${dontKnowCount} out of 8 questions.
+                    </p>
+                    <div style="background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <strong>That means:</strong><br>
+                        ❌ You don't know basic settings that control lead quality<br>
+                        ❌ You're likely wasting 50-70% of your ad spend<br>
+                        ❌ You're flying blind (no tracking, no visibility)
+                    </div>
+                    <p style="margin-bottom: 20px;">
+                        <strong style="font-size: 1.1rem;">Estimated monthly waste: <span style="color: #ef4444;">$2,000-5,000+</span></strong>
+                    </p>
+                    <p>
+                        The good news: These are all fixable. But they require someone who knows the platform inside and out.
+                    </p>
+                `;
+                ctaContent.innerHTML = `
+                    <p style="margin-bottom: 15px;"><strong>You have 2 options:</strong></p>
+                    <p style="margin-bottom: 15px;"><strong>Option 1: Learn This Yourself</strong><br>
+                    Estimated time: 40-60 hours to learn + implement all fixes</p>
+                    <a href="#" class="cta-button secondary">Download Our 47-Step Lead Quality SOP →</a>
+                    <p style="margin: 20px 0 15px;"><strong>Option 2: Hire Someone Who Knows</strong><br>
+                    Someone who's done this 100+ times can fix everything in 2-3 weeks.</p>
+                    <a href="#" class="cta-button">Book Free Account Review →</a>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: #93c5fd;">
+                        We'll tell you if we can help. No sales pitch. Just honest assessment.
+                    </p>
+                `;
+            }
+
+            resultsDiv.classList.add('show');
+        }
+
+        function findIssues(formData) {
+            const issues = [];
+
+            if (formData.get('q1') === '0') {
+                issues.push({
+                    title: 'Form Quality Setting',
+                    description: 'You\'re using "More Volume" or don\'t know your setting. This is the #1 source of spam leads.',
+                    cost: '800-1500'
+                });
+            }
+
+            if (formData.get('q2') === '0') {
+                issues.push({
+                    title: 'No Qualification Questions',
+                    description: 'Without custom questions, you can\'t filter out job seekers, tire-kickers, or unqualified prospects.',
+                    cost: '600-1200'
+                });
+            }
+
+            if (formData.get('q3') === '0') {
+                issues.push({
+                    title: 'Audience Network Still Running',
+                    description: 'Audience Network is notorious for low-quality leads. Most agencies exclude it immediately.',
+                    cost: '400-800'
+                });
+            }
+
+            if (parseInt(formData.get('q4')) < 8) {
+                issues.push({
+                    title: 'Slow Lead Follow-Up',
+                    description: 'Speed-to-contact is critical. Leads that aren\'t contacted within 1 hour have 10x lower conversion rates.',
+                    cost: '500-1000'
+                });
+            }
+
+            if (parseInt(formData.get('q5')) < 10) {
+                issues.push({
+                    title: 'Poor Lead Quality Rate',
+                    description: 'Less than 50% of your leads are qualified. This means your targeting, form, or placements need work.',
+                    cost: '1000-2000'
+                });
+            }
+
+            if (formData.get('q6') === '0') {
+                issues.push({
+                    title: 'No Customer Exclusions',
+                    description: 'You\'re wasting money advertising to people who already bought from you.',
+                    cost: '200-500'
+                });
+            }
+
+            if (parseInt(formData.get('q7')) < 10) {
+                issues.push({
+                    title: 'No CRM Integration',
+                    description: 'Manual lead handling means delays, lost leads, and no quality tracking.',
+                    cost: '300-600'
+                });
+            }
+
+            if (parseInt(formData.get('q8')) < 5) {
+                issues.push({
+                    title: 'Creative Fatigue',
+                    description: 'High ad frequency means your audience is seeing the same ads too many times, leading to declining performance.',
+                    cost: '400-800'
+                });
+            }
+
+            return issues;
+        }
+
+        function calculateTotalWaste(issues) {
+            let total = 0;
+            issues.forEach(issue => {
+                const costs = issue.cost.split('-');
+                const avgCost = (parseInt(costs[0]) + parseInt(costs[1])) / 2;
+                total += avgCost;
+            });
+            return Math.round(total).toLocaleString();
+        }
+
+        function countDontKnows(formData) {
+            let count = 0;
+            for (let i = 1; i <= 8; i++) {
+                if (formData.get(`q${i}`) === '0') {
+                    count++;
+                }
+            }
+            return count;
+        }
+    </script>   </body></html>

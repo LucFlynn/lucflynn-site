@@ -1,0 +1,4 @@
+Across the 24 rated jobs:
+Average = (22×5 + 4.9 + 4.5) ÷ 24 = 119.4 ÷ 24 = 4.975.
+
+So it’ll display as 4.98/5 (two decimals) or 5.0/5 (one decimal).

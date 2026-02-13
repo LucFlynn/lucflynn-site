@@ -1,0 +1,61 @@
+---
+import TrackingScripts from '../components/TrackingScripts.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalUrl: string;
+  ogTitle: string;
+  ogDescription: string;
+  currentPage: string;
+  jsonLd?: object;
+}
+
+const {
+  title,
+  description,
+  canonicalUrl,
+  ogTitle,
+  ogDescription,
+  currentPage,
+  jsonLd,
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalUrl} />
+  <meta property="og:title" content={ogTitle} />
+  <meta property="og:description" content={ogDescription} />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:site_name" content="Luc Flynn" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <TrackingScripts />
+  {jsonLd && (
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  )}
+</head>
+<body class="prose-dark">
+  <header class="border-b border-slate-700 bg-slate-900/70 backdrop-blur sticky top-0 z-40">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <a href="/" class="font-semibold tracking-tight text-white hover:text-purple-400">Luc Flynn</a>
+      <nav class="text-sm hidden sm:flex gap-4">
+        <a class="text-gray-300 hover:text-purple-400" href="/sop">All SOPs</a>
+        <a class="text-purple-400 font-semibold" href={canonicalUrl}>{currentPage}</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+    <slot />
+  </main>
+</body>
+</html>

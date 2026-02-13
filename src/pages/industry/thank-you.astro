@@ -1,0 +1,306 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Your Cheat Sheet is Downloaded - Founder's Trial Inside" showNav={false} showFooter={false}>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        @keyframes pulse-scale {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .pulse-animation {
+            animation: pulse-scale 2s ease-in-out infinite;
+        }
+    </style>
+
+    <script is:inline>
+        // Push conversion event to dataLayer
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'conversion',
+            'conversion_type': 'qualified_lead_download',
+            'page_type': 'thank_you_founders_offer',
+            'lead_value': 'high_spend'
+        });
+
+        // Auto-download the cheat sheet when page loads
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const downloadLink = document.createElement('a');
+                downloadLink.href = '/assets/docs/The 2025 Cleaning Ads Cheat Sheet.pdf';
+                downloadLink.download = 'The 2025 Cleaning Ads Cheat Sheet.pdf';
+                downloadLink.style.display = 'none';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            }, 500);
+        });
+    </script>
+
+    <!-- Success Banner -->
+    <div class="bg-green-600 text-white py-3 text-center">
+        <div class="flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span class="font-medium">Your download is starting now...</span>
+        </div>
+    </div>
+
+    <!-- Urgency Banner -->
+    <div class="bg-red-50 border-b-2 border-red-200 py-3 text-center pulse-animation">
+        <div class="flex items-center justify-center gap-2">
+            <span class="text-xl">⚠️</span>
+            <span class="text-red-900 font-bold">FOUNDER'S TRIAL: Only 2 of 3 Spots Left This Month</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
+
+        <!-- SECTION 1: HERO (Micro-Yes #1-2) -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden mb-8">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 p-8 md:p-12 text-white text-center">
+                <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+                    Your Cheat Sheet is Downloaded. Here's What Happens When You Stop Guessing on Ad Spend:
+                </h1>
+
+                <!-- 3 Result Cards -->
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <!-- Result Card 1 -->
+                    <div class="bg-white rounded-xl p-6 shadow-md text-left">
+                        <h3 class="font-bold text-lg mb-2 text-blue-600">Denver Residential Client</h3>
+                        <p class="text-gray-700 font-semibold">"$29.26 cost per lead with 19.75% conversion rate — top 5% of all cleaning companies"</p>
+                    </div>
+
+                    <!-- Result Card 2 -->
+                    <div class="bg-white rounded-xl p-6 shadow-md text-left">
+                        <h3 class="font-bold text-lg mb-2 text-blue-600">Austin Maid Service</h3>
+                        <p class="text-gray-700 font-semibold">"27% conversion rate (highest in dataset) at $30.24 per lead vs. $67 industry average"</p>
+                    </div>
+
+                    <!-- Result Card 3 -->
+                    <div class="bg-white rounded-xl p-6 shadow-md text-left">
+                        <h3 class="font-bold text-lg mb-2 text-blue-600">Phoenix Commercial Cleaners</h3>
+                        <p class="text-gray-700 font-semibold">"$35.58 cost per lead — 47% cheaper than $67 industry average with 13.56% conversion"</p>
+                    </div>
+                </div>
+
+                <!-- Subhead -->
+                <p class="text-xl md:text-2xl text-blue-100 leading-relaxed">
+                    I'm Luc Flynn. I've managed $10M+ in ad spend across 150+ service businesses over 8 years—and I've learned that leads don't matter if they don't convert into paying customers.
+                </p>
+            </div>
+        </div>
+
+        <!-- SECTION 2: CREDIBILITY (Micro-Yes #3-4) -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Who's Building Your System?</h2>
+
+            <div class="flex flex-col md:flex-row gap-8 items-center max-w-4xl mx-auto">
+                <div class="flex-shrink-0">
+                    <img src="/assets/images/headshot.jpg" alt="Luc Flynn" class="rounded-full w-48 h-48 object-cover shadow-lg">
+                </div>
+
+                <div class="prose prose-lg text-gray-700 flex-1">
+                    <p>I specialize in building fully automated lead-generation systems—not just running ads.</p>
+
+                    <p>Over 8 years, I've managed $10M+ in ad spend, and I've realized that just getting leads isn't enough. Most cleaning companies need a system that filters, tracks, and nurtures those leads so they actually convert into booked jobs.</p>
+
+                    <p><strong>My system includes:</strong></p>
+                    <ul class="space-y-2">
+                        <li>✅ Paid Ads (Google, Meta) optimized for lead quality, not just volume</li>
+                        <li>✅ Conversion Tracking from ad click to closed sale</li>
+                        <li>✅ Automated Reports & Benchmarking so you know exactly what's working</li>
+                    </ul>
+
+                    <p class="font-bold text-gray-900">The result: 20-28% conversion rates and $21-45 cost per booked job (vs. the industry average of 3-5% and $80+ CPAs).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Real Testimonial -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="text-yellow-500 text-2xl mb-4">★★★★★</div>
+                <blockquote class="text-xl italic text-gray-700 mb-6">
+                    "Luc is a top tier Google Ads manager with advanced understanding and expertise with the platform. We hired him to upgrade some existing campaigns and after giving it the proper amount of time to reset, the campaigns suddenly kicked into high gear. We have broken records for daily conversions and call bookings. All campaign metrics are above benchmark. In some cases we are getting 2x benchmark results. We will be working with Luc again after we launch an upgraded version of our website. Do not hesitate to let Luc audit your current campaigns or start from scratch. I have been working with Google Ads for over 10 years. Luc is the best we've worked with. He's also just got the right entrepreneurial mindset and he's a problem solver."
+                </blockquote>
+                <p class="font-semibold text-gray-900">— Owner, Financial Services Firm</p>
+            </div>
+        </div>
+
+        <!-- SECTION 3: THE OFFER (Micro-Yes #5-6) -->
+        <div class="bg-gradient-to-r from-orange-400 to-red-500 rounded-2xl p-1 mb-8">
+            <div class="bg-white rounded-xl p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-center mb-6">🔥 Founder's Trial (First 3 Cleaning Companies Only)</h2>
+
+                <div class="prose prose-lg mx-auto text-gray-700">
+                    <p>I'm testing a new end-to-end system where I own every piece—ads, landing pages, tracking, automation—instead of just 'running ads' and hoping your website converts.</p>
+
+                    <p class="text-xl font-bold text-gray-900">Here's how it works:</p>
+
+                    <div class="bg-green-50 border-2 border-green-300 rounded-lg p-6 my-6">
+                        <h3 class="text-2xl font-bold text-green-800 mb-3">Month 1: You Pay Only Ad Spend (typically $600-800)</h3>
+                        <ul class="space-y-2">
+                            <li>✅ I build your landing page, ads, and tracking system—<strong>FREE</strong></li>
+                            <li>✅ I personally manage your campaigns daily</li>
+                            <li>✅ Goal: 15+ qualified leads or 10 booked jobs in 30 days</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-50 border-2 border-blue-300 rounded-lg p-6 my-6">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-3">Month 2+: Continue at $1,000/month</h3>
+                        <ul class="space-y-2">
+                            <li>✅ 20 ongoing leads per month</li>
+                            <li>✅ Full campaign management + weekly reports</li>
+                            <li>✅ Direct access to me (not a VA) for strategy</li>
+                        </ul>
+                        <p class="mt-4 font-semibold text-gray-900">OR walk away—keep everything I built, no hard feelings.</p>
+                    </div>
+
+                    <p class="text-center text-xl font-bold text-gray-900">📍 No contracts. No lock-in. Just results.</p>
+                    <p class="text-center text-xl font-bold text-gray-900">📍 Only 2 spots left this month (I can only personally manage 3 trials at once)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 4: GUARANTEE (Micro-Yes #7) -->
+        <div class="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12 text-white mb-8">
+            <h2 class="text-3xl font-bold text-center mb-4">⚡ My Personal Guarantee</h2>
+            <p class="text-xl text-center text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                If we don't book at least 10 qualified jobs in your first 30 days, I'll work a second month completely free until we hit 15.
+            </p>
+            <p class="text-center text-2xl font-bold mt-6">
+                You literally can't lose. Worst case: you get 2 months of professional management for just the cost of ad spend.
+            </p>
+        </div>
+
+        <!-- SECTION 5: WHAT I BUILD (Features—for scanners) -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Everything I Build & Manage For You (FREE First Month)</h2>
+
+            <div class="space-y-6">
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl font-bold">1</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Custom Landing Page & Ads</h3>
+                        <p class="text-gray-700">Convert 20-28% of ad clicks into booked jobs with a scientifically optimized page (design, copy, hosting included)</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl font-bold">2</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Complete Ads Setup & Management</h3>
+                        <p class="text-gray-700">Google & Meta campaigns with daily optimization. I manage bids, budgets, creative—you don't touch the ads</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl font-bold">3</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Advanced Tracking & Analytics</h3>
+                        <p class="text-gray-700">Know exactly which keywords book jobs and which waste money. Full conversion tracking + weekly reports</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl font-bold">4</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Booking System Integration</h3>
+                        <p class="text-gray-700">Calls and form fills go straight to your CRM or booking software. Zero manual data entry</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl font-bold">5</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">1-on-1 Strategy Support</h3>
+                        <p class="text-gray-700">Direct access to me (not a VA) for strategy, optimization, troubleshooting</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl font-bold">6</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Real, Qualified Jobs</h3>
+                        <p class="text-gray-700">Not just leads—we optimize for booked appointments. You only deal with customers ready to hire</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 6: PRIMARY CTA (Micro-Yes #8) -->
+        <div class="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-8 md:p-12 text-center text-white mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+            <a href="https://calendly.com/luc-flynn/b"
+               class="inline-block bg-white text-green-600 font-bold py-5 px-10 rounded-lg text-xl shadow-lg hover:shadow-xl transform transition hover:scale-105 mb-4">
+                Book Your Founder's Spot Now →
+            </a>
+            <p class="text-green-100 mb-2 text-lg">Next: 15-minute qualification call to confirm fit. If qualified, we start building immediately.</p>
+            <p class="text-sm text-green-200">Takes 30 seconds to book • Only 2 spots remaining</p>
+        </div>
+
+        <!-- SECTION 7: SECONDARY PATH (Email Nurture Fallback) -->
+        <div class="bg-gray-100 rounded-2xl p-8 md:p-12 text-center mb-8">
+            <h3 class="text-2xl font-bold mb-4 text-gray-900">Not ready to book yet?</h3>
+            <p class="text-gray-700 text-lg mb-6">I'll email you 2 case studies + the exact 3-step system I use to book jobs for cleaning companies. You can grab a spot whenever you're ready.</p>
+
+            <form action="https://formspree.io/f/mblqrqoq" method="POST" class="max-w-md mx-auto">
+                <input type="hidden" name="_subject" value="Email Nurture Signup - Thank You Page">
+                <input type="hidden" name="source" value="thankyou-page-email-capture">
+
+                <div class="space-y-4">
+                    <input type="text" name="name" placeholder="Your Name" required
+                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="email" name="email" placeholder="Your Email" required
+                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button type="submit"
+                            class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition">
+                        Send Me The Case Studies
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- SECTION 8: FAQ (Anxiety Reduction) -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-8">
+            <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+
+            <div class="space-y-6 max-w-3xl mx-auto">
+                <div class="border-b pb-6">
+                    <h3 class="text-xl font-bold mb-3">Q: Who qualifies for this offer?</h3>
+                    <p class="text-gray-700">Cleaning businesses (residential or commercial) spending OR willing to spend at least $600/month on ads. Whether you're brand new to advertising or frustrated with current results—if you're ready to grow, you likely qualify.</p>
+                </div>
+
+                <div class="border-b pb-6">
+                    <h3 class="text-xl font-bold mb-3">Q: What's the catch?</h3>
+                    <p class="text-gray-700">No catch—just case studies. I need 3 businesses to prove this end-to-end system works across different markets. In exchange for your honest feedback and permission to use your results (anonymously), you get everything built free for month 1.</p>
+                </div>
+
+                <div class="border-b pb-6">
+                    <h3 class="text-xl font-bold mb-3">Q: What happens after the free month?</h3>
+                    <p class="text-gray-700">You decide. Continue at $1,000/month for 20 ongoing leads, or walk away with everything I built. No pressure, no hard feelings.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Q: What if I don't get results?</h3>
+                    <p class="text-gray-700">If we don't book at least 10 qualified jobs in your first 30 days, I work a second month completely free until we hit 15. You literally can't lose.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 9: FINAL CTA -->
+        <div class="bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl p-8 text-center text-white">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Don't Let Another Competitor Take Your Spot</h2>
+            <a href="https://calendly.com/luc-flynn/b"
+               class="inline-block bg-white text-red-600 font-bold py-5 px-10 rounded-lg text-xl shadow-lg hover:shadow-xl transform transition hover:scale-105 mb-3">
+                Lock In Your Founder's Spot Now →
+            </a>
+            <p class="text-red-100 text-lg">Only 2 of 3 spots left. Next group pays $1,200/month from day one.</p>
+        </div>
+
+    </div>
+</BaseLayout>
