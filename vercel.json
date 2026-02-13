@@ -1,0 +1,49 @@
+{
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/privacy.html", "destination": "/privacy", "permanent": true },
+
+    { "source": "/pages/sop/index.html", "destination": "/sop", "permanent": true },
+    { "source": "/pages/sop/keyword-optimization.html", "destination": "/sop/keyword-optimization", "permanent": true },
+    { "source": "/pages/sop/campaign-optimization.html", "destination": "/sop/campaign-optimization", "permanent": true },
+    { "source": "/pages/sop/scaling.html", "destination": "/sop/scaling", "permanent": true },
+    { "source": "/pages/sop/landing-page.html", "destination": "/sop/landing-page", "permanent": true },
+    { "source": "/pages/sop/lead-scoring.html", "destination": "/sop/lead-scoring", "permanent": true },
+    { "source": "/pages/sop/conversion-tracking.html", "destination": "/sop/conversion-tracking", "permanent": true },
+
+    { "source": "/pages/templates/healthcheck.html", "destination": "/templates/healthcheck", "permanent": true },
+    { "source": "/pages/templates/leadflow.html", "destination": "/templates/leadflow", "permanent": true },
+    { "source": "/pages/templates/leadScore.html", "destination": "/templates/lead-score", "permanent": true },
+    { "source": "/pages/templates/caculator.html", "destination": "/templates/calculator", "permanent": true },
+    { "source": "/pages/templates/facebook-ads-weekly-checklist.html", "destination": "/templates/facebook-ads-weekly-checklist", "permanent": true },
+    { "source": "/pages/templates/facebook-lead-spam-checklist.html", "destination": "/templates/facebook-lead-spam-checklist", "permanent": true },
+    { "source": "/pages/templates/google-ads-weekly-checklist.html", "destination": "/templates/google-ads-weekly-checklist", "permanent": true },
+    { "source": "/pages/templates/weekly-optimization-checklists.html", "destination": "/templates/weekly-optimization-checklists", "permanent": true },
+    { "source": "/pages/templates/services.html", "destination": "/templates/services", "permanent": true },
+    { "source": "/pages/templates/training.html", "destination": "/templates/training", "permanent": true },
+
+    { "source": "/industry/cleaning.html", "destination": "/industry/cleaning", "permanent": true },
+    { "source": "/industry/cleaning-offer.html", "destination": "/industry/cleaning-offer", "permanent": true },
+    { "source": "/industry/epoxy-offer.html", "destination": "/industry/epoxy-offer", "permanent": true },
+    { "source": "/industry/landing1.html", "destination": "/industry/landing1", "permanent": true },
+    { "source": "/industry/thanksyou.html", "destination": "/industry/thank-you", "permanent": true },
+    { "source": "/industry/thankyou-ads.html", "destination": "/industry/thank-you-ads", "permanent": true },
+    { "source": "/industry/thankyou-simple.html", "destination": "/industry/thank-you-simple", "permanent": true },
+
+    { "source": "/pages/offer/index.html", "destination": "/offer", "permanent": true },
+    { "source": "/pages/offer/", "destination": "/offer", "permanent": true },
+    { "source": "/pages/leadflow-rescue.html", "destination": "/leadflow-rescue", "permanent": true },
+
+    { "source": "/pages/campaign-templates/B2B/googleSet.html", "destination": "/campaign-templates/b2b/googleSet", "permanent": true },
+    { "source": "/pages/campaign-templates/B2B/healthcheck-results.html", "destination": "/campaign-templates/b2b/healthcheck-results", "permanent": true },
+    { "source": "/pages/campaign-templates/B2B/medSpaCopy.html", "destination": "/campaign-templates/b2b/medSpaCopy", "permanent": true },
+    { "source": "/pages/campaign-templates/Cleaners/googleSet.html", "destination": "/campaign-templates/cleaners/googleSet", "permanent": true },
+    { "source": "/pages/campaign-templates/Cleaners/healthcheck-results.html", "destination": "/campaign-templates/cleaners/healthcheck-results", "permanent": true },
+    { "source": "/pages/campaign-templates/Cleaners/medSpaCopy.html", "destination": "/campaign-templates/cleaners/medSpaCopy", "permanent": true },
+    { "source": "/pages/campaign-templates/Home%20Service/googleSet.html", "destination": "/campaign-templates/home-service/google-set", "permanent": true },
+    { "source": "/pages/campaign-templates/Home%20Service/healthcheck-results.html", "destination": "/campaign-templates/home-service/healthcheck-results", "permanent": true },
+    { "source": "/pages/campaign-templates/Home%20Service/medSpaCopy.html", "destination": "/campaign-templates/home-service/med-spa-copy", "permanent": true },
+    { "source": "/pages/campaign-templates/Medspas/googleSet.html", "destination": "/campaign-templates/medspas/google-settings", "permanent": true },
+    { "source": "/pages/campaign-templates/Medspas/medSpaCopy.html", "destination": "/campaign-templates/medspas/medspa-copy", "permanent": true }
+  ]
+}

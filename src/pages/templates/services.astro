@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Services & Pricing" showNav={false} showFooter={false}>
+
+  <div class="container" style="padding: 4rem 2rem; max-width: 1000px;">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <h1 style="font-size: 2.5rem; color: #FFFFFF; margin-bottom: 1rem;">Services & Pricing</h1>
+      <p style="font-size: 1.2rem; color: #B0B8E0;">Coming soon. Building this out based on demand.</p>
+    </div>
+
+    <div style="background: linear-gradient(135deg, #1E2251 0%, #252a5f 100%); padding: 3rem; border-radius: 16px; border: 2px solid #6366F1; text-align: center;">
+      <h2 style="font-size: 1.8rem; color: #FFFFFF; margin-bottom: 1rem;">Interested in Working Together?</h2>
+      <p style="font-size: 1.1rem; color: #B0B8E0; margin-bottom: 2rem;">Let's talk about what you need.</p>
+      <a href="mailto:luc@lucflynn.com" class="btn btn-primary btn-lg">Get In Touch</a>
+      <div style="margin-top: 2rem;">
+        <a href="/templates/leadflow" style="color: #6366F1; text-decoration: none;">&larr; Back to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="/templates/leadflow">Home</a>
+          <a href="/templates/services">Services & Pricing</a>
+          <a href="/templates/training">Free Training</a>
+          <a href="mailto:luc@lucflynn.com">Contact</a>
+        </div>
+        <div class="footer-copyright">
+          &copy; <span id="currentYear"></span> Luc Flynn. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script is:inline>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+
+</BaseLayout>

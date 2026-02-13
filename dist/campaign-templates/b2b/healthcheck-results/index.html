@@ -1,0 +1,496 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Your Results | Ad Account Health Check | Luc Flynn</title><meta name="description" content="Free ad management resources, SOPs, templates, and tools by Luc Flynn."><meta property="og:type" content="website"><meta property="og:site_name" content="Luc Flynn"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K5T59C5F');</script> <!-- Vercel Analytics --><script defer src="/_vercel/insights/script.js"></script> <!-- Hotjar Tracking Code --><script>
+(function (c, s, q, u, a, r, e) {
+    c.hj=c.hj||function(){(c.hj.q=c.hj.q||[]).push(arguments)};
+    c._hjSettings = { hjid: a };
+    r = s.getElementsByTagName('head')[0];
+    e = s.createElement('script');
+    e.async = true;
+    e.src = q + c._hjSettings.hjid + u;
+    r.appendChild(e);
+})(window, document, 'https://static.hj.contentsquare.net/c/csq-', '.js', 6579122);
+</script> <!-- PostHog --><script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Or Ar ci Tr Cr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_87ISppR8KUJq1jXfcyR9b0jayvulu5XRQGNFi26Aymy', {
+    api_host: 'https://us.i.posthog.com',
+    defaults: '2025-05-24',
+    person_profiles: 'identified_only',
+})
+</script><link rel="stylesheet" href="/_astro/googleSet.CzPgZt_-.css">
+<link rel="stylesheet" href="/_astro/googleSet.CnDQ2qkQ.css"></head> <body>   <style>
+    /* Results Page Styles */
+    .results-container {
+      min-height: 100vh;
+      padding: 3rem 2rem;
+      background: linear-gradient(180deg, #0B0F2F 0%, #1a1f4f 100%);
+    }
+
+    .results-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .results-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .results-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .results-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+    }
+
+    .results-subtitle {
+      font-size: 1.2rem;
+      color: #B0B8E0;
+    }
+
+    /* Your Metrics Card */
+    .metrics-card {
+      background: linear-gradient(135deg, #1E2251 0%, #252a5f 100%);
+      padding: 2.5rem;
+      border-radius: 16px;
+      margin-bottom: 3rem;
+      border: 2px solid #6366F1;
+    }
+
+    .metrics-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .metric-item {
+      background: rgba(99, 102, 241, 0.1);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .metric-item.good {
+      border: 2px solid #10B981;
+      background: rgba(16, 185, 129, 0.1);
+    }
+
+    .metric-item.bad {
+      border: 2px solid #EF4444;
+      background: rgba(239, 68, 68, 0.1);
+    }
+
+    .metric-label {
+      font-size: 0.9rem;
+      color: #8A93C4;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .metric-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 0.25rem;
+    }
+
+    .metric-item.good .metric-value {
+      color: #10B981;
+    }
+
+    .metric-item.bad .metric-value {
+      color: #EF4444;
+    }
+
+    .metric-status {
+      font-size: 0.85rem;
+      color: #B0B8E0;
+    }
+
+    /* Issues Section */
+    .issues-section {
+      margin-bottom: 3rem;
+    }
+
+    .issues-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .issue-card {
+      background: linear-gradient(135deg, #1E2251 0%, #252a5f 100%);
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      border-left: 6px solid #EF4444;
+    }
+
+    .issue-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .issue-number {
+      background: #EF4444;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .issue-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin: 0;
+    }
+
+    .issue-description {
+      font-size: 1rem;
+      color: #B0B8E0;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .issue-fix {
+      background: rgba(99, 102, 241, 0.1);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border-left: 4px solid #6366F1;
+    }
+
+    .fix-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #A6ADFF;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .fix-description {
+      font-size: 1rem;
+      color: #E0E0E0;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .fix-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #6366F1;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .fix-link:hover {
+      background: #4F46E5;
+      transform: translateX(3px);
+    }
+
+    /* No Issues / Good Performance */
+    .success-card {
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      padding: 3rem;
+      border-radius: 16px;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .success-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .success-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+    }
+
+    .success-text {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.6;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, #1E2251 0%, #252a5f 100%);
+      padding: 3rem;
+      border-radius: 16px;
+      text-align: center;
+      border: 2px solid #6366F1;
+    }
+
+    .cta-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+    }
+
+    .cta-text {
+      font-size: 1.1rem;
+      color: #B0B8E0;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-btn-primary {
+      background: #6366F1;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .cta-btn-primary:hover {
+      background: #4F46E5;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    }
+
+    .cta-btn-secondary {
+      background: transparent;
+      color: #A6ADFF;
+      border: 2px solid #6366F1;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .cta-btn-secondary:hover {
+      background: rgba(99, 102, 241, 0.1);
+      border-color: #8B5CF6;
+    }
+
+    @media (max-width: 768px) {
+      .results-title {
+        font-size: 2rem;
+      }
+
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metric-value {
+        font-size: 1.6rem;
+      }
+
+      .issue-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+</style> <div class="results-container"> <div class="results-wrapper"> <div class="results-header"> <div class="results-icon" id="results-icon">📊</div> <h1 class="results-title">Your Ad Account Health Check Results</h1> <p class="results-subtitle">Here's what we found and how to fix it</p> </div> <!-- Metrics Card --> <div class="metrics-card"> <h2 class="metrics-title">Your Numbers</h2> <div class="metrics-grid" id="metrics-grid"> <!-- Populated by JavaScript --> </div> </div> <!-- Issues Section --> <div class="issues-section" id="issues-section"> <!-- Populated by JavaScript --> </div> <!-- CTA Section --> <div class="cta-section"> <h2 class="cta-title">Want Help Fixing These?</h2> <p class="cta-text">I can audit your account and implement these fixes for you—or you can use the resources above to do it yourself.</p> <div class="cta-buttons"> <a href="#contact-form" class="cta-btn-primary">Book a Free Audit Call</a> <a href="/templates/leadflow#all-resources" class="cta-btn-secondary">See All Resources</a> </div> </div> </div> </div> <script>
+    // ===========================================
+    // BENCHMARKS - Must match healthcheck.html
+    // ===========================================
+    const BENCHMARKS = {
+      minCTR: 3,
+      minCVR: 3,
+      maxCPC: 20,
+      maxCPL: 150
+    };
+
+    // ===========================================
+    // Load Data and Generate Results
+    // ===========================================
+    document.addEventListener('DOMContentLoaded', function() {
+      const data = JSON.parse(localStorage.getItem('healthCheckData'));
+
+      if (!data) {
+        // No data found, redirect back
+        window.location.href = '/campaign-templates/b2b/healthcheck';
+        return;
+      }
+
+      // Display metrics
+      displayMetrics(data);
+
+      // Analyze and display issues
+      const issues = analyzeIssues(data);
+      displayIssues(issues);
+    });
+
+    function displayMetrics(data) {
+      const metricsGrid = document.getElementById('metrics-grid');
+
+      const metrics = [
+        {
+          label: 'CTR',
+          value: data.ctr.toFixed(2) + '%',
+          status: data.ctr >= BENCHMARKS.minCTR ? 'good' : 'bad',
+          benchmark: `Target: ${BENCHMARKS.minCTR}%+`
+        },
+        {
+          label: 'CVR',
+          value: data.cvr.toFixed(2) + '%',
+          status: data.cvr >= BENCHMARKS.minCVR ? 'good' : 'bad',
+          benchmark: `Target: ${BENCHMARKS.minCVR}%+`
+        },
+        {
+          label: 'CPC',
+          value: '$' + data.cpc.toFixed(2),
+          status: data.cpc <= BENCHMARKS.maxCPC ? 'good' : 'bad',
+          benchmark: `Target: <$${BENCHMARKS.maxCPC}`
+        },
+        {
+          label: 'CPL',
+          value: data.conversions > 0 ? '$' + data.cpl.toFixed(2) : 'N/A',
+          status: data.conversions > 0 && data.cpl <= BENCHMARKS.maxCPL ? 'good' : (data.conversions > 0 ? 'bad' : ''),
+          benchmark: `Target: <$${BENCHMARKS.maxCPL}`
+        }
+      ];
+
+      metricsGrid.innerHTML = metrics.map(metric => `
+        <div class="metric-item ${metric.status}">
+          <div class="metric-label">${metric.label}</div>
+          <div class="metric-value">${metric.value}</div>
+          <div class="metric-status">${metric.benchmark}</div>
+        </div>
+      `).join('');
+    }
+
+    function analyzeIssues(data) {
+      const issues = [];
+
+      // Issue 1: Low CTR (bad ads)
+      if (data.ctr < BENCHMARKS.minCTR) {
+        issues.push({
+          title: 'Low Click-Through Rate (CTR)',
+          description: `Your CTR is ${data.ctr.toFixed(2)}%, which is below the ${BENCHMARKS.minCTR}% benchmark. This means your ads aren't compelling enough to make people click.`,
+          fix: {
+            title: 'How to Fix: Improve Your Ad Copy',
+            description: 'Write ads that speak directly to your customer\'s pain points. Test multiple headlines and descriptions. Use numbers, questions, and clear calls-to-action.',
+            resource: '#', // TODO: Add link to ad copy resource
+            resourceText: 'Get the Ad Copy SOP'
+          }
+        });
+      }
+
+      // Issue 2: Low CVR (bad landing page)
+      if (data.cvr < BENCHMARKS.minCVR) {
+        issues.push({
+          title: 'Low Conversion Rate (CVR)',
+          description: `Your CVR is ${data.cvr.toFixed(2)}%, which is below the ${BENCHMARKS.minCVR}% benchmark. People are clicking your ads but not converting. Your landing page or offer needs work.`,
+          fix: {
+            title: 'How to Fix: Optimize Your Landing Page',
+            description: 'Make sure your landing page matches your ad promise. Remove distractions, simplify your form, add trust signals (reviews, guarantees), and make your CTA crystal clear.',
+            resource: '#', // TODO: Add link to landing page resource
+            resourceText: 'Get the Landing Page SOP'
+          }
+        });
+      }
+
+      // Issue 3: High CPC (wasted spend)
+      if (data.cpc > BENCHMARKS.maxCPC) {
+        issues.push({
+          title: 'High Cost Per Click (CPC)',
+          description: `Your CPC is $${data.cpc.toFixed(2)}, which is above the $${BENCHMARKS.maxCPC} benchmark. You're paying too much for each click, which drives up your overall costs.`,
+          fix: {
+            title: 'How to Fix: Cut Wasted Spend',
+            description: 'Add negative keywords to block irrelevant searches. Tighten your geo-targeting. Improve your Quality Score by making ads more relevant to keywords. Schedule ads during your best-performing hours.',
+            resource: '#', // TODO: Add link to CPC reduction resource
+            resourceText: 'Get the CPC Reduction SOP'
+          }
+        });
+      }
+
+      // Prioritize by severity
+      return issues.slice(0, 3); // Return top 3
+    }
+
+    function displayIssues(issues) {
+      const issuesSection = document.getElementById('issues-section');
+      const resultsIcon = document.getElementById('results-icon');
+
+      if (issues.length === 0) {
+        // No issues! Everything looks good
+        resultsIcon.textContent = '🎉';
+        issuesSection.innerHTML = `
+          <div class="success-card">
+            <div class="success-icon">✅</div>
+            <h2 class="success-title">Great News! Your Ads Are Healthy</h2>
+            <p class="success-text">All your key metrics are within healthy ranges. Keep monitoring your performance and continue optimizing to maintain these results.</p>
+          </div>
+        `;
+      } else {
+        // Show issues
+        issuesSection.innerHTML = `
+          <h2 class="issues-title">Your ${issues.length} Biggest Issue${issues.length > 1 ? 's' : ''}</h2>
+          ${issues.map((issue, index) => `
+            <div class="issue-card">
+              <div class="issue-header">
+                <div class="issue-number">${index + 1}</div>
+                <h3 class="issue-title">${issue.title}</h3>
+              </div>
+              <p class="issue-description">${issue.description}</p>
+              <div class="issue-fix">
+                <div class="fix-title">${issue.fix.title}</div>
+                <p class="fix-description">${issue.fix.description}</p>
+                <a href="${issue.fix.resource}" class="fix-link">
+                  <span>${issue.fix.resourceText}</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          `).join('')}
+        `;
+      }
+    }
+  </script>   </body></html>

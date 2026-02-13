@@ -1,0 +1,106 @@
+---
+import SOPLayout from '../../layouts/SOPLayout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Conversion Tracking SOP — Google + Meta via GTM",
+  "description": "Complete setup guide for conversion tracking with Google Tag Manager.",
+  "author": {"@type": "Person", "name": "Luc Flynn"},
+  "dateModified": "2025-11-04",
+  "mainEntityOfPage": {"@type": "WebPage", "@id": "https://lucflynn.com/sop/conversion-tracking"}
+};
+---
+<SOPLayout
+  title="Conversion Tracking SOP — Google + Meta via GTM | Luc Flynn"
+  description="Set up Google Ads and Meta conversion tracking via Google Tag Manager. Track leads, calls, and quality conversions properly."
+  canonicalUrl="https://lucflynn.com/sop/conversion-tracking"
+  ogTitle="Conversion Tracking SOP — Google + Meta via GTM"
+  ogDescription="Complete SOP for setting up conversion tracking with GTM."
+  currentPage="Conversion Tracking"
+  jsonLd={jsonLd}
+>
+  <article>
+    <h1 class="text-3xl/tight sm:text-4xl font-extrabold tracking-tight text-white">Conversion Tracking SOP</h1>
+    <p class="mt-3 text-gray-400">You can't fix what you can't measure. Tracking is how we find out which ads actually make money. <span class="text-gray-500">Updated Nov 4, 2025</span></p>
+
+    <section id="basics" class="section-anchor mt-8 card-dark rounded-xl border-2 p-6 transition-all">
+      <h2 class="text-xl font-bold text-white">The Basics</h2>
+      <p class="mt-2 text-gray-300"><strong class="text-white">Google Tag Manager (GTM)</strong> = your control center. It's one tag that manages all your tracking (Google Ads, Meta, etc.).</p>
+      <p class="mt-2 text-gray-300">Instead of adding code to your site every time you want to track something, you install GTM once, then manage everything from there.</p>
+    </section>
+
+    <section id="google-ads" class="section-anchor mt-8 card-dark rounded-xl border-2 p-6 transition-all">
+      <h2 class="text-xl font-bold text-white">Google Ads Setup (Simple Version)</h2>
+      <ol class="mt-4 space-y-3 text-gray-300 list-decimal pl-6">
+        <li>In Google Ads, make a "conversion action" (like Form Submitted).</li>
+        <li>Grab the <strong class="text-white">Conversion ID</strong> and <strong class="text-white">Label</strong> Google gives you.</li>
+        <li>In GTM &rarr; add a <strong class="text-white">Conversion Linker</strong> tag (fires on all pages).</li>
+        <li>Add a <strong class="text-white">Google Ads Conversion</strong> tag with that ID + Label.</li>
+        <li>Set the trigger (e.g. when someone hits the "Thank You" page).</li>
+        <li>Test in <strong class="text-white">GTM Preview</strong>. Make sure the tag fires when the form is filled.</li>
+      </ol>
+    </section>
+
+    <section id="meta" class="section-anchor mt-8 card-dark rounded-xl border-2 p-6 transition-all">
+      <h2 class="text-xl font-bold text-white">Meta (Facebook/Instagram) Setup (Simple Version)</h2>
+      <ol class="mt-4 space-y-3 text-gray-300 list-decimal pl-6">
+        <li>Create a <strong class="text-white">Pixel</strong> in Meta Ads Manager.</li>
+        <li>In GTM, add it as a <strong class="text-white">Custom HTML</strong> tag (paste the code).</li>
+        <li>Fire it on all pages for basic tracking.</li>
+        <li>For form leads, add a separate tag (Meta "Lead" event) on the thank-you page.</li>
+        <li>Test it with Meta's <strong class="text-white">"Test Events"</strong> tool.</li>
+      </ol>
+    </section>
+
+    <section id="what-to-track" class="section-anchor mt-8 card-dark rounded-xl border-2 p-6 transition-all">
+      <h2 class="text-xl font-bold text-white">What to Track</h2>
+      <ul class="mt-3 space-y-2 list-disc pl-6 text-gray-300">
+        <li><strong class="text-white">Leads / Form Submits</strong> — The most important conversion.</li>
+        <li><strong class="text-white">Phone Calls</strong> — If you use CallRail or Google Forwarding Numbers.</li>
+        <li><strong class="text-white">Button Clicks / Calendly Bookings</strong> — Micro-conversions that indicate intent.</li>
+        <li><strong class="text-white">Offline Conversions</strong> — If you close deals later and want to tell Google/Meta.</li>
+      </ul>
+    </section>
+
+    <section id="protips" class="section-anchor mt-10 protip-box rounded-xl p-6">
+      <h2 class="text-xl font-bold text-white">Pro Tips</h2>
+      <ul class="mt-4 space-y-3 text-gray-300">
+        <li><strong class="text-purple-400">Track quality, not clicks:</strong> It's better to track 10 real leads than 100 fake ones. Use server-side tracking or enhanced conversions if possible.</li>
+        <li><strong class="text-purple-400">Test everything:</strong> Use GTM Preview mode and Meta Test Events to make sure tags fire correctly before spending money.</li>
+        <li><strong class="text-purple-400">Use conversion values:</strong> If some leads are worth more (higher ticket service, better location), assign values so Google/Meta can optimize for revenue, not just volume.</li>
+        <li><strong class="text-purple-400">Enhanced conversions:</strong> Google's enhanced conversions pass hashed email/phone data back to improve attribution. Set it up if you can.</li>
+      </ul>
+    </section>
+
+    <section id="warning" class="section-anchor mt-8 warning-box rounded-xl p-6">
+      <h2 class="text-xl font-bold text-white mb-3">Common Mistakes</h2>
+      <ul class="mt-2 space-y-2 text-gray-300">
+        <li><strong class="text-white">Tracking the wrong page:</strong> Don't fire conversion tags on the form page — fire them on the thank-you page after submission.</li>
+        <li><strong class="text-white">Duplicate tracking:</strong> If you have GTM + hardcoded pixels, you'll double-count conversions. Pick one method.</li>
+        <li><strong class="text-white">No testing:</strong> If you don't test in preview mode, you won't know it's broken until you've wasted budget.</li>
+      </ul>
+    </section>
+
+    <section id="checklist" class="section-anchor mt-8 card-dark rounded-xl border-2 p-6 transition-all">
+      <h2 class="text-xl font-bold text-white">Quick Checklist</h2>
+      <ul class="mt-3 space-y-2 list-disc pl-6 text-gray-300">
+        <li>GTM container installed on all pages</li>
+        <li>Conversion Linker tag added (Google Ads)</li>
+        <li>Google Ads conversion tag fires on thank-you page</li>
+        <li>Meta Pixel base code fires on all pages</li>
+        <li>Meta Lead event fires on thank-you page</li>
+        <li>Tags tested in GTM Preview + Meta Test Events</li>
+        <li>Conversions showing in Google Ads + Meta within 24 hours</li>
+      </ul>
+    </section>
+
+    <footer class="mt-12 border-t border-slate-700 pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <p class="text-sm text-gray-500">Part of the ElectroRaven Optimization Series.</p>
+      <div class="flex gap-3">
+        <a href="/sop/landing-page" class="inline-flex items-center gap-2 rounded-xl border border-slate-600 bg-slate-800 px-4 py-2 text-sm text-gray-300 hover:border-purple-500 hover:text-purple-400 transition-all">&larr; Landing Page SOP</a>
+        <a href="/sop/lead-scoring" class="inline-flex items-center gap-2 rounded-xl border border-slate-600 bg-slate-800 px-4 py-2 text-sm text-gray-300 hover:border-purple-500 hover:text-purple-400 transition-all">Next: Lead Scoring &rarr;</a>
+      </div>
+    </footer>
+  </article>
+</SOPLayout>

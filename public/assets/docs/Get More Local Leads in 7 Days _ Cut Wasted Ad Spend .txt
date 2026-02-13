@@ -1,0 +1,181 @@
+﻿SEO Title: Get More Local Leads in 7 Days | Cut Wasted Ad Spend | LeadFlow Rescue™
+Meta Description: We fix & relaunch your Google + Meta ads in 7 days, install tracking, build fast landing pages, and cut wasted spend—so you get more booked jobs. $199–$399/mo. CPL-Improvement Guarantee.
+Hero
+Headline: More Booked Jobs in 7 Days—Without a $3–5k/mo Agency
+Subhead: We rescue your Google + Meta ads, install rock-solid tracking, and turn clicks into calls—backed by our CPL-Improvement Guarantee.
+Primary CTA (button): Start My 7-Day Rescue
+Secondary CTA (button): See Pricing
+Trust Row (logos or text): Google Ads | Meta Business | GA4 | GTM | Looker Studio
+Micro-proof strip (optional): “Average 22–38% CPL reduction in first 30 days” (swap with real data when available)
+Avatar Split (2 quick links)
+* I’m a Local Business → Jumps to Local section
+
+* I’m an Agency (White-Label) → Jumps to Agency section
+
+________________
+
+
+Problem → Promise
+Problem callout: “Running ads feels like burning cash. Leads are slow, costs creep up, phones stay quiet.”
+Promise: We’ll fix your accounts, cut wasted spend, and get you more qualified leads—fast—so your team spends more time serving customers, not worrying about ads.
+________________
+
+
+How It Works (7-Day Launch)
+Day 0–1: Access + verification (Google/Meta billing, BM/Page, phone/email), tracking scaffold (GTM/GA4)
+Day 2–3: Keyword & negative lists, offers, ad copy, geo & schedule, Landing Page Lite
+Day 4: QA events, test calls/forms, GMB sync, call tracking
+Day 5: Go live
+Day 6–7: Rapid optimizations, waste-cuts, first performance update
+CTA: Start My 7-Day Rescue
+________________
+
+
+What You Get (mapped to real frustrations)
+   * Account & Compliance Setup/Rescue – We handle access, billing, verifications, pages/profiles.
+
+   * Budget & Targeting Calibration – Daily budgets, geo, schedule (open hours), lead targets.
+
+   * Money-Making Build – Keywords + Negative Keyword Shield, high-intent copy, Landing Page Lite (form + click-to-call), GMB hookup.
+
+   * Full-Funnel Tracking – Call & form tracking, GTM + GA4 + data-layer events, Looker dashboard.
+
+   * 24/7 Guardrails – Daily search-term trims, bids/budgets, creative tweaks, weekly summaries.
+
+   * Conversion Boosters – Speed-to-lead scripts (phone/SMS), offer testing (free quote, $X off, same-day).
+
+________________
+
+
+Pricing (simple, month-to-month)
+Ad spend paid by client. $0 setup.
+Starter – $199/mo
+1 platform (Google or Meta) • Landing Page Lite • Weekly report
+Core – $299/mo (Most Popular)
+Both platforms • Landing Page Lite • Call tracking • Weekly report + monthly strategy call
+Core+ – $399/mo
+Everything in Core • Second landing page variant • Extra creative tests
+CTA (buttons under each): Start With Starter | Choose Core | Go Core+
+Fine print: Cancel any time. We recommend ≥$20/day ad spend for meaningful data.
+________________
+
+
+Guarantee (Risk-Reversal)
+CPL-Improvement Guarantee: If we don’t beat your last 30-day blended CPL by 20% within 30 days, we work the next month free until we do (max 60 days).
+Fair-use: ≥$20/day ad spend; our tracking + landing page installed; answer/return-call rate ≥70%.
+________________
+
+
+Bonus Stack (fear removers)
+      1. Local Offer Swipe Vault (50 proven hooks) – know exactly what to say to make leads convert.
+
+      2. Negative Keyword Shield (350+ by niche) – instant waste-cutting.
+
+      3. Speed-to-Lead Playbook – turn inbound leads into booked jobs with 2-minute responses.
+
+      4. LeadFlow Dashboard (GA4 + Looker Studio) – see CPL & ROAS at a glance.
+
+      5. Receptionist Quick-Train (10-min) – no more lost leads at “hello.”
+
+Scarcity/urgency note: We onboard 10 new accounts/month to protect performance. Founders’ Rate includes Landing Page Lite (normally $499) for the first 15 clients.
+CTA: Claim a Founders’ Slot
+________________
+
+
+For Local Businesses (section)
+Headline: “Make the Phone Ring—Consistently”
+Copy: Whether you’re a plumber, electrician, clinic, or local retailer, we zero in on buyers who are ready now, stop paying for junk clicks, and feed your calendar with real opportunities.
+Mini-bullets:
+         * High-intent search terms only
+
+         * Real-time call & form tracking
+
+         * Geo-targeting & open-hour ad schedules
+
+         * Offer testing to raise appointment show-rates
+
+CTA: Start My 7-Day Rescue
+________________
+
+
+For Agencies (White-Label) (section)
+Headline: Fulfillment That Adds Margin (Not Headaches)
+Copy: We build/rescue accounts, install tracking, deploy landing pages, and send white-label weekly summaries with your logo—so you keep clients longer and fulfill profitably.
+Plan: Agency Amplifier™ – $349/mo per account
+Volume: 5–9 accounts → $299 | 10+ → $249
+Add-ons: extra landing page variant $99/mo; creative pack $49/mo.
+Guarantee: Churn-Shield—If a client cancels within 60 days for performance reasons, we fulfill the next client’s first month free (1x) to protect your margin.
+Agency Bonuses:
+            * White-Label Sales Deck + Discovery Script
+
+            * Client “First 30 Days” Email Sequence
+
+            * Niche Negative Lists & Offer Library
+
+CTA: Book Agency Demo
+________________
+
+
+“What Will This Look Like In My Account?” (set expectations)
+               * Your ads will likely change a lot in the first 90 days. That’s normal—it’s how we cut waste and scale winners.
+
+               * You’ll get weekly email updates and a monthly strategy tune-up.
+
+               * You’ll always see lead counts, CPL, and top search terms in your dashboard.
+
+________________
+
+
+FAQs
+Q: How fast will I see leads?
+A: Many see traction inside the first 7–14 days; compounding gains happen as optimizations stack.
+Q: Can you work with small budgets?
+A: Yes. We’ll recommend a floor (usually ≥$20/day) to reach statistical significance.
+Q: Do I need a website?
+A: No. We include Landing Page Lite with form + click-to-call and tracking built-in.
+Q: What if I don’t pick up the phone?
+A: Use our Speed-to-Lead Playbook and set voicemail/SMS rules—we’ll help you plug leaks.
+Q: Do you replace my current agency?
+A: We can co-pilot or fully take over. For agencies, we’re white-label.
+Q: Contracts?
+A: Month-to-month. Cancel any time.
+________________
+
+
+Lead Magnet (for cold traffic)
+Section title: Get 50 Proven Local Ad Offers (Free)
+Copy: Swipe the exact offers that increase call volume and lower CPL—organized by niche (HVAC, trades, dental, home services, retail).
+Form fields: Name, Email, Business Type, City/Zip
+CTA: Send Me The Offers
+________________
+
+
+Final CTA Bar (sticky)
+Text: Ready to cut wasted ad spend and get more leads in 7 days?
+Button: Start My 7-Day Rescue
+________________
+
+
+Footer
+Links: Privacy • Terms • Refund Policy • Contact
+Contact: support@yourdomain • (555) 123-4567
+Note: “LeadFlow Rescue™ is not affiliated with Google or Meta.”
+________________
+
+
+Optional: Implementation Notes (for your dev)
+                  * Sections layout: Hero → Promise → How it Works → What You Get → Pricing → Guarantee → Bonuses → Local → Agency → Process expectations → FAQs → Lead Magnet → Final CTA.
+
+                  * Lead routing: Use call tracking + instant email/SMS to your client.
+
+                  * Form fields: keep to 3–4 fields max on primary CTA.
+
+                  * Speed to lead: Trigger SMS to client within 60 seconds of form/call.
+
+                  * Analytics: GTM container with events (form_submit, call_click, call_connected, purchase) → GA4 → Looker Studio.
+
+                  * Schema: LocalBusiness + FAQ schema for better SERP real estate.
+
+                  * Social proof: Add 3 testimonial slots; swap in real logos/case snippets as you collect them.
+
+                  * Scarcity logic: Countdown or “X of 10 monthly onboarding slots left.”

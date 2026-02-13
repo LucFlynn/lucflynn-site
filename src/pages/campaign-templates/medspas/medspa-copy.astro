@@ -1,0 +1,992 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="MedSpa Campaign Templates - Complete Data Reference" showNav={false} showFooter={false}>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 40px 20px;
+        min-height: 100vh;
+    }
+
+    .container {
+        max-width: 1600px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 16px;
+        padding: 48px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+        font-size: 36px;
+        color: #1a1a1a;
+        margin-bottom: 12px;
+        font-weight: 700;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 32px;
+    }
+
+    .section {
+        margin-bottom: 64px;
+    }
+
+    .section-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        border-bottom: 3px solid #667eea;
+    }
+
+    .section-number {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .section-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #1a1a1a;
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+        margin-top: 16px;
+        border-radius: 8px;
+        border: 1px solid #e9ecef;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+    }
+
+    thead {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        position: sticky;
+        top: 0;
+    }
+
+    th {
+        padding: 16px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 14px;
+        border-bottom: 2px solid #5a67d8;
+    }
+
+    td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #e9ecef;
+        color: #495057;
+        font-size: 13px;
+    }
+
+    tbody tr:hover {
+        background: #f8f9fa;
+    }
+
+    tbody tr:nth-child(even) {
+        background: #fafbfc;
+    }
+
+    tbody tr:nth-child(even):hover {
+        background: #f1f3f5;
+    }
+
+    .two-column-table {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .column-wrapper {
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .column-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 16px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .column-content {
+        max-height: 600px;
+        overflow-y: auto;
+    }
+
+    .item-list {
+        list-style: none;
+    }
+
+    .item-list li {
+        padding: 10px 16px;
+        border-bottom: 1px solid #e9ecef;
+        font-size: 13px;
+    }
+
+    .item-list li:hover {
+        background: #f8f9fa;
+    }
+
+    .item-list li:last-child {
+        border-bottom: none;
+    }
+
+    .note-box {
+        background: #fff3cd;
+        border: 2px solid #ffc107;
+        border-radius: 8px;
+        padding: 16px;
+        margin-top: 16px;
+        font-size: 14px;
+        color: #856404;
+    }
+
+    .note-box strong {
+        display: block;
+        margin-bottom: 8px;
+        color: #856404;
+    }
+
+    @media (max-width: 1200px) {
+        .two-column-table {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 24px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .section-title {
+            font-size: 22px;
+        }
+    }
+</style>
+
+    <div class="container">
+        <h1>📋 MedSpa Campaign Templates - Complete Data Reference</h1>
+        <p class="subtitle">All raw data from your CSV templates organized for easy reference and implementation</p>
+
+        <!-- SECTION 1: GEO TARGETING -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-number">1</div>
+                <h2 class="section-title">Geographic Targeting Data</h2>
+            </div>
+
+            <div class="two-column-table">
+                <div class="column-wrapper">
+                    <div class="column-header">🌍 Countries (For Excluding)</div>
+                    <div class="column-content">
+                        <ul class="item-list">
+                            <li>Afghanistan</li>
+                            <li>Albania</li>
+                            <li>Algeria</li>
+                            <li>American Samoa</li>
+                            <li>Andorra</li>
+                            <li>Angola</li>
+                            <li>Anguilla</li>
+                            <li>Antarctica</li>
+                            <li>Antigua and Barbuda</li>
+                            <li>Argentina</li>
+                            <li>Australia</li>
+                            <li>Austria</li>
+                            <li>Azerbaijan</li>
+                            <li>Bahamas</li>
+                            <li>Bahrain</li>
+                            <li>Bangladesh</li>
+                            <li>Barbados</li>
+                            <li>Belarus</li>
+                            <li>Belgium</li>
+                            <li>Belize</li>
+                            <li>Benin</li>
+                            <li>Bhutan</li>
+                            <li>Bolivia</li>
+                            <li>Bosnia and Herzegovina</li>
+                            <li>Botswana</li>
+                            <li>Brazil</li>
+                            <li>British Virgin Islands</li>
+                            <li>Brunei Darussalam</li>
+                            <li>Bulgaria</li>
+                            <li>Burkina Faso</li>
+                            <li>Burundi</li>
+                            <li>Cambodia</li>
+                            <li>Cameroon</li>
+                            <li>Canada</li>
+                            <li>Cape Verde</li>
+                            <li>Central African Republic</li>
+                            <li>Chad</li>
+                            <li>Chile</li>
+                            <li>China</li>
+                            <li>Hong Kong</li>
+                            <li>Taiwan</li>
+                            <li>Christmas Island</li>
+                            <li>Cocos Islands</li>
+                            <li>Colombia</li>
+                            <li>Comoros</li>
+                            <li>Congo-Brazzaville</li>
+                            <li>Congo-Kinshasa</li>
+                            <li>Cook Islands</li>
+                            <li>Costa Rica</li>
+                            <li>Cote d'Ivoire</li>
+                            <li>Croatia</li>
+                            <li>Cuba</li>
+                            <li>Cyprus</li>
+                            <li>Czech Republic</li>
+                            <li>Denmark</li>
+                            <li>Djibouti</li>
+                            <li>Dominica</li>
+                            <li>Dominican Republic</li>
+                            <li>Ecuador</li>
+                            <li>Egypt</li>
+                            <li>El Salvador</li>
+                            <li>Equatorial Guinea</li>
+                            <li>Eritrea</li>
+                            <li>Estonia</li>
+                            <li>Ethiopia</li>
+                            <li>Falkland Islands</li>
+                            <li>Federated States of Micronesia</li>
+                            <li>Fiji</li>
+                            <li>Finland</li>
+                            <li>France</li>
+                            <li>French Guiana</li>
+                            <li>French Polynesia</li>
+                            <li>Gabon</li>
+                            <li>Gambia</li>
+                            <li>Georgia</li>
+                            <li>Germany</li>
+                            <li>Ghana</li>
+                            <li>Greece</li>
+                            <li>Greenland</li>
+                            <li>Grenada</li>
+                            <li>Guadeloupe</li>
+                            <li>Guam</li>
+                            <li>Guatemala</li>
+                            <li>Guinea</li>
+                            <li>Guinea Bissau</li>
+                            <li>Guyana</li>
+                            <li>Haiti</li>
+                            <li>Honduras</li>
+                            <li>Hungary</li>
+                            <li>Iceland</li>
+                            <li>India</li>
+                            <li>Indonesia</li>
+                            <li>Iraq</li>
+                            <li>Ireland</li>
+                            <li>Israel</li>
+                            <li>Italy</li>
+                            <li>Jamaica</li>
+                            <li>Japan</li>
+                            <li>Jordan</li>
+                            <li>Kazakhstan</li>
+                            <li>Kenya</li>
+                            <li>Kiribati</li>
+                            <li>Kosovo</li>
+                            <li>Kuwait</li>
+                            <li>Kyrgyzstan</li>
+                            <li>Laos</li>
+                            <li>Latvia</li>
+                            <li>Lebanon</li>
+                            <li>Lesotho</li>
+                            <li>Liberia</li>
+                            <li>Libya</li>
+                            <li>Liechtenstein</li>
+                            <li>Lithuania</li>
+                            <li>Luxembourg</li>
+                            <li>Macedonia</li>
+                            <li>Madagascar</li>
+                            <li>Malawi</li>
+                            <li>Malaysia</li>
+                            <li>Maldives</li>
+                            <li>Mali</li>
+                            <li>Malta</li>
+                            <li>Martinique</li>
+                            <li>Mauritania</li>
+                            <li>Mauritius</li>
+                            <li>Mexico</li>
+                            <li>Micronesia</li>
+                            <li>Moldova</li>
+                            <li>Monaco</li>
+                            <li>Mongolia</li>
+                            <li>Montenegro</li>
+                            <li>Morocco</li>
+                            <li>Mozambique</li>
+                            <li>Myanmar</li>
+                            <li>Namibia</li>
+                            <li>Nauru</li>
+                            <li>Nepal</li>
+                            <li>Netherlands</li>
+                            <li>New Caledonia</li>
+                            <li>New Zealand</li>
+                            <li>Nicaragua</li>
+                            <li>Niger</li>
+                            <li>Nigeria</li>
+                            <li>Niue</li>
+                            <li>Norfolk Island</li>
+                            <li>Norway</li>
+                            <li>Oman</li>
+                            <li>Pakistan</li>
+                            <li>Palau</li>
+                            <li>Palestine</li>
+                            <li>Panama</li>
+                            <li>Papua New Guinea</li>
+                            <li>Paraguay</li>
+                            <li>Peru</li>
+                            <li>Philippines</li>
+                            <li>Poland</li>
+                            <li>Portugal</li>
+                            <li>Qatar</li>
+                            <li>Romania</li>
+                            <li>Russia</li>
+                            <li>Rwanda</li>
+                            <li>Saint Kitts and Nevis</li>
+                            <li>Saint Lucia</li>
+                            <li>Samoa</li>
+                            <li>San Marino</li>
+                            <li>São Tomé and Príncipe</li>
+                            <li>Saudi Arabia</li>
+                            <li>Senegal</li>
+                            <li>Serbia</li>
+                            <li>Seychelles</li>
+                            <li>Sierra Leone</li>
+                            <li>Singapore</li>
+                            <li>Slovakia</li>
+                            <li>Slovenia</li>
+                            <li>Solomon Islands</li>
+                            <li>Somalia</li>
+                            <li>South Africa</li>
+                            <li>South Georgia and the South Sandwich Islands</li>
+                            <li>South Korea</li>
+                            <li>Sudan</li>
+                            <li>Spain</li>
+                            <li>Sri Lanka</li>
+                            <li>St. Vincent and the Grenadines</li>
+                            <li>Suriname</li>
+                            <li>Svalbard and Jan Mayen</li>
+                            <li>Swaziland</li>
+                            <li>Sweden</li>
+                            <li>Switzerland</li>
+                            <li>Tajikistan</li>
+                            <li>Tanzania</li>
+                            <li>Thailand</li>
+                            <li>UAE</li>
+                            <li>Togo</li>
+                            <li>Tonga</li>
+                            <li>Trinidad and Tobago</li>
+                            <li>Tunisia</li>
+                            <li>Turkey</li>
+                            <li>Turkmenistan</li>
+                            <li>Tuvalu</li>
+                            <li>Uganda</li>
+                            <li>Ukraine</li>
+                            <li>United Kingdom</li>
+                            <li>Uruguay</li>
+                            <li>Uzbekistan</li>
+                            <li>Vanuatu</li>
+                            <li>Vatican City</li>
+                            <li>Venezuela</li>
+                            <li>Vietnam</li>
+                            <li>Wallis and Futuna Islands</li>
+                            <li>Western Sahara</li>
+                            <li>Yemen</li>
+                            <li>Zambia</li>
+                            <li>Zimbabwe</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="column-wrapper">
+                    <div class="column-header">🇺🇸 US States (For Targeting or Excluding)</div>
+                    <div class="column-content">
+                        <ul class="item-list">
+                            <li>Alabama</li>
+                            <li>Alaska</li>
+                            <li>Arizona</li>
+                            <li>Arkansas</li>
+                            <li>California</li>
+                            <li>Colorado</li>
+                            <li>Connecticut</li>
+                            <li>Delaware</li>
+                            <li>Florida</li>
+                            <li>Georgia, United States</li>
+                            <li>Hawaii</li>
+                            <li>Idaho</li>
+                            <li>Illinois</li>
+                            <li>Indiana</li>
+                            <li>Iowa</li>
+                            <li>Kansas</li>
+                            <li>Kentucky</li>
+                            <li>Louisiana</li>
+                            <li>Maine</li>
+                            <li>Maryland</li>
+                            <li>Massachusetts</li>
+                            <li>Michigan</li>
+                            <li>Minnesota</li>
+                            <li>Mississippi</li>
+                            <li>Missouri</li>
+                            <li>Montana</li>
+                            <li>Nebraska</li>
+                            <li>Nevada</li>
+                            <li>New Hampshire</li>
+                            <li>New Jersey</li>
+                            <li>New Mexico</li>
+                            <li>New York</li>
+                            <li>North Carolina</li>
+                            <li>North Dakota</li>
+                            <li>Ohio</li>
+                            <li>Oklahoma</li>
+                            <li>Oregon</li>
+                            <li>Pennsylvania</li>
+                            <li>Rhode Island</li>
+                            <li>South Carolina</li>
+                            <li>South Dakota</li>
+                            <li>Tennessee</li>
+                            <li>Texas</li>
+                            <li>Utah</li>
+                            <li>Vermont</li>
+                            <li>Virginia</li>
+                            <li>Washington</li>
+                            <li>West Virginia</li>
+                            <li>Wisconsin</li>
+                            <li>Wyoming</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note-box">
+                <strong>Usage Note:</strong>
+                Exclude ALL countries in the left column except United States. Then target only the specific US states where you operate (right column), or use city/radius targeting for more precision.
+            </div>
+        </section>
+
+        <!-- SECTION 2: HEADLINES & DESCRIPTIONS -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-number">2</div>
+                <h2 class="section-title">Headlines & Ad Copy</h2>
+            </div>
+
+            <h3 style="font-size: 20px; color: #495057; margin-bottom: 16px; font-weight: 600;">Strategy 1: Pinned Headlines (Focused Approach)</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Headline</th>
+                            <th>Character Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>H1 (Position 1)</td>
+                            <td>Botox in Austin by Experts</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>H2 (Position 2)</td>
+                            <td>Board Certified</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>H3 (Position 3)</td>
+                            <td>34+ Years</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>Description 1</td>
+                            <td>Erase wrinkles and restore confidence. Trusted by over 7,000 clients. Call now</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>Description 2</td>
+                            <td>Best MedSpa in Austin</td>
+                            <td>23</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="font-size: 20px; color: #495057; margin: 32px 0 16px; font-weight: 600;">Strategy 2: All 15 Headlines (Performance Max)</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Headline</th>
+                            <th>Character Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>H1</td>
+                            <td>Botox in Austin by Experts</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>H2</td>
+                            <td>$12/Unit for New Clients</td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>H3</td>
+                            <td>Book a Free Consultation Today</td>
+                            <td>31 (needs trim to 30)</td>
+                        </tr>
+                        <tr>
+                            <td>H4</td>
+                            <td>Save $200 on Your First Visit</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>H5</td>
+                            <td>1,745 Procedures Done Locally</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>H6</td>
+                            <td>1,000+ Procedures Done by MD</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>H7</td>
+                            <td>Natural-looking Results</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>H8</td>
+                            <td>Lip Filler Experts in Austin</td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <td>H9</td>
+                            <td>CoolSculpting in Austin</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>H10</td>
+                            <td>Since 2016</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>H11</td>
+                            <td>View Prices, Deals And Offers</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>H12</td>
+                            <td>$500 off Limited Time Only</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>H13</td>
+                            <td>CoolSculpting Near You</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>H14</td>
+                            <td>Board Certified MD, 20+ Years</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>H15</td>
+                            <td>{'{Keyword:Smart Tummy Tuck}'} By MD</td>
+                            <td>Variable (Dynamic)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="font-size: 20px; color: #495057; margin: 32px 0 16px; font-weight: 600;">Descriptions for Strategy 2</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Description</th>
+                            <th>Character Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>D1</td>
+                            <td>$99/mo No Interest Plan. 4000+ procedures. Limited Time $1000 off. Free consultation</td>
+                            <td>87</td>
+                        </tr>
+                        <tr>
+                            <td>D2</td>
+                            <td>Breastlift Specialist, Certified MD. Limited time $1000 off. Free Consultation</td>
+                            <td>81</td>
+                        </tr>
+                        <tr>
+                            <td>D3</td>
+                            <td>9000+ Treatments, 23 years of Experience. Free Consultation with Dr</td>
+                            <td>71</td>
+                        </tr>
+                        <tr>
+                            <td>D4</td>
+                            <td>1,745 Procedures Done Locally</td>
+                            <td>30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="note-box">
+                <strong>Template Note:</strong>
+                Replace specifics with your own (e.g., years of experience, price, and services), but keep the structure. There are 2 rows of headlines. This is to create 2 ads: one with all 15 headlines filled, and the other to focus on the most potent headlines which use pinning order.
+            </div>
+        </section>
+
+        <!-- SECTION 3: KEYWORDS -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-number">3</div>
+                <h2 class="section-title">Keywords by Service Category</h2>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>LipoSuction</th>
+                            <th>Hair Loss</th>
+                            <th>Laser Hair Removal</th>
+                            <th>BBL</th>
+                            <th>Botox</th>
+                            <th>Weight Loss</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>LipoSuction</td>
+                            <td>Hair Transplant</td>
+                            <td>Laser Hair Removal</td>
+                            <td>Butt Lift Treatments</td>
+                            <td>Medical Botox</td>
+                            <td>Fat Loss Treatments</td>
+                        </tr>
+                        <tr>
+                            <td>Laser LipoSuction</td>
+                            <td>Hair Restoration</td>
+                            <td>Hair Removal Treatment</td>
+                            <td>Bum Lift</td>
+                            <td>Get Botox Near Me</td>
+                            <td>Weight Reduction</td>
+                        </tr>
+                        <tr>
+                            <td>Non Invasive Fat Removal</td>
+                            <td>Fue Hair Transplant</td>
+                            <td>Laser Hair Removal</td>
+                            <td>Bigger Booty Without Surgery</td>
+                            <td>Botox Skin Treatment</td>
+                            <td>For Weight Loss</td>
+                        </tr>
+                        <tr>
+                            <td>Non Invasive Fat Reduction</td>
+                            <td>Stop Hair Loss</td>
+                            <td>Laser Hair Removal near me</td>
+                            <td>Buttocks Fillers</td>
+                            <td>Botox Specialist</td>
+                            <td>Weight Loss Treatment</td>
+                        </tr>
+                        <tr>
+                            <td>Laser LipoSuction Cost</td>
+                            <td>Replace Hair</td>
+                            <td>Laser Hair Removal (insert city)</td>
+                            <td>BBL Near Me</td>
+                            <td>Cosmetic Fillers Near Me</td>
+                            <td>Weight Loss Centers</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="note-box">
+                <strong>Match Type Recommendation:</strong>
+                Use Phrase Match (&/or Broad Match) for all keywords. Start with phrase match, then test broad match after 2-3 weeks of data collection. Replace "(insert city)" with your actual city name.
+            </div>
+        </section>
+
+        <!-- SECTION 4: NEGATIVE KEYWORDS -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-number">4</div>
+                <h2 class="section-title">Negative Keywords (Complete List)</h2>
+            </div>
+
+            <h3 style="font-size: 20px; color: #495057; margin-bottom: 16px; font-weight: 600;">General Negative Keywords</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Category</th>
+                            <th>Keywords</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>General</strong></td>
+                            <td>Cheap, Free, DIY, At-home, How to, Tutorial, Courses, Jobs, Salary, Training</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="font-size: 20px; color: #495057; margin: 32px 0 16px; font-weight: 600;">Irrelevant Services</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Category</th>
+                            <th>Keywords</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Irrelevant Services</strong></td>
+                            <td>Tattoo shops, Hair salons, Barbers, Massage therapy, Day spa, Yoga, Nail salons, Permanent makeup, Tanning</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="font-size: 20px; color: #495057; margin: 32px 0 16px; font-weight: 600;">Medical & Procedures Not Offered</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Category</th>
+                            <th>Keywords</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Medical Services</strong></td>
+                            <td>Plastic surgery, Cosmetic surgeon, Rhinoplasty, Facelift, Liposuction (if not offered), Breast augmentation, Dental, Orthodontics, Dermatologist (unless specifically relevant)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="font-size: 20px; color: #495057; margin: 32px 0 16px; font-weight: 600;">Geographic Irrelevance</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Category</th>
+                            <th>Keywords</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Location-Based</strong></td>
+                            <td>Include nearby cities or states you don't serve or locations where you've seen irrelevant clicks. Online consultations, Virtual services</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="font-size: 20px; color: #495057; margin: 32px 0 16px; font-weight: 600;">Competitor Keywords (Optional)</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Category</th>
+                            <th>Keywords</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Competitors</strong></td>
+                            <td>[Competitor Name] reviews, [Competitor Name] cost, [Competitor Name] location</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="font-size: 20px; color: #495057; margin: 32px 0 16px; font-weight: 600;">Low-Intent Keywords</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Category</th>
+                            <th>Keywords</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Low Intent</strong></td>
+                            <td>Before and after, Pictures, Images, Photos, Side effects, Reddit, Forum</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="font-size: 20px; color: #495057; margin: 32px 0 16px; font-weight: 600;">Non-Transactional Keywords</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Category</th>
+                            <th>Keywords</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Informational</strong></td>
+                            <td>What is, Meaning of, Definition of, Why does, Explained</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="font-size: 20px; color: #495057; margin: 32px 0 16px; font-weight: 600;">Service-Specific Example (Botox)</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Category</th>
+                            <th>Keywords</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Botox Campaign</strong></td>
+                            <td>Botox training, Botox certification, DIY Botox, Cheap Botox</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="font-size: 20px; color: #495057; margin: 32px 0 16px; font-weight: 600;">State Abbreviations (For Negative Keywords)</h3>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="6" style="text-align: center;">US State Abbreviations - Add as negative keywords for states you don't serve</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AL - Alabama</td>
+                            <td>AK - Alaska</td>
+                            <td>AZ - Arizona</td>
+                            <td>AR - Arkansas</td>
+                            <td>CA - California</td>
+                            <td>CO - Colorado</td>
+                        </tr>
+                        <tr>
+                            <td>CT - Connecticut</td>
+                            <td>DE - Delaware</td>
+                            <td>FL - Florida</td>
+                            <td>GA - Georgia</td>
+                            <td>HI - Hawaii</td>
+                            <td>ID - Idaho</td>
+                        </tr>
+                        <tr>
+                            <td>IL - Illinois</td>
+                            <td>IN - Indiana</td>
+                            <td>IA - Iowa</td>
+                            <td>KS - Kansas</td>
+                            <td>KY - Kentucky</td>
+                            <td>LA - Louisiana</td>
+                        </tr>
+                        <tr>
+                            <td>ME - Maine</td>
+                            <td>MD - Maryland</td>
+                            <td>MA - Massachusetts</td>
+                            <td>MI - Michigan</td>
+                            <td>MN - Minnesota</td>
+                            <td>MS - Mississippi</td>
+                        </tr>
+                        <tr>
+                            <td>MO - Missouri</td>
+                            <td>MT - Montana</td>
+                            <td>NE - Nebraska</td>
+                            <td>NV - Nevada</td>
+                            <td>NH - New Hampshire</td>
+                            <td>NJ - New Jersey</td>
+                        </tr>
+                        <tr>
+                            <td>NM - New Mexico</td>
+                            <td>NY - New York</td>
+                            <td>NC - North Carolina</td>
+                            <td>ND - North Dakota</td>
+                            <td>OH - Ohio</td>
+                            <td>OK - Oklahoma</td>
+                        </tr>
+                        <tr>
+                            <td>OR - Oregon</td>
+                            <td>PA - Pennsylvania</td>
+                            <td>RI - Rhode Island</td>
+                            <td>SC - South Carolina</td>
+                            <td>SD - South Dakota</td>
+                            <td>TN - Tennessee</td>
+                        </tr>
+                        <tr>
+                            <td>TX - Texas</td>
+                            <td>UT - Utah</td>
+                            <td>VT - Vermont</td>
+                            <td>VA - Virginia</td>
+                            <td>WA - Washington</td>
+                            <td>WV - West Virginia</td>
+                        </tr>
+                        <tr>
+                            <td>WI - Wisconsin</td>
+                            <td>WY - Wyoming</td>
+                            <td colspan="4"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="note-box">
+                <strong>Match Type Note:</strong>
+                Use broad match type liberally here but it's okay to use exact and phrase if that's too much. Negative keywords are more aggressive with broad match, which is usually what you want to block irrelevant traffic.
+            </div>
+        </section>
+
+        <div style="margin-top: 48px; padding-top: 24px; border-top: 2px solid #e9ecef; text-align: center; color: #6c757d; font-size: 14px;">
+            <p><strong>Complete Data Reference</strong> - All data from your original CSV templates</p>
+            <p style="margin-top: 8px;">Use this document as a reference when building your campaigns. Customize with your specific services, credentials, and market.</p>
+        </div>
+    </div>
+
+</BaseLayout>
