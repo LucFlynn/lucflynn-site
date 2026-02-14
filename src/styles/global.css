@@ -120,6 +120,20 @@ h1, h2, h3, h4 {
   color: var(--text-primary);
 }
 
+.nav-cta {
+  background: var(--primary);
+  color: #fff !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.nav-cta:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
 .nav-dropdown {
   position: relative;
 }
