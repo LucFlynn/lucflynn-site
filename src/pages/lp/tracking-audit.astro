@@ -1,0 +1,695 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Free Tracking Audit | Luc Flynn"
+  description="Your tracking is broken and it's costing you money. Get a free audit — I'll show you exactly what's wrong with your GA4, pixels, and conversion tracking."
+  showNav={false}
+  showFooter={false}
+>
+
+  <!-- Minimal Header -->
+  <header class="lp-header">
+    <a href="/" class="lp-logo">Luc Flynn</a>
+  </header>
+
+  <!-- Hero: Two-column — copy left, form right -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-copy">
+        <h1 class="hero-headline">
+          Your Tracking Is Broken.<br />
+          <span class="highlight">Let Me Prove It — Free.</span>
+        </h1>
+        <p class="hero-subtext">
+          I'll audit your entire tracking setup — GA4, pixels, GTM, conversion mapping, CRM attribution — and send you a Loom video showing exactly what's broken and how to fix it.
+        </p>
+        <div class="trust-row">
+          <div class="trust-item">
+            <span class="trust-number">150+</span>
+            <span class="trust-label">Clients Served</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-number">$11M+</span>
+            <span class="trust-label">Ad Spend Tracked</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-number">8+</span>
+            <span class="trust-label">Years Experience</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-form" id="audit-form">
+        <div class="form-card">
+          <h2 class="form-title">Get Your Free Audit</h2>
+          <form id="lp-form" class="audit-form">
+            <input type="hidden" name="_subject" value="Free Tracking Audit Request - LP" />
+            <input type="hidden" name="source" value="lp-tracking-audit" />
+            <input type="hidden" name="utm_source" id="utm_source" value="" />
+            <input type="hidden" name="utm_medium" id="utm_medium" value="" />
+            <input type="hidden" name="utm_campaign" id="utm_campaign" value="" />
+            <input type="hidden" name="utm_term" id="utm_term" value="" />
+            <input type="hidden" name="utm_content" id="utm_content" value="" />
+            <input type="hidden" name="gclid" id="gclid" value="" />
+            <input type="hidden" name="fbclid" id="fbclid" value="" />
+
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Your name" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="you@company.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company / Website *</label>
+              <input type="text" id="company" name="company" required placeholder="yourcompany.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="ad_spend">How much ad spend do you manage? *</label>
+              <select id="ad_spend" name="ad_spend" required>
+                <option value="">Select...</option>
+                <option value="under_5k">Under $5k/mo</option>
+                <option value="5k_15k">$5k - $15k/mo</option>
+                <option value="15k_50k">$15k - $50k/mo</option>
+                <option value="50k_100k">$50k - $100k/mo</option>
+                <option value="100k_plus">$100k+/mo</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="challenge">Biggest tracking or attribution challenge? *</label>
+              <textarea id="challenge" name="challenge" required rows="3" placeholder="e.g., GA4 and Google Ads conversion numbers don't match, Meta pixel isn't firing on all pages, can't track leads through our CRM back to ad source..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submit-btn">Get My Free Audit</button>
+            <p class="form-disclaimer">No credit card. No obligation. Just answers.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="problems">
+    <div class="section-container">
+      <h2 class="section-headline">Sound Familiar?</h2>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">&#9888;</div>
+          <h3>GA4 says 47 conversions. Google Ads says 83.</h3>
+          <p>You have no idea which number is right — or which campaigns are actually working.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">&#10060;</div>
+          <h3>Your pixel fires... sometimes.</h3>
+          <p>You refresh and it works. Your client checks and it doesn't. You're flying blind on half your traffic.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">&#128184;</div>
+          <h3>Spending $10k/mo on guesswork.</h3>
+          <p>Can't prove which campaigns work, which audiences convert, or where the funnel breaks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You Get -->
+  <section class="deliverables">
+    <div class="section-container">
+      <h2 class="section-headline">Here's What You Get <span class="highlight-badge">(100% Free)</span></h2>
+      <div class="deliverables-card">
+        <ul class="check-list">
+          <li>
+            <span class="check">&#10003;</span>
+            <span>A Loom video walkthrough of your entire tracking setup</span>
+          </li>
+          <li>
+            <span class="check">&#10003;</span>
+            <span>Exact diagnosis of what's broken — tags, GA4 config, conversion mapping, attribution</span>
+          </li>
+          <li>
+            <span class="check">&#10003;</span>
+            <span>Priority-ranked fix list — do this first, then this, then this</span>
+          </li>
+          <li>
+            <span class="check">&#10003;</span>
+            <span>Estimated impact on your ad performance once fixed</span>
+          </li>
+          <li>
+            <span class="check">&#10003;</span>
+            <span>Delivered after I get access to your accounts — typically within a few days</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="testimonials">
+    <div class="section-container">
+      <div class="testimonial-grid">
+        <blockquote class="testimonial-card">
+          <p>"We were making decisions on completely wrong data. Luc found 5 critical tracking issues in our funnel that were costing us thousands per month in wasted spend. Our GA4 and Google Ads finally match."</p>
+          <cite>— Marketing Director, SaaS Company</cite>
+        </blockquote>
+        <blockquote class="testimonial-card">
+          <p>"I thought our Meta pixel was working. Turns out only 40% of conversions were being tracked. Luc's audit saved us from scaling a broken campaign to $50k/month."</p>
+          <cite>— Agency Owner</cite>
+        </blockquote>
+      </div>
+      <p class="testimonial-note">* Replace with your real testimonials when available</p>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="section-container">
+      <h2 class="section-headline">Ready to See What's Broken?</h2>
+      <p class="final-subtext">It takes 2 minutes to fill out the form. You'll hear from me within 24 hours.</p>
+      <a href="#audit-form" class="btn-primary-large">Get My Free Audit</a>
+      <p class="qualify-note">Most valuable for businesses spending $5k+/month on ads or agencies managing multiple client accounts.</p>
+    </div>
+  </section>
+
+  <!-- Minimal Footer -->
+  <footer class="lp-footer">
+    <p>&copy; 2025 Luc Flynn. All rights reserved. <a href="/privacy">Privacy Policy</a></p>
+  </footer>
+
+  <!-- UTM Capture Script -->
+  <script is:inline>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var fields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'];
+      fields.forEach(function(field) {
+        var value = params.get(field);
+        if (value) {
+          var el = document.getElementById(field);
+          if (el) el.value = value;
+        }
+      });
+    })();
+  </script>
+
+  <!-- Form Submit Handler -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      var form = document.getElementById('lp-form');
+      var submitBtn = document.getElementById('submit-btn');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        fetch('https://formspree.io/f/mblqrqoq', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+          if (response.ok) {
+            window.location.href = '/lp/tracking-audit/thank-you';
+          } else {
+            alert('Something went wrong. Please try again or email luc@lucflynn.com');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Get My Free Audit';
+          }
+        }).catch(function() {
+          alert('Something went wrong. Please try again or email luc@lucflynn.com');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Get My Free Audit';
+        });
+      });
+    });
+  </script>
+
+</BaseLayout>
+
+<style>
+  /* ============================================
+     LANDING PAGE — STANDALONE STYLES
+     ============================================ */
+
+  /* Header */
+  .lp-header {
+    padding: 1.25rem 2rem;
+    background: var(--dark);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .lp-logo {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
+  /* ---- Hero ---- */
+  .hero {
+    padding: 4rem 2rem 5rem;
+    background: linear-gradient(135deg, var(--dark) 0%, var(--dark-lighter) 100%);
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .hero-headline {
+    font-size: clamp(2.25rem, 4vw, 3.25rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+  }
+
+  .highlight {
+    background: linear-gradient(135deg, var(--primary) 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtext {
+    font-size: 1.15rem;
+    color: var(--text-body);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .trust-row {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .trust-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--green);
+  }
+
+  .trust-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  /* ---- Form Card ---- */
+  .form-card {
+    background: var(--dark-card-gradient);
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 2.5rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 1.75rem;
+  }
+
+  .audit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--dark-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #555;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  }
+
+  .form-group select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='%2394a3b8'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  .btn-submit {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 0.25rem;
+  }
+
+  .btn-submit:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+  }
+
+  .btn-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .form-disclaimer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+  }
+
+  /* ---- Problem Section ---- */
+  .problems {
+    padding: 5rem 2rem;
+    background: var(--dark);
+  }
+
+  .section-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-headline {
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .problem-card {
+    background: var(--dark-lighter);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+
+  .problem-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+  }
+
+  .problem-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .problem-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .problem-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ---- Deliverables ---- */
+  .deliverables {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--dark) 0%, var(--dark-lighter) 100%);
+  }
+
+  .highlight-badge {
+    color: var(--green);
+  }
+
+  .deliverables-card {
+    background: var(--dark-card-gradient);
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    line-height: 1.5;
+  }
+
+  .check {
+    color: var(--green);
+    font-size: 1.35rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  /* ---- Testimonials ---- */
+  .testimonials {
+    padding: 5rem 2rem;
+    background: var(--dark);
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    background: var(--dark-lighter);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 12px 12px 0;
+    padding: 2rem;
+    margin: 0;
+  }
+
+  .testimonial-card p {
+    font-size: 1rem;
+    color: var(--text-body);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-card cite {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    font-style: normal;
+  }
+
+  .testimonial-note {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 1.5rem;
+    opacity: 0.6;
+  }
+
+  /* ---- Final CTA ---- */
+  .final-cta {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--dark-lighter) 0%, var(--dark) 100%);
+    text-align: center;
+  }
+
+  .final-subtext {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-primary-large {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    padding: 1.15rem 2.5rem;
+    border-radius: 8px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .btn-primary-large:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+  }
+
+  .qualify-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 1.5rem;
+  }
+
+  /* ---- Footer ---- */
+  .lp-footer {
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    background: var(--dark);
+  }
+
+  .lp-footer p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .lp-footer a {
+    color: var(--accent-text);
+    text-decoration: none;
+  }
+
+  .lp-footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* ============================================
+     RESPONSIVE
+     ============================================ */
+  @media (max-width: 768px) {
+    .hero {
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .hero-headline {
+      font-size: 2rem;
+    }
+
+    .trust-row {
+      gap: 1.5rem;
+    }
+
+    .form-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .problem-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .deliverables-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .check-list li {
+      font-size: 1rem;
+    }
+
+    .testimonial-grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .final-cta {
+      padding: 4rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-headline {
+      font-size: 1.75rem;
+    }
+
+    .hero-subtext {
+      font-size: 1rem;
+    }
+
+    .trust-number {
+      font-size: 1.25rem;
+    }
+
+    .section-headline {
+      font-size: 1.5rem;
+    }
+  }
+</style>

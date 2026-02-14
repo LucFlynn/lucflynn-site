@@ -1,0 +1,335 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Audit Request Received | Luc Flynn"
+  description="Your free tracking audit request has been received. Here's what happens next."
+  showNav={false}
+  showFooter={false}
+>
+
+  <!-- Conversion Tracking -->
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'conversion',
+      'conversion_type': 'tracking_audit_request',
+      'page_type': 'thank_you',
+      'lead_value': 'tracking_audit'
+    });
+  </script>
+
+  <!-- Minimal Header -->
+  <header class="lp-header">
+    <a href="/" class="lp-logo">Luc Flynn</a>
+  </header>
+
+  <!-- Confirmation Section -->
+  <section class="confirmation">
+    <div class="container">
+      <div class="confirmation-card">
+        <div class="success-icon">&#9989;</div>
+        <h1 class="confirm-headline">Your Audit Request Is In!</h1>
+        <p class="confirm-subtext">
+          I'll email you within 24 hours to introduce myself and get the ball rolling.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Happens Next -->
+  <section class="next-steps">
+    <div class="container">
+      <h2 class="steps-headline">Here's What Happens Next</h2>
+      <div class="timeline">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>I email you within 24 hours</h3>
+            <p>I'll introduce myself and explain exactly what access I need to audit your setup.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>You grant me access</h3>
+            <p>Read-only access to your ad accounts, GA4, GTM, and any relevant tracking tools. Takes about 5 minutes — I'll walk you through it.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>I audit everything</h3>
+            <p>Tags, pixels, GA4 configuration, conversion mapping, CRM attribution — the full stack. I dig into every layer.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>You get a Loom video</h3>
+            <p>A recorded walkthrough showing exactly what's broken, why it matters, and a priority-ranked fix list.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3>We hop on a call (optional)</h3>
+            <p>If you want to discuss the findings live, we can. No pressure, no pitch unless you want one.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Access Note -->
+  <section class="access-note">
+    <div class="container">
+      <div class="note-card">
+        <h3>About Access</h3>
+        <p>I'll need read-only access to your ad accounts, GA4, GTM, and any relevant tracking tools to complete the audit. Don't worry — I'll send you step-by-step instructions. Most people have it set up in under 5 minutes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Questions -->
+  <section class="questions">
+    <div class="container">
+      <p class="questions-text">
+        Questions in the meantime? Email me at
+        <a href="mailto:luc@lucflynn.com">luc@lucflynn.com</a>
+      </p>
+      <a href="/" class="home-link">Browse free resources while you wait &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Minimal Footer -->
+  <footer class="lp-footer">
+    <p>&copy; 2025 Luc Flynn. All rights reserved. <a href="/privacy">Privacy Policy</a></p>
+  </footer>
+
+</BaseLayout>
+
+<style>
+  /* Header */
+  .lp-header {
+    padding: 1.25rem 2rem;
+    background: var(--dark);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .lp-logo {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+
+  /* Container */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* ---- Confirmation ---- */
+  .confirmation {
+    padding: 5rem 0 3rem;
+    background: linear-gradient(135deg, var(--dark) 0%, var(--dark-lighter) 100%);
+  }
+
+  .confirmation-card {
+    text-align: center;
+  }
+
+  .success-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    animation: bounce 1s ease;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .confirm-headline {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+  }
+
+  .confirm-subtext {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ---- Next Steps Timeline ---- */
+  .next-steps {
+    padding: 4rem 0;
+    background: var(--dark);
+  }
+
+  .steps-headline {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .step {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    background: var(--dark-lighter);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem;
+    transition: border-color 0.2s;
+  }
+
+  .step:hover {
+    border-color: var(--accent);
+  }
+
+  .step-number {
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--primary);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .step-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+  }
+
+  .step-content p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ---- Access Note ---- */
+  .access-note {
+    padding: 2rem 0 3rem;
+    background: var(--dark);
+  }
+
+  .note-card {
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    padding: 1.75rem;
+  }
+
+  .note-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .note-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ---- Questions ---- */
+  .questions {
+    padding: 3rem 0 4rem;
+    background: var(--dark);
+    text-align: center;
+  }
+
+  .questions-text {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+
+  .questions-text a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .questions-text a:hover {
+    text-decoration: underline;
+  }
+
+  .home-link {
+    display: inline-block;
+    color: var(--accent-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  .home-link:hover {
+    color: var(--accent);
+  }
+
+  /* ---- Footer ---- */
+  .lp-footer {
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    background: var(--dark);
+  }
+
+  .lp-footer p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .lp-footer a {
+    color: var(--accent-text);
+    text-decoration: none;
+  }
+
+  .lp-footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 768px) {
+    .confirmation {
+      padding: 3.5rem 0 2rem;
+    }
+
+    .success-icon {
+      font-size: 3rem;
+    }
+
+    .step {
+      padding: 1.25rem;
+    }
+
+    .step-number {
+      width: 2rem;
+      height: 2rem;
+      font-size: 0.85rem;
+    }
+  }
+</style>
