@@ -1,0 +1,490 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Free Tracking Audit | Luc Flynn"
+  description="Stop Losing Clients Because You Can't Prove ROI. Get a free audit report showing why your campaigns are better than the data shows"
+  showNav={false}
+  showFooter={false}
+>
+
+  <!-- Minimal Header -->
+  <header class="lp-header">
+    <a href="/" class="lp-logo">Luc Flynn</a>
+  </header>
+
+  <!-- Hero — single column, centered, form is the focal point -->
+  <section class="hero">
+    <div class="hero-container">
+      <h1 class="headline">Stop Losing Clients Because You Can't Prove ROI.</h1>
+      <p class="subheadline">Get a free audit report showing why your campaigns are better than the data shows.</p>
+
+      <!-- Hero Visual — Report document mockup -->
+      <div class="hero-visual">
+        <div class="report-mockup">
+          <div class="report-header">
+            <div class="report-title">Marketing Performance Audit</div>
+            <div class="report-meta">Prepared by: Luc Flynn</div>
+          </div>
+          <div class="report-score">
+            <span class="score-label">Clarity Score:</span>
+            <span class="score-value">?<span class="score-max">/10</span></span>
+          </div>
+          <div class="report-sections">
+            <div class="report-line"></div>
+            <div class="report-line short"></div>
+            <div class="report-section-title">&#9888; Meta Ads &mdash; Current State</div>
+            <div class="report-line"></div>
+            <div class="report-line medium"></div>
+            <div class="report-section-title">&#9888; Google Ads &mdash; Conversion Tracking</div>
+            <div class="report-line"></div>
+            <div class="report-line short"></div>
+            <div class="report-section-title">&#10003; Next Steps &amp; Prioritized Fixes</div>
+            <div class="report-line medium"></div>
+          </div>
+        </div>
+        <p class="visual-caption">Your personalized report</p>
+      </div>
+
+      <!-- The Form -->
+      <div class="form-wrap">
+        <form id="lp-form" class="audit-form">
+          <input type="hidden" name="_subject" value="Free Tracking Audit Request - LP" />
+          <input type="hidden" name="source" value="lp-tracking-audit" />
+          <input type="hidden" name="utm_source" id="utm_source" value="" />
+          <input type="hidden" name="utm_medium" id="utm_medium" value="" />
+          <input type="hidden" name="utm_campaign" id="utm_campaign" value="" />
+          <input type="hidden" name="utm_term" id="utm_term" value="" />
+          <input type="hidden" name="utm_content" id="utm_content" value="" />
+          <input type="hidden" name="gclid" id="gclid" value="" />
+          <input type="hidden" name="fbclid" id="fbclid" value="" />
+
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="name" name="name" required placeholder="Name" />
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required placeholder="Email" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="company" name="company" required placeholder="Company / Website" />
+            </div>
+            <div class="form-group">
+              <select id="ad_spend" name="ad_spend" required>
+                <option value="">Monthly ad spend...</option>
+                <option value="under_5k">Under $5k/mo</option>
+                <option value="5k_15k">$5k - $15k/mo</option>
+                <option value="15k_50k">$15k - $50k/mo</option>
+                <option value="50k_100k">$50k - $100k/mo</option>
+                <option value="100k_plus">$100k+/mo</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <textarea id="challenge" name="challenge" required rows="2" placeholder="What's your biggest tracking or attribution challenge?"></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submit-btn">Get My Free Audit</button>
+        </form>
+        <p class="justification">200+ tracking setups audited. No credit card.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 Objection Bullets — below the fold -->
+  <section class="objections">
+    <div class="objections-container">
+      <div class="objection">
+        <h3>Is this actually free?</h3>
+        <p>Yes. No credit card, no catch. I use this to show you what I can do.</p>
+      </div>
+      <div class="objection">
+        <h3>How long does this take?</h3>
+        <p>You fill out the form (2 min). I deliver the audit within days of getting access to your accounts.</p>
+      </div>
+      <div class="objection">
+        <h3>Will you just try to sell me?</h3>
+        <p>The video stands on its own. If you want help fixing things, we can talk. If not, no problem.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal Footer -->
+  <footer class="lp-footer">
+    <p>&copy; 2025 Luc Flynn. <a href="/privacy">Privacy Policy</a></p>
+  </footer>
+
+  <!-- UTM Capture -->
+  <script is:inline>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var fields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'];
+      fields.forEach(function(field) {
+        var value = params.get(field);
+        if (value) {
+          var el = document.getElementById(field);
+          if (el) el.value = value;
+        }
+      });
+    })();
+  </script>
+
+  <!-- Form Submit Handler -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      var form = document.getElementById('lp-form');
+      var submitBtn = document.getElementById('submit-btn');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        fetch('https://formspree.io/f/mblqrqoq', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+          if (response.ok) {
+            window.location.href = '/lp/tracking-audit/thank-you';
+          } else {
+            alert('Something went wrong. Please try again or email luc@lucflynn.com');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Get My Free Audit';
+          }
+        }).catch(function() {
+          alert('Something went wrong. Please try again or email luc@lucflynn.com');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Get My Free Audit';
+        });
+      });
+    });
+  </script>
+
+</BaseLayout>
+
+<style>
+  /* ============================================
+     LANDING PAGE — HORMOZI FRAMEWORK
+     Short. Focused. One action.
+     ============================================ */
+
+  * { box-sizing: border-box; }
+
+  /* Header */
+  .lp-header {
+    padding: 1rem 2rem;
+    background: var(--dark);
+  }
+
+  .lp-logo {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-decoration: none;
+    opacity: 0.7;
+  }
+
+  /* ---- Hero ---- */
+  .hero {
+    padding: 3rem 1.5rem 4rem;
+    background: var(--dark);
+  }
+
+  .hero-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .headline {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.15;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .subheadline {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ---- Hero Visual (Report mockup) ---- */
+  .hero-visual {
+    margin: 0 auto 2.5rem;
+    max-width: 400px;
+  }
+
+  .report-mockup {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    text-align: left;
+  }
+
+  .report-header {
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  .report-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.2rem;
+  }
+
+  .report-meta {
+    font-size: 0.7rem;
+    color: #64748b;
+  }
+
+  .report-score {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.6rem 0.75rem;
+    background: #f1f5f9;
+    border-radius: 6px;
+  }
+
+  .score-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #475569;
+  }
+
+  .score-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+  }
+
+  .score-max {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #94a3b8;
+  }
+
+  .report-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .report-line {
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 3px;
+    width: 100%;
+  }
+
+  .report-line.short {
+    width: 60%;
+  }
+
+  .report-line.medium {
+    width: 80%;
+  }
+
+  .report-section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #334155;
+    margin-top: 0.4rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .visual-caption {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+    font-style: italic;
+  }
+
+  /* ---- Form ---- */
+  .form-wrap {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .audit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: var(--dark-lighter);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #64748b;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  }
+
+  .form-group select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='%2394a3b8'%3E%3Cpath d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+    color: #64748b;
+  }
+
+  .form-group select:valid {
+    color: var(--text-primary);
+  }
+
+  .form-group textarea {
+    resize: none;
+  }
+
+  .btn-submit {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 0.25rem;
+  }
+
+  .btn-submit:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+  }
+
+  .btn-submit:active {
+    transform: translateY(0);
+  }
+
+  .btn-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .justification {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+  }
+
+  /* ---- Objections (below the fold) ---- */
+  .objections {
+    padding: 3rem 1.5rem 3.5rem;
+    background: var(--dark-lighter);
+    border-top: 1px solid var(--border);
+  }
+
+  .objections-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .objection h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+  }
+
+  .objection p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* ---- Footer ---- */
+  .lp-footer {
+    padding: 1.5rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    background: var(--dark);
+  }
+
+  .lp-footer p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  .lp-footer a {
+    color: var(--text-muted);
+    text-decoration: underline;
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 600px) {
+    .hero {
+      padding: 2rem 1.25rem 3rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .report-mockup {
+      padding: 1.25rem 1.5rem;
+    }
+
+    .headline {
+      font-size: 1.75rem;
+    }
+  }
+</style>

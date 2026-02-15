@@ -1,0 +1,305 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Get a Free Tracking Audit | Luc Flynn"
+  description="Book a free audit to find out what's broken in your tracking, analytics, and funnel infrastructure."
+>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-headline">Let's Find What's Broken</h1>
+      <p class="hero-subtext">
+        Most businesses are bleeding leads because of broken tracking, misconfigured analytics, or funnel gaps they don't even know about. I'll audit your setup for free and show you exactly what to fix.
+      </p>
+    </div>
+  </section>
+
+  <!-- Trust Indicators -->
+  <section class="trust-section">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <span class="trust-number">$11M+</span>
+          <span class="trust-label">in ad spend managed</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-number">150+</span>
+          <span class="trust-label">clients served</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-number">8+</span>
+          <span class="trust-label">years experience</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="form-section">
+    <div class="container">
+      <div class="form-card">
+        <h2 class="form-title">Request Your Free Audit</h2>
+        <p class="form-subtitle">Fill out the form below and I'll get back to you within 24 hours with a personalized breakdown of your tracking and analytics setup.</p>
+
+        <form action="https://formspree.io/f/mblqrqoq" method="POST" class="contact-form">
+          <!-- Hidden fields -->
+          <input type="hidden" name="_subject" value="Free Tracking Audit Request" />
+          <input type="hidden" name="source" value="contact-page" />
+          <input type="hidden" name="utm_source" id="utm_source" value="" />
+          <input type="hidden" name="utm_medium" id="utm_medium" value="" />
+          <input type="hidden" name="utm_campaign" id="utm_campaign" value="" />
+          <input type="hidden" name="utm_term" id="utm_term" value="" />
+          <input type="hidden" name="utm_content" id="utm_content" value="" />
+          <input type="hidden" name="gclid" id="gclid" value="" />
+          <input type="hidden" name="fbclid" id="fbclid" value="" />
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@company.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company / Website</label>
+            <input type="text" id="company" name="company" required placeholder="yourcompany.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="challenge">What's your biggest tracking or analytics challenge?</label>
+            <textarea id="challenge" name="challenge" required rows="5" placeholder="e.g. Our Google Ads conversions don't match GA4, we're not sure if our Meta pixel is firing correctly, our funnel drop-off is high but we can't figure out where..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Request Free Audit</button>
+        </form>
+
+        <p class="form-alt">Or email me directly at <a href="mailto:luc@lucflynn.com">luc@lucflynn.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- UTM Capture Script -->
+  <script is:inline>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var fields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'];
+      fields.forEach(function(field) {
+        var value = params.get(field);
+        if (value) {
+          var el = document.getElementById(field);
+          if (el) {
+            el.value = value;
+          }
+        }
+      });
+    })();
+  </script>
+
+</BaseLayout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    padding: 6rem 1.5rem 3rem;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero-headline {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+    line-height: 1.15;
+  }
+
+  .hero-subtext {
+    font-size: 1.2rem;
+    color: #B0B8E0;
+    line-height: 1.7;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  /* Trust Indicators */
+  .trust-section {
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .trust-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .trust-number {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #6366F1;
+  }
+
+  .trust-label {
+    font-size: 0.95rem;
+    color: #8A93C4;
+  }
+
+  /* Form Section */
+  .form-section {
+    padding: 2rem 1.5rem 5rem;
+  }
+
+  .form-card {
+    background: linear-gradient(135deg, #1E2251 0%, #252a5f 100%);
+    border: 1px solid #6366F1;
+    border-radius: 16px;
+    padding: 3rem;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .form-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .form-subtitle {
+    font-size: 1rem;
+    color: #B0B8E0;
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #8A93C4;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    background: #0B0F2F;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.2s ease;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #555;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #6366F1;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .btn-submit {
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-top: 0.5rem;
+  }
+
+  .btn-submit:hover {
+    background: #1d4ed8;
+  }
+
+  .form-alt {
+    text-align: center;
+    margin-top: 1.75rem;
+    font-size: 0.95rem;
+    color: #8A93C4;
+  }
+
+  .form-alt a {
+    color: #6366F1;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .form-alt a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .hero {
+      padding: 4rem 1.25rem 2rem;
+    }
+
+    .hero-headline {
+      font-size: 2.25rem;
+    }
+
+    .hero-subtext {
+      font-size: 1.05rem;
+    }
+
+    .trust-grid {
+      gap: 2rem;
+    }
+
+    .trust-number {
+      font-size: 1.5rem;
+    }
+
+    .form-card {
+      padding: 2rem 1.5rem;
+    }
+
+    .form-title {
+      font-size: 1.4rem;
+    }
+  }
+</style>
