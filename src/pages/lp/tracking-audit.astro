@@ -18,32 +18,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <section class="hero">
     <div class="hero-container">
       <h1 class="headline">Stop Losing Clients Because You Can't Prove ROI.</h1>
-      <p class="subheadline">Get a free audit report showing why your campaigns are better than the data shows.</p>
+      <p class="subheadline">Get a free audit showing exactly what's broken in your tracking and what it's costing you</p>
 
-      <!-- Hero Visual — Report document mockup -->
+      <!-- Hero Visual — Report image -->
       <div class="hero-visual">
-        <div class="report-mockup">
-          <div class="report-header">
-            <div class="report-title">Marketing Performance Audit</div>
-            <div class="report-meta">Prepared by: Luc Flynn</div>
-          </div>
-          <div class="report-score">
-            <span class="score-label">Clarity Score:</span>
-            <span class="score-value">?<span class="score-max">/10</span></span>
-          </div>
-          <div class="report-sections">
-            <div class="report-line"></div>
-            <div class="report-line short"></div>
-            <div class="report-section-title">&#9888; Meta Ads &mdash; Current State</div>
-            <div class="report-line"></div>
-            <div class="report-line medium"></div>
-            <div class="report-section-title">&#9888; Google Ads &mdash; Conversion Tracking</div>
-            <div class="report-line"></div>
-            <div class="report-line short"></div>
-            <div class="report-section-title">&#10003; Next Steps &amp; Prioritized Fixes</div>
-            <div class="report-line medium"></div>
-          </div>
-        </div>
+        <img src="/assets/images/Landing page hero.png" alt="Marketing Performance Audit Report" class="hero-image-clean" />
         <p class="visual-caption">Your personalized report</p>
       </div>
 
@@ -110,6 +89,19 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       <div class="objection">
         <h3>Will you just try to sell me?</h3>
         <p>The video stands on its own. If you want help fixing things, we can talk. If not, no problem.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bio Section -->
+  <section class="bio-section">
+    <div class="bio-container">
+      <img src="/assets/images/headshot.jpg" alt="Luc Flynn" class="bio-headshot" />
+      <div class="bio-content">
+        <p class="bio-intro">I'm Luc Flynn.</p>
+        <p class="bio-text">I've managed over $10 million in ad spend across Google, Meta, and more.</p>
+        <p class="bio-text">I've worked with 150+ clients — agencies, media buyers, and consultants — who needed the backend done right.</p>
+        <p class="bio-promise">I make you look like a rockstar to your clients.</p>
       </div>
     </div>
   </section>
@@ -221,93 +213,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     margin-right: auto;
   }
 
-  /* ---- Hero Visual (Report mockup) ---- */
+  /* ---- Hero Visual (Image) ---- */
   .hero-visual {
     margin: 0 auto 2.5rem;
-    max-width: 400px;
+    max-width: 500px;
   }
 
-  .report-mockup {
-    background: #f8fafc;
-    border-radius: 8px;
-    padding: 1.5rem 1.75rem;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
-    text-align: left;
-  }
-
-  .report-header {
-    margin-bottom: 1rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 2px solid #e2e8f0;
-  }
-
-  .report-title {
-    font-size: 0.95rem;
-    font-weight: 800;
-    color: #0f172a;
-    margin-bottom: 0.2rem;
-  }
-
-  .report-meta {
-    font-size: 0.7rem;
-    color: #64748b;
-  }
-
-  .report-score {
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-    padding: 0.6rem 0.75rem;
-    background: #f1f5f9;
-    border-radius: 6px;
-  }
-
-  .score-label {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #475569;
-  }
-
-  .score-value {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--primary);
-  }
-
-  .score-max {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: #94a3b8;
-  }
-
-  .report-sections {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-
-  .report-line {
-    height: 6px;
-    background: #e2e8f0;
-    border-radius: 3px;
+  .hero-image {
     width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
   }
 
-  .report-line.short {
-    width: 60%;
-  }
-
-  .report-line.medium {
-    width: 80%;
-  }
-
-  .report-section-title {
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: #334155;
-    margin-top: 0.4rem;
-    margin-bottom: 0.1rem;
+  .hero-image-clean {
+    width: 100%;
+    height: auto;
   }
 
   .visual-caption {
@@ -451,6 +372,58 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     line-height: 1.5;
   }
 
+  /* ---- Bio Section ---- */
+  .bio-section {
+    padding: 3rem 1.5rem;
+    background: var(--dark);
+    border-top: 1px solid var(--border);
+  }
+
+  .bio-container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .bio-headshot {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary);
+  }
+
+  .bio-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .bio-intro {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  .bio-text {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .bio-promise {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0.25rem 0 0;
+  }
+
   /* ---- Footer ---- */
   .lp-footer {
     padding: 1.5rem;
@@ -477,10 +450,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
     .form-row {
       grid-template-columns: 1fr;
-    }
-
-    .report-mockup {
-      padding: 1.25rem 1.5rem;
     }
 
     .headline {
