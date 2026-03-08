@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Terms of Service — Software Tools"
+  description="Terms of Service for Luc Flynn's software tools including EPI, Media Buyer's Cockpit, and Snapshots."
+>
+  <style is:inline>
+    .privacy-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .privacy-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .privacy-header h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .privacy-header p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+    }
+
+    .privacy-content {
+      background: var(--dark-lighter);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 3rem;
+    }
+
+    .privacy-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .privacy-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .privacy-content h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .privacy-content p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .privacy-content ul {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+    }
+
+    .privacy-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .privacy-content a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .privacy-content a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .privacy-container {
+        padding: 2rem 1rem;
+      }
+
+      .privacy-content {
+        padding: 2rem 1.5rem;
+      }
+
+      .privacy-header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+
+  <div class="privacy-container">
+    <div class="privacy-header">
+      <h1>Terms of Service — Software Tools</h1>
+      <p>Last Updated: March 2026</p>
+    </div>
+
+    <div class="privacy-content">
+      <p>These Terms of Service ("Terms") govern your use of software tools operated by Luc Flynn ("we," "us," "our"), including but not limited to EPI, Media Buyer's Cockpit, and Snapshots (collectively, "Tools").</p>
+      <p>By creating an account or using any of our Tools, you agree to these Terms.</p>
+
+      <h3>1. Account Registration</h3>
+      <ul>
+        <li>You must provide accurate and complete information when creating an account</li>
+        <li>You are responsible for maintaining the security of your account credentials</li>
+        <li>You must be at least 18 years old to use our Tools</li>
+        <li>One person or legal entity per account unless otherwise agreed</li>
+      </ul>
+
+      <h3>2. Connecting Third-Party Accounts</h3>
+      <p>When you connect third-party accounts (such as Google Ads or Meta Ads) to our Tools:</p>
+      <ul>
+        <li>You represent that you have authorization to grant us access to those accounts</li>
+        <li>You are responsible for maintaining valid authorization</li>
+        <li>We access only the data necessary to provide our Tools' functionality</li>
+        <li>You can disconnect third-party accounts at any time through your settings</li>
+        <li>We are not responsible for changes made by third-party platforms to their APIs or services</li>
+      </ul>
+
+      <h3>3. Acceptable Use</h3>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use our Tools to violate any applicable laws or advertising platform policies</li>
+        <li>Share your account credentials with unauthorized users</li>
+        <li>Attempt to reverse-engineer, decompile, or extract source code from our Tools</li>
+        <li>Use our Tools to collect data about accounts you do not have authorization to access</li>
+        <li>Resell access to our Tools without written permission</li>
+        <li>Use our Tools in any way that could damage, disable, or impair our services</li>
+      </ul>
+
+      <h3>4. Data and Privacy</h3>
+      <ul>
+        <li>Our <a href="/privacy">Privacy Policy</a> describes how we collect, use, and protect your data</li>
+        <li>You retain ownership of your data at all times</li>
+        <li>We do not sell your data to third parties</li>
+        <li>You can request export or deletion of your data at any time</li>
+      </ul>
+
+      <h3>5. Subscriptions and Billing</h3>
+      <ul>
+        <li>Paid features are billed on a recurring monthly basis</li>
+        <li>Prices are listed on each Tool's pricing page and may change with 30 days notice</li>
+        <li>You can cancel your subscription at any time; access continues through the end of the billing period</li>
+        <li>Refunds are handled on a case-by-case basis</li>
+        <li>Free tiers are provided at our discretion and may be modified or discontinued</li>
+      </ul>
+
+      <h3>6. Service Availability</h3>
+      <ul>
+        <li>We aim for high availability but do not guarantee uninterrupted access</li>
+        <li>We may perform maintenance that temporarily affects availability</li>
+        <li>We are not liable for downtime caused by third-party services (Google, Meta, hosting providers, etc.)</li>
+        <li>We reserve the right to modify, suspend, or discontinue any Tool or feature</li>
+      </ul>
+
+      <h3>7. Intellectual Property</h3>
+      <ul>
+        <li>Our Tools, including code, design, and documentation, are our intellectual property</li>
+        <li>Your use of our Tools does not grant you ownership of any intellectual property</li>
+        <li>Feedback you provide may be used to improve our Tools without compensation</li>
+      </ul>
+
+      <h3>8. Disclaimers</h3>
+      <ul>
+        <li>Our Tools are provided "as is" without warranties of any kind</li>
+        <li>We do not guarantee specific advertising results, lead quality improvements, or performance outcomes</li>
+        <li>Data displayed in our Tools is derived from third-party APIs and may not be 100% accurate</li>
+        <li>Lead scoring, alerts, and recommendations are informational and should not replace professional judgment</li>
+      </ul>
+
+      <h3>9. Limitation of Liability</h3>
+      <p>To the fullest extent permitted by law, our total liability for any claims arising from your use of our Tools is limited to the amount you paid us in the 12 months preceding the claim. We are not liable for any indirect, incidental, special, consequential, or punitive damages.</p>
+
+      <h3>10. Indemnification</h3>
+      <p>You agree to indemnify and hold us harmless from any claims, damages, or expenses arising from your use of our Tools, your violation of these Terms, or your violation of any third-party rights.</p>
+
+      <h3>11. Termination</h3>
+      <ul>
+        <li>You can delete your account at any time</li>
+        <li>We may suspend or terminate your account for violation of these Terms</li>
+        <li>Upon termination, your right to use our Tools ceases immediately</li>
+        <li>Data deletion follows our <a href="/privacy">Privacy Policy</a> retention schedule</li>
+      </ul>
+
+      <h3>12. Governing Law</h3>
+      <p>These Terms are governed by the laws of the State of New Mexico, United States.</p>
+
+      <h3>13. Changes to Terms</h3>
+      <p>We may update these Terms from time to time. We will notify you of material changes via email or in-app notification. Continued use after changes constitutes acceptance.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about these Terms: <a href="mailto:luc@lucflynn.com">luc@lucflynn.com</a></p>
+    </div>
+  </div>
+</BaseLayout>
