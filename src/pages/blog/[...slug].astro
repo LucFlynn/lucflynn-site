@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const description = post.data.description
+  || (post.body ? post.body.replace(/^#+\s.*/gm, '').replace(/\*\*/g, '').trim().slice(0, 155) : '');
+
+const formattedDate = post.data.pubDate.toLocaleDateString('en-US', {
+  year: 'numeric', month: 'long', day: 'numeric',
+});
+---
+<BaseLayout
+  title={post.data.title}
+  description={description}
+  ogType="article"
+>
+  <Fragment slot="head">
+    {post.data.seo_keywords && <meta name="keywords" content={post.data.seo_keywords} />}
+  </Fragment>
+
+  <article class="blog-post">
+    <div class="blog-post-container">
+      <header class="blog-post-header">
+        {post.data.topic && <span class="blog-post-topic">{post.data.topic}</span>}
+        <h1 class="blog-post-title">{post.data.title}</h1>
+        <time class="blog-post-date" datetime={post.data.pubDate.toISOString()}>
+          {formattedDate}
+        </time>
+      </header>
+
+      <div class="blog-post-body prose-dark">
+        <Content />
+      </div>
+
+      <div class="blog-cta">
+        <h3>Ready to fix your tracking?</h3>
+        <p>Find out exactly where your data is leaking — and what it's costing you.</p>
+        <a href="/contact" class="btn-primary">Get a Free Tracking Audit &rarr;</a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

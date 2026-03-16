@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<BaseLayout
+  title="Blog"
+  description="Insights on tracking, analytics, and conversion infrastructure by Luc Flynn."
+>
+  <section class="blog-hero">
+    <div class="container">
+      <h1 class="blog-hero-title">Blog</h1>
+      <p class="blog-hero-sub">Tracking, analytics, and conversion infrastructure — no fluff.</p>
+    </div>
+  </section>
+
+  <section class="blog-list-section">
+    <div class="container">
+      {posts.length === 0 && (
+        <p style="color: var(--text-secondary); text-align: center; padding: 4rem 0;">
+          Posts coming soon.
+        </p>
+      )}
+      <div class="blog-grid">
+        {posts.map((post) => {
+          const excerpt = post.body
+            ? post.body.replace(/^#+\s.*/gm, '').replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim().slice(0, 150) + '...'
+            : '';
+          return (
+            <a href={`/blog/${post.id}/`} class="blog-card">
+              {post.data.topic && <span class="blog-card-topic">{post.data.topic}</span>}
+              <h2 class="blog-card-title">{post.data.title}</h2>
+              <p class="blog-card-excerpt">{post.data.description || excerpt}</p>
+              <time class="blog-card-date" datetime={post.data.pubDate.toISOString()}>
+                {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
