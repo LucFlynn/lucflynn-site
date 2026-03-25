@@ -715,11 +715,132 @@ details.expandable-section summary::-webkit-details-marker {
   color: var(--accent-light);
 }
 
-.prose-dark :where(code):not(:where([class~="not-prose"])) {
+.prose-dark :where(code):not(:where([class~="not-prose"], pre *)) {
   background: #0b1220;
   color: #d1e9ff;
   padding: .15rem .35rem;
   border-radius: .35rem;
+}
+
+/* Markdown rendered content styles */
+.prose-md h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.prose-md h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-md h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-md h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #FFFFFF;
+}
+
+.prose-md p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.prose-md ul, .prose-md ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.prose-md ul {
+  list-style-type: disc;
+}
+
+.prose-md ol {
+  list-style-type: decimal;
+}
+
+.prose-md li {
+  margin-bottom: 0.4rem;
+  line-height: 1.6;
+}
+
+.prose-md li > ul, .prose-md li > ol {
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+}
+
+.prose-md pre {
+  background: #0b1220;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.prose-md pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+}
+
+.prose-md blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin: 1.25rem 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.prose-md hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+.prose-md table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.prose-md th, .prose-md td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+.prose-md th {
+  background: rgba(99, 102, 241, 0.1);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.prose-md img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* Checkbox lists (prerequisites) */
+.prose-md input[type="checkbox"] {
+  margin-right: 0.5rem;
+  accent-color: var(--accent);
 }
 
 .section-anchor {

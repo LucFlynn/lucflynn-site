@@ -1,0 +1,56 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  category: string;
+  slug: string;
+  date: string;
+  hubPage?: string;
+}
+
+const { title, description, category, slug, date, hubPage } = Astro.props;
+const canonicalUrl = `https://lucflynn.com/${category}/${slug}`;
+const categoryLabels: Record<string, string> = {
+  tracking: 'Tracking Guides',
+  integrations: 'Integration Guides',
+  attribution: 'Attribution Guides',
+  services: 'Services',
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": title,
+  "description": description,
+  "author": { "@type": "Person", "name": "Luc Flynn" },
+  "datePublished": date,
+  "dateModified": date,
+  "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
+};
+---
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalUrl={canonicalUrl}
+  ogTitle={title}
+  ogDescription={description}
+  ogUrl={canonicalUrl}
+  ogType="article"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </Fragment>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-10">
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="/" class="hover:text-purple-400">Home</a>
+      <span class="mx-2">/</span>
+      <a href={`/${category}`} class="hover:text-purple-400">{categoryLabels[category]}</a>
+    </nav>
+    <article class="prose-dark prose-md">
+      <slot />
+    </article>
+  </main>
+</BaseLayout>

@@ -1,0 +1,3810 @@
+[
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "gravity-forms-google-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Gravity Forms",
+      "slug": "gravity-forms",
+      "platform": "WordPress",
+      "notes": "AJAX submission via gform_confirmation_loaded event. Field IDs are numeric (input_1, input_3). Most common WordPress form plugin."
+    },
+    "ad_platform": {
+      "name": "Google Ads",
+      "slug": "google-ads",
+      "tag_type": "Google Ads Conversion Tracking tag",
+      "verification": "Google Ads \u2192 Goals \u2192 Conversions status column",
+      "notes": "Use Conversion ID + Label. Set counting to 'One' for leads. Enhanced Conversions strongly recommended. 30-day default attribution window."
+    },
+    "tracking_method": "Enhanced Conversions",
+    "title": "How to Track Gravity Forms Conversions in Google Ads (2026 Guide)",
+    "h1": "Gravity Forms + Google Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Gravity Forms form submissions as conversions in Google Ads. Covers GTM setup, Enhanced Conversions, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P0",
+    "hub_page": "/tracking/google-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/gravity-forms-meta-ads-conversion-tracking",
+      "/tracking/gravity-forms-ga4-conversion-tracking",
+      "/tracking/gravity-forms-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "gravity-forms-meta-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Gravity Forms",
+      "slug": "gravity-forms",
+      "platform": "WordPress",
+      "notes": "AJAX submission via gform_confirmation_loaded event. Field IDs are numeric (input_1, input_3). Most common WordPress form plugin."
+    },
+    "ad_platform": {
+      "name": "Meta Ads",
+      "slug": "meta-ads",
+      "tag_type": "Meta Pixel event tag",
+      "verification": "Events Manager \u2192 Test Events tool",
+      "notes": "Use standard event 'Lead' or custom conversion. Meta CAPI strongly recommended for server-side deduplication. Event deduplication via event_id required if using both pixel and CAPI."
+    },
+    "tracking_method": "Meta CAPI",
+    "title": "How to Track Gravity Forms Conversions in Meta Ads (2026 Guide)",
+    "h1": "Gravity Forms + Meta Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Gravity Forms form submissions as conversions in Meta Ads. Covers GTM setup, Meta CAPI, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P0",
+    "hub_page": "/tracking/meta-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/gravity-forms-google-ads-conversion-tracking",
+      "/tracking/gravity-forms-ga4-conversion-tracking",
+      "/tracking/gravity-forms-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "gravity-forms-ga4-conversion-tracking",
+    "form_tool": {
+      "name": "Gravity Forms",
+      "slug": "gravity-forms",
+      "platform": "WordPress",
+      "notes": "AJAX submission via gform_confirmation_loaded event. Field IDs are numeric (input_1, input_3). Most common WordPress form plugin."
+    },
+    "ad_platform": {
+      "name": "GA4",
+      "slug": "ga4",
+      "tag_type": "GA4 Event tag",
+      "verification": "GA4 \u2192 DebugView and Realtime reports",
+      "notes": "Send as 'generate_lead' recommended event or custom event. Mark as conversion in GA4 admin. Can link to Google Ads for import."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Gravity Forms Conversions in GA4 (2026 Guide)",
+    "h1": "Gravity Forms + GA4 Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Gravity Forms form submissions as conversions in GA4. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/ga4-conversion-tracking",
+    "related_spokes": [
+      "/tracking/gravity-forms-google-ads-conversion-tracking",
+      "/tracking/gravity-forms-meta-ads-conversion-tracking",
+      "/tracking/gravity-forms-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "gravity-forms-linkedin-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Gravity Forms",
+      "slug": "gravity-forms",
+      "platform": "WordPress",
+      "notes": "AJAX submission via gform_confirmation_loaded event. Field IDs are numeric (input_1, input_3). Most common WordPress form plugin."
+    },
+    "ad_platform": {
+      "name": "LinkedIn Ads",
+      "slug": "linkedin-ads",
+      "tag_type": "LinkedIn Insight Tag conversion event",
+      "verification": "LinkedIn Campaign Manager \u2192 Analyze \u2192 Conversions",
+      "notes": "Uses LinkedIn Insight Tag base code + event-specific pixel. Online conversions tracked via image pixel or event-based tracking. Less mature than Google/Meta tracking."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Gravity Forms Conversions in LinkedIn Ads (2026 Guide)",
+    "h1": "Gravity Forms + LinkedIn Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Gravity Forms form submissions as conversions in LinkedIn Ads. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/linkedin-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/gravity-forms-google-ads-conversion-tracking",
+      "/tracking/gravity-forms-meta-ads-conversion-tracking",
+      "/tracking/gravity-forms-ga4-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "wpforms-google-ads-conversion-tracking",
+    "form_tool": {
+      "name": "WPForms",
+      "slug": "wpforms",
+      "platform": "WordPress",
+      "notes": "Uses wpformsAjaxSubmitSuccess event. Lite version is free. Field mapping is more intuitive than Gravity Forms."
+    },
+    "ad_platform": {
+      "name": "Google Ads",
+      "slug": "google-ads",
+      "tag_type": "Google Ads Conversion Tracking tag",
+      "verification": "Google Ads \u2192 Goals \u2192 Conversions status column",
+      "notes": "Use Conversion ID + Label. Set counting to 'One' for leads. Enhanced Conversions strongly recommended. 30-day default attribution window."
+    },
+    "tracking_method": "Enhanced Conversions",
+    "title": "How to Track WPForms Conversions in Google Ads (2026 Guide)",
+    "h1": "WPForms + Google Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking WPForms form submissions as conversions in Google Ads. Covers GTM setup, Enhanced Conversions, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P0",
+    "hub_page": "/tracking/google-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/wpforms-meta-ads-conversion-tracking",
+      "/tracking/wpforms-ga4-conversion-tracking",
+      "/tracking/wpforms-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "wpforms-meta-ads-conversion-tracking",
+    "form_tool": {
+      "name": "WPForms",
+      "slug": "wpforms",
+      "platform": "WordPress",
+      "notes": "Uses wpformsAjaxSubmitSuccess event. Lite version is free. Field mapping is more intuitive than Gravity Forms."
+    },
+    "ad_platform": {
+      "name": "Meta Ads",
+      "slug": "meta-ads",
+      "tag_type": "Meta Pixel event tag",
+      "verification": "Events Manager \u2192 Test Events tool",
+      "notes": "Use standard event 'Lead' or custom conversion. Meta CAPI strongly recommended for server-side deduplication. Event deduplication via event_id required if using both pixel and CAPI."
+    },
+    "tracking_method": "Meta CAPI",
+    "title": "How to Track WPForms Conversions in Meta Ads (2026 Guide)",
+    "h1": "WPForms + Meta Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking WPForms form submissions as conversions in Meta Ads. Covers GTM setup, Meta CAPI, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P0",
+    "hub_page": "/tracking/meta-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/wpforms-google-ads-conversion-tracking",
+      "/tracking/wpforms-ga4-conversion-tracking",
+      "/tracking/wpforms-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "wpforms-ga4-conversion-tracking",
+    "form_tool": {
+      "name": "WPForms",
+      "slug": "wpforms",
+      "platform": "WordPress",
+      "notes": "Uses wpformsAjaxSubmitSuccess event. Lite version is free. Field mapping is more intuitive than Gravity Forms."
+    },
+    "ad_platform": {
+      "name": "GA4",
+      "slug": "ga4",
+      "tag_type": "GA4 Event tag",
+      "verification": "GA4 \u2192 DebugView and Realtime reports",
+      "notes": "Send as 'generate_lead' recommended event or custom event. Mark as conversion in GA4 admin. Can link to Google Ads for import."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track WPForms Conversions in GA4 (2026 Guide)",
+    "h1": "WPForms + GA4 Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking WPForms form submissions as conversions in GA4. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/ga4-conversion-tracking",
+    "related_spokes": [
+      "/tracking/wpforms-google-ads-conversion-tracking",
+      "/tracking/wpforms-meta-ads-conversion-tracking",
+      "/tracking/wpforms-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "wpforms-linkedin-ads-conversion-tracking",
+    "form_tool": {
+      "name": "WPForms",
+      "slug": "wpforms",
+      "platform": "WordPress",
+      "notes": "Uses wpformsAjaxSubmitSuccess event. Lite version is free. Field mapping is more intuitive than Gravity Forms."
+    },
+    "ad_platform": {
+      "name": "LinkedIn Ads",
+      "slug": "linkedin-ads",
+      "tag_type": "LinkedIn Insight Tag conversion event",
+      "verification": "LinkedIn Campaign Manager \u2192 Analyze \u2192 Conversions",
+      "notes": "Uses LinkedIn Insight Tag base code + event-specific pixel. Online conversions tracked via image pixel or event-based tracking. Less mature than Google/Meta tracking."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track WPForms Conversions in LinkedIn Ads (2026 Guide)",
+    "h1": "WPForms + LinkedIn Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking WPForms form submissions as conversions in LinkedIn Ads. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/linkedin-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/wpforms-google-ads-conversion-tracking",
+      "/tracking/wpforms-meta-ads-conversion-tracking",
+      "/tracking/wpforms-ga4-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "contact-form-7-google-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Contact Form 7",
+      "slug": "contact-form-7",
+      "platform": "WordPress",
+      "notes": "Fires wpcf7mailsent DOM event on submission. No built-in entry storage \u2014 submissions go to email only unless you add Flamingo plugin. Very lightweight."
+    },
+    "ad_platform": {
+      "name": "Google Ads",
+      "slug": "google-ads",
+      "tag_type": "Google Ads Conversion Tracking tag",
+      "verification": "Google Ads \u2192 Goals \u2192 Conversions status column",
+      "notes": "Use Conversion ID + Label. Set counting to 'One' for leads. Enhanced Conversions strongly recommended. 30-day default attribution window."
+    },
+    "tracking_method": "Enhanced Conversions",
+    "title": "How to Track Contact Form 7 Conversions in Google Ads (2026 Guide)",
+    "h1": "Contact Form 7 + Google Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Contact Form 7 form submissions as conversions in Google Ads. Covers GTM setup, Enhanced Conversions, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P0",
+    "hub_page": "/tracking/google-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/contact-form-7-meta-ads-conversion-tracking",
+      "/tracking/contact-form-7-ga4-conversion-tracking",
+      "/tracking/contact-form-7-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "contact-form-7-meta-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Contact Form 7",
+      "slug": "contact-form-7",
+      "platform": "WordPress",
+      "notes": "Fires wpcf7mailsent DOM event on submission. No built-in entry storage \u2014 submissions go to email only unless you add Flamingo plugin. Very lightweight."
+    },
+    "ad_platform": {
+      "name": "Meta Ads",
+      "slug": "meta-ads",
+      "tag_type": "Meta Pixel event tag",
+      "verification": "Events Manager \u2192 Test Events tool",
+      "notes": "Use standard event 'Lead' or custom conversion. Meta CAPI strongly recommended for server-side deduplication. Event deduplication via event_id required if using both pixel and CAPI."
+    },
+    "tracking_method": "Meta CAPI",
+    "title": "How to Track Contact Form 7 Conversions in Meta Ads (2026 Guide)",
+    "h1": "Contact Form 7 + Meta Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Contact Form 7 form submissions as conversions in Meta Ads. Covers GTM setup, Meta CAPI, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P0",
+    "hub_page": "/tracking/meta-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/contact-form-7-google-ads-conversion-tracking",
+      "/tracking/contact-form-7-ga4-conversion-tracking",
+      "/tracking/contact-form-7-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "contact-form-7-ga4-conversion-tracking",
+    "form_tool": {
+      "name": "Contact Form 7",
+      "slug": "contact-form-7",
+      "platform": "WordPress",
+      "notes": "Fires wpcf7mailsent DOM event on submission. No built-in entry storage \u2014 submissions go to email only unless you add Flamingo plugin. Very lightweight."
+    },
+    "ad_platform": {
+      "name": "GA4",
+      "slug": "ga4",
+      "tag_type": "GA4 Event tag",
+      "verification": "GA4 \u2192 DebugView and Realtime reports",
+      "notes": "Send as 'generate_lead' recommended event or custom event. Mark as conversion in GA4 admin. Can link to Google Ads for import."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Contact Form 7 Conversions in GA4 (2026 Guide)",
+    "h1": "Contact Form 7 + GA4 Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Contact Form 7 form submissions as conversions in GA4. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/ga4-conversion-tracking",
+    "related_spokes": [
+      "/tracking/contact-form-7-google-ads-conversion-tracking",
+      "/tracking/contact-form-7-meta-ads-conversion-tracking",
+      "/tracking/contact-form-7-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "contact-form-7-linkedin-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Contact Form 7",
+      "slug": "contact-form-7",
+      "platform": "WordPress",
+      "notes": "Fires wpcf7mailsent DOM event on submission. No built-in entry storage \u2014 submissions go to email only unless you add Flamingo plugin. Very lightweight."
+    },
+    "ad_platform": {
+      "name": "LinkedIn Ads",
+      "slug": "linkedin-ads",
+      "tag_type": "LinkedIn Insight Tag conversion event",
+      "verification": "LinkedIn Campaign Manager \u2192 Analyze \u2192 Conversions",
+      "notes": "Uses LinkedIn Insight Tag base code + event-specific pixel. Online conversions tracked via image pixel or event-based tracking. Less mature than Google/Meta tracking."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Contact Form 7 Conversions in LinkedIn Ads (2026 Guide)",
+    "h1": "Contact Form 7 + LinkedIn Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Contact Form 7 form submissions as conversions in LinkedIn Ads. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/linkedin-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/contact-form-7-google-ads-conversion-tracking",
+      "/tracking/contact-form-7-meta-ads-conversion-tracking",
+      "/tracking/contact-form-7-ga4-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "unbounce-google-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Unbounce",
+      "slug": "unbounce",
+      "platform": "Standalone Landing Page",
+      "notes": "Has its own tag manager and form system. Can fire conversion events via Unbounce Scripts or redirect to thank-you URL. Often used with external GTM snippet."
+    },
+    "ad_platform": {
+      "name": "Google Ads",
+      "slug": "google-ads",
+      "tag_type": "Google Ads Conversion Tracking tag",
+      "verification": "Google Ads \u2192 Goals \u2192 Conversions status column",
+      "notes": "Use Conversion ID + Label. Set counting to 'One' for leads. Enhanced Conversions strongly recommended. 30-day default attribution window."
+    },
+    "tracking_method": "Enhanced Conversions",
+    "title": "How to Track Unbounce Conversions in Google Ads (2026 Guide)",
+    "h1": "Unbounce + Google Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Unbounce form submissions as conversions in Google Ads. Covers GTM setup, Enhanced Conversions, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P0",
+    "hub_page": "/tracking/google-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/unbounce-meta-ads-conversion-tracking",
+      "/tracking/unbounce-ga4-conversion-tracking",
+      "/tracking/unbounce-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "unbounce-meta-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Unbounce",
+      "slug": "unbounce",
+      "platform": "Standalone Landing Page",
+      "notes": "Has its own tag manager and form system. Can fire conversion events via Unbounce Scripts or redirect to thank-you URL. Often used with external GTM snippet."
+    },
+    "ad_platform": {
+      "name": "Meta Ads",
+      "slug": "meta-ads",
+      "tag_type": "Meta Pixel event tag",
+      "verification": "Events Manager \u2192 Test Events tool",
+      "notes": "Use standard event 'Lead' or custom conversion. Meta CAPI strongly recommended for server-side deduplication. Event deduplication via event_id required if using both pixel and CAPI."
+    },
+    "tracking_method": "Meta CAPI",
+    "title": "How to Track Unbounce Conversions in Meta Ads (2026 Guide)",
+    "h1": "Unbounce + Meta Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Unbounce form submissions as conversions in Meta Ads. Covers GTM setup, Meta CAPI, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P0",
+    "hub_page": "/tracking/meta-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/unbounce-google-ads-conversion-tracking",
+      "/tracking/unbounce-ga4-conversion-tracking",
+      "/tracking/unbounce-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "unbounce-ga4-conversion-tracking",
+    "form_tool": {
+      "name": "Unbounce",
+      "slug": "unbounce",
+      "platform": "Standalone Landing Page",
+      "notes": "Has its own tag manager and form system. Can fire conversion events via Unbounce Scripts or redirect to thank-you URL. Often used with external GTM snippet."
+    },
+    "ad_platform": {
+      "name": "GA4",
+      "slug": "ga4",
+      "tag_type": "GA4 Event tag",
+      "verification": "GA4 \u2192 DebugView and Realtime reports",
+      "notes": "Send as 'generate_lead' recommended event or custom event. Mark as conversion in GA4 admin. Can link to Google Ads for import."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Unbounce Conversions in GA4 (2026 Guide)",
+    "h1": "Unbounce + GA4 Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Unbounce form submissions as conversions in GA4. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/ga4-conversion-tracking",
+    "related_spokes": [
+      "/tracking/unbounce-google-ads-conversion-tracking",
+      "/tracking/unbounce-meta-ads-conversion-tracking",
+      "/tracking/unbounce-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "unbounce-linkedin-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Unbounce",
+      "slug": "unbounce",
+      "platform": "Standalone Landing Page",
+      "notes": "Has its own tag manager and form system. Can fire conversion events via Unbounce Scripts or redirect to thank-you URL. Often used with external GTM snippet."
+    },
+    "ad_platform": {
+      "name": "LinkedIn Ads",
+      "slug": "linkedin-ads",
+      "tag_type": "LinkedIn Insight Tag conversion event",
+      "verification": "LinkedIn Campaign Manager \u2192 Analyze \u2192 Conversions",
+      "notes": "Uses LinkedIn Insight Tag base code + event-specific pixel. Online conversions tracked via image pixel or event-based tracking. Less mature than Google/Meta tracking."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Unbounce Conversions in LinkedIn Ads (2026 Guide)",
+    "h1": "Unbounce + LinkedIn Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Unbounce form submissions as conversions in LinkedIn Ads. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/linkedin-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/unbounce-google-ads-conversion-tracking",
+      "/tracking/unbounce-meta-ads-conversion-tracking",
+      "/tracking/unbounce-ga4-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "hubspot-forms-google-ads-conversion-tracking",
+    "form_tool": {
+      "name": "HubSpot Forms",
+      "slug": "hubspot-forms",
+      "platform": "HubSpot CMS or Embedded",
+      "notes": "Fires hsFormCallback and window.addEventListener for onFormSubmitted. Native HubSpot tracking pixel handles most HubSpot-specific tracking. Embedded forms on non-HubSpot sites need GTM listener."
+    },
+    "ad_platform": {
+      "name": "Google Ads",
+      "slug": "google-ads",
+      "tag_type": "Google Ads Conversion Tracking tag",
+      "verification": "Google Ads \u2192 Goals \u2192 Conversions status column",
+      "notes": "Use Conversion ID + Label. Set counting to 'One' for leads. Enhanced Conversions strongly recommended. 30-day default attribution window."
+    },
+    "tracking_method": "Enhanced Conversions",
+    "title": "How to Track HubSpot Forms Conversions in Google Ads (2026 Guide)",
+    "h1": "HubSpot Forms + Google Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking HubSpot Forms form submissions as conversions in Google Ads. Covers GTM setup, Enhanced Conversions, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P0",
+    "hub_page": "/tracking/google-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/hubspot-forms-meta-ads-conversion-tracking",
+      "/tracking/hubspot-forms-ga4-conversion-tracking",
+      "/tracking/hubspot-forms-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "hubspot-forms-meta-ads-conversion-tracking",
+    "form_tool": {
+      "name": "HubSpot Forms",
+      "slug": "hubspot-forms",
+      "platform": "HubSpot CMS or Embedded",
+      "notes": "Fires hsFormCallback and window.addEventListener for onFormSubmitted. Native HubSpot tracking pixel handles most HubSpot-specific tracking. Embedded forms on non-HubSpot sites need GTM listener."
+    },
+    "ad_platform": {
+      "name": "Meta Ads",
+      "slug": "meta-ads",
+      "tag_type": "Meta Pixel event tag",
+      "verification": "Events Manager \u2192 Test Events tool",
+      "notes": "Use standard event 'Lead' or custom conversion. Meta CAPI strongly recommended for server-side deduplication. Event deduplication via event_id required if using both pixel and CAPI."
+    },
+    "tracking_method": "Meta CAPI",
+    "title": "How to Track HubSpot Forms Conversions in Meta Ads (2026 Guide)",
+    "h1": "HubSpot Forms + Meta Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking HubSpot Forms form submissions as conversions in Meta Ads. Covers GTM setup, Meta CAPI, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P0",
+    "hub_page": "/tracking/meta-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/hubspot-forms-google-ads-conversion-tracking",
+      "/tracking/hubspot-forms-ga4-conversion-tracking",
+      "/tracking/hubspot-forms-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "hubspot-forms-ga4-conversion-tracking",
+    "form_tool": {
+      "name": "HubSpot Forms",
+      "slug": "hubspot-forms",
+      "platform": "HubSpot CMS or Embedded",
+      "notes": "Fires hsFormCallback and window.addEventListener for onFormSubmitted. Native HubSpot tracking pixel handles most HubSpot-specific tracking. Embedded forms on non-HubSpot sites need GTM listener."
+    },
+    "ad_platform": {
+      "name": "GA4",
+      "slug": "ga4",
+      "tag_type": "GA4 Event tag",
+      "verification": "GA4 \u2192 DebugView and Realtime reports",
+      "notes": "Send as 'generate_lead' recommended event or custom event. Mark as conversion in GA4 admin. Can link to Google Ads for import."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track HubSpot Forms Conversions in GA4 (2026 Guide)",
+    "h1": "HubSpot Forms + GA4 Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking HubSpot Forms form submissions as conversions in GA4. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/ga4-conversion-tracking",
+    "related_spokes": [
+      "/tracking/hubspot-forms-google-ads-conversion-tracking",
+      "/tracking/hubspot-forms-meta-ads-conversion-tracking",
+      "/tracking/hubspot-forms-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "hubspot-forms-linkedin-ads-conversion-tracking",
+    "form_tool": {
+      "name": "HubSpot Forms",
+      "slug": "hubspot-forms",
+      "platform": "HubSpot CMS or Embedded",
+      "notes": "Fires hsFormCallback and window.addEventListener for onFormSubmitted. Native HubSpot tracking pixel handles most HubSpot-specific tracking. Embedded forms on non-HubSpot sites need GTM listener."
+    },
+    "ad_platform": {
+      "name": "LinkedIn Ads",
+      "slug": "linkedin-ads",
+      "tag_type": "LinkedIn Insight Tag conversion event",
+      "verification": "LinkedIn Campaign Manager \u2192 Analyze \u2192 Conversions",
+      "notes": "Uses LinkedIn Insight Tag base code + event-specific pixel. Online conversions tracked via image pixel or event-based tracking. Less mature than Google/Meta tracking."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track HubSpot Forms Conversions in LinkedIn Ads (2026 Guide)",
+    "h1": "HubSpot Forms + LinkedIn Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking HubSpot Forms form submissions as conversions in LinkedIn Ads. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/linkedin-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/hubspot-forms-google-ads-conversion-tracking",
+      "/tracking/hubspot-forms-meta-ads-conversion-tracking",
+      "/tracking/hubspot-forms-ga4-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "typeform-google-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Typeform",
+      "slug": "typeform",
+      "platform": "Standalone or Embedded",
+      "notes": "Embedded Typeform uses postMessage events. Can use Typeform webhooks for server-side tracking. Redirect on completion is the simplest tracking method."
+    },
+    "ad_platform": {
+      "name": "Google Ads",
+      "slug": "google-ads",
+      "tag_type": "Google Ads Conversion Tracking tag",
+      "verification": "Google Ads \u2192 Goals \u2192 Conversions status column",
+      "notes": "Use Conversion ID + Label. Set counting to 'One' for leads. Enhanced Conversions strongly recommended. 30-day default attribution window."
+    },
+    "tracking_method": "Enhanced Conversions",
+    "title": "How to Track Typeform Conversions in Google Ads (2026 Guide)",
+    "h1": "Typeform + Google Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Typeform form submissions as conversions in Google Ads. Covers GTM setup, Enhanced Conversions, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/google-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/typeform-meta-ads-conversion-tracking",
+      "/tracking/typeform-ga4-conversion-tracking",
+      "/tracking/typeform-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "typeform-meta-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Typeform",
+      "slug": "typeform",
+      "platform": "Standalone or Embedded",
+      "notes": "Embedded Typeform uses postMessage events. Can use Typeform webhooks for server-side tracking. Redirect on completion is the simplest tracking method."
+    },
+    "ad_platform": {
+      "name": "Meta Ads",
+      "slug": "meta-ads",
+      "tag_type": "Meta Pixel event tag",
+      "verification": "Events Manager \u2192 Test Events tool",
+      "notes": "Use standard event 'Lead' or custom conversion. Meta CAPI strongly recommended for server-side deduplication. Event deduplication via event_id required if using both pixel and CAPI."
+    },
+    "tracking_method": "Meta CAPI",
+    "title": "How to Track Typeform Conversions in Meta Ads (2026 Guide)",
+    "h1": "Typeform + Meta Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Typeform form submissions as conversions in Meta Ads. Covers GTM setup, Meta CAPI, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/meta-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/typeform-google-ads-conversion-tracking",
+      "/tracking/typeform-ga4-conversion-tracking",
+      "/tracking/typeform-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "typeform-ga4-conversion-tracking",
+    "form_tool": {
+      "name": "Typeform",
+      "slug": "typeform",
+      "platform": "Standalone or Embedded",
+      "notes": "Embedded Typeform uses postMessage events. Can use Typeform webhooks for server-side tracking. Redirect on completion is the simplest tracking method."
+    },
+    "ad_platform": {
+      "name": "GA4",
+      "slug": "ga4",
+      "tag_type": "GA4 Event tag",
+      "verification": "GA4 \u2192 DebugView and Realtime reports",
+      "notes": "Send as 'generate_lead' recommended event or custom event. Mark as conversion in GA4 admin. Can link to Google Ads for import."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Typeform Conversions in GA4 (2026 Guide)",
+    "h1": "Typeform + GA4 Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Typeform form submissions as conversions in GA4. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/ga4-conversion-tracking",
+    "related_spokes": [
+      "/tracking/typeform-google-ads-conversion-tracking",
+      "/tracking/typeform-meta-ads-conversion-tracking",
+      "/tracking/typeform-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "typeform-linkedin-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Typeform",
+      "slug": "typeform",
+      "platform": "Standalone or Embedded",
+      "notes": "Embedded Typeform uses postMessage events. Can use Typeform webhooks for server-side tracking. Redirect on completion is the simplest tracking method."
+    },
+    "ad_platform": {
+      "name": "LinkedIn Ads",
+      "slug": "linkedin-ads",
+      "tag_type": "LinkedIn Insight Tag conversion event",
+      "verification": "LinkedIn Campaign Manager \u2192 Analyze \u2192 Conversions",
+      "notes": "Uses LinkedIn Insight Tag base code + event-specific pixel. Online conversions tracked via image pixel or event-based tracking. Less mature than Google/Meta tracking."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Typeform Conversions in LinkedIn Ads (2026 Guide)",
+    "h1": "Typeform + LinkedIn Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Typeform form submissions as conversions in LinkedIn Ads. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/linkedin-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/typeform-google-ads-conversion-tracking",
+      "/tracking/typeform-meta-ads-conversion-tracking",
+      "/tracking/typeform-ga4-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "jotform-google-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Jotform",
+      "slug": "jotform",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires submission via iframe postMessage. Thank-you page redirect is most reliable tracking method. Has native integrations with most CRMs."
+    },
+    "ad_platform": {
+      "name": "Google Ads",
+      "slug": "google-ads",
+      "tag_type": "Google Ads Conversion Tracking tag",
+      "verification": "Google Ads \u2192 Goals \u2192 Conversions status column",
+      "notes": "Use Conversion ID + Label. Set counting to 'One' for leads. Enhanced Conversions strongly recommended. 30-day default attribution window."
+    },
+    "tracking_method": "Enhanced Conversions",
+    "title": "How to Track Jotform Conversions in Google Ads (2026 Guide)",
+    "h1": "Jotform + Google Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Jotform form submissions as conversions in Google Ads. Covers GTM setup, Enhanced Conversions, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/google-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/jotform-meta-ads-conversion-tracking",
+      "/tracking/jotform-ga4-conversion-tracking",
+      "/tracking/jotform-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "jotform-meta-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Jotform",
+      "slug": "jotform",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires submission via iframe postMessage. Thank-you page redirect is most reliable tracking method. Has native integrations with most CRMs."
+    },
+    "ad_platform": {
+      "name": "Meta Ads",
+      "slug": "meta-ads",
+      "tag_type": "Meta Pixel event tag",
+      "verification": "Events Manager \u2192 Test Events tool",
+      "notes": "Use standard event 'Lead' or custom conversion. Meta CAPI strongly recommended for server-side deduplication. Event deduplication via event_id required if using both pixel and CAPI."
+    },
+    "tracking_method": "Meta CAPI",
+    "title": "How to Track Jotform Conversions in Meta Ads (2026 Guide)",
+    "h1": "Jotform + Meta Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Jotform form submissions as conversions in Meta Ads. Covers GTM setup, Meta CAPI, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/meta-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/jotform-google-ads-conversion-tracking",
+      "/tracking/jotform-ga4-conversion-tracking",
+      "/tracking/jotform-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "jotform-ga4-conversion-tracking",
+    "form_tool": {
+      "name": "Jotform",
+      "slug": "jotform",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires submission via iframe postMessage. Thank-you page redirect is most reliable tracking method. Has native integrations with most CRMs."
+    },
+    "ad_platform": {
+      "name": "GA4",
+      "slug": "ga4",
+      "tag_type": "GA4 Event tag",
+      "verification": "GA4 \u2192 DebugView and Realtime reports",
+      "notes": "Send as 'generate_lead' recommended event or custom event. Mark as conversion in GA4 admin. Can link to Google Ads for import."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Jotform Conversions in GA4 (2026 Guide)",
+    "h1": "Jotform + GA4 Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Jotform form submissions as conversions in GA4. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/ga4-conversion-tracking",
+    "related_spokes": [
+      "/tracking/jotform-google-ads-conversion-tracking",
+      "/tracking/jotform-meta-ads-conversion-tracking",
+      "/tracking/jotform-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "jotform-linkedin-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Jotform",
+      "slug": "jotform",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires submission via iframe postMessage. Thank-you page redirect is most reliable tracking method. Has native integrations with most CRMs."
+    },
+    "ad_platform": {
+      "name": "LinkedIn Ads",
+      "slug": "linkedin-ads",
+      "tag_type": "LinkedIn Insight Tag conversion event",
+      "verification": "LinkedIn Campaign Manager \u2192 Analyze \u2192 Conversions",
+      "notes": "Uses LinkedIn Insight Tag base code + event-specific pixel. Online conversions tracked via image pixel or event-based tracking. Less mature than Google/Meta tracking."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Jotform Conversions in LinkedIn Ads (2026 Guide)",
+    "h1": "Jotform + LinkedIn Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Jotform form submissions as conversions in LinkedIn Ads. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/linkedin-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/jotform-google-ads-conversion-tracking",
+      "/tracking/jotform-meta-ads-conversion-tracking",
+      "/tracking/jotform-ga4-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "elementor-forms-google-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Elementor Forms",
+      "slug": "elementor-forms",
+      "platform": "WordPress",
+      "notes": "Fires submit event on .elementor-form. Can use Elementor's built-in Actions After Submit to redirect or trigger webhook. Works well with GTM form submission trigger."
+    },
+    "ad_platform": {
+      "name": "Google Ads",
+      "slug": "google-ads",
+      "tag_type": "Google Ads Conversion Tracking tag",
+      "verification": "Google Ads \u2192 Goals \u2192 Conversions status column",
+      "notes": "Use Conversion ID + Label. Set counting to 'One' for leads. Enhanced Conversions strongly recommended. 30-day default attribution window."
+    },
+    "tracking_method": "Enhanced Conversions",
+    "title": "How to Track Elementor Forms Conversions in Google Ads (2026 Guide)",
+    "h1": "Elementor Forms + Google Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Elementor Forms form submissions as conversions in Google Ads. Covers GTM setup, Enhanced Conversions, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/google-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/elementor-forms-meta-ads-conversion-tracking",
+      "/tracking/elementor-forms-ga4-conversion-tracking",
+      "/tracking/elementor-forms-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "elementor-forms-meta-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Elementor Forms",
+      "slug": "elementor-forms",
+      "platform": "WordPress",
+      "notes": "Fires submit event on .elementor-form. Can use Elementor's built-in Actions After Submit to redirect or trigger webhook. Works well with GTM form submission trigger."
+    },
+    "ad_platform": {
+      "name": "Meta Ads",
+      "slug": "meta-ads",
+      "tag_type": "Meta Pixel event tag",
+      "verification": "Events Manager \u2192 Test Events tool",
+      "notes": "Use standard event 'Lead' or custom conversion. Meta CAPI strongly recommended for server-side deduplication. Event deduplication via event_id required if using both pixel and CAPI."
+    },
+    "tracking_method": "Meta CAPI",
+    "title": "How to Track Elementor Forms Conversions in Meta Ads (2026 Guide)",
+    "h1": "Elementor Forms + Meta Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Elementor Forms form submissions as conversions in Meta Ads. Covers GTM setup, Meta CAPI, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/meta-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/elementor-forms-google-ads-conversion-tracking",
+      "/tracking/elementor-forms-ga4-conversion-tracking",
+      "/tracking/elementor-forms-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "elementor-forms-ga4-conversion-tracking",
+    "form_tool": {
+      "name": "Elementor Forms",
+      "slug": "elementor-forms",
+      "platform": "WordPress",
+      "notes": "Fires submit event on .elementor-form. Can use Elementor's built-in Actions After Submit to redirect or trigger webhook. Works well with GTM form submission trigger."
+    },
+    "ad_platform": {
+      "name": "GA4",
+      "slug": "ga4",
+      "tag_type": "GA4 Event tag",
+      "verification": "GA4 \u2192 DebugView and Realtime reports",
+      "notes": "Send as 'generate_lead' recommended event or custom event. Mark as conversion in GA4 admin. Can link to Google Ads for import."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Elementor Forms Conversions in GA4 (2026 Guide)",
+    "h1": "Elementor Forms + GA4 Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Elementor Forms form submissions as conversions in GA4. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/ga4-conversion-tracking",
+    "related_spokes": [
+      "/tracking/elementor-forms-google-ads-conversion-tracking",
+      "/tracking/elementor-forms-meta-ads-conversion-tracking",
+      "/tracking/elementor-forms-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "elementor-forms-linkedin-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Elementor Forms",
+      "slug": "elementor-forms",
+      "platform": "WordPress",
+      "notes": "Fires submit event on .elementor-form. Can use Elementor's built-in Actions After Submit to redirect or trigger webhook. Works well with GTM form submission trigger."
+    },
+    "ad_platform": {
+      "name": "LinkedIn Ads",
+      "slug": "linkedin-ads",
+      "tag_type": "LinkedIn Insight Tag conversion event",
+      "verification": "LinkedIn Campaign Manager \u2192 Analyze \u2192 Conversions",
+      "notes": "Uses LinkedIn Insight Tag base code + event-specific pixel. Online conversions tracked via image pixel or event-based tracking. Less mature than Google/Meta tracking."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Elementor Forms Conversions in LinkedIn Ads (2026 Guide)",
+    "h1": "Elementor Forms + LinkedIn Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Elementor Forms form submissions as conversions in LinkedIn Ads. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/linkedin-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/elementor-forms-google-ads-conversion-tracking",
+      "/tracking/elementor-forms-meta-ads-conversion-tracking",
+      "/tracking/elementor-forms-ga4-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "formidable-forms-google-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Formidable Forms",
+      "slug": "formidable-forms",
+      "platform": "WordPress",
+      "notes": "Fires frmFormComplete event. Good for complex multi-page forms. Field IDs follow frm_field_X_container pattern."
+    },
+    "ad_platform": {
+      "name": "Google Ads",
+      "slug": "google-ads",
+      "tag_type": "Google Ads Conversion Tracking tag",
+      "verification": "Google Ads \u2192 Goals \u2192 Conversions status column",
+      "notes": "Use Conversion ID + Label. Set counting to 'One' for leads. Enhanced Conversions strongly recommended. 30-day default attribution window."
+    },
+    "tracking_method": "Enhanced Conversions",
+    "title": "How to Track Formidable Forms Conversions in Google Ads (2026 Guide)",
+    "h1": "Formidable Forms + Google Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Formidable Forms form submissions as conversions in Google Ads. Covers GTM setup, Enhanced Conversions, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/google-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/formidable-forms-meta-ads-conversion-tracking",
+      "/tracking/formidable-forms-ga4-conversion-tracking",
+      "/tracking/formidable-forms-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "formidable-forms-meta-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Formidable Forms",
+      "slug": "formidable-forms",
+      "platform": "WordPress",
+      "notes": "Fires frmFormComplete event. Good for complex multi-page forms. Field IDs follow frm_field_X_container pattern."
+    },
+    "ad_platform": {
+      "name": "Meta Ads",
+      "slug": "meta-ads",
+      "tag_type": "Meta Pixel event tag",
+      "verification": "Events Manager \u2192 Test Events tool",
+      "notes": "Use standard event 'Lead' or custom conversion. Meta CAPI strongly recommended for server-side deduplication. Event deduplication via event_id required if using both pixel and CAPI."
+    },
+    "tracking_method": "Meta CAPI",
+    "title": "How to Track Formidable Forms Conversions in Meta Ads (2026 Guide)",
+    "h1": "Formidable Forms + Meta Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Formidable Forms form submissions as conversions in Meta Ads. Covers GTM setup, Meta CAPI, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/meta-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/formidable-forms-google-ads-conversion-tracking",
+      "/tracking/formidable-forms-ga4-conversion-tracking",
+      "/tracking/formidable-forms-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "formidable-forms-ga4-conversion-tracking",
+    "form_tool": {
+      "name": "Formidable Forms",
+      "slug": "formidable-forms",
+      "platform": "WordPress",
+      "notes": "Fires frmFormComplete event. Good for complex multi-page forms. Field IDs follow frm_field_X_container pattern."
+    },
+    "ad_platform": {
+      "name": "GA4",
+      "slug": "ga4",
+      "tag_type": "GA4 Event tag",
+      "verification": "GA4 \u2192 DebugView and Realtime reports",
+      "notes": "Send as 'generate_lead' recommended event or custom event. Mark as conversion in GA4 admin. Can link to Google Ads for import."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Formidable Forms Conversions in GA4 (2026 Guide)",
+    "h1": "Formidable Forms + GA4 Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Formidable Forms form submissions as conversions in GA4. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/ga4-conversion-tracking",
+    "related_spokes": [
+      "/tracking/formidable-forms-google-ads-conversion-tracking",
+      "/tracking/formidable-forms-meta-ads-conversion-tracking",
+      "/tracking/formidable-forms-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "formidable-forms-linkedin-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Formidable Forms",
+      "slug": "formidable-forms",
+      "platform": "WordPress",
+      "notes": "Fires frmFormComplete event. Good for complex multi-page forms. Field IDs follow frm_field_X_container pattern."
+    },
+    "ad_platform": {
+      "name": "LinkedIn Ads",
+      "slug": "linkedin-ads",
+      "tag_type": "LinkedIn Insight Tag conversion event",
+      "verification": "LinkedIn Campaign Manager \u2192 Analyze \u2192 Conversions",
+      "notes": "Uses LinkedIn Insight Tag base code + event-specific pixel. Online conversions tracked via image pixel or event-based tracking. Less mature than Google/Meta tracking."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Formidable Forms Conversions in LinkedIn Ads (2026 Guide)",
+    "h1": "Formidable Forms + LinkedIn Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Formidable Forms form submissions as conversions in LinkedIn Ads. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/linkedin-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/formidable-forms-google-ads-conversion-tracking",
+      "/tracking/formidable-forms-meta-ads-conversion-tracking",
+      "/tracking/formidable-forms-ga4-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "calendly-google-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Calendly",
+      "slug": "calendly",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires calendly.event_scheduled postMessage event when embedded. Can also track via redirect URL after booking. Native webhooks available for server-side tracking."
+    },
+    "ad_platform": {
+      "name": "Google Ads",
+      "slug": "google-ads",
+      "tag_type": "Google Ads Conversion Tracking tag",
+      "verification": "Google Ads \u2192 Goals \u2192 Conversions status column",
+      "notes": "Use Conversion ID + Label. Set counting to 'One' for leads. Enhanced Conversions strongly recommended. 30-day default attribution window."
+    },
+    "tracking_method": "Enhanced Conversions",
+    "title": "How to Track Calendly Conversions in Google Ads (2026 Guide)",
+    "h1": "Calendly + Google Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Calendly form submissions as conversions in Google Ads. Covers GTM setup, Enhanced Conversions, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/google-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/calendly-meta-ads-conversion-tracking",
+      "/tracking/calendly-ga4-conversion-tracking",
+      "/tracking/calendly-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "calendly-meta-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Calendly",
+      "slug": "calendly",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires calendly.event_scheduled postMessage event when embedded. Can also track via redirect URL after booking. Native webhooks available for server-side tracking."
+    },
+    "ad_platform": {
+      "name": "Meta Ads",
+      "slug": "meta-ads",
+      "tag_type": "Meta Pixel event tag",
+      "verification": "Events Manager \u2192 Test Events tool",
+      "notes": "Use standard event 'Lead' or custom conversion. Meta CAPI strongly recommended for server-side deduplication. Event deduplication via event_id required if using both pixel and CAPI."
+    },
+    "tracking_method": "Meta CAPI",
+    "title": "How to Track Calendly Conversions in Meta Ads (2026 Guide)",
+    "h1": "Calendly + Meta Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Calendly form submissions as conversions in Meta Ads. Covers GTM setup, Meta CAPI, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/meta-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/calendly-google-ads-conversion-tracking",
+      "/tracking/calendly-ga4-conversion-tracking",
+      "/tracking/calendly-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "calendly-ga4-conversion-tracking",
+    "form_tool": {
+      "name": "Calendly",
+      "slug": "calendly",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires calendly.event_scheduled postMessage event when embedded. Can also track via redirect URL after booking. Native webhooks available for server-side tracking."
+    },
+    "ad_platform": {
+      "name": "GA4",
+      "slug": "ga4",
+      "tag_type": "GA4 Event tag",
+      "verification": "GA4 \u2192 DebugView and Realtime reports",
+      "notes": "Send as 'generate_lead' recommended event or custom event. Mark as conversion in GA4 admin. Can link to Google Ads for import."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Calendly Conversions in GA4 (2026 Guide)",
+    "h1": "Calendly + GA4 Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Calendly form submissions as conversions in GA4. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/ga4-conversion-tracking",
+    "related_spokes": [
+      "/tracking/calendly-google-ads-conversion-tracking",
+      "/tracking/calendly-meta-ads-conversion-tracking",
+      "/tracking/calendly-linkedin-ads-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "A",
+    "route_prefix": "/tracking",
+    "slug": "calendly-linkedin-ads-conversion-tracking",
+    "form_tool": {
+      "name": "Calendly",
+      "slug": "calendly",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires calendly.event_scheduled postMessage event when embedded. Can also track via redirect URL after booking. Native webhooks available for server-side tracking."
+    },
+    "ad_platform": {
+      "name": "LinkedIn Ads",
+      "slug": "linkedin-ads",
+      "tag_type": "LinkedIn Insight Tag conversion event",
+      "verification": "LinkedIn Campaign Manager \u2192 Analyze \u2192 Conversions",
+      "notes": "Uses LinkedIn Insight Tag base code + event-specific pixel. Online conversions tracked via image pixel or event-based tracking. Less mature than Google/Meta tracking."
+    },
+    "tracking_method": "Client-Side GTM",
+    "title": "How to Track Calendly Conversions in LinkedIn Ads (2026 Guide)",
+    "h1": "Calendly + LinkedIn Ads Conversion Tracking Setup",
+    "meta_description": "Step-by-step guide to tracking Calendly form submissions as conversions in LinkedIn Ads. Covers GTM setup, Client-Side GTM, testing, and troubleshooting.",
+    "search_intent": "Transactional / How-to",
+    "priority": "P1",
+    "hub_page": "/tracking/linkedin-ads-conversion-tracking",
+    "related_spokes": [
+      "/tracking/calendly-google-ads-conversion-tracking",
+      "/tracking/calendly-meta-ads-conversion-tracking",
+      "/tracking/calendly-ga4-conversion-tracking"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "gravity-forms-to-hubspot",
+    "form_tool": {
+      "name": "Gravity Forms",
+      "slug": "gravity-forms",
+      "platform": "WordPress",
+      "notes": "AJAX submission via gform_confirmation_loaded event. Field IDs are numeric (input_1, input_3). Most common WordPress form plugin."
+    },
+    "crm": {
+      "name": "HubSpot",
+      "slug": "hubspot",
+      "notes": "Native integrations with most form tools. REST API for custom integrations. Contact properties map to form fields. Workflows can trigger on form submission."
+    },
+    "title": "How to Send Gravity Forms Leads to HubSpot (Setup Guide)",
+    "h1": "Gravity Forms \u2192 HubSpot Integration Guide",
+    "meta_description": "Connect Gravity Forms to HubSpot so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P0",
+    "hub_page": "/integrations/hubspot",
+    "related_spokes": [
+      "/integrations/gravity-forms-to-salesforce",
+      "/integrations/gravity-forms-to-gohighlevel",
+      "/integrations/gravity-forms-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "gravity-forms-to-salesforce",
+    "form_tool": {
+      "name": "Gravity Forms",
+      "slug": "gravity-forms",
+      "platform": "WordPress",
+      "notes": "AJAX submission via gform_confirmation_loaded event. Field IDs are numeric (input_1, input_3). Most common WordPress form plugin."
+    },
+    "crm": {
+      "name": "Salesforce",
+      "slug": "salesforce",
+      "notes": "Web-to-Lead for simple setups. REST API for custom. Lead vs Contact object matters. Field mapping requires matching API names. Pardot adds marketing automation layer."
+    },
+    "title": "How to Send Gravity Forms Leads to Salesforce (Setup Guide)",
+    "h1": "Gravity Forms \u2192 Salesforce Integration Guide",
+    "meta_description": "Connect Gravity Forms to Salesforce so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P0",
+    "hub_page": "/integrations/salesforce",
+    "related_spokes": [
+      "/integrations/gravity-forms-to-hubspot",
+      "/integrations/gravity-forms-to-gohighlevel",
+      "/integrations/gravity-forms-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "gravity-forms-to-gohighlevel",
+    "form_tool": {
+      "name": "Gravity Forms",
+      "slug": "gravity-forms",
+      "platform": "WordPress",
+      "notes": "AJAX submission via gform_confirmation_loaded event. Field IDs are numeric (input_1, input_3). Most common WordPress form plugin."
+    },
+    "crm": {
+      "name": "GoHighLevel",
+      "slug": "gohighlevel",
+      "notes": "Webhook-based integration is most reliable. Native Zapier connection available. Contact and Opportunity objects. Pipeline automation on inbound leads. Popular with agencies."
+    },
+    "title": "How to Send Gravity Forms Leads to GoHighLevel (Setup Guide)",
+    "h1": "Gravity Forms \u2192 GoHighLevel Integration Guide",
+    "meta_description": "Connect Gravity Forms to GoHighLevel so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P0",
+    "hub_page": "/integrations/gohighlevel",
+    "related_spokes": [
+      "/integrations/gravity-forms-to-hubspot",
+      "/integrations/gravity-forms-to-salesforce",
+      "/integrations/gravity-forms-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "gravity-forms-to-activecampaign",
+    "form_tool": {
+      "name": "Gravity Forms",
+      "slug": "gravity-forms",
+      "platform": "WordPress",
+      "notes": "AJAX submission via gform_confirmation_loaded event. Field IDs are numeric (input_1, input_3). Most common WordPress form plugin."
+    },
+    "crm": {
+      "name": "ActiveCampaign",
+      "slug": "activecampaign",
+      "notes": "Form tool integrations via native or Zapier. Contact + Deal objects. Automation triggers on contact creation. Custom fields map to form fields."
+    },
+    "title": "How to Send Gravity Forms Leads to ActiveCampaign (Setup Guide)",
+    "h1": "Gravity Forms \u2192 ActiveCampaign Integration Guide",
+    "meta_description": "Connect Gravity Forms to ActiveCampaign so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/activecampaign",
+    "related_spokes": [
+      "/integrations/gravity-forms-to-hubspot",
+      "/integrations/gravity-forms-to-salesforce",
+      "/integrations/gravity-forms-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "gravity-forms-to-zoho",
+    "form_tool": {
+      "name": "Gravity Forms",
+      "slug": "gravity-forms",
+      "platform": "WordPress",
+      "notes": "AJAX submission via gform_confirmation_loaded event. Field IDs are numeric (input_1, input_3). Most common WordPress form plugin."
+    },
+    "crm": {
+      "name": "Zoho CRM",
+      "slug": "zoho",
+      "notes": "Web forms generate leads directly. REST API for custom. Lead and Contact modules. Blueprint automation available. Zoho Forms has native integration."
+    },
+    "title": "How to Send Gravity Forms Leads to Zoho CRM (Setup Guide)",
+    "h1": "Gravity Forms \u2192 Zoho CRM Integration Guide",
+    "meta_description": "Connect Gravity Forms to Zoho CRM so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/zoho",
+    "related_spokes": [
+      "/integrations/gravity-forms-to-hubspot",
+      "/integrations/gravity-forms-to-salesforce",
+      "/integrations/gravity-forms-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "gravity-forms-to-mailchimp",
+    "form_tool": {
+      "name": "Gravity Forms",
+      "slug": "gravity-forms",
+      "platform": "WordPress",
+      "notes": "AJAX submission via gform_confirmation_loaded event. Field IDs are numeric (input_1, input_3). Most common WordPress form plugin."
+    },
+    "crm": {
+      "name": "Mailchimp",
+      "slug": "mailchimp",
+      "notes": "Audience/List based. Tags and segments for organization. Limited CRM functionality \u2014 better as email destination than true CRM. API and Zapier integrations."
+    },
+    "title": "How to Send Gravity Forms Leads to Mailchimp (Setup Guide)",
+    "h1": "Gravity Forms \u2192 Mailchimp Integration Guide",
+    "meta_description": "Connect Gravity Forms to Mailchimp so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/mailchimp",
+    "related_spokes": [
+      "/integrations/gravity-forms-to-hubspot",
+      "/integrations/gravity-forms-to-salesforce",
+      "/integrations/gravity-forms-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "wpforms-to-hubspot",
+    "form_tool": {
+      "name": "WPForms",
+      "slug": "wpforms",
+      "platform": "WordPress",
+      "notes": "Uses wpformsAjaxSubmitSuccess event. Lite version is free. Field mapping is more intuitive than Gravity Forms."
+    },
+    "crm": {
+      "name": "HubSpot",
+      "slug": "hubspot",
+      "notes": "Native integrations with most form tools. REST API for custom integrations. Contact properties map to form fields. Workflows can trigger on form submission."
+    },
+    "title": "How to Send WPForms Leads to HubSpot (Setup Guide)",
+    "h1": "WPForms \u2192 HubSpot Integration Guide",
+    "meta_description": "Connect WPForms to HubSpot so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P0",
+    "hub_page": "/integrations/hubspot",
+    "related_spokes": [
+      "/integrations/wpforms-to-salesforce",
+      "/integrations/wpforms-to-gohighlevel",
+      "/integrations/wpforms-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "wpforms-to-salesforce",
+    "form_tool": {
+      "name": "WPForms",
+      "slug": "wpforms",
+      "platform": "WordPress",
+      "notes": "Uses wpformsAjaxSubmitSuccess event. Lite version is free. Field mapping is more intuitive than Gravity Forms."
+    },
+    "crm": {
+      "name": "Salesforce",
+      "slug": "salesforce",
+      "notes": "Web-to-Lead for simple setups. REST API for custom. Lead vs Contact object matters. Field mapping requires matching API names. Pardot adds marketing automation layer."
+    },
+    "title": "How to Send WPForms Leads to Salesforce (Setup Guide)",
+    "h1": "WPForms \u2192 Salesforce Integration Guide",
+    "meta_description": "Connect WPForms to Salesforce so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P0",
+    "hub_page": "/integrations/salesforce",
+    "related_spokes": [
+      "/integrations/wpforms-to-hubspot",
+      "/integrations/wpforms-to-gohighlevel",
+      "/integrations/wpforms-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "wpforms-to-gohighlevel",
+    "form_tool": {
+      "name": "WPForms",
+      "slug": "wpforms",
+      "platform": "WordPress",
+      "notes": "Uses wpformsAjaxSubmitSuccess event. Lite version is free. Field mapping is more intuitive than Gravity Forms."
+    },
+    "crm": {
+      "name": "GoHighLevel",
+      "slug": "gohighlevel",
+      "notes": "Webhook-based integration is most reliable. Native Zapier connection available. Contact and Opportunity objects. Pipeline automation on inbound leads. Popular with agencies."
+    },
+    "title": "How to Send WPForms Leads to GoHighLevel (Setup Guide)",
+    "h1": "WPForms \u2192 GoHighLevel Integration Guide",
+    "meta_description": "Connect WPForms to GoHighLevel so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P0",
+    "hub_page": "/integrations/gohighlevel",
+    "related_spokes": [
+      "/integrations/wpforms-to-hubspot",
+      "/integrations/wpforms-to-salesforce",
+      "/integrations/wpforms-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "wpforms-to-activecampaign",
+    "form_tool": {
+      "name": "WPForms",
+      "slug": "wpforms",
+      "platform": "WordPress",
+      "notes": "Uses wpformsAjaxSubmitSuccess event. Lite version is free. Field mapping is more intuitive than Gravity Forms."
+    },
+    "crm": {
+      "name": "ActiveCampaign",
+      "slug": "activecampaign",
+      "notes": "Form tool integrations via native or Zapier. Contact + Deal objects. Automation triggers on contact creation. Custom fields map to form fields."
+    },
+    "title": "How to Send WPForms Leads to ActiveCampaign (Setup Guide)",
+    "h1": "WPForms \u2192 ActiveCampaign Integration Guide",
+    "meta_description": "Connect WPForms to ActiveCampaign so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/activecampaign",
+    "related_spokes": [
+      "/integrations/wpforms-to-hubspot",
+      "/integrations/wpforms-to-salesforce",
+      "/integrations/wpforms-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "wpforms-to-zoho",
+    "form_tool": {
+      "name": "WPForms",
+      "slug": "wpforms",
+      "platform": "WordPress",
+      "notes": "Uses wpformsAjaxSubmitSuccess event. Lite version is free. Field mapping is more intuitive than Gravity Forms."
+    },
+    "crm": {
+      "name": "Zoho CRM",
+      "slug": "zoho",
+      "notes": "Web forms generate leads directly. REST API for custom. Lead and Contact modules. Blueprint automation available. Zoho Forms has native integration."
+    },
+    "title": "How to Send WPForms Leads to Zoho CRM (Setup Guide)",
+    "h1": "WPForms \u2192 Zoho CRM Integration Guide",
+    "meta_description": "Connect WPForms to Zoho CRM so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/zoho",
+    "related_spokes": [
+      "/integrations/wpforms-to-hubspot",
+      "/integrations/wpforms-to-salesforce",
+      "/integrations/wpforms-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "wpforms-to-mailchimp",
+    "form_tool": {
+      "name": "WPForms",
+      "slug": "wpforms",
+      "platform": "WordPress",
+      "notes": "Uses wpformsAjaxSubmitSuccess event. Lite version is free. Field mapping is more intuitive than Gravity Forms."
+    },
+    "crm": {
+      "name": "Mailchimp",
+      "slug": "mailchimp",
+      "notes": "Audience/List based. Tags and segments for organization. Limited CRM functionality \u2014 better as email destination than true CRM. API and Zapier integrations."
+    },
+    "title": "How to Send WPForms Leads to Mailchimp (Setup Guide)",
+    "h1": "WPForms \u2192 Mailchimp Integration Guide",
+    "meta_description": "Connect WPForms to Mailchimp so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/mailchimp",
+    "related_spokes": [
+      "/integrations/wpforms-to-hubspot",
+      "/integrations/wpforms-to-salesforce",
+      "/integrations/wpforms-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "contact-form-7-to-hubspot",
+    "form_tool": {
+      "name": "Contact Form 7",
+      "slug": "contact-form-7",
+      "platform": "WordPress",
+      "notes": "Fires wpcf7mailsent DOM event on submission. No built-in entry storage \u2014 submissions go to email only unless you add Flamingo plugin. Very lightweight."
+    },
+    "crm": {
+      "name": "HubSpot",
+      "slug": "hubspot",
+      "notes": "Native integrations with most form tools. REST API for custom integrations. Contact properties map to form fields. Workflows can trigger on form submission."
+    },
+    "title": "How to Send Contact Form 7 Leads to HubSpot (Setup Guide)",
+    "h1": "Contact Form 7 \u2192 HubSpot Integration Guide",
+    "meta_description": "Connect Contact Form 7 to HubSpot so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P0",
+    "hub_page": "/integrations/hubspot",
+    "related_spokes": [
+      "/integrations/contact-form-7-to-salesforce",
+      "/integrations/contact-form-7-to-gohighlevel",
+      "/integrations/contact-form-7-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "contact-form-7-to-salesforce",
+    "form_tool": {
+      "name": "Contact Form 7",
+      "slug": "contact-form-7",
+      "platform": "WordPress",
+      "notes": "Fires wpcf7mailsent DOM event on submission. No built-in entry storage \u2014 submissions go to email only unless you add Flamingo plugin. Very lightweight."
+    },
+    "crm": {
+      "name": "Salesforce",
+      "slug": "salesforce",
+      "notes": "Web-to-Lead for simple setups. REST API for custom. Lead vs Contact object matters. Field mapping requires matching API names. Pardot adds marketing automation layer."
+    },
+    "title": "How to Send Contact Form 7 Leads to Salesforce (Setup Guide)",
+    "h1": "Contact Form 7 \u2192 Salesforce Integration Guide",
+    "meta_description": "Connect Contact Form 7 to Salesforce so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P0",
+    "hub_page": "/integrations/salesforce",
+    "related_spokes": [
+      "/integrations/contact-form-7-to-hubspot",
+      "/integrations/contact-form-7-to-gohighlevel",
+      "/integrations/contact-form-7-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "contact-form-7-to-gohighlevel",
+    "form_tool": {
+      "name": "Contact Form 7",
+      "slug": "contact-form-7",
+      "platform": "WordPress",
+      "notes": "Fires wpcf7mailsent DOM event on submission. No built-in entry storage \u2014 submissions go to email only unless you add Flamingo plugin. Very lightweight."
+    },
+    "crm": {
+      "name": "GoHighLevel",
+      "slug": "gohighlevel",
+      "notes": "Webhook-based integration is most reliable. Native Zapier connection available. Contact and Opportunity objects. Pipeline automation on inbound leads. Popular with agencies."
+    },
+    "title": "How to Send Contact Form 7 Leads to GoHighLevel (Setup Guide)",
+    "h1": "Contact Form 7 \u2192 GoHighLevel Integration Guide",
+    "meta_description": "Connect Contact Form 7 to GoHighLevel so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P0",
+    "hub_page": "/integrations/gohighlevel",
+    "related_spokes": [
+      "/integrations/contact-form-7-to-hubspot",
+      "/integrations/contact-form-7-to-salesforce",
+      "/integrations/contact-form-7-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "contact-form-7-to-activecampaign",
+    "form_tool": {
+      "name": "Contact Form 7",
+      "slug": "contact-form-7",
+      "platform": "WordPress",
+      "notes": "Fires wpcf7mailsent DOM event on submission. No built-in entry storage \u2014 submissions go to email only unless you add Flamingo plugin. Very lightweight."
+    },
+    "crm": {
+      "name": "ActiveCampaign",
+      "slug": "activecampaign",
+      "notes": "Form tool integrations via native or Zapier. Contact + Deal objects. Automation triggers on contact creation. Custom fields map to form fields."
+    },
+    "title": "How to Send Contact Form 7 Leads to ActiveCampaign (Setup Guide)",
+    "h1": "Contact Form 7 \u2192 ActiveCampaign Integration Guide",
+    "meta_description": "Connect Contact Form 7 to ActiveCampaign so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/activecampaign",
+    "related_spokes": [
+      "/integrations/contact-form-7-to-hubspot",
+      "/integrations/contact-form-7-to-salesforce",
+      "/integrations/contact-form-7-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "contact-form-7-to-zoho",
+    "form_tool": {
+      "name": "Contact Form 7",
+      "slug": "contact-form-7",
+      "platform": "WordPress",
+      "notes": "Fires wpcf7mailsent DOM event on submission. No built-in entry storage \u2014 submissions go to email only unless you add Flamingo plugin. Very lightweight."
+    },
+    "crm": {
+      "name": "Zoho CRM",
+      "slug": "zoho",
+      "notes": "Web forms generate leads directly. REST API for custom. Lead and Contact modules. Blueprint automation available. Zoho Forms has native integration."
+    },
+    "title": "How to Send Contact Form 7 Leads to Zoho CRM (Setup Guide)",
+    "h1": "Contact Form 7 \u2192 Zoho CRM Integration Guide",
+    "meta_description": "Connect Contact Form 7 to Zoho CRM so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/zoho",
+    "related_spokes": [
+      "/integrations/contact-form-7-to-hubspot",
+      "/integrations/contact-form-7-to-salesforce",
+      "/integrations/contact-form-7-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "contact-form-7-to-mailchimp",
+    "form_tool": {
+      "name": "Contact Form 7",
+      "slug": "contact-form-7",
+      "platform": "WordPress",
+      "notes": "Fires wpcf7mailsent DOM event on submission. No built-in entry storage \u2014 submissions go to email only unless you add Flamingo plugin. Very lightweight."
+    },
+    "crm": {
+      "name": "Mailchimp",
+      "slug": "mailchimp",
+      "notes": "Audience/List based. Tags and segments for organization. Limited CRM functionality \u2014 better as email destination than true CRM. API and Zapier integrations."
+    },
+    "title": "How to Send Contact Form 7 Leads to Mailchimp (Setup Guide)",
+    "h1": "Contact Form 7 \u2192 Mailchimp Integration Guide",
+    "meta_description": "Connect Contact Form 7 to Mailchimp so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/mailchimp",
+    "related_spokes": [
+      "/integrations/contact-form-7-to-hubspot",
+      "/integrations/contact-form-7-to-salesforce",
+      "/integrations/contact-form-7-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "unbounce-to-hubspot",
+    "form_tool": {
+      "name": "Unbounce",
+      "slug": "unbounce",
+      "platform": "Standalone Landing Page",
+      "notes": "Has its own tag manager and form system. Can fire conversion events via Unbounce Scripts or redirect to thank-you URL. Often used with external GTM snippet."
+    },
+    "crm": {
+      "name": "HubSpot",
+      "slug": "hubspot",
+      "notes": "Native integrations with most form tools. REST API for custom integrations. Contact properties map to form fields. Workflows can trigger on form submission."
+    },
+    "title": "How to Send Unbounce Leads to HubSpot (Setup Guide)",
+    "h1": "Unbounce \u2192 HubSpot Integration Guide",
+    "meta_description": "Connect Unbounce to HubSpot so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P0",
+    "hub_page": "/integrations/hubspot",
+    "related_spokes": [
+      "/integrations/unbounce-to-salesforce",
+      "/integrations/unbounce-to-gohighlevel",
+      "/integrations/unbounce-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "unbounce-to-salesforce",
+    "form_tool": {
+      "name": "Unbounce",
+      "slug": "unbounce",
+      "platform": "Standalone Landing Page",
+      "notes": "Has its own tag manager and form system. Can fire conversion events via Unbounce Scripts or redirect to thank-you URL. Often used with external GTM snippet."
+    },
+    "crm": {
+      "name": "Salesforce",
+      "slug": "salesforce",
+      "notes": "Web-to-Lead for simple setups. REST API for custom. Lead vs Contact object matters. Field mapping requires matching API names. Pardot adds marketing automation layer."
+    },
+    "title": "How to Send Unbounce Leads to Salesforce (Setup Guide)",
+    "h1": "Unbounce \u2192 Salesforce Integration Guide",
+    "meta_description": "Connect Unbounce to Salesforce so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P0",
+    "hub_page": "/integrations/salesforce",
+    "related_spokes": [
+      "/integrations/unbounce-to-hubspot",
+      "/integrations/unbounce-to-gohighlevel",
+      "/integrations/unbounce-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "unbounce-to-gohighlevel",
+    "form_tool": {
+      "name": "Unbounce",
+      "slug": "unbounce",
+      "platform": "Standalone Landing Page",
+      "notes": "Has its own tag manager and form system. Can fire conversion events via Unbounce Scripts or redirect to thank-you URL. Often used with external GTM snippet."
+    },
+    "crm": {
+      "name": "GoHighLevel",
+      "slug": "gohighlevel",
+      "notes": "Webhook-based integration is most reliable. Native Zapier connection available. Contact and Opportunity objects. Pipeline automation on inbound leads. Popular with agencies."
+    },
+    "title": "How to Send Unbounce Leads to GoHighLevel (Setup Guide)",
+    "h1": "Unbounce \u2192 GoHighLevel Integration Guide",
+    "meta_description": "Connect Unbounce to GoHighLevel so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P0",
+    "hub_page": "/integrations/gohighlevel",
+    "related_spokes": [
+      "/integrations/unbounce-to-hubspot",
+      "/integrations/unbounce-to-salesforce",
+      "/integrations/unbounce-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "unbounce-to-activecampaign",
+    "form_tool": {
+      "name": "Unbounce",
+      "slug": "unbounce",
+      "platform": "Standalone Landing Page",
+      "notes": "Has its own tag manager and form system. Can fire conversion events via Unbounce Scripts or redirect to thank-you URL. Often used with external GTM snippet."
+    },
+    "crm": {
+      "name": "ActiveCampaign",
+      "slug": "activecampaign",
+      "notes": "Form tool integrations via native or Zapier. Contact + Deal objects. Automation triggers on contact creation. Custom fields map to form fields."
+    },
+    "title": "How to Send Unbounce Leads to ActiveCampaign (Setup Guide)",
+    "h1": "Unbounce \u2192 ActiveCampaign Integration Guide",
+    "meta_description": "Connect Unbounce to ActiveCampaign so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/activecampaign",
+    "related_spokes": [
+      "/integrations/unbounce-to-hubspot",
+      "/integrations/unbounce-to-salesforce",
+      "/integrations/unbounce-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "unbounce-to-zoho",
+    "form_tool": {
+      "name": "Unbounce",
+      "slug": "unbounce",
+      "platform": "Standalone Landing Page",
+      "notes": "Has its own tag manager and form system. Can fire conversion events via Unbounce Scripts or redirect to thank-you URL. Often used with external GTM snippet."
+    },
+    "crm": {
+      "name": "Zoho CRM",
+      "slug": "zoho",
+      "notes": "Web forms generate leads directly. REST API for custom. Lead and Contact modules. Blueprint automation available. Zoho Forms has native integration."
+    },
+    "title": "How to Send Unbounce Leads to Zoho CRM (Setup Guide)",
+    "h1": "Unbounce \u2192 Zoho CRM Integration Guide",
+    "meta_description": "Connect Unbounce to Zoho CRM so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/zoho",
+    "related_spokes": [
+      "/integrations/unbounce-to-hubspot",
+      "/integrations/unbounce-to-salesforce",
+      "/integrations/unbounce-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "unbounce-to-mailchimp",
+    "form_tool": {
+      "name": "Unbounce",
+      "slug": "unbounce",
+      "platform": "Standalone Landing Page",
+      "notes": "Has its own tag manager and form system. Can fire conversion events via Unbounce Scripts or redirect to thank-you URL. Often used with external GTM snippet."
+    },
+    "crm": {
+      "name": "Mailchimp",
+      "slug": "mailchimp",
+      "notes": "Audience/List based. Tags and segments for organization. Limited CRM functionality \u2014 better as email destination than true CRM. API and Zapier integrations."
+    },
+    "title": "How to Send Unbounce Leads to Mailchimp (Setup Guide)",
+    "h1": "Unbounce \u2192 Mailchimp Integration Guide",
+    "meta_description": "Connect Unbounce to Mailchimp so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/mailchimp",
+    "related_spokes": [
+      "/integrations/unbounce-to-hubspot",
+      "/integrations/unbounce-to-salesforce",
+      "/integrations/unbounce-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "hubspot-forms-to-hubspot",
+    "form_tool": {
+      "name": "HubSpot Forms",
+      "slug": "hubspot-forms",
+      "platform": "HubSpot CMS or Embedded",
+      "notes": "Fires hsFormCallback and window.addEventListener for onFormSubmitted. Native HubSpot tracking pixel handles most HubSpot-specific tracking. Embedded forms on non-HubSpot sites need GTM listener."
+    },
+    "crm": {
+      "name": "HubSpot",
+      "slug": "hubspot",
+      "notes": "Native integrations with most form tools. REST API for custom integrations. Contact properties map to form fields. Workflows can trigger on form submission."
+    },
+    "title": "How to Send HubSpot Forms Leads to HubSpot (Setup Guide)",
+    "h1": "HubSpot Forms \u2192 HubSpot Integration Guide",
+    "meta_description": "Connect HubSpot Forms to HubSpot so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P0",
+    "hub_page": "/integrations/hubspot",
+    "related_spokes": [
+      "/integrations/hubspot-forms-to-salesforce",
+      "/integrations/hubspot-forms-to-gohighlevel",
+      "/integrations/hubspot-forms-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "hubspot-forms-to-salesforce",
+    "form_tool": {
+      "name": "HubSpot Forms",
+      "slug": "hubspot-forms",
+      "platform": "HubSpot CMS or Embedded",
+      "notes": "Fires hsFormCallback and window.addEventListener for onFormSubmitted. Native HubSpot tracking pixel handles most HubSpot-specific tracking. Embedded forms on non-HubSpot sites need GTM listener."
+    },
+    "crm": {
+      "name": "Salesforce",
+      "slug": "salesforce",
+      "notes": "Web-to-Lead for simple setups. REST API for custom. Lead vs Contact object matters. Field mapping requires matching API names. Pardot adds marketing automation layer."
+    },
+    "title": "How to Send HubSpot Forms Leads to Salesforce (Setup Guide)",
+    "h1": "HubSpot Forms \u2192 Salesforce Integration Guide",
+    "meta_description": "Connect HubSpot Forms to Salesforce so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P0",
+    "hub_page": "/integrations/salesforce",
+    "related_spokes": [
+      "/integrations/hubspot-forms-to-hubspot",
+      "/integrations/hubspot-forms-to-gohighlevel",
+      "/integrations/hubspot-forms-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "hubspot-forms-to-gohighlevel",
+    "form_tool": {
+      "name": "HubSpot Forms",
+      "slug": "hubspot-forms",
+      "platform": "HubSpot CMS or Embedded",
+      "notes": "Fires hsFormCallback and window.addEventListener for onFormSubmitted. Native HubSpot tracking pixel handles most HubSpot-specific tracking. Embedded forms on non-HubSpot sites need GTM listener."
+    },
+    "crm": {
+      "name": "GoHighLevel",
+      "slug": "gohighlevel",
+      "notes": "Webhook-based integration is most reliable. Native Zapier connection available. Contact and Opportunity objects. Pipeline automation on inbound leads. Popular with agencies."
+    },
+    "title": "How to Send HubSpot Forms Leads to GoHighLevel (Setup Guide)",
+    "h1": "HubSpot Forms \u2192 GoHighLevel Integration Guide",
+    "meta_description": "Connect HubSpot Forms to GoHighLevel so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P0",
+    "hub_page": "/integrations/gohighlevel",
+    "related_spokes": [
+      "/integrations/hubspot-forms-to-hubspot",
+      "/integrations/hubspot-forms-to-salesforce",
+      "/integrations/hubspot-forms-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "hubspot-forms-to-activecampaign",
+    "form_tool": {
+      "name": "HubSpot Forms",
+      "slug": "hubspot-forms",
+      "platform": "HubSpot CMS or Embedded",
+      "notes": "Fires hsFormCallback and window.addEventListener for onFormSubmitted. Native HubSpot tracking pixel handles most HubSpot-specific tracking. Embedded forms on non-HubSpot sites need GTM listener."
+    },
+    "crm": {
+      "name": "ActiveCampaign",
+      "slug": "activecampaign",
+      "notes": "Form tool integrations via native or Zapier. Contact + Deal objects. Automation triggers on contact creation. Custom fields map to form fields."
+    },
+    "title": "How to Send HubSpot Forms Leads to ActiveCampaign (Setup Guide)",
+    "h1": "HubSpot Forms \u2192 ActiveCampaign Integration Guide",
+    "meta_description": "Connect HubSpot Forms to ActiveCampaign so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/activecampaign",
+    "related_spokes": [
+      "/integrations/hubspot-forms-to-hubspot",
+      "/integrations/hubspot-forms-to-salesforce",
+      "/integrations/hubspot-forms-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "hubspot-forms-to-zoho",
+    "form_tool": {
+      "name": "HubSpot Forms",
+      "slug": "hubspot-forms",
+      "platform": "HubSpot CMS or Embedded",
+      "notes": "Fires hsFormCallback and window.addEventListener for onFormSubmitted. Native HubSpot tracking pixel handles most HubSpot-specific tracking. Embedded forms on non-HubSpot sites need GTM listener."
+    },
+    "crm": {
+      "name": "Zoho CRM",
+      "slug": "zoho",
+      "notes": "Web forms generate leads directly. REST API for custom. Lead and Contact modules. Blueprint automation available. Zoho Forms has native integration."
+    },
+    "title": "How to Send HubSpot Forms Leads to Zoho CRM (Setup Guide)",
+    "h1": "HubSpot Forms \u2192 Zoho CRM Integration Guide",
+    "meta_description": "Connect HubSpot Forms to Zoho CRM so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/zoho",
+    "related_spokes": [
+      "/integrations/hubspot-forms-to-hubspot",
+      "/integrations/hubspot-forms-to-salesforce",
+      "/integrations/hubspot-forms-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "hubspot-forms-to-mailchimp",
+    "form_tool": {
+      "name": "HubSpot Forms",
+      "slug": "hubspot-forms",
+      "platform": "HubSpot CMS or Embedded",
+      "notes": "Fires hsFormCallback and window.addEventListener for onFormSubmitted. Native HubSpot tracking pixel handles most HubSpot-specific tracking. Embedded forms on non-HubSpot sites need GTM listener."
+    },
+    "crm": {
+      "name": "Mailchimp",
+      "slug": "mailchimp",
+      "notes": "Audience/List based. Tags and segments for organization. Limited CRM functionality \u2014 better as email destination than true CRM. API and Zapier integrations."
+    },
+    "title": "How to Send HubSpot Forms Leads to Mailchimp (Setup Guide)",
+    "h1": "HubSpot Forms \u2192 Mailchimp Integration Guide",
+    "meta_description": "Connect HubSpot Forms to Mailchimp so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/mailchimp",
+    "related_spokes": [
+      "/integrations/hubspot-forms-to-hubspot",
+      "/integrations/hubspot-forms-to-salesforce",
+      "/integrations/hubspot-forms-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "typeform-to-hubspot",
+    "form_tool": {
+      "name": "Typeform",
+      "slug": "typeform",
+      "platform": "Standalone or Embedded",
+      "notes": "Embedded Typeform uses postMessage events. Can use Typeform webhooks for server-side tracking. Redirect on completion is the simplest tracking method."
+    },
+    "crm": {
+      "name": "HubSpot",
+      "slug": "hubspot",
+      "notes": "Native integrations with most form tools. REST API for custom integrations. Contact properties map to form fields. Workflows can trigger on form submission."
+    },
+    "title": "How to Send Typeform Leads to HubSpot (Setup Guide)",
+    "h1": "Typeform \u2192 HubSpot Integration Guide",
+    "meta_description": "Connect Typeform to HubSpot so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/hubspot",
+    "related_spokes": [
+      "/integrations/typeform-to-salesforce",
+      "/integrations/typeform-to-gohighlevel",
+      "/integrations/typeform-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "typeform-to-salesforce",
+    "form_tool": {
+      "name": "Typeform",
+      "slug": "typeform",
+      "platform": "Standalone or Embedded",
+      "notes": "Embedded Typeform uses postMessage events. Can use Typeform webhooks for server-side tracking. Redirect on completion is the simplest tracking method."
+    },
+    "crm": {
+      "name": "Salesforce",
+      "slug": "salesforce",
+      "notes": "Web-to-Lead for simple setups. REST API for custom. Lead vs Contact object matters. Field mapping requires matching API names. Pardot adds marketing automation layer."
+    },
+    "title": "How to Send Typeform Leads to Salesforce (Setup Guide)",
+    "h1": "Typeform \u2192 Salesforce Integration Guide",
+    "meta_description": "Connect Typeform to Salesforce so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/salesforce",
+    "related_spokes": [
+      "/integrations/typeform-to-hubspot",
+      "/integrations/typeform-to-gohighlevel",
+      "/integrations/typeform-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "typeform-to-gohighlevel",
+    "form_tool": {
+      "name": "Typeform",
+      "slug": "typeform",
+      "platform": "Standalone or Embedded",
+      "notes": "Embedded Typeform uses postMessage events. Can use Typeform webhooks for server-side tracking. Redirect on completion is the simplest tracking method."
+    },
+    "crm": {
+      "name": "GoHighLevel",
+      "slug": "gohighlevel",
+      "notes": "Webhook-based integration is most reliable. Native Zapier connection available. Contact and Opportunity objects. Pipeline automation on inbound leads. Popular with agencies."
+    },
+    "title": "How to Send Typeform Leads to GoHighLevel (Setup Guide)",
+    "h1": "Typeform \u2192 GoHighLevel Integration Guide",
+    "meta_description": "Connect Typeform to GoHighLevel so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/gohighlevel",
+    "related_spokes": [
+      "/integrations/typeform-to-hubspot",
+      "/integrations/typeform-to-salesforce",
+      "/integrations/typeform-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "typeform-to-activecampaign",
+    "form_tool": {
+      "name": "Typeform",
+      "slug": "typeform",
+      "platform": "Standalone or Embedded",
+      "notes": "Embedded Typeform uses postMessage events. Can use Typeform webhooks for server-side tracking. Redirect on completion is the simplest tracking method."
+    },
+    "crm": {
+      "name": "ActiveCampaign",
+      "slug": "activecampaign",
+      "notes": "Form tool integrations via native or Zapier. Contact + Deal objects. Automation triggers on contact creation. Custom fields map to form fields."
+    },
+    "title": "How to Send Typeform Leads to ActiveCampaign (Setup Guide)",
+    "h1": "Typeform \u2192 ActiveCampaign Integration Guide",
+    "meta_description": "Connect Typeform to ActiveCampaign so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/activecampaign",
+    "related_spokes": [
+      "/integrations/typeform-to-hubspot",
+      "/integrations/typeform-to-salesforce",
+      "/integrations/typeform-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "typeform-to-zoho",
+    "form_tool": {
+      "name": "Typeform",
+      "slug": "typeform",
+      "platform": "Standalone or Embedded",
+      "notes": "Embedded Typeform uses postMessage events. Can use Typeform webhooks for server-side tracking. Redirect on completion is the simplest tracking method."
+    },
+    "crm": {
+      "name": "Zoho CRM",
+      "slug": "zoho",
+      "notes": "Web forms generate leads directly. REST API for custom. Lead and Contact modules. Blueprint automation available. Zoho Forms has native integration."
+    },
+    "title": "How to Send Typeform Leads to Zoho CRM (Setup Guide)",
+    "h1": "Typeform \u2192 Zoho CRM Integration Guide",
+    "meta_description": "Connect Typeform to Zoho CRM so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/zoho",
+    "related_spokes": [
+      "/integrations/typeform-to-hubspot",
+      "/integrations/typeform-to-salesforce",
+      "/integrations/typeform-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "typeform-to-mailchimp",
+    "form_tool": {
+      "name": "Typeform",
+      "slug": "typeform",
+      "platform": "Standalone or Embedded",
+      "notes": "Embedded Typeform uses postMessage events. Can use Typeform webhooks for server-side tracking. Redirect on completion is the simplest tracking method."
+    },
+    "crm": {
+      "name": "Mailchimp",
+      "slug": "mailchimp",
+      "notes": "Audience/List based. Tags and segments for organization. Limited CRM functionality \u2014 better as email destination than true CRM. API and Zapier integrations."
+    },
+    "title": "How to Send Typeform Leads to Mailchimp (Setup Guide)",
+    "h1": "Typeform \u2192 Mailchimp Integration Guide",
+    "meta_description": "Connect Typeform to Mailchimp so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/mailchimp",
+    "related_spokes": [
+      "/integrations/typeform-to-hubspot",
+      "/integrations/typeform-to-salesforce",
+      "/integrations/typeform-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "jotform-to-hubspot",
+    "form_tool": {
+      "name": "Jotform",
+      "slug": "jotform",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires submission via iframe postMessage. Thank-you page redirect is most reliable tracking method. Has native integrations with most CRMs."
+    },
+    "crm": {
+      "name": "HubSpot",
+      "slug": "hubspot",
+      "notes": "Native integrations with most form tools. REST API for custom integrations. Contact properties map to form fields. Workflows can trigger on form submission."
+    },
+    "title": "How to Send Jotform Leads to HubSpot (Setup Guide)",
+    "h1": "Jotform \u2192 HubSpot Integration Guide",
+    "meta_description": "Connect Jotform to HubSpot so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/hubspot",
+    "related_spokes": [
+      "/integrations/jotform-to-salesforce",
+      "/integrations/jotform-to-gohighlevel",
+      "/integrations/jotform-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "jotform-to-salesforce",
+    "form_tool": {
+      "name": "Jotform",
+      "slug": "jotform",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires submission via iframe postMessage. Thank-you page redirect is most reliable tracking method. Has native integrations with most CRMs."
+    },
+    "crm": {
+      "name": "Salesforce",
+      "slug": "salesforce",
+      "notes": "Web-to-Lead for simple setups. REST API for custom. Lead vs Contact object matters. Field mapping requires matching API names. Pardot adds marketing automation layer."
+    },
+    "title": "How to Send Jotform Leads to Salesforce (Setup Guide)",
+    "h1": "Jotform \u2192 Salesforce Integration Guide",
+    "meta_description": "Connect Jotform to Salesforce so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/salesforce",
+    "related_spokes": [
+      "/integrations/jotform-to-hubspot",
+      "/integrations/jotform-to-gohighlevel",
+      "/integrations/jotform-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "jotform-to-gohighlevel",
+    "form_tool": {
+      "name": "Jotform",
+      "slug": "jotform",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires submission via iframe postMessage. Thank-you page redirect is most reliable tracking method. Has native integrations with most CRMs."
+    },
+    "crm": {
+      "name": "GoHighLevel",
+      "slug": "gohighlevel",
+      "notes": "Webhook-based integration is most reliable. Native Zapier connection available. Contact and Opportunity objects. Pipeline automation on inbound leads. Popular with agencies."
+    },
+    "title": "How to Send Jotform Leads to GoHighLevel (Setup Guide)",
+    "h1": "Jotform \u2192 GoHighLevel Integration Guide",
+    "meta_description": "Connect Jotform to GoHighLevel so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/gohighlevel",
+    "related_spokes": [
+      "/integrations/jotform-to-hubspot",
+      "/integrations/jotform-to-salesforce",
+      "/integrations/jotform-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "jotform-to-activecampaign",
+    "form_tool": {
+      "name": "Jotform",
+      "slug": "jotform",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires submission via iframe postMessage. Thank-you page redirect is most reliable tracking method. Has native integrations with most CRMs."
+    },
+    "crm": {
+      "name": "ActiveCampaign",
+      "slug": "activecampaign",
+      "notes": "Form tool integrations via native or Zapier. Contact + Deal objects. Automation triggers on contact creation. Custom fields map to form fields."
+    },
+    "title": "How to Send Jotform Leads to ActiveCampaign (Setup Guide)",
+    "h1": "Jotform \u2192 ActiveCampaign Integration Guide",
+    "meta_description": "Connect Jotform to ActiveCampaign so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/activecampaign",
+    "related_spokes": [
+      "/integrations/jotform-to-hubspot",
+      "/integrations/jotform-to-salesforce",
+      "/integrations/jotform-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "jotform-to-zoho",
+    "form_tool": {
+      "name": "Jotform",
+      "slug": "jotform",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires submission via iframe postMessage. Thank-you page redirect is most reliable tracking method. Has native integrations with most CRMs."
+    },
+    "crm": {
+      "name": "Zoho CRM",
+      "slug": "zoho",
+      "notes": "Web forms generate leads directly. REST API for custom. Lead and Contact modules. Blueprint automation available. Zoho Forms has native integration."
+    },
+    "title": "How to Send Jotform Leads to Zoho CRM (Setup Guide)",
+    "h1": "Jotform \u2192 Zoho CRM Integration Guide",
+    "meta_description": "Connect Jotform to Zoho CRM so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/zoho",
+    "related_spokes": [
+      "/integrations/jotform-to-hubspot",
+      "/integrations/jotform-to-salesforce",
+      "/integrations/jotform-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "jotform-to-mailchimp",
+    "form_tool": {
+      "name": "Jotform",
+      "slug": "jotform",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires submission via iframe postMessage. Thank-you page redirect is most reliable tracking method. Has native integrations with most CRMs."
+    },
+    "crm": {
+      "name": "Mailchimp",
+      "slug": "mailchimp",
+      "notes": "Audience/List based. Tags and segments for organization. Limited CRM functionality \u2014 better as email destination than true CRM. API and Zapier integrations."
+    },
+    "title": "How to Send Jotform Leads to Mailchimp (Setup Guide)",
+    "h1": "Jotform \u2192 Mailchimp Integration Guide",
+    "meta_description": "Connect Jotform to Mailchimp so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/mailchimp",
+    "related_spokes": [
+      "/integrations/jotform-to-hubspot",
+      "/integrations/jotform-to-salesforce",
+      "/integrations/jotform-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "elementor-forms-to-hubspot",
+    "form_tool": {
+      "name": "Elementor Forms",
+      "slug": "elementor-forms",
+      "platform": "WordPress",
+      "notes": "Fires submit event on .elementor-form. Can use Elementor's built-in Actions After Submit to redirect or trigger webhook. Works well with GTM form submission trigger."
+    },
+    "crm": {
+      "name": "HubSpot",
+      "slug": "hubspot",
+      "notes": "Native integrations with most form tools. REST API for custom integrations. Contact properties map to form fields. Workflows can trigger on form submission."
+    },
+    "title": "How to Send Elementor Forms Leads to HubSpot (Setup Guide)",
+    "h1": "Elementor Forms \u2192 HubSpot Integration Guide",
+    "meta_description": "Connect Elementor Forms to HubSpot so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/hubspot",
+    "related_spokes": [
+      "/integrations/elementor-forms-to-salesforce",
+      "/integrations/elementor-forms-to-gohighlevel",
+      "/integrations/elementor-forms-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "elementor-forms-to-salesforce",
+    "form_tool": {
+      "name": "Elementor Forms",
+      "slug": "elementor-forms",
+      "platform": "WordPress",
+      "notes": "Fires submit event on .elementor-form. Can use Elementor's built-in Actions After Submit to redirect or trigger webhook. Works well with GTM form submission trigger."
+    },
+    "crm": {
+      "name": "Salesforce",
+      "slug": "salesforce",
+      "notes": "Web-to-Lead for simple setups. REST API for custom. Lead vs Contact object matters. Field mapping requires matching API names. Pardot adds marketing automation layer."
+    },
+    "title": "How to Send Elementor Forms Leads to Salesforce (Setup Guide)",
+    "h1": "Elementor Forms \u2192 Salesforce Integration Guide",
+    "meta_description": "Connect Elementor Forms to Salesforce so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/salesforce",
+    "related_spokes": [
+      "/integrations/elementor-forms-to-hubspot",
+      "/integrations/elementor-forms-to-gohighlevel",
+      "/integrations/elementor-forms-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "elementor-forms-to-gohighlevel",
+    "form_tool": {
+      "name": "Elementor Forms",
+      "slug": "elementor-forms",
+      "platform": "WordPress",
+      "notes": "Fires submit event on .elementor-form. Can use Elementor's built-in Actions After Submit to redirect or trigger webhook. Works well with GTM form submission trigger."
+    },
+    "crm": {
+      "name": "GoHighLevel",
+      "slug": "gohighlevel",
+      "notes": "Webhook-based integration is most reliable. Native Zapier connection available. Contact and Opportunity objects. Pipeline automation on inbound leads. Popular with agencies."
+    },
+    "title": "How to Send Elementor Forms Leads to GoHighLevel (Setup Guide)",
+    "h1": "Elementor Forms \u2192 GoHighLevel Integration Guide",
+    "meta_description": "Connect Elementor Forms to GoHighLevel so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/gohighlevel",
+    "related_spokes": [
+      "/integrations/elementor-forms-to-hubspot",
+      "/integrations/elementor-forms-to-salesforce",
+      "/integrations/elementor-forms-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "elementor-forms-to-activecampaign",
+    "form_tool": {
+      "name": "Elementor Forms",
+      "slug": "elementor-forms",
+      "platform": "WordPress",
+      "notes": "Fires submit event on .elementor-form. Can use Elementor's built-in Actions After Submit to redirect or trigger webhook. Works well with GTM form submission trigger."
+    },
+    "crm": {
+      "name": "ActiveCampaign",
+      "slug": "activecampaign",
+      "notes": "Form tool integrations via native or Zapier. Contact + Deal objects. Automation triggers on contact creation. Custom fields map to form fields."
+    },
+    "title": "How to Send Elementor Forms Leads to ActiveCampaign (Setup Guide)",
+    "h1": "Elementor Forms \u2192 ActiveCampaign Integration Guide",
+    "meta_description": "Connect Elementor Forms to ActiveCampaign so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/activecampaign",
+    "related_spokes": [
+      "/integrations/elementor-forms-to-hubspot",
+      "/integrations/elementor-forms-to-salesforce",
+      "/integrations/elementor-forms-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "elementor-forms-to-zoho",
+    "form_tool": {
+      "name": "Elementor Forms",
+      "slug": "elementor-forms",
+      "platform": "WordPress",
+      "notes": "Fires submit event on .elementor-form. Can use Elementor's built-in Actions After Submit to redirect or trigger webhook. Works well with GTM form submission trigger."
+    },
+    "crm": {
+      "name": "Zoho CRM",
+      "slug": "zoho",
+      "notes": "Web forms generate leads directly. REST API for custom. Lead and Contact modules. Blueprint automation available. Zoho Forms has native integration."
+    },
+    "title": "How to Send Elementor Forms Leads to Zoho CRM (Setup Guide)",
+    "h1": "Elementor Forms \u2192 Zoho CRM Integration Guide",
+    "meta_description": "Connect Elementor Forms to Zoho CRM so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/zoho",
+    "related_spokes": [
+      "/integrations/elementor-forms-to-hubspot",
+      "/integrations/elementor-forms-to-salesforce",
+      "/integrations/elementor-forms-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "elementor-forms-to-mailchimp",
+    "form_tool": {
+      "name": "Elementor Forms",
+      "slug": "elementor-forms",
+      "platform": "WordPress",
+      "notes": "Fires submit event on .elementor-form. Can use Elementor's built-in Actions After Submit to redirect or trigger webhook. Works well with GTM form submission trigger."
+    },
+    "crm": {
+      "name": "Mailchimp",
+      "slug": "mailchimp",
+      "notes": "Audience/List based. Tags and segments for organization. Limited CRM functionality \u2014 better as email destination than true CRM. API and Zapier integrations."
+    },
+    "title": "How to Send Elementor Forms Leads to Mailchimp (Setup Guide)",
+    "h1": "Elementor Forms \u2192 Mailchimp Integration Guide",
+    "meta_description": "Connect Elementor Forms to Mailchimp so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/mailchimp",
+    "related_spokes": [
+      "/integrations/elementor-forms-to-hubspot",
+      "/integrations/elementor-forms-to-salesforce",
+      "/integrations/elementor-forms-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "formidable-forms-to-hubspot",
+    "form_tool": {
+      "name": "Formidable Forms",
+      "slug": "formidable-forms",
+      "platform": "WordPress",
+      "notes": "Fires frmFormComplete event. Good for complex multi-page forms. Field IDs follow frm_field_X_container pattern."
+    },
+    "crm": {
+      "name": "HubSpot",
+      "slug": "hubspot",
+      "notes": "Native integrations with most form tools. REST API for custom integrations. Contact properties map to form fields. Workflows can trigger on form submission."
+    },
+    "title": "How to Send Formidable Forms Leads to HubSpot (Setup Guide)",
+    "h1": "Formidable Forms \u2192 HubSpot Integration Guide",
+    "meta_description": "Connect Formidable Forms to HubSpot so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/hubspot",
+    "related_spokes": [
+      "/integrations/formidable-forms-to-salesforce",
+      "/integrations/formidable-forms-to-gohighlevel",
+      "/integrations/formidable-forms-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "formidable-forms-to-salesforce",
+    "form_tool": {
+      "name": "Formidable Forms",
+      "slug": "formidable-forms",
+      "platform": "WordPress",
+      "notes": "Fires frmFormComplete event. Good for complex multi-page forms. Field IDs follow frm_field_X_container pattern."
+    },
+    "crm": {
+      "name": "Salesforce",
+      "slug": "salesforce",
+      "notes": "Web-to-Lead for simple setups. REST API for custom. Lead vs Contact object matters. Field mapping requires matching API names. Pardot adds marketing automation layer."
+    },
+    "title": "How to Send Formidable Forms Leads to Salesforce (Setup Guide)",
+    "h1": "Formidable Forms \u2192 Salesforce Integration Guide",
+    "meta_description": "Connect Formidable Forms to Salesforce so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/salesforce",
+    "related_spokes": [
+      "/integrations/formidable-forms-to-hubspot",
+      "/integrations/formidable-forms-to-gohighlevel",
+      "/integrations/formidable-forms-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "formidable-forms-to-gohighlevel",
+    "form_tool": {
+      "name": "Formidable Forms",
+      "slug": "formidable-forms",
+      "platform": "WordPress",
+      "notes": "Fires frmFormComplete event. Good for complex multi-page forms. Field IDs follow frm_field_X_container pattern."
+    },
+    "crm": {
+      "name": "GoHighLevel",
+      "slug": "gohighlevel",
+      "notes": "Webhook-based integration is most reliable. Native Zapier connection available. Contact and Opportunity objects. Pipeline automation on inbound leads. Popular with agencies."
+    },
+    "title": "How to Send Formidable Forms Leads to GoHighLevel (Setup Guide)",
+    "h1": "Formidable Forms \u2192 GoHighLevel Integration Guide",
+    "meta_description": "Connect Formidable Forms to GoHighLevel so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/gohighlevel",
+    "related_spokes": [
+      "/integrations/formidable-forms-to-hubspot",
+      "/integrations/formidable-forms-to-salesforce",
+      "/integrations/formidable-forms-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "formidable-forms-to-activecampaign",
+    "form_tool": {
+      "name": "Formidable Forms",
+      "slug": "formidable-forms",
+      "platform": "WordPress",
+      "notes": "Fires frmFormComplete event. Good for complex multi-page forms. Field IDs follow frm_field_X_container pattern."
+    },
+    "crm": {
+      "name": "ActiveCampaign",
+      "slug": "activecampaign",
+      "notes": "Form tool integrations via native or Zapier. Contact + Deal objects. Automation triggers on contact creation. Custom fields map to form fields."
+    },
+    "title": "How to Send Formidable Forms Leads to ActiveCampaign (Setup Guide)",
+    "h1": "Formidable Forms \u2192 ActiveCampaign Integration Guide",
+    "meta_description": "Connect Formidable Forms to ActiveCampaign so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/activecampaign",
+    "related_spokes": [
+      "/integrations/formidable-forms-to-hubspot",
+      "/integrations/formidable-forms-to-salesforce",
+      "/integrations/formidable-forms-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "formidable-forms-to-zoho",
+    "form_tool": {
+      "name": "Formidable Forms",
+      "slug": "formidable-forms",
+      "platform": "WordPress",
+      "notes": "Fires frmFormComplete event. Good for complex multi-page forms. Field IDs follow frm_field_X_container pattern."
+    },
+    "crm": {
+      "name": "Zoho CRM",
+      "slug": "zoho",
+      "notes": "Web forms generate leads directly. REST API for custom. Lead and Contact modules. Blueprint automation available. Zoho Forms has native integration."
+    },
+    "title": "How to Send Formidable Forms Leads to Zoho CRM (Setup Guide)",
+    "h1": "Formidable Forms \u2192 Zoho CRM Integration Guide",
+    "meta_description": "Connect Formidable Forms to Zoho CRM so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/zoho",
+    "related_spokes": [
+      "/integrations/formidable-forms-to-hubspot",
+      "/integrations/formidable-forms-to-salesforce",
+      "/integrations/formidable-forms-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "formidable-forms-to-mailchimp",
+    "form_tool": {
+      "name": "Formidable Forms",
+      "slug": "formidable-forms",
+      "platform": "WordPress",
+      "notes": "Fires frmFormComplete event. Good for complex multi-page forms. Field IDs follow frm_field_X_container pattern."
+    },
+    "crm": {
+      "name": "Mailchimp",
+      "slug": "mailchimp",
+      "notes": "Audience/List based. Tags and segments for organization. Limited CRM functionality \u2014 better as email destination than true CRM. API and Zapier integrations."
+    },
+    "title": "How to Send Formidable Forms Leads to Mailchimp (Setup Guide)",
+    "h1": "Formidable Forms \u2192 Mailchimp Integration Guide",
+    "meta_description": "Connect Formidable Forms to Mailchimp so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/mailchimp",
+    "related_spokes": [
+      "/integrations/formidable-forms-to-hubspot",
+      "/integrations/formidable-forms-to-salesforce",
+      "/integrations/formidable-forms-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "calendly-to-hubspot",
+    "form_tool": {
+      "name": "Calendly",
+      "slug": "calendly",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires calendly.event_scheduled postMessage event when embedded. Can also track via redirect URL after booking. Native webhooks available for server-side tracking."
+    },
+    "crm": {
+      "name": "HubSpot",
+      "slug": "hubspot",
+      "notes": "Native integrations with most form tools. REST API for custom integrations. Contact properties map to form fields. Workflows can trigger on form submission."
+    },
+    "title": "How to Send Calendly Leads to HubSpot (Setup Guide)",
+    "h1": "Calendly \u2192 HubSpot Integration Guide",
+    "meta_description": "Connect Calendly to HubSpot so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/hubspot",
+    "related_spokes": [
+      "/integrations/calendly-to-salesforce",
+      "/integrations/calendly-to-gohighlevel",
+      "/integrations/calendly-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "calendly-to-salesforce",
+    "form_tool": {
+      "name": "Calendly",
+      "slug": "calendly",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires calendly.event_scheduled postMessage event when embedded. Can also track via redirect URL after booking. Native webhooks available for server-side tracking."
+    },
+    "crm": {
+      "name": "Salesforce",
+      "slug": "salesforce",
+      "notes": "Web-to-Lead for simple setups. REST API for custom. Lead vs Contact object matters. Field mapping requires matching API names. Pardot adds marketing automation layer."
+    },
+    "title": "How to Send Calendly Leads to Salesforce (Setup Guide)",
+    "h1": "Calendly \u2192 Salesforce Integration Guide",
+    "meta_description": "Connect Calendly to Salesforce so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/salesforce",
+    "related_spokes": [
+      "/integrations/calendly-to-hubspot",
+      "/integrations/calendly-to-gohighlevel",
+      "/integrations/calendly-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "calendly-to-gohighlevel",
+    "form_tool": {
+      "name": "Calendly",
+      "slug": "calendly",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires calendly.event_scheduled postMessage event when embedded. Can also track via redirect URL after booking. Native webhooks available for server-side tracking."
+    },
+    "crm": {
+      "name": "GoHighLevel",
+      "slug": "gohighlevel",
+      "notes": "Webhook-based integration is most reliable. Native Zapier connection available. Contact and Opportunity objects. Pipeline automation on inbound leads. Popular with agencies."
+    },
+    "title": "How to Send Calendly Leads to GoHighLevel (Setup Guide)",
+    "h1": "Calendly \u2192 GoHighLevel Integration Guide",
+    "meta_description": "Connect Calendly to GoHighLevel so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/gohighlevel",
+    "related_spokes": [
+      "/integrations/calendly-to-hubspot",
+      "/integrations/calendly-to-salesforce",
+      "/integrations/calendly-to-activecampaign"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "calendly-to-activecampaign",
+    "form_tool": {
+      "name": "Calendly",
+      "slug": "calendly",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires calendly.event_scheduled postMessage event when embedded. Can also track via redirect URL after booking. Native webhooks available for server-side tracking."
+    },
+    "crm": {
+      "name": "ActiveCampaign",
+      "slug": "activecampaign",
+      "notes": "Form tool integrations via native or Zapier. Contact + Deal objects. Automation triggers on contact creation. Custom fields map to form fields."
+    },
+    "title": "How to Send Calendly Leads to ActiveCampaign (Setup Guide)",
+    "h1": "Calendly \u2192 ActiveCampaign Integration Guide",
+    "meta_description": "Connect Calendly to ActiveCampaign so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/activecampaign",
+    "related_spokes": [
+      "/integrations/calendly-to-hubspot",
+      "/integrations/calendly-to-salesforce",
+      "/integrations/calendly-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "calendly-to-zoho",
+    "form_tool": {
+      "name": "Calendly",
+      "slug": "calendly",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires calendly.event_scheduled postMessage event when embedded. Can also track via redirect URL after booking. Native webhooks available for server-side tracking."
+    },
+    "crm": {
+      "name": "Zoho CRM",
+      "slug": "zoho",
+      "notes": "Web forms generate leads directly. REST API for custom. Lead and Contact modules. Blueprint automation available. Zoho Forms has native integration."
+    },
+    "title": "How to Send Calendly Leads to Zoho CRM (Setup Guide)",
+    "h1": "Calendly \u2192 Zoho CRM Integration Guide",
+    "meta_description": "Connect Calendly to Zoho CRM so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/zoho",
+    "related_spokes": [
+      "/integrations/calendly-to-hubspot",
+      "/integrations/calendly-to-salesforce",
+      "/integrations/calendly-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "B",
+    "route_prefix": "/integrations",
+    "slug": "calendly-to-mailchimp",
+    "form_tool": {
+      "name": "Calendly",
+      "slug": "calendly",
+      "platform": "Standalone or Embedded",
+      "notes": "Fires calendly.event_scheduled postMessage event when embedded. Can also track via redirect URL after booking. Native webhooks available for server-side tracking."
+    },
+    "crm": {
+      "name": "Mailchimp",
+      "slug": "mailchimp",
+      "notes": "Audience/List based. Tags and segments for organization. Limited CRM functionality \u2014 better as email destination than true CRM. API and Zapier integrations."
+    },
+    "title": "How to Send Calendly Leads to Mailchimp (Setup Guide)",
+    "h1": "Calendly \u2192 Mailchimp Integration Guide",
+    "meta_description": "Connect Calendly to Mailchimp so every form submission creates a lead automatically. Covers native integrations, Zapier, webhooks, and field mapping.",
+    "search_intent": "Transactional / Integration",
+    "priority": "P1",
+    "hub_page": "/integrations/mailchimp",
+    "related_spokes": [
+      "/integrations/calendly-to-hubspot",
+      "/integrations/calendly-to-salesforce",
+      "/integrations/calendly-to-gohighlevel"
+    ],
+    "cta_link": "/contact",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "server-side-gtm-google-ads-setup",
+    "tracking_method_name": "Server-Side GTM",
+    "tracking_method_slug": "server-side-gtm",
+    "ad_platform_name": "Google Ads",
+    "ad_platform_slug": "google-ads",
+    "title": "Server-Side GTM for Google Ads: Complete Setup Guide (2026)",
+    "h1": "Server-Side GTM + Google Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Server-Side GTM for Google Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P0",
+    "hub_page": "/tracking/server-side-gtm",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "server-side-gtm-meta-ads-setup",
+    "tracking_method_name": "Server-Side GTM",
+    "tracking_method_slug": "server-side-gtm",
+    "ad_platform_name": "Meta Ads",
+    "ad_platform_slug": "meta-ads",
+    "title": "Server-Side GTM for Meta Ads: Complete Setup Guide (2026)",
+    "h1": "Server-Side GTM + Meta Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Server-Side GTM for Meta Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P0",
+    "hub_page": "/tracking/server-side-gtm",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "server-side-gtm-ga4-setup",
+    "tracking_method_name": "Server-Side GTM",
+    "tracking_method_slug": "server-side-gtm",
+    "ad_platform_name": "GA4",
+    "ad_platform_slug": "ga4",
+    "title": "Server-Side GTM for GA4: Complete Setup Guide (2026)",
+    "h1": "Server-Side GTM + GA4 Setup Guide",
+    "meta_description": "Complete guide to setting up Server-Side GTM for GA4. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P0",
+    "hub_page": "/tracking/server-side-gtm",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "server-side-gtm-linkedin-ads-setup",
+    "tracking_method_name": "Server-Side GTM",
+    "tracking_method_slug": "server-side-gtm",
+    "ad_platform_name": "LinkedIn Ads",
+    "ad_platform_slug": "linkedin-ads",
+    "title": "Server-Side GTM for LinkedIn Ads: Complete Setup Guide (2026)",
+    "h1": "Server-Side GTM + LinkedIn Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Server-Side GTM for LinkedIn Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P0",
+    "hub_page": "/tracking/server-side-gtm",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "server-side-gtm-tiktok-ads-setup",
+    "tracking_method_name": "Server-Side GTM",
+    "tracking_method_slug": "server-side-gtm",
+    "ad_platform_name": "TikTok Ads",
+    "ad_platform_slug": "tiktok-ads",
+    "title": "Server-Side GTM for TikTok Ads: Complete Setup Guide (2026)",
+    "h1": "Server-Side GTM + TikTok Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Server-Side GTM for TikTok Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P0",
+    "hub_page": "/tracking/server-side-gtm",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "meta-capi-meta-ads-setup",
+    "tracking_method_name": "Meta CAPI",
+    "tracking_method_slug": "meta-capi",
+    "ad_platform_name": "Meta Ads",
+    "ad_platform_slug": "meta-ads",
+    "title": "Meta CAPI for Meta Ads: Complete Setup Guide (2026)",
+    "h1": "Meta CAPI + Meta Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Meta CAPI for Meta Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P0",
+    "hub_page": "/tracking/meta-capi",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "enhanced-conversions-google-ads-setup",
+    "tracking_method_name": "Enhanced Conversions",
+    "tracking_method_slug": "enhanced-conversions",
+    "ad_platform_name": "Google Ads",
+    "ad_platform_slug": "google-ads",
+    "title": "Enhanced Conversions for Google Ads: Complete Setup Guide (2026)",
+    "h1": "Enhanced Conversions + Google Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Enhanced Conversions for Google Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P0",
+    "hub_page": "/tracking/enhanced-conversions",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "enhanced-conversions-ga4-setup",
+    "tracking_method_name": "Enhanced Conversions",
+    "tracking_method_slug": "enhanced-conversions",
+    "ad_platform_name": "GA4",
+    "ad_platform_slug": "ga4",
+    "title": "Enhanced Conversions for GA4: Complete Setup Guide (2026)",
+    "h1": "Enhanced Conversions + GA4 Setup Guide",
+    "meta_description": "Complete guide to setting up Enhanced Conversions for GA4. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P0",
+    "hub_page": "/tracking/enhanced-conversions",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "offline-conversions-google-ads-setup",
+    "tracking_method_name": "Offline Conversion Import",
+    "tracking_method_slug": "offline-conversions",
+    "ad_platform_name": "Google Ads",
+    "ad_platform_slug": "google-ads",
+    "title": "Offline Conversion Import for Google Ads: Complete Setup Guide (2026)",
+    "h1": "Offline Conversion Import + Google Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Offline Conversion Import for Google Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P1",
+    "hub_page": "/tracking/offline-conversions",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "offline-conversions-meta-ads-setup",
+    "tracking_method_name": "Offline Conversion Import",
+    "tracking_method_slug": "offline-conversions",
+    "ad_platform_name": "Meta Ads",
+    "ad_platform_slug": "meta-ads",
+    "title": "Offline Conversion Import for Meta Ads: Complete Setup Guide (2026)",
+    "h1": "Offline Conversion Import + Meta Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Offline Conversion Import for Meta Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P1",
+    "hub_page": "/tracking/offline-conversions",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "offline-conversions-linkedin-ads-setup",
+    "tracking_method_name": "Offline Conversion Import",
+    "tracking_method_slug": "offline-conversions",
+    "ad_platform_name": "LinkedIn Ads",
+    "ad_platform_slug": "linkedin-ads",
+    "title": "Offline Conversion Import for LinkedIn Ads: Complete Setup Guide (2026)",
+    "h1": "Offline Conversion Import + LinkedIn Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Offline Conversion Import for LinkedIn Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P1",
+    "hub_page": "/tracking/offline-conversions",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "gtm-google-ads-setup",
+    "tracking_method_name": "Client-Side GTM",
+    "tracking_method_slug": "gtm",
+    "ad_platform_name": "Google Ads",
+    "ad_platform_slug": "google-ads",
+    "title": "Client-Side GTM for Google Ads: Complete Setup Guide (2026)",
+    "h1": "Client-Side GTM + Google Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Client-Side GTM for Google Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P1",
+    "hub_page": "/tracking/form-conversion-tracking",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "gtm-meta-ads-setup",
+    "tracking_method_name": "Client-Side GTM",
+    "tracking_method_slug": "gtm",
+    "ad_platform_name": "Meta Ads",
+    "ad_platform_slug": "meta-ads",
+    "title": "Client-Side GTM for Meta Ads: Complete Setup Guide (2026)",
+    "h1": "Client-Side GTM + Meta Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Client-Side GTM for Meta Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P1",
+    "hub_page": "/tracking/form-conversion-tracking",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "gtm-ga4-setup",
+    "tracking_method_name": "Client-Side GTM",
+    "tracking_method_slug": "gtm",
+    "ad_platform_name": "GA4",
+    "ad_platform_slug": "ga4",
+    "title": "Client-Side GTM for GA4: Complete Setup Guide (2026)",
+    "h1": "Client-Side GTM + GA4 Setup Guide",
+    "meta_description": "Complete guide to setting up Client-Side GTM for GA4. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P1",
+    "hub_page": "/tracking/form-conversion-tracking",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "gtm-linkedin-ads-setup",
+    "tracking_method_name": "Client-Side GTM",
+    "tracking_method_slug": "gtm",
+    "ad_platform_name": "LinkedIn Ads",
+    "ad_platform_slug": "linkedin-ads",
+    "title": "Client-Side GTM for LinkedIn Ads: Complete Setup Guide (2026)",
+    "h1": "Client-Side GTM + LinkedIn Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Client-Side GTM for LinkedIn Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P1",
+    "hub_page": "/tracking/form-conversion-tracking",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "gtm-tiktok-ads-setup",
+    "tracking_method_name": "Client-Side GTM",
+    "tracking_method_slug": "gtm",
+    "ad_platform_name": "TikTok Ads",
+    "ad_platform_slug": "tiktok-ads",
+    "title": "Client-Side GTM for TikTok Ads: Complete Setup Guide (2026)",
+    "h1": "Client-Side GTM + TikTok Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Client-Side GTM for TikTok Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P1",
+    "hub_page": "/tracking/form-conversion-tracking",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "gtm-microsoft-ads-setup",
+    "tracking_method_name": "Client-Side GTM",
+    "tracking_method_slug": "gtm",
+    "ad_platform_name": "Microsoft Ads",
+    "ad_platform_slug": "microsoft-ads",
+    "title": "Client-Side GTM for Microsoft Ads: Complete Setup Guide (2026)",
+    "h1": "Client-Side GTM + Microsoft Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Client-Side GTM for Microsoft Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P1",
+    "hub_page": "/tracking/form-conversion-tracking",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "webhooks-google-ads-setup",
+    "tracking_method_name": "Webhooks / Direct API",
+    "tracking_method_slug": "webhooks",
+    "ad_platform_name": "Google Ads",
+    "ad_platform_slug": "google-ads",
+    "title": "Webhooks / Direct API for Google Ads: Complete Setup Guide (2026)",
+    "h1": "Webhooks / Direct API + Google Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Webhooks / Direct API for Google Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P1",
+    "hub_page": "/tracking/webhooks",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "webhooks-meta-ads-setup",
+    "tracking_method_name": "Webhooks / Direct API",
+    "tracking_method_slug": "webhooks",
+    "ad_platform_name": "Meta Ads",
+    "ad_platform_slug": "meta-ads",
+    "title": "Webhooks / Direct API for Meta Ads: Complete Setup Guide (2026)",
+    "h1": "Webhooks / Direct API + Meta Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Webhooks / Direct API for Meta Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P1",
+    "hub_page": "/tracking/webhooks",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "C",
+    "route_prefix": "/tracking",
+    "slug": "webhooks-linkedin-ads-setup",
+    "tracking_method_name": "Webhooks / Direct API",
+    "tracking_method_slug": "webhooks",
+    "ad_platform_name": "LinkedIn Ads",
+    "ad_platform_slug": "linkedin-ads",
+    "title": "Webhooks / Direct API for LinkedIn Ads: Complete Setup Guide (2026)",
+    "h1": "Webhooks / Direct API + LinkedIn Ads Setup Guide",
+    "meta_description": "Complete guide to setting up Webhooks / Direct API for LinkedIn Ads. Step-by-step configuration, testing, and troubleshooting.",
+    "search_intent": "Transactional / Technical",
+    "priority": "P1",
+    "hub_page": "/tracking/webhooks",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "D",
+    "route_prefix": "/attribution",
+    "slug": "hyros-google-ads-setup",
+    "attribution_tool": {
+      "name": "Hyros",
+      "slug": "hyros",
+      "notes": "Call tracking + web tracking. Universal script + CAPI integration. Requires proper URL parameter passthrough. Known for accurate long-funnel attribution."
+    },
+    "ad_platform_name": "Google Ads",
+    "ad_platform_slug": "google-ads",
+    "title": "Hyros + Google Ads Attribution Setup Guide (2026)",
+    "h1": "How to Set Up Hyros for Google Ads",
+    "meta_description": "Step-by-step Hyros setup for Google Ads attribution. Covers pixel installation, integration configuration, and verification.",
+    "search_intent": "Transactional / Setup",
+    "priority": "P0",
+    "hub_page": "/attribution",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "D",
+    "route_prefix": "/attribution",
+    "slug": "hyros-meta-ads-setup",
+    "attribution_tool": {
+      "name": "Hyros",
+      "slug": "hyros",
+      "notes": "Call tracking + web tracking. Universal script + CAPI integration. Requires proper URL parameter passthrough. Known for accurate long-funnel attribution."
+    },
+    "ad_platform_name": "Meta Ads",
+    "ad_platform_slug": "meta-ads",
+    "title": "Hyros + Meta Ads Attribution Setup Guide (2026)",
+    "h1": "How to Set Up Hyros for Meta Ads",
+    "meta_description": "Step-by-step Hyros setup for Meta Ads attribution. Covers pixel installation, integration configuration, and verification.",
+    "search_intent": "Transactional / Setup",
+    "priority": "P0",
+    "hub_page": "/attribution",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "D",
+    "route_prefix": "/attribution",
+    "slug": "hyros-multi-channel-setup",
+    "attribution_tool": {
+      "name": "Hyros",
+      "slug": "hyros",
+      "notes": "Call tracking + web tracking. Universal script + CAPI integration. Requires proper URL parameter passthrough. Known for accurate long-funnel attribution."
+    },
+    "ad_platform_name": "Multi-Channel",
+    "ad_platform_slug": "multi-channel",
+    "title": "Hyros + Multi-Channel Attribution Setup Guide (2026)",
+    "h1": "How to Set Up Hyros for Multi-Channel",
+    "meta_description": "Step-by-step Hyros setup for Multi-Channel attribution. Covers pixel installation, integration configuration, and verification.",
+    "search_intent": "Transactional / Setup",
+    "priority": "P0",
+    "hub_page": "/attribution",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "D",
+    "route_prefix": "/attribution",
+    "slug": "triple-whale-google-ads-setup",
+    "attribution_tool": {
+      "name": "Triple Whale",
+      "slug": "triple-whale",
+      "notes": "E-commerce focused but expanding. Pixel-based tracking + data warehouse integrations. Shopify-native with expanding platform support."
+    },
+    "ad_platform_name": "Google Ads",
+    "ad_platform_slug": "google-ads",
+    "title": "Triple Whale + Google Ads Attribution Setup Guide (2026)",
+    "h1": "How to Set Up Triple Whale for Google Ads",
+    "meta_description": "Step-by-step Triple Whale setup for Google Ads attribution. Covers pixel installation, integration configuration, and verification.",
+    "search_intent": "Transactional / Setup",
+    "priority": "P1",
+    "hub_page": "/attribution",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "D",
+    "route_prefix": "/attribution",
+    "slug": "triple-whale-meta-ads-setup",
+    "attribution_tool": {
+      "name": "Triple Whale",
+      "slug": "triple-whale",
+      "notes": "E-commerce focused but expanding. Pixel-based tracking + data warehouse integrations. Shopify-native with expanding platform support."
+    },
+    "ad_platform_name": "Meta Ads",
+    "ad_platform_slug": "meta-ads",
+    "title": "Triple Whale + Meta Ads Attribution Setup Guide (2026)",
+    "h1": "How to Set Up Triple Whale for Meta Ads",
+    "meta_description": "Step-by-step Triple Whale setup for Meta Ads attribution. Covers pixel installation, integration configuration, and verification.",
+    "search_intent": "Transactional / Setup",
+    "priority": "P1",
+    "hub_page": "/attribution",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "D",
+    "route_prefix": "/attribution",
+    "slug": "triple-whale-multi-channel-setup",
+    "attribution_tool": {
+      "name": "Triple Whale",
+      "slug": "triple-whale",
+      "notes": "E-commerce focused but expanding. Pixel-based tracking + data warehouse integrations. Shopify-native with expanding platform support."
+    },
+    "ad_platform_name": "Multi-Channel",
+    "ad_platform_slug": "multi-channel",
+    "title": "Triple Whale + Multi-Channel Attribution Setup Guide (2026)",
+    "h1": "How to Set Up Triple Whale for Multi-Channel",
+    "meta_description": "Step-by-step Triple Whale setup for Multi-Channel attribution. Covers pixel installation, integration configuration, and verification.",
+    "search_intent": "Transactional / Setup",
+    "priority": "P1",
+    "hub_page": "/attribution",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "D",
+    "route_prefix": "/attribution",
+    "slug": "northbeam-google-ads-setup",
+    "attribution_tool": {
+      "name": "Northbeam",
+      "slug": "northbeam",
+      "notes": "ML-based attribution modeling. Requires pixel installation + data connections to ad platforms. Custom attribution windows."
+    },
+    "ad_platform_name": "Google Ads",
+    "ad_platform_slug": "google-ads",
+    "title": "Northbeam + Google Ads Attribution Setup Guide (2026)",
+    "h1": "How to Set Up Northbeam for Google Ads",
+    "meta_description": "Step-by-step Northbeam setup for Google Ads attribution. Covers pixel installation, integration configuration, and verification.",
+    "search_intent": "Transactional / Setup",
+    "priority": "P1",
+    "hub_page": "/attribution",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "D",
+    "route_prefix": "/attribution",
+    "slug": "northbeam-meta-ads-setup",
+    "attribution_tool": {
+      "name": "Northbeam",
+      "slug": "northbeam",
+      "notes": "ML-based attribution modeling. Requires pixel installation + data connections to ad platforms. Custom attribution windows."
+    },
+    "ad_platform_name": "Meta Ads",
+    "ad_platform_slug": "meta-ads",
+    "title": "Northbeam + Meta Ads Attribution Setup Guide (2026)",
+    "h1": "How to Set Up Northbeam for Meta Ads",
+    "meta_description": "Step-by-step Northbeam setup for Meta Ads attribution. Covers pixel installation, integration configuration, and verification.",
+    "search_intent": "Transactional / Setup",
+    "priority": "P1",
+    "hub_page": "/attribution",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "D",
+    "route_prefix": "/attribution",
+    "slug": "northbeam-multi-channel-setup",
+    "attribution_tool": {
+      "name": "Northbeam",
+      "slug": "northbeam",
+      "notes": "ML-based attribution modeling. Requires pixel installation + data connections to ad platforms. Custom attribution windows."
+    },
+    "ad_platform_name": "Multi-Channel",
+    "ad_platform_slug": "multi-channel",
+    "title": "Northbeam + Multi-Channel Attribution Setup Guide (2026)",
+    "h1": "How to Set Up Northbeam for Multi-Channel",
+    "meta_description": "Step-by-step Northbeam setup for Multi-Channel attribution. Covers pixel installation, integration configuration, and verification.",
+    "search_intent": "Transactional / Setup",
+    "priority": "P1",
+    "hub_page": "/attribution",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "D",
+    "route_prefix": "/attribution",
+    "slug": "wicked-reports-google-ads-setup",
+    "attribution_tool": {
+      "name": "Wicked Reports",
+      "slug": "wicked-reports",
+      "notes": "CRM-based attribution. Requires CRM integration + ad platform connections. Strong for B2B and longer sales cycles."
+    },
+    "ad_platform_name": "Google Ads",
+    "ad_platform_slug": "google-ads",
+    "title": "Wicked Reports + Google Ads Attribution Setup Guide (2026)",
+    "h1": "How to Set Up Wicked Reports for Google Ads",
+    "meta_description": "Step-by-step Wicked Reports setup for Google Ads attribution. Covers pixel installation, integration configuration, and verification.",
+    "search_intent": "Transactional / Setup",
+    "priority": "P1",
+    "hub_page": "/attribution",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "D",
+    "route_prefix": "/attribution",
+    "slug": "wicked-reports-meta-ads-setup",
+    "attribution_tool": {
+      "name": "Wicked Reports",
+      "slug": "wicked-reports",
+      "notes": "CRM-based attribution. Requires CRM integration + ad platform connections. Strong for B2B and longer sales cycles."
+    },
+    "ad_platform_name": "Meta Ads",
+    "ad_platform_slug": "meta-ads",
+    "title": "Wicked Reports + Meta Ads Attribution Setup Guide (2026)",
+    "h1": "How to Set Up Wicked Reports for Meta Ads",
+    "meta_description": "Step-by-step Wicked Reports setup for Meta Ads attribution. Covers pixel installation, integration configuration, and verification.",
+    "search_intent": "Transactional / Setup",
+    "priority": "P1",
+    "hub_page": "/attribution",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "D",
+    "route_prefix": "/attribution",
+    "slug": "wicked-reports-multi-channel-setup",
+    "attribution_tool": {
+      "name": "Wicked Reports",
+      "slug": "wicked-reports",
+      "notes": "CRM-based attribution. Requires CRM integration + ad platform connections. Strong for B2B and longer sales cycles."
+    },
+    "ad_platform_name": "Multi-Channel",
+    "ad_platform_slug": "multi-channel",
+    "title": "Wicked Reports + Multi-Channel Attribution Setup Guide (2026)",
+    "h1": "How to Set Up Wicked Reports for Multi-Channel",
+    "meta_description": "Step-by-step Wicked Reports setup for Multi-Channel attribution. Covers pixel installation, integration configuration, and verification.",
+    "search_intent": "Transactional / Setup",
+    "priority": "P1",
+    "hub_page": "/attribution",
+    "page_type": "spoke"
+  },
+  {
+    "cluster": "E",
+    "route_prefix": "/services",
+    "slug": "law-firm-google-ads",
+    "vertical": {
+      "name": "Law Firms",
+      "slug": "law-firm",
+      "notes": "High CPC ($50-200+). Competitive local search. Call tracking critical. Case value justifies high ad spend. Compliance restrictions on ad copy."
+    },
+    "title": "Google Ads Management for Law Firms",
+    "h1": "Google Ads for Law Firms",
+    "meta_description": "Managed Google Ads for Law Firms. Tracking setup, campaign management, and conversion optimization. $800 setup + $200/month.",
+    "search_intent": "Commercial / Service",
+    "priority": "P0",
+    "page_type": "service_vertical"
+  },
+  {
+    "cluster": "E",
+    "route_prefix": "/services",
+    "slug": "home-services-google-ads",
+    "vertical": {
+      "name": "Home Services",
+      "slug": "home-services",
+      "notes": "Local service ads + search. Seasonal demand patterns. Lead quality varies wildly. Phone calls are primary conversion. Service area targeting."
+    },
+    "title": "Google Ads Management for Home Services",
+    "h1": "Google Ads for Home Services",
+    "meta_description": "Managed Google Ads for Home Services. Tracking setup, campaign management, and conversion optimization. $800 setup + $200/month.",
+    "search_intent": "Commercial / Service",
+    "priority": "P0",
+    "page_type": "service_vertical"
+  },
+  {
+    "cluster": "E",
+    "route_prefix": "/services",
+    "slug": "healthcare-google-ads",
+    "vertical": {
+      "name": "Healthcare / Medical",
+      "slug": "healthcare",
+      "notes": "HIPAA considerations for tracking. Limited remarketing. High patient lifetime value. Location-based targeting. Appointment booking as conversion."
+    },
+    "title": "Google Ads Management for Healthcare / Medical",
+    "h1": "Google Ads for Healthcare / Medical",
+    "meta_description": "Managed Google Ads for Healthcare / Medical. Tracking setup, campaign management, and conversion optimization. $800 setup + $200/month.",
+    "search_intent": "Commercial / Service",
+    "priority": "P0",
+    "page_type": "service_vertical"
+  },
+  {
+    "cluster": "E",
+    "route_prefix": "/services",
+    "slug": "higher-education-google-ads",
+    "vertical": {
+      "name": "Higher Education",
+      "slug": "higher-education",
+      "notes": "Long enrollment cycles. Multiple touch attribution matters. Program-level campaigns. Lead nurture is critical. Seasonal enrollment windows."
+    },
+    "title": "Google Ads Management for Higher Education",
+    "h1": "Google Ads for Higher Education",
+    "meta_description": "Managed Google Ads for Higher Education. Tracking setup, campaign management, and conversion optimization. $800 setup + $200/month.",
+    "search_intent": "Commercial / Service",
+    "priority": "P0",
+    "page_type": "service_vertical"
+  },
+  {
+    "cluster": "E",
+    "route_prefix": "/services",
+    "slug": "saas-google-ads",
+    "vertical": {
+      "name": "SaaS / B2B",
+      "slug": "saas",
+      "notes": "Demo/trial as primary conversion. Long sales cycles. Account-based targeting. LinkedIn often outperforms for enterprise. Free trial \u2192 paid conversion tracking."
+    },
+    "title": "Google Ads Management for SaaS / B2B",
+    "h1": "Google Ads for SaaS / B2B",
+    "meta_description": "Managed Google Ads for SaaS / B2B. Tracking setup, campaign management, and conversion optimization. $800 setup + $200/month.",
+    "search_intent": "Commercial / Service",
+    "priority": "P1",
+    "page_type": "service_vertical"
+  },
+  {
+    "cluster": "E",
+    "route_prefix": "/services",
+    "slug": "ecommerce-google-ads",
+    "vertical": {
+      "name": "E-commerce",
+      "slug": "ecommerce",
+      "notes": "ROAS-focused. Shopping campaigns. Dynamic remarketing. Cart abandonment tracking. Revenue tracking with transaction data."
+    },
+    "title": "Google Ads Management for E-commerce",
+    "h1": "Google Ads for E-commerce",
+    "meta_description": "Managed Google Ads for E-commerce. Tracking setup, campaign management, and conversion optimization. $800 setup + $200/month.",
+    "search_intent": "Commercial / Service",
+    "priority": "P1",
+    "page_type": "service_vertical"
+  },
+  {
+    "cluster": "E",
+    "route_prefix": "/services",
+    "slug": "real-estate-google-ads",
+    "vertical": {
+      "name": "Real Estate",
+      "slug": "real-estate",
+      "notes": "High-value leads. Local targeting critical. Listing-specific landing pages. Lead registration forms. IDX integration tracking."
+    },
+    "title": "Google Ads Management for Real Estate",
+    "h1": "Google Ads for Real Estate",
+    "meta_description": "Managed Google Ads for Real Estate. Tracking setup, campaign management, and conversion optimization. $800 setup + $200/month.",
+    "search_intent": "Commercial / Service",
+    "priority": "P1",
+    "page_type": "service_vertical"
+  },
+  {
+    "cluster": "E",
+    "route_prefix": "/services",
+    "slug": "dental-google-ads",
+    "vertical": {
+      "name": "Dental / Orthodontics",
+      "slug": "dental",
+      "notes": "Local search dominant. New patient value $3K-10K+. Call tracking essential. Insurance vs cash-pay targeting. Before/after content."
+    },
+    "title": "Google Ads Management for Dental / Orthodontics",
+    "h1": "Google Ads for Dental / Orthodontics",
+    "meta_description": "Managed Google Ads for Dental / Orthodontics. Tracking setup, campaign management, and conversion optimization. $800 setup + $200/month.",
+    "search_intent": "Commercial / Service",
+    "priority": "P1",
+    "page_type": "service_vertical"
+  },
+  {
+    "cluster": "E",
+    "route_prefix": "/services",
+    "slug": "roofing-google-ads",
+    "vertical": {
+      "name": "Roofing",
+      "slug": "roofing",
+      "notes": "Storm-chasing seasonal spikes. Local service ads. High ticket ($8K-25K+). Lead quality filtering critical. Emergency vs planned replacement."
+    },
+    "title": "Google Ads Management for Roofing",
+    "h1": "Google Ads for Roofing",
+    "meta_description": "Managed Google Ads for Roofing. Tracking setup, campaign management, and conversion optimization. $800 setup + $200/month.",
+    "search_intent": "Commercial / Service",
+    "priority": "P1",
+    "page_type": "service_vertical"
+  },
+  {
+    "cluster": "E",
+    "route_prefix": "/services",
+    "slug": "hvac-google-ads",
+    "vertical": {
+      "name": "HVAC",
+      "slug": "hvac",
+      "notes": "Seasonal demand (summer cooling, winter heating). Emergency service calls. Maintenance agreement upsells. Local targeting. Call tracking."
+    },
+    "title": "Google Ads Management for HVAC",
+    "h1": "Google Ads for HVAC",
+    "meta_description": "Managed Google Ads for HVAC. Tracking setup, campaign management, and conversion optimization. $800 setup + $200/month.",
+    "search_intent": "Commercial / Service",
+    "priority": "P1",
+    "page_type": "service_vertical"
+  },
+  {
+    "cluster": "E",
+    "route_prefix": "/services",
+    "slug": "tracking-audit",
+    "service": {
+      "name": "Conversion Tracking Audit",
+      "slug": "tracking-audit",
+      "notes": "Full audit of all tracking tags, pixels, and conversion events. Identifies gaps, double-counting, and misattribution. Deliverable: audit report + fix list."
+    },
+    "title": "Conversion Tracking Audit",
+    "h1": "Conversion Tracking Audit",
+    "meta_description": "Full audit of all tracking tags, pixels, and conversion events. Identifies gaps, double-counting, and misattribution. Deliverable: audit report + fix ",
+    "search_intent": "Commercial / Service",
+    "priority": "P0",
+    "page_type": "service_technical"
+  },
+  {
+    "cluster": "E",
+    "route_prefix": "/services",
+    "slug": "server-side-gtm-setup",
+    "service": {
+      "name": "Server-Side GTM Implementation",
+      "slug": "server-side-gtm-setup",
+      "notes": "Full sGTM deployment on custom subdomain. Includes Google Ads, Meta CAPI, GA4 server-side configs. First-party data collection setup."
+    },
+    "title": "Server-Side GTM Implementation",
+    "h1": "Server-Side GTM Implementation",
+    "meta_description": "Full sGTM deployment on custom subdomain. Includes Google Ads, Meta CAPI, GA4 server-side configs. First-party data collection setup.",
+    "search_intent": "Commercial / Service",
+    "priority": "P0",
+    "page_type": "service_technical"
+  },
+  {
+    "cluster": "E",
+    "route_prefix": "/services",
+    "slug": "meta-capi-setup",
+    "service": {
+      "name": "Meta CAPI Implementation",
+      "slug": "meta-capi-setup",
+      "notes": "Meta Conversions API setup via sGTM or direct integration. Event deduplication. Data quality verification in Events Manager."
+    },
+    "title": "Meta CAPI Implementation",
+    "h1": "Meta CAPI Implementation",
+    "meta_description": "Meta Conversions API setup via sGTM or direct integration. Event deduplication. Data quality verification in Events Manager.",
+    "search_intent": "Commercial / Service",
+    "priority": "P0",
+    "page_type": "service_technical"
+  },
+  {
+    "cluster": "E",
+    "route_prefix": "/services",
+    "slug": "ga4-setup",
+    "service": {
+      "name": "GA4 Setup & Configuration",
+      "slug": "ga4-setup",
+      "notes": "Full GA4 property setup. Event tracking configuration. Conversion marking. Google Ads linking. Custom dimensions and audiences."
+    },
+    "title": "GA4 Setup & Configuration",
+    "h1": "GA4 Setup & Configuration",
+    "meta_description": "Full GA4 property setup. Event tracking configuration. Conversion marking. Google Ads linking. Custom dimensions and audiences.",
+    "search_intent": "Commercial / Service",
+    "priority": "P1",
+    "page_type": "service_technical"
+  },
+  {
+    "cluster": "E",
+    "route_prefix": "/services",
+    "slug": "attribution-setup",
+    "service": {
+      "name": "Attribution Platform Setup",
+      "slug": "attribution-setup",
+      "notes": "Setup and configuration of third-party attribution tools (Hyros, Triple Whale, etc). URL parameter configuration. Platform integration verification."
+    },
+    "title": "Attribution Platform Setup",
+    "h1": "Attribution Platform Setup",
+    "meta_description": "Setup and configuration of third-party attribution tools (Hyros, Triple Whale, etc). URL parameter configuration. Platform integration verification.",
+    "search_intent": "Commercial / Service",
+    "priority": "P1",
+    "page_type": "service_technical"
+  }
+]
