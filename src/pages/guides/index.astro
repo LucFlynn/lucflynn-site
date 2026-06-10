@@ -1,0 +1,77 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const all = await getCollection('pages');
+const count = (cat: string) => all.filter((p) => p.data.category === cat).length;
+
+const clusters = [
+  {
+    href: '/tracking',
+    title: 'Conversion Tracking Guides',
+    desc: 'Form-by-form, platform-by-platform setup guides — GA4, Google Ads, Meta, LinkedIn, server-side GTM, Enhanced Conversions. Stop losing conversions.',
+    count: count('tracking'),
+  },
+  {
+    href: '/ads',
+    title: 'Ads Management Guides',
+    desc: "Already running Google or Meta ads and it's not working? Diagnose what's broken, fix wasted spend, and know when it's worth getting help.",
+    count: count('ads'),
+  },
+  {
+    href: '/integrations',
+    title: 'Integration Guides',
+    desc: 'Connect your forms, CRMs, and ad platforms so your lead data actually flows where it needs to go.',
+    count: count('integrations'),
+  },
+  {
+    href: '/attribution',
+    title: 'Attribution Guides',
+    desc: 'Figure out which channels and campaigns actually drive revenue — multi-touch, offline conversions, and cross-platform attribution.',
+    count: count('attribution'),
+  },
+];
+---
+<BaseLayout
+  title="Guides — Tracking, Ads, Integrations & Attribution"
+  description="Every guide library in one place: conversion tracking, Google & Meta ads management, platform integrations, and attribution. Practical, specific, and built from real accounts."
+  canonicalUrl="https://lucflynn.com/guides"
+  ogTitle="Guides — Tracking, Ads, Integrations & Attribution"
+  ogDescription="Every guide library in one place: tracking, ads, integrations, and attribution."
+  ogUrl="https://lucflynn.com/guides"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Guides",
+      "description": "Conversion tracking, ads management, integrations, and attribution guides.",
+      "author": { "@type": "Person", "name": "Luc Flynn" },
+    })} />
+  </Fragment>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 prose-dark">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">Guides</h1>
+      <p class="mt-4 text-xl text-gray-400">Four libraries, one job: make your marketing measurable and your ad spend work.</p>
+      <p class="mt-2 text-gray-500">Pick the area you're stuck on. Every guide is built from real accounts, not theory.</p>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2">
+      {clusters.map((c) => (
+        <a href={c.href} class="card-dark rounded-xl border-2 p-6 sop-card block">
+          <div class="flex items-center justify-between mb-2">
+            <h2 class="text-2xl font-bold text-white">{c.title}</h2>
+            {c.count > 0 && <span class="category-badge">{c.count} guides</span>}
+          </div>
+          <p class="text-gray-300">{c.desc}</p>
+          <div class="mt-4 text-purple-400 font-semibold">Browse {c.title.replace(' Guides', '')} &rarr;</div>
+        </a>
+      ))}
+    </div>
+
+    <footer class="mt-16 pt-8 border-t border-slate-700 text-center">
+      <p class="text-gray-400">Not sure where to start? <a href="/contact" class="text-purple-400 hover:text-purple-300 font-semibold">Get a free audit</a> and I'll point you to the right fix.</p>
+    </footer>
+  </main>
+</BaseLayout>
