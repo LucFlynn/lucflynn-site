@@ -72,7 +72,7 @@ Neither is better. They're different. Understanding the difference changes how y
 
 Meta has a meaningful fraud problem — this isn't a reason to avoid the platform, but pretending it doesn't exist leads to bad decisions.
 
-The fraud pattern works similarly to [what happens with Google PMax](/ads/facebook-ads-not-converting-lead-gen): fraudsters build bots that fill out lead forms. They profit from the ad impressions those bots generate on their own sites. The result is a wave of fake submissions — wrong numbers, fake emails, people who never heard of you.
+The fraud pattern works similarly to [what happens with Google PMax](/ads/performance-max-lead-gen-problems): fraudsters build bots that fill out lead forms. They profit from the ad impressions those bots generate on their own sites. The result is a wave of fake submissions — wrong numbers, fake emails, people who never heard of you.
 
 The solution isn't to run less on Meta. It's to make the path harder for low-intent and fake submitters, and feed Meta's algorithm better signal about what a real lead is worth to you.
 
