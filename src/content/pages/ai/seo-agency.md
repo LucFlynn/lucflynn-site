@@ -12,7 +12,7 @@ page_type: "spoke"
 
 This page came out of an AI SEO engine I built and run on my own site. My expertise gets dictated. An AI research layer verifies the claims, pulls competitive context, and drafts in my voice. The result ships through an automated publishing pipeline. What you're reading right now is its output.
 
-That's not a pitch — it's the actual operation. And it's why I can tell you with a straight face what most AI SEO agencies can't: the content ranking in search in 2025 and beyond isn't the content AI writes. It's the content AI helps a real practitioner scale.
+That's not a pitch — it's the actual operation. And it's why I can tell you with a straight face what most AI SEO agencies can't: the content ranking in search in 2026 and beyond isn't the content AI writes. It's the content AI helps a real practitioner scale.
 
 ## What Most "AI SEO" Actually Looks Like
 
