@@ -19,7 +19,7 @@ const pages = defineCollection({
     title: z.string(),
     slug: z.string(),
     description: z.string(),
-    category: z.enum(['tracking', 'integrations', 'attribution', 'services']),
+    category: z.enum(['tracking', 'integrations', 'attribution', 'services', 'ads']),
     date: z.string(),
     hub_page: z.string().optional(),
     page_type: z.enum(['spoke', 'hub', 'service_vertical', 'service_technical']).optional().default('spoke'),

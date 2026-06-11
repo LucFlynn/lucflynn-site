@@ -1,0 +1,72 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const allPages = await getCollection('pages', ({ data }) => data.category === 'ads');
+const hubs = allPages.filter(p => p.data.page_type === 'hub').sort((a, b) => a.data.title.localeCompare(b.data.title));
+const spokes = allPages.filter(p => p.data.page_type !== 'hub').sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+<BaseLayout
+  title="Ads Management Guides — Make Your Google & Meta Ads Work"
+  description="Straight answers for business owners already running Google and Meta ads. Diagnose what's broken, fix wasted spend, and know when to get help."
+  canonicalUrl="https://lucflynn.com/ads"
+  ogTitle="Ads Management Guides — Make Your Google & Meta Ads Work"
+  ogDescription="Diagnose, fix, and structure your Google and Meta ad accounts — from someone who's managed 200+ of them."
+  ogUrl="https://lucflynn.com/ads"
+  showFooter={false}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Ads Management Guides",
+      "description": "Diagnostic and troubleshooting guides for Google and Meta ads",
+      "author": {"@type": "Person", "name": "Luc Flynn"},
+    })} />
+  </Fragment>
+
+  {/* nav handled by shared <Nav /> */}
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 prose-dark">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">Ads Management Guides</h1>
+      <p class="mt-4 text-xl text-gray-400">Already running ads and it's not going well? Start here.</p>
+      <p class="mt-2 text-gray-500">Diagnose what's broken, stop the waste, and know when it's worth getting help.</p>
+    </div>
+
+    {hubs.length > 0 && (
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold text-white mb-6">Start Here</h2>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {hubs.map((page) => (
+            <a href={`/ads/${page.data.slug}`} class="card-dark rounded-xl border-2 p-6 sop-card block">
+              <div class="mb-3">
+                <span class="category-badge">Guide</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">{page.data.title.replace(/ — .*$/, '')}</h3>
+              <p class="text-gray-300 text-sm line-clamp-2">{page.data.description}</p>
+              <div class="mt-4 text-purple-400 text-sm font-semibold">Read Guide &rarr;</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-6">All Ads Guides</h2>
+      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {spokes.map((page) => (
+          <a href={`/ads/${page.data.slug}`} class="card-dark rounded-xl border-2 p-5 sop-card block">
+            <h3 class="text-lg font-bold text-white mb-2">{page.data.title.replace(/ — .*$/, '').replace(/\(.*\)/, '').trim()}</h3>
+            <p class="text-gray-400 text-sm line-clamp-2">{page.data.description}</p>
+            <div class="mt-3 text-purple-400 text-sm font-semibold">Read Guide &rarr;</div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <footer class="mt-16 pt-8 border-t border-slate-700 text-center">
+      <p class="text-gray-400">Tired of guessing whether your ads are working? <a href="/contact" class="text-purple-400 hover:text-purple-300 font-semibold">Get a free account audit</a></p>
+    </footer>
+  </main>
+</BaseLayout>

@@ -1,0 +1,25 @@
+---
+import { getCollection, render } from 'astro:content';
+import SEOPageLayout from '../../layouts/SEOPageLayout.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('pages', ({ data }) => data.category === 'ads');
+  return pages.map((page) => ({
+    params: { slug: page.data.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+---
+<SEOPageLayout
+  title={page.data.title}
+  description={page.data.description}
+  category={page.data.category}
+  slug={page.data.slug}
+  date={page.data.date}
+  hubPage={page.data.hub_page}
+>
+  <Content />
+</SEOPageLayout>
