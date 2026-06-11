@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const allPages = await getCollection('pages', ({ data }) => data.category === 'ai');
+const pages = allPages.sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+<BaseLayout
+  title="AI Automation for Ads & Marketing — Custom Builds by Luc Flynn"
+  description="Custom AI automation for businesses running ads: Slack bots that query your ad accounts, AI reporting, lead-data agents. Builds from $500, hosting from $100/month."
+  canonicalUrl="https://lucflynn.com/ai"
+  ogTitle="AI Automation for Ads & Marketing"
+  ogDescription="Custom AI builds for ad accounts, reporting, and lead data — with guardrails. From the team managing $11M+ in ad spend."
+  ogUrl="https://lucflynn.com/ai"
+  showFooter={false}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "AI Automation for Ads & Marketing",
+      "description": "Custom AI automation builds for businesses running Google and Meta ads",
+      "provider": { "@type": "Person", "name": "Luc Flynn" },
+      "areaServed": ["Albuquerque, NM", "United States"],
+    })} />
+  </Fragment>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-12 prose-dark">
+    <div class="text-center mb-10">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">AI Automation for Ads & Marketing</h1>
+      <p class="mt-4 text-xl text-gray-400">Chat with your ad accounts. Automate your reporting. Score your campaigns.</p>
+      <p class="mt-2 text-gray-500">Real builds, not buzzwords — custom AI on top of your ads and lead data, with guardrails. Builds from <strong class="text-white">$500</strong>, hosting + support from <strong class="text-white">$100/month</strong>.</p>
+      <div class="mt-6">
+        <a href="/contact" class="inline-block bg-purple-600 hover:bg-purple-500 text-white font-semibold px-6 py-3 rounded-lg">Tell me what you want to build &rarr;</a>
+      </div>
+    </div>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-white mb-6">AI Services</h2>
+      <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {pages.map((page) => (
+          <a href={`/ai/${page.data.slug}`} class="card-dark rounded-xl border-2 p-5 sop-card block">
+            <h3 class="text-lg font-bold text-white mb-2">{page.data.title.replace(/ — .*$/, '').replace(/\(.*\)/, '').trim()}</h3>
+            <p class="text-gray-400 text-sm line-clamp-2">{page.data.description}</p>
+            <div class="mt-3 text-purple-400 text-sm font-semibold">Learn More &rarr;</div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <footer class="mt-16 pt-8 border-t border-slate-700 text-center">
+      <p class="text-gray-400">Running ads and want AI on your data? <a href="/contact" class="text-purple-400 hover:text-purple-300 font-semibold">Get in touch</a> — tell me what you wish you could automate.</p>
+    </footer>
+  </main>
+</BaseLayout>
