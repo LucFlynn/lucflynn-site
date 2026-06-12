@@ -26,7 +26,7 @@ No. Running ads with AI is like asking whether you should let AI invest all your
 
 ## The Honest Small-Spend Caveat
 
-If you're spending around $20/day — roughly $600/month — it genuinely doesn't make sense to add [management fees](/ads/how-much-google-ads-management-cost) on top of that. A real agency charging you 50–100% of your spend in management fees at that level feels wrong, and it is. Put that money toward ads instead. At that budget, you're better off learning it yourself, keeping the overhead zero, and scaling spend when you have enough data.
+If you're spending around $20/day — roughly $600/month — it genuinely doesn't make sense to add [management fees](/ads/how-much-google-ads-management-cost) on top of that. A real agency charging you 50–100% of your spend in management fees at that level feels wrong, and it is. Put that money toward ads instead. At that budget, you're better off learning it yourself, keeping the overhead zero, and scaling spend when you have enough data. The [Google Ads SOP](/ads/google-ads-sop-small-business) covers what managing it yourself actually looks like week to week — it's less work than you'd think.
 
 This changes as spend goes up. When you're at $3,000, $5,000, $10,000 a month, the math on professional management starts to make obvious sense — even a small efficiency improvement more than covers the fee. But at $600/month, you're not there yet.
 

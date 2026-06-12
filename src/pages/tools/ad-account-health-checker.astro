@@ -2,12 +2,28 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Ad Account Health Check | Get Your 3 Improvements" showNav={false} showFooter={false}>
+<BaseLayout
+  title="Ad Account Health Checker — Free Google Ads & Meta Tool"
+  description="Free ad account health checker. Enter your last 30 days of impressions, clicks, conversions, and spend — get your CTR, CPC, and cost per lead scored against real benchmarks, plus 3 specific fixes."
+>
+
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Ad Account Health Checker",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "Free tool that scores your Google Ads or Meta ad account health from your last 30 days of data and returns 3 specific improvements.",
+    "provider": { "@type": "Person", "name": "Luc Flynn" }
+  })} />
+</Fragment>
 
 <style is:inline>
   /* Health Check Specific Styles */
   .health-check-container {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,34 +61,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     font-size: 1.1rem;
     color: #B0B8E0;
     line-height: 1.6;
-  }
-
-  .video-help {
-    background: rgba(99, 102, 241, 0.1);
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  .video-help-text {
-    font-size: 0.95rem;
-    color: #A6ADFF;
-    margin-bottom: 0.75rem;
-  }
-
-  .video-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #6366F1;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .video-link:hover {
-    color: #8B5CF6;
   }
 
   .form-section {
@@ -192,16 +180,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   <div class="health-check-card">
     <div class="health-check-header">
       <div class="health-check-icon">📊</div>
-      <h1 class="health-check-title">Ad Account Health Check</h1>
+      <h1 class="health-check-title">Ad Account Health Checker</h1>
       <p class="health-check-subtitle">Enter your last 30 days of data to get 3 specific improvements</p>
-    </div>
-
-    <div class="video-help">
-      <p class="video-help-text">Not sure where to find these numbers?</p>
-      <a href="#" class="video-link">
-        <span>▶️</span>
-        <span>Watch 60-second tutorial</span>
-      </a>
     </div>
 
     <div class="error-message" id="error-message">
@@ -271,6 +251,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     </form>
   </div>
 </div>
+
+<section class="max-w-3xl mx-auto px-4 sm:px-6 pb-16 prose-dark">
+  <h2 class="text-2xl font-bold text-white mb-4">What this health checker actually looks at</h2>
+  <p class="text-gray-400 mb-4">Four numbers tell you most of what's wrong with an ad account: click-through rate, conversion rate, cost per click, and cost per lead. This tool takes your last 30 days of data — straight out of Google Ads or Meta Ads Manager — and scores each one against the benchmarks I use when I audit accounts. Then it tells you the three things to fix first, in order.</p>
+  <p class="text-gray-400 mb-4">Roughly: CTR under 3% usually means an ad relevance or targeting problem. Conversion rate under 3% is almost always a landing page problem, not an ads problem. CPC over $20 points at keyword and Quality Score issues. And cost per lead over $150 is the symptom the other three cause. Your industry shifts these numbers — but if you're failing two or more, the account is leaking money.</p>
+
+  <h2 class="text-2xl font-bold text-white mb-4 mt-8">What it can't see</h2>
+  <p class="text-gray-400 mb-4">This checker reads your topline numbers. It can't read your search terms report — and that's where most wasted spend actually hides. It also can't tell you whether your conversion tracking is lying to you, which is more common than anyone wants to admit. For that, run the <a href="/ads/google-ads-account-audit-checklist" class="text-purple-400 hover:text-purple-300">30-minute account audit</a> yourself, or check whether your account is being maintained the way it should be with the <a href="/ads/google-ads-sop-small-business" class="text-purple-400 hover:text-purple-300">Google Ads SOP</a>.</p>
+  <p class="text-gray-400 mb-4">And if your numbers come back ugly and you'd rather have a human look at the account: I do <a href="/services/google-ads-audit" class="text-purple-400 hover:text-purple-300">free Google Ads audits</a>. No deck, no pitch — I open the account, find where the money is going, and tell you.</p>
+</section>
 
 <script is:inline>
   // ===========================================

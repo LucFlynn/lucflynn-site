@@ -3,6 +3,10 @@
     { "source": "/index.html", "destination": "/", "permanent": true },
     { "source": "/privacy.html", "destination": "/privacy", "permanent": true },
 
+    { "source": "/blog/:slug.md", "destination": "/blog/:slug", "permanent": true },
+    { "source": "/blog/:slug.md/", "destination": "/blog/:slug", "permanent": true },
+    { "source": "/templates/healthcheck", "destination": "/tools/ad-account-health-checker", "permanent": true },
+
     { "source": "/pages/sop/index.html", "destination": "/sop", "permanent": true },
     { "source": "/pages/sop/keyword-optimization.html", "destination": "/sop/keyword-optimization", "permanent": true },
     { "source": "/pages/sop/campaign-optimization.html", "destination": "/sop/campaign-optimization", "permanent": true },
@@ -11,7 +15,7 @@
     { "source": "/pages/sop/lead-scoring.html", "destination": "/sop/lead-scoring", "permanent": true },
     { "source": "/pages/sop/conversion-tracking.html", "destination": "/sop/conversion-tracking", "permanent": true },
 
-    { "source": "/pages/templates/healthcheck.html", "destination": "/templates/healthcheck", "permanent": true },
+    { "source": "/pages/templates/healthcheck.html", "destination": "/tools/ad-account-health-checker", "permanent": true },
     { "source": "/pages/templates/leadflow.html", "destination": "/templates/leadflow", "permanent": true },
     { "source": "/pages/templates/leadScore.html", "destination": "/templates/lead-score", "permanent": true },
     { "source": "/pages/templates/caculator.html", "destination": "/templates/calculator", "permanent": true },
