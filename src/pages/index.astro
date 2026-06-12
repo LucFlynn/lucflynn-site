@@ -1,27 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Luc Flynn - Tracking, Analytics & Funnel Infrastructure">
+<BaseLayout
+  title="Luc Flynn - Google Ads Management & AI Automation"
+  description="Google & Meta ads management for small businesses — $800 setup, $200/month, you keep your account. Plus custom AI automation: Slack bots for your ad accounts, automated reporting, account monitoring. Albuquerque + nationwide."
+>
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-container">
-      <div class="value-badge">$11M+ IN AD SPEND TRACKED & OPTIMIZED</div>
+      <div class="value-badge">$11M+ IN AD SPEND MANAGED & OPTIMIZED</div>
       <h1 class="hero-headline">
-        Your Tracking is Broken.<br />
-        <span class="highlight">Your Data is Lying to You.</span><br />
+        Your Ads Are Leaking Money.<br />
+        <span class="highlight">Nobody's Actually Watching Them.</span><br />
         I Fix Both.
       </h1>
       <p class="hero-subtext">
-        I build and fix tracking, analytics, and conversion infrastructure for agencies and in-house teams.<br />
-        Bad data = bad decisions. Let's fix that first.
+        I manage Google & Meta ads for small businesses — $800 setup, $200/month, you keep your account.<br />
+        And I build custom AI that watches your numbers so nothing slips.
       </p>
 
       <div class="hero-cta-group">
         <a href="/contact" class="btn-primary">
-          Get a Free Tracking Audit &rarr;
+          Get a Free Account Audit &rarr;
         </a>
-        <a href="#quick-wins" class="btn-secondary">
-          Browse Free Tools
+        <a href="/ai" class="btn-secondary">
+          See the AI Builds
         </a>
       </div>
 
@@ -37,6 +40,57 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="indicator">
           <span class="indicator-number">8+</span>
           <span class="indicator-label">Years Experience</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work With Me Section -->
+  <section id="work" class="work">
+    <div class="container">
+      <div class="section-header">
+        <h2>Work With Me</h2>
+        <p>Flat pricing, no percentage-of-spend games, no retainer theater</p>
+      </div>
+
+      <div class="offer-grid">
+        <div class="offer-card">
+          <h3>Google & Meta Ads Management</h3>
+          <div class="price">$800 Setup &middot; $200/month</div>
+          <ul>
+            <li>For businesses spending $500&ndash;$10,000/month on ads</li>
+            <li>Campaign structure built for lead gen, not vanity metrics</li>
+            <li>Conversion tracking that doesn't lie to you</li>
+            <li>Weekly search-terms review &mdash; my software watches it daily</li>
+            <li>You keep your account. Always.</li>
+          </ul>
+          <a href="/contact" class="btn-primary">Get a Free Account Audit &rarr;</a>
+        </div>
+
+        <div class="offer-card">
+          <h3>AI Automation</h3>
+          <div class="price">Builds $500&ndash;$2,000 &middot; Hosting from $100/month</div>
+          <ul>
+            <li>Slack bots that answer questions about your ad accounts in plain English</li>
+            <li>Automated reporting that shows up without anyone asking</li>
+            <li>Account scoring & monitoring with guardrails</li>
+            <li>Real builds, not buzzwords &mdash; I'll name exactly what you're getting</li>
+            <li>Built on your data: ads, leads, CRM</li>
+          </ul>
+          <a href="/ai" class="btn-primary">See What I Build &rarr;</a>
+        </div>
+
+        <div class="offer-card">
+          <h3>Tracking & Consulting</h3>
+          <div class="price">Done-For-You or By the Hour</div>
+          <ul>
+            <li>GTM, GA4, server-side tracking, Meta CAPI</li>
+            <li>Fix data discrepancies between platforms</li>
+            <li>Form-to-CRM integrations & offline conversions</li>
+            <li>Or hop on a call &mdash; you screenshare, I guide</li>
+            <li>No retainer, no commitment</li>
+          </ul>
+          <a href="/contact" class="btn-primary">Get a Free Audit &rarr;</a>
         </div>
       </div>
     </div>
@@ -162,7 +216,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="about-content">
         <div class="about-text">
           <h2>Why I Give Away My Playbooks</h2>
-          <p class="lead">Most businesses are flying blind. Their tracking is broken, their attribution is wrong, and they're making decisions on bad data.</p>
+          <p class="lead">Most businesses running ads are flying blind. The account is leaking, the tracking is lying, and nobody is actually looking at it.</p>
           <p>I've spent 8+ years and $11M+ in ad spend learning exactly how to fix this. Every SOP, template, and tool on this site is something I actually use with clients.</p>
           <p>I give it away because the bottleneck is never knowledge — it's execution. The people who can execute become great partners. The ones who can't become great clients.</p>
           <div class="about-stats">
@@ -181,63 +235,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Work With Me Section -->
-  <section id="work" class="work">
-    <div class="container">
-      <div class="section-header">
-        <h2>Work With Me</h2>
-        <p>Three ways I help teams fix their measurement and funnel infrastructure</p>
-      </div>
-
-      <div class="offer-grid">
-        <div class="offer-card">
-          <h3>Full Funnel Build</h3>
-          <div class="price">Done-For-You</div>
-          <ul>
-            <li>I build your entire tracking & conversion infrastructure on a proven stack</li>
-            <li>Google Tag Manager, GA4, server-side tracking</li>
-            <li>Conversion API setup (Meta CAPI, Google Enhanced Conversions)</li>
-            <li>Attribution modeling & reporting dashboards</li>
-            <li>End-to-end funnel QA</li>
-          </ul>
-          <a href="/contact" class="btn-primary">Get a Free Audit &rarr;</a>
-        </div>
-
-        <div class="offer-card">
-          <h3>Tracking Fix</h3>
-          <div class="price">Done-For-You</div>
-          <ul>
-            <li>I fix your existing tracking on whatever stack you're running</li>
-            <li>Audit every tag, pixel, and conversion event</li>
-            <li>Fix data discrepancies between platforms</li>
-            <li>Ensure accurate attribution across channels</li>
-            <li>Documentation so your team can maintain it</li>
-          </ul>
-          <a href="/contact" class="btn-primary">Get a Free Audit &rarr;</a>
-        </div>
-
-        <div class="offer-card">
-          <h3>Consulting</h3>
-          <div class="price">By the Hour</div>
-          <ul>
-            <li>Hop on a call — you screenshare, I guide</li>
-            <li>Perfect for teams that can execute but need direction</li>
-            <li>Live troubleshooting and strategy</li>
-            <li>No retainer, no commitment</li>
-            <li>Walk away with a clear action plan</li>
-          </ul>
-          <a href="/contact" class="btn-primary">Book a Session &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Final CTA -->
   <section class="final-cta">
     <div class="container" style="text-align: center; padding: 4rem 2rem;">
       <h2 style="font-size: 2rem; color: #fff; margin-bottom: 1rem;">Not Sure What You Need?</h2>
       <p style="font-size: 1.15rem; color: #B0B8E0; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-        Start with a free audit. I'll look at your tracking setup, tell you what's broken, and give you a plan to fix it — whether you hire me or not.
+        Start with a free audit. I'll open your ad account, tell you where the money is actually going, and give you a plan — whether you hire me or not.
       </p>
       <a href="/contact" class="btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">
         Request Free Audit &rarr;
