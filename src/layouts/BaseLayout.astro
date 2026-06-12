@@ -2,6 +2,7 @@
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import TrackingScripts from '../components/TrackingScripts.astro';
+import { isNoindexedPath } from '../lib/noindex.mjs';
 import '../styles/global.css';
 
 interface Props {
@@ -31,7 +32,10 @@ const {
 } = Astro.props;
 
 const fullTitle = title.includes('Luc Flynn') ? title : `${title} | Luc Flynn`;
-// Every page needs a canonical so Google consolidates the www/non-www hosts
+// Funnel/client paths are noindexed automatically; the prop covers one-offs.
+// Noindex pages intentionally get no canonical (Google: don't combine the two).
+const isNoindexed = noindex || isNoindexedPath(Astro.url.pathname);
+// Every indexable page needs a canonical so Google consolidates the www/non-www hosts
 const canonical = canonicalUrl ?? new URL(Astro.url.pathname, Astro.site).href;
 ---
 <!DOCTYPE html>
@@ -41,8 +45,8 @@ const canonical = canonicalUrl ?? new URL(Astro.url.pathname, Astro.site).href;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{fullTitle}</title>
   <meta name="description" content={description} />
-  {!noindex && <link rel="canonical" href={canonical} />}
-  {noindex && <meta name="robots" content="noindex" />}
+  {!isNoindexed && <link rel="canonical" href={canonical} />}
+  {isNoindexed && <meta name="robots" content="noindex" />}
   {ogTitle && <meta property="og:title" content={ogTitle} />}
   {ogDescription && <meta property="og:description" content={ogDescription} />}
   {ogUrl && <meta property="og:url" content={ogUrl} />}
