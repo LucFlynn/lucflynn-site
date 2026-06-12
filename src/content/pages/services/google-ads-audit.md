@@ -22,7 +22,7 @@ It's not a teaser. It's the whole thing.
 
 **[→ How to Audit a Google Ads Account in 30 Minutes](/ads/google-ads-account-audit-checklist)**
 
-If you'd rather do it yourself, that page has everything you need. Go run it.
+If you'd rather do it yourself, that page has everything you need. Go run it. For a 60-second first pass, the [ad account health checker](/tools/ad-account-health-checker) scores your last 30 days of numbers against benchmarks before you commit to the full 30 minutes.
 
 ## Option 2: I'll Look at It for You (Also Free)
 

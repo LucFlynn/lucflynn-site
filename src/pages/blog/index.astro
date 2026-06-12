@@ -29,7 +29,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
             ? post.body.replace(/^#+\s.*/gm, '').replace(/\*\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').trim().slice(0, 150) + '...'
             : '';
           return (
-            <a href={`/blog/${post.id}/`} class="blog-card">
+            <a href={`/blog/${post.id.replace(/\.md$/, '')}/`} class="blog-card">
               {post.data.topic && <span class="blog-card-topic">{post.data.topic}</span>}
               <h2 class="blog-card-title">{post.data.title}</h2>
               <p class="blog-card-excerpt">{post.data.description || excerpt}</p>

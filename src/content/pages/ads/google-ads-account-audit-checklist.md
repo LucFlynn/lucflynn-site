@@ -50,7 +50,7 @@ What you're looking for at the account level:
 - **Conversion rate below 5%**: a problem. Good accounts run 7–8%+. If the landing page is generic or mismatched to the ad, this is where it shows.
 - **Spend not matching budget**: if the account's daily budget is $100 and it only spent $600 in the last 10 days instead of $1,000, it's not configured to spend. That's often a sign the structure is bad or quality scores are too low to compete in the auction.
 
-For a full breakdown of what these numbers mean — and what ranges to actually aim for — see [how to tell if your Google Ads are working](/ads/how-to-tell-google-ads-working).
+For a full breakdown of what these numbers mean — and what ranges to actually aim for — see [how to tell if your Google Ads are working](/ads/how-to-tell-google-ads-working). And if you want the fast version first: drop your last 30 days of numbers into the [ad account health checker](/tools/ad-account-health-checker) and it'll score them against benchmarks and tell you the three things to fix first.
 
 ## Step 4: Drill the Campaign → Ad Group → Keyword Hierarchy
 
@@ -113,7 +113,7 @@ You've run the audit. Now connect the findings to actions.
 
 If you've run through this and found: no activity in the change history, search terms full of irrelevant queries, conversion tracking numbers that don't match reality, and campaign settings still on their defaults — you've found a neglected account, not an optimized one.
 
-That's actually useful information. It means there's room to improve things that aren't currently being worked on, and the wins from basic cleanup tend to be fast.
+That's actually useful information. It means there's room to improve things that aren't currently being worked on, and the wins from basic cleanup tend to be fast. Once it's cleaned up, the [Google Ads SOP](/ads/google-ads-sop-small-business) covers the weekly maintenance that keeps it from drifting back into this state.
 
 If you're not sure what you're looking at, or you found something concerning and want a second set of eyes, that's what the audit offer below is for. I'll tell you what's actually wrong and what I'd do about it — no obligation to hire anyone.
 

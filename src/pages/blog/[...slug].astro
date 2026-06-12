@@ -5,7 +5,8 @@ import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.map((post) => ({
-    params: { slug: post.id },
+    // post.id includes the .md extension; strip it so URLs are clean
+    params: { slug: post.id.replace(/\.md$/, '') },
     props: { post },
   }));
 }

@@ -72,7 +72,7 @@ The checklist above assumes a functioning account. Sometimes things aren't funct
 
 **Spend dropped significantly.** Usually a budget or bid strategy issue. Sometimes a Quality Score problem. Worth a closer look, but not a panic.
 
-The honest truth is that if you set the account up right — strong negative keyword list from day one, conversion tracking that actually fires, keywords that match what people buy rather than what they browse — you'll see real problems rarely. The weekly search-terms review catches the slow leak before it becomes a flood.
+The honest truth is that if you set the account up right — strong negative keyword list from day one, conversion tracking that actually fires, keywords that match what people buy rather than what they browse — you'll see real problems rarely. The weekly search-terms review catches the slow leak before it becomes a flood. If you want a quick read on whether your topline numbers are healthy right now, the [ad account health checker](/tools/ad-account-health-checker) scores your last 30 days against benchmarks in about a minute.
 
 ## What Most Agency SOPs Get Wrong
 
