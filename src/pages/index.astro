@@ -2,46 +2,70 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout
-  title="Luc Flynn - Google Ads Management & AI Automation"
-  description="Google & Meta ads management for small businesses — $800 setup, $200/month, you keep your account. Plus custom AI automation: Slack bots for your ad accounts, automated reporting, account monitoring. Albuquerque + nationwide."
+  title="Ad System Management | Luc Flynn"
+  description="Make sense of your paid advertising. Luc Flynn looks across your ads, tracking, landing pages, offer, and lead flow to find the weak point and lead the right fix."
 >
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-container">
-      <div class="value-badge">$11M+ IN AD SPEND MANAGED & OPTIMIZED</div>
-      <h1 class="hero-headline">
-        Your Ads Are Leaking Money.<br />
-        <span class="highlight">Nobody's Actually Watching Them.</span><br />
-        I Fix Both.
-      </h1>
-      <p class="hero-subtext">
-        I manage Google & Meta ads for small businesses — $800 setup, $200/month, you keep your account.<br />
-        And I build custom AI that watches your numbers so nothing slips.
-      </p>
+  <section class="hero system-hero">
+    <div class="system-hero-grid">
+      <div class="system-hero-copy">
+        <div class="value-badge">AD SYSTEM MANAGEMENT</div>
+        <h1 class="hero-headline">How Many People Have You Hired to Fix Your Ads?</h1>
+        <p class="hero-subtext hero-story">
+          A media buyer. A web designer. A tracking expert. Maybe another consultant.
+          Everyone fixes one piece. Nobody makes sense of the whole system.
+        </p>
+        <p class="system-promise">
+          I look across your ads, tracking, landing pages, offer, and lead flow. Then I make the numbers clear, find the weak point, and lead the fix.
+        </p>
+        <p class="system-summary">One clear plan. No more experts blaming each other.</p>
 
-      <div class="hero-cta-group">
-        <a href="/contact" class="btn-primary">
-          Get a Free Account Audit &rarr;
-        </a>
-        <a href="/ai" class="btn-secondary">
-          See the AI Builds
-        </a>
+        <div class="trust-indicators system-trust">
+          <div class="indicator">
+            <span class="indicator-number">150+</span>
+            <span class="indicator-label">Clients Served</span>
+          </div>
+          <div class="indicator">
+            <span class="indicator-number">$11M+</span>
+            <span class="indicator-label">Ad Spend Managed</span>
+          </div>
+          <div class="indicator">
+            <span class="indicator-number">8+</span>
+            <span class="indicator-label">Years Experience</span>
+          </div>
+        </div>
+
+        <a href="#quick-wins" class="resource-jump">Just looking? Browse the free tools &darr;</a>
       </div>
 
-      <div class="trust-indicators">
-        <div class="indicator">
-          <span class="indicator-number">150+</span>
-          <span class="indicator-label">Clients Served</span>
-        </div>
-        <div class="indicator">
-          <span class="indicator-number">$11M+</span>
-          <span class="indicator-label">Ad Spend Managed</span>
-        </div>
-        <div class="indicator">
-          <span class="indicator-number">8+</span>
-          <span class="indicator-label">Years Experience</span>
-        </div>
-      </div>
+      <aside id="tell-me" class="hero-contact-card" aria-labelledby="hero-form-title">
+        <span class="form-kicker">NO SALES CALL REQUIRED</span>
+        <h2 id="hero-form-title">Tell Me What's Going On</h2>
+        <p>Send me your site and a short note. I'll reply with the clearest next step I see.</p>
+
+        <form action="https://formspree.io/f/mblqrqoq" method="POST" class="hero-contact-form">
+          <input type="hidden" name="_subject" value="Homepage Ad System Question" />
+          <input type="hidden" name="source" value="homepage-hero" />
+          <input type="hidden" name="utm_source" id="hero_utm_source" value="" />
+          <input type="hidden" name="utm_medium" id="hero_utm_medium" value="" />
+          <input type="hidden" name="utm_campaign" id="hero_utm_campaign" value="" />
+          <input type="hidden" name="utm_content" id="hero_utm_content" value="" />
+          <input type="hidden" name="fbclid" id="hero_fbclid" value="" />
+          <input type="hidden" name="gclid" id="hero_gclid" value="" />
+
+          <label for="hero-email">Work email</label>
+          <input type="email" id="hero-email" name="email" required placeholder="you@company.com" autocomplete="email" />
+
+          <label for="hero-website">Website</label>
+          <input type="text" id="hero-website" name="website" required placeholder="yourcompany.com" autocomplete="url" />
+
+          <label for="hero-problem">What are you trying to fix?</label>
+          <textarea id="hero-problem" name="problem" required rows="4" placeholder="The ads look fine, but the leads aren't turning into sales..."></textarea>
+
+          <button type="submit">Send Me the Problem &rarr;</button>
+        </form>
+        <small>No pressure and no automated pitch. I'll answer by email.</small>
+      </aside>
     </div>
   </section>
 
@@ -49,50 +73,56 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section id="work" class="work">
     <div class="container">
       <div class="section-header">
-        <h2>Work With Me</h2>
-        <p>Flat pricing, no percentage-of-spend games, no retainer theater</p>
+        <h2>Three Ways to Work With Me</h2>
+        <p>Start with the foundation. Add the level of ownership your business needs.</p>
       </div>
 
       <div class="offer-grid">
         <div class="offer-card">
-          <h3>Google & Meta Ads Management</h3>
-          <div class="price">$800 Setup &middot; $200/month</div>
+          <span class="offer-level">1 &middot; START</span>
+          <h3>Ad System Setup</h3>
+          <div class="price">Starting at $1,600</div>
           <ul>
-            <li>For businesses spending $500&ndash;$10,000/month on ads</li>
-            <li>Campaign structure built for lead gen, not vanity metrics</li>
-            <li>Conversion tracking that doesn't lie to you</li>
-            <li>Weekly search-terms review &mdash; my software watches it daily</li>
-            <li>You keep your account. Always.</li>
+            <li>Review the ads, tracking, landing pages, offer, and lead flow</li>
+            <li>Find the weak point before spending more money</li>
+            <li>Fix the tracking and campaign foundation</li>
+            <li>Leave with one clear plan for what happens next</li>
           </ul>
-          <a href="/contact" class="btn-primary">Get a Free Account Audit &rarr;</a>
+          <a href="#tell-me" class="btn-primary">Tell Me What's Going On &rarr;</a>
+        </div>
+
+        <div class="offer-card offer-card-featured">
+          <span class="offer-level">2 &middot; MANAGE</span>
+          <h3>Managed Ad System</h3>
+          <div class="price">Starting at $400/month</div>
+          <ul>
+            <li>Ongoing Google or Meta campaign management</li>
+            <li>Monitoring, support, and one clear monthly report</li>
+            <li>We watch for the weak point to move</li>
+            <li>Add more reporting or strategy time only when you need it</li>
+            <li>You keep your accounts and your data</li>
+          </ul>
+          <a href="#tell-me" class="btn-primary">Tell Me What's Going On &rarr;</a>
         </div>
 
         <div class="offer-card">
-          <h3>AI Automation</h3>
-          <div class="price">Builds $500&ndash;$2,000 &middot; Hosting from $100/month</div>
+          <span class="offer-level">3 &middot; LEAD</span>
+          <h3>Director of Advertising</h3>
+          <div class="price">Starting at $5,000/month</div>
           <ul>
-            <li>Slack bots that answer questions about your ad accounts in plain English</li>
-            <li>Automated reporting that shows up without anyone asking</li>
-            <li>Account scoring & monitoring with guardrails</li>
-            <li>Real builds, not buzzwords &mdash; I'll name exactly what you're getting</li>
-            <li>Built on your data: ads, leads, CRM</li>
+            <li>I lead the complete paid-advertising system</li>
+            <li>Set priorities and decide what gets fixed next</li>
+            <li>Direct the specialists working on each piece</li>
+            <li>Turn the numbers into clear business decisions</li>
+            <li>Lead each fix from strategy through execution</li>
           </ul>
-          <a href="/ai" class="btn-primary">See What I Build &rarr;</a>
-        </div>
-
-        <div class="offer-card">
-          <h3>Tracking & Consulting</h3>
-          <div class="price">Done-For-You or By the Hour</div>
-          <ul>
-            <li>GTM, GA4, server-side tracking, Meta CAPI</li>
-            <li>Fix data discrepancies between platforms</li>
-            <li>Form-to-CRM integrations & offline conversions</li>
-            <li>Or hop on a call &mdash; you screenshare, I guide</li>
-            <li>No retainer, no commitment</li>
-          </ul>
-          <a href="/contact" class="btn-primary">Get a Free Audit &rarr;</a>
+          <a href="#tell-me" class="btn-primary">Talk to Me About the System &rarr;</a>
         </div>
       </div>
+
+      <p class="constraint-note">
+        Landing pages, tracking builds, positioning sprints, and other constraint fixes are scoped separately when the system shows they are needed.
+      </p>
     </div>
   </section>
 
@@ -202,7 +232,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <a href="/tracking">Conversion Tracking Guides</a>
               <a href="/integrations">Form-to-CRM Integrations</a>
               <a href="/attribution">Attribution Tool Setup</a>
-              <a href="/services">Services & Pricing</a>
+              <a href="/services">Solutions Library</a>
             </div>
           </div>
         </div>
@@ -266,5 +296,244 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         }, 10);
       });
     }
+
+    // Keep the ad context attached to low-pressure homepage enquiries.
+    const params = new URLSearchParams(window.location.search);
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'fbclid', 'gclid'].forEach((field) => {
+      const value = params.get(field);
+      const input = document.getElementById(`hero_${field}`);
+      if (value && input instanceof HTMLInputElement) input.value = value;
+    });
   </script>
 </BaseLayout>
+
+<style>
+  .system-hero {
+    padding: 4.5rem 0;
+  }
+
+  .system-hero-grid {
+    width: min(1180px, calc(100% - 3rem));
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .system-hero-copy {
+    text-align: left;
+  }
+
+  .system-hero-copy .value-badge {
+    margin-bottom: 1.5rem;
+  }
+
+  .system-hero-copy .hero-headline {
+    font-size: clamp(2.8rem, 5.6vw, 5rem);
+    max-width: 780px;
+    letter-spacing: -0.045em;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-story {
+    max-width: 700px;
+    margin-bottom: 1rem;
+    color: #cbd5e1;
+  }
+
+  .system-promise {
+    max-width: 700px;
+    color: #f8fafc;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .system-summary {
+    color: #60a5fa;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  }
+
+  .system-trust {
+    justify-content: flex-start;
+    gap: 2.25rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .system-trust .indicator {
+    align-items: flex-start;
+  }
+
+  .resource-jump {
+    color: #a5b4fc;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(165, 180, 252, 0.45);
+  }
+
+  .hero-contact-card {
+    background: linear-gradient(150deg, rgba(30, 41, 59, 0.98), rgba(15, 23, 42, 0.98));
+    border: 1px solid rgba(99, 102, 241, 0.55);
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: 0 28px 70px rgba(2, 6, 23, 0.38);
+  }
+
+  .form-kicker {
+    display: block;
+    color: #34d399;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.65rem;
+  }
+
+  .hero-contact-card h2 {
+    font-size: 1.85rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .hero-contact-card > p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-contact-form {
+    display: grid;
+    gap: 0.65rem;
+  }
+
+  .hero-contact-form label {
+    color: #cbd5e1;
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-top: 0.35rem;
+  }
+
+  .hero-contact-form input,
+  .hero-contact-form textarea {
+    width: 100%;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background: #0b1220;
+    color: #f8fafc;
+    font: inherit;
+    padding: 0.82rem 0.9rem;
+  }
+
+  .hero-contact-form input:focus,
+  .hero-contact-form textarea:focus {
+    outline: 2px solid rgba(99, 102, 241, 0.45);
+    border-color: #818cf8;
+  }
+
+  .hero-contact-form textarea {
+    resize: vertical;
+    min-height: 106px;
+  }
+
+  .hero-contact-form button {
+    margin-top: 0.65rem;
+    border: 0;
+    border-radius: 8px;
+    padding: 0.95rem 1rem;
+    background: #2563eb;
+    color: #fff;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .hero-contact-form button:hover {
+    background: #1d4ed8;
+  }
+
+  .hero-contact-card small {
+    display: block;
+    color: #64748b;
+    text-align: center;
+    line-height: 1.5;
+    margin-top: 0.85rem;
+  }
+
+  .offer-level {
+    display: inline-block;
+    color: #34d399;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.75rem;
+  }
+
+  .offer-card-featured {
+    border-color: rgba(99, 102, 241, 0.85);
+    box-shadow: 0 18px 45px rgba(2, 6, 23, 0.24);
+  }
+
+  .offer-card .price {
+    font-size: 1.45rem;
+  }
+
+  .offer-card .btn-primary {
+    width: 100%;
+    text-align: center;
+    padding: 0.85rem 1rem;
+  }
+
+  .constraint-note {
+    max-width: 850px;
+    margin: 2rem auto 0;
+    color: #94a3b8;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 900px) {
+    .system-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      width: min(720px, calc(100% - 2.5rem));
+    }
+
+    .system-hero-copy,
+    .system-trust .indicator {
+      text-align: center;
+      align-items: center;
+    }
+
+    .system-trust {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .system-hero {
+      padding: 3rem 0;
+    }
+
+    .system-hero-copy .hero-headline {
+      font-size: 2.4rem;
+    }
+
+    .system-trust {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+    }
+
+    .system-trust .indicator-number {
+      font-size: 1.2rem;
+    }
+
+    .system-trust .indicator-label {
+      font-size: 0.68rem;
+    }
+
+    .hero-contact-card {
+      padding: 1.4rem;
+    }
+  }
+</style>
